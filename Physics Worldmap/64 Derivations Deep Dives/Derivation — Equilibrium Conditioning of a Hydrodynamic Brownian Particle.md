@@ -80,7 +80,14 @@ $$
 
 **The $x_0$ part agrees.** It equals $x_0(P-K)/(sP)=x_0[1/s-K/(sP)]$, whose inverse is $x_0K\int_t^\infty\chi$. That is exactly the equilibrium regression coefficient.
 
-**The $v_0$ part does not.** It is $(m+zs^{-1/2})v_0/P$, while the equilibrium coefficient is $mv_0/P$. The extra $zs^{-1/2}v_0/P$ describes a particle that has moved at $v_0$ without the fluid having set up the matching vorticity. That state is not drawn from the equilibrium ensemble. An *impulsive* kick to a particle at rest in a quiescent fluid does give $m v_0/P$. This is the classical identity between the normalised velocity autocorrelation and impulsive relaxation, associated with Widom and with Hauge and Martin-Löf.
+**The $v_0$ part does not.** It is $(m+zs^{-1/2})v_0/P$, while the equilibrium coefficient is $mv_0/P$. That state is not drawn from the equilibrium ensemble. An *impulsive* kick to a particle at rest in a quiescent fluid does give $m v_0/P$. This is the classical identity between the normalised velocity autocorrelation and impulsive relaxation, associated with Widom and with Hauge and Martin-Löf.
+
+> [!warning] Correction 2026-10-08: which preparation the extra term describes
+> An earlier version said the extra $zs^{-1/2}v_0/P$ describes motion at $v_0$ "without the fluid having set up the matching vorticity". That is backwards. The transform $z(s^{1/2}\hat v-s^{-1/2}v_0)$ is the Caputo half-derivative. It drops the velocity jump at $t=0$, which is exactly the history integral $\int_{-\infty}^t\ddot x/\sqrt{t-s}$ when $v=v_0$ for all $s<0$.
+>
+> So $(m+zs^{-1/2})v_0/P$ is the mean motion of a sphere **released after steady dragging at $v_0$**, with fully developed flow. Starting from a quiescent fluid, the jump contributes the Riemann–Liouville force $z v_0/\sqrt{\pi t}$, and the result is $m v_0/P$: the impulsive start and the equilibrium answer.
+>
+> Lab 39 (`39_conditional_mean_preparations.py`) integrates both preparations in the time domain with a Grünwald–Letnikov scheme, independently of the partial-fraction formulas. Each matches its closed form to $1.4\times10^{-4}$ and $3.5\times10^{-5}$ respectively, with first-order convergence. The conclusion of this note is unchanged.
 
 **Size of the difference** at the published parameters ($a=3.398$ µm, $K=7.80\times10^{-5}$ N/m, BaTiO₃ in acetone):
 

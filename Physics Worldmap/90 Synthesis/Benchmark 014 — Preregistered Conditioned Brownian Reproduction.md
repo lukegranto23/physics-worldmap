@@ -81,6 +81,11 @@ No hydrodynamic model, mass, or gain enters.
 
 ## Next
 
+> [!note] Update 2026-10-08
+> - **Item 1 is settled.** [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]] shows that omitting the term is correct for the equilibrium ensemble. Lab 39 checks this in the time domain: the extra term is the mean motion after release from steady dragging.
+> - **Item 2 is done**, in [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]]. Noise-power drift explains the empty-trap failure. Most of the particle shortfall is calibration transfer between trace halves; the in-sample residual is −0.8% ± 1.0%.
+> - **The gain-free test** is [[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]]. Its synthetic controls are done; the real-data run is pending.
+
 1. Independently derive the hydrodynamic conditional mean for $v_0\neq0$ and settle the commented-out term.
 2. Freeze and run a nonstationary-noise-aware conditioning protocol (see the hypothesis above) on the same files, labelled as a second-stage analysis on already-inspected data.
 3. Compare the metre-unit curves with the authors' theory only alongside an explicit note that the gain is theory-fitted.

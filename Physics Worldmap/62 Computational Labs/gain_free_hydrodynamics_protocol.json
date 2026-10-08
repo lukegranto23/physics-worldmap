@@ -64,6 +64,12 @@
       "before_any_model_comparison": true,
       "change": "Numerical only: operator quadrature 48 -> 12 Gauss-Legendre nodes (max relative change 4.4e-10 vs 96 nodes at published and Langevin parameters); bootstrap refits parallelised. No statistical or decision change.",
       "reason": "First run exceeded 30 minutes without output; it was stopped before printing or writing any result."
+    },
+    {
+      "date": "2026-10-08",
+      "before_any_model_comparison": false,
+      "change": "Serialisation only: cast one numpy bool in the decision dictionary to bool. No statistical, model, seed, or decision change.",
+      "reason": "The first real-data run (started 2026-10-08T07:23:57Z, after the lab 38 synthetic controls had passed) crashed at the final JSON write. Before the crash it had printed only the main-fit chi2 values on the noise-subtracted observable: B2 3610.17, B3 2748.21, L 9092.97 (16 lags). No residuals, parameters, p-values, or plots were seen. The run is repeated unchanged with the same seeds."
     }
   ]
 }

@@ -86,6 +86,27 @@ All calibration readings are counted. Across in-scope cells, empirical coverage 
 
 The September 18 feasibility checkpoint adds [[Instrument Feasibility — Response Bounds Before Data Claims]]: a conventional camera's broad allowance can be too loose to help, while optical velocity averaging cannot be substituted for camera exposure. [[Public Data Lead — Conditioned Hydrodynamic Brownian Motion]] identifies a public processed-data repository, records unresolved provenance/access details, and derives the standard Gaussian conditional-displacement baseline, including noisy and finite-bin selection. This is source review and mathematics, not a reproduced experiment.
 
+## Public-data follow-ups (October 6–8)
+
+[[Benchmark 014 — Preregistered Conditioned Brownian Reproduction]] reproduced the published conditioned $t^{5/2}$ on the digest-verified Dryad traces. Three follow-ups on the same files:
+
+- **[[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]].**
+  - The empty-trap failure is slowly varying detector-noise power.
+  - Most of the particle's ~3% shortfall is calibration transfer between trace halves. The in-sample residual is −0.8% ± 1.0%.
+  - A preregistered "supported" verdict for the particle is withdrawn: an eight-seed stationary audit (lab 37) shows the primary variance proxy is itself biased.
+- **[[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]].**
+  - The observable is the regression slope $\operatorname{Cov}(D,W)/\operatorname{Var}W$, in seconds, with no volts-to-metres gain.
+  - The published Basset model, with no free parameters, matches it within 1.6% from 0.75 to 192 µs. Memoryless Langevin is decisively rejected.
+  - Lab 38's synthetic controls validated the frozen rules before the real run.
+  - A sub-percent structured residual at 2–12 µs remains unexplained by the five frozen diagnostics of lab 40.
+- **[[Benchmark 017 — Processing Dependence of the Conditioned Super-Ballistic Signal]].**
+  - A forward model shows two effects at 0.75–6 µs. The measurement operator suppresses the conditioned MSD to 0.26–0.79 of the continuum curve. Detector noise supplies 16–71% of the measured value.
+  - A confirmatory test, frozen before data, recomputed velocity nine ways. The conditioned MSD changes by factors down to 0.25, as the forward model predicts ($Z=20.9$ over 32 cells), and the processing-independent reading is rejected ($Z=4773$).
+  - The apparent 3–12 µs exponent ranges from 2.29 to 2.96 with processing alone.
+  - Basset physics stands. The published curve is a processing-dependent statistic, and its agreement with the continuum $t^{5/2}$ curve is a near-cancellation.
+
+Lab 39 independently confirms that the authors' commented-out $v_0$ term describes release after steady dragging, not equilibrium. It also corrects the physical labelling in [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]].
+
 ## Precision work
 
 The September 14 independent audit of Benchmark 011 adds eight passing verification groups, including 80- and 100-digit series calculations, truncation refinements, and analytic covariance comparisons. Its source and full results are included with the benchmark. This release also rejects nonstandard JSON constants and checks the new results against their recorded source and input hashes.

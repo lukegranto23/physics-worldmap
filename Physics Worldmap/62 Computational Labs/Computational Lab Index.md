@@ -142,6 +142,14 @@ Protocols are `spectral_response_protocol.json` and `acceleration_alias_diagnost
 
 [[Benchmark 014 — Preregistered Conditioned Brownian Reproduction]] documents lab 34 (`34_conditioned_displacement_reproduction.py`): a protocol frozen before data content was seen, synthetic positive/negative self-tests (`--selftest`), and a digest-gated run on the public Dryad traces (`--data <dir>`). Outputs are in `results/conditioned_reproduction/`. Third-party data are not redistributed in the vault. This lab is separate from the core teaching runner.
 
+Follow-up labs on the same digest-verified Dryad files (all separate from the core runner; SciPy and mpmath required):
+
+- **Lab 35** (`35_gain_free_hydrodynamic_memory.py`, protocol `gain_free_hydrodynamics_protocol.json`). It compares Basset, initial-value and memoryless Langevin models through the measured bin-and-stencil operator. The observable is the regression slope $\operatorname{Cov}(D_k,W)/\operatorname{Var}W$, in seconds, after empty-trap noise subtraction; the volts-to-metres gain cancels. Documented in [[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]].
+- **Lab 36** (`36_stratified_conditioning.py`). The preregistered variance-stratification test of Benchmark 014's anomalies.
+- **Lab 37** (`37_stratification_artifact_audit.py`). A post hoc eight-seed stationary audit showing that the primary $\operatorname{Var}W$ proxy is itself biased. Labs 36–37 are documented in [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]].
+- **Lab 38** (`38_gain_free_selftest.py`). Synthetic Basset and Langevin controls for lab 35's frozen rules. Positions are synthesised exactly from the FDT spectrum on a 25 ns grid and box-averaged, with white and smooth detector noise. The synthesiser's expected increment variances match lab 35's operator to about $10^{-5}$.
+- **Lab 39** (`39_conditional_mean_preparations.py`). A Grünwald–Letnikov time-domain check that the equilibrium conditional mean equals the impulsive start, and that the authors' commented-out term is release after steady dragging. Supports [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]].
+
 ## How to learn with these
 
 1. Run the unmodified program and read the printed validation report.
