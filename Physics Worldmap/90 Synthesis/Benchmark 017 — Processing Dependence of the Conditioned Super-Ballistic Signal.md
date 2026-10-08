@@ -75,6 +75,18 @@ Over 0.75–6 µs the noise-free operator curve has log-log slope **2.93**. Addi
 
 The continuum theory itself gives 2.32 there.
 
+## Extension to the nonzero-speed curves (lab 43)
+
+Lab 43 (`43_nonzero_speed_processing_test.py`) applies the same nine-variant test to the published conditioning speeds $v_0=q\,\operatorname{sd}(W)$, using the authors' ±1% window. It was frozen and committed (`f9505f2`) before the real-data run, and the forward prediction now includes the window's $E[W^2]$.
+
+| $q$ | Synthetic self-test | Dryad data | $Z_\text{fwd}$ / $Z_\text{cont}$ (data) | Direction of the effect |
+|---:|---|---|---|---|
+| 0.5 | H_fwd | **H_fwd FAVOURED** | 44 / 849 | coarser processing suppresses the curve ($\rho\approx0.7$–0.9) |
+| 1 | UNRESOLVED | UNRESOLVED | 16 / 28 | crossover: both hypotheses predict $\rho\approx1$ |
+| 2 | H_fwd | **H_fwd FAVOURED** | 33 / 114 | coarser processing *enhances* the curve ($\rho$ up to 1.25) |
+
+At larger speeds the mean-displacement term $(r/s)^2E[W^2]$ grows. It responds to processing in the opposite direction to the residual-variance term, so the sign of the effect changes near $q\approx1$. The UNRESOLVED verdict at $q=1$ is that crossover, which the self-test predicted, not a failure. Processing dependence therefore covers every published conditioning speed except the crossover.
+
 ## Interpretation
 
 1. **Basset theory is supported.** The published Basset model predicts how the measured statistic changes under nine processing choices, at percent level, with no free parameters. That is further support for the hydrodynamics.
@@ -91,7 +103,7 @@ The continuum theory itself gives 2.32 there.
 ## Next
 
 1. Review and send [[Draft Technical Note — Processing Dependence for the Data Authors]]: forward model, test, code, digests.
-2. Extend the forward model to nonzero conditioning speeds, and to the authors' metre-unit figures.
+2. Extend the forward model to the authors' metre-unit figures. Nonzero speeds are done (lab 43).
 3. Test noise additivity directly, for example from the high-frequency $d^4$ proxy in particle versus empty-trap runs.
 
 [[Benchmark 014 — Preregistered Conditioned Brownian Reproduction]] · [[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]] · [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] · [[Public Data Lead — Conditioned Hydrodynamic Brownian Motion]] · [[Research Frontier — Identifiability Before Discovery]]
