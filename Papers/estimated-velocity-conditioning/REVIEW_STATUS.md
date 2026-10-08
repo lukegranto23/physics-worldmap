@@ -18,4 +18,4 @@ An adversarial referee pass (an independent AI agent told to find errors) recomm
 
 **What survives:** the Gaussian-conditioning algebra, the exact cancellation of the ballistic part, the continuum limit, and the nine-variant ratios, which reproduce exactly. The gain-free slope agrees with the published Basset model to about 2%, with an unexplained 1–2% residual.
 
-**Recommendation:** do not submit. The note already emailed to the data author needs a short correction (drafted 8 October, not sent without the owner's approval).
+**Recommendation:** do not submit. The note already emailed to the data author needs a short correction (sent 8 October in the same email thread).

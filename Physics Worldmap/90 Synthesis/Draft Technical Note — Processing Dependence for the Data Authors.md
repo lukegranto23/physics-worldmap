@@ -19,7 +19,7 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 > 4. **The note missed that the paper already flags the first point** as set by finite differencing and laser noise.
 > 5. **"Frozen before each confirmatory statistic" overstates it.** The freezes were self-recorded commits, and the hypotheses were formed after the data were analysed.
 >
-> A short correction email was drafted for the owner's approval.
+> A correction email covering points 1–5 was **sent to the corresponding author on 2026-10-08**, in the same thread, with the owner's approval.
 
 
 > [!note] Sent 2026-10-08
