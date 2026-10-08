@@ -95,6 +95,13 @@ At larger speeds the mean-displacement term $(r/s)^2E[W^2]$ grows. It responds t
 2. **The published conditioned curve is processing-dependent.** It is not a processing-independent display of the physical $t^{5/2}$ law. Its agreement with the continuum curve at 750 ns and order 8 depends on detector noise filling in what the measurement operator suppresses. Neither effect appears in the published comparison.
 3. **The physical super-ballistic law can still be inferred.** The physical conditioned MSD is a model-based reconstruction. It can be obtained through a forward model like this one, or from the gain-free observable of Benchmark 015, not read directly off the curve.
 
+**Generalisation.** [[Derivation — Conditioning on an Estimated Velocity]] (lab 46) turns this into a general result for any velocity cusp $C_v=c-a|\tau|^\alpha$. It has three parts:
+- a universal operator factor $\Phi_\alpha(k)$;
+- a velocity-noise ballistic leak $\tfrac{\varepsilon}{1+\varepsilon}r^2/s$;
+- a position-noise floor.
+
+It also gives a design criterion. For this experiment, a clean $t^{5/2}$ would need $t\gtrsim17$ µs but also $t\ll\tau_f\approx28$ µs, so there is effectively no clean scaling window.
+
 ## Limits
 
 - **Noise model.** It assumes additive, particle-independent noise statistically equal to the empty trap. The lab 45 spectra in Benchmark 015 show this is only approximate: the particle-run noise floor above 400 kHz is about 0.5–0.7× the empty trap's. The noise shares quoted above (9–71%) are therefore upper estimates; at 0.75 µs a 0.6× floor still gives roughly 60%. The nine-variant test passed regardless, because its ratios are dominated by the operator. [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] and lab 40 diagnostic D4 (in Benchmark 015) suggest the noise during particle runs may differ, but only partly.
