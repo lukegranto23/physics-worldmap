@@ -252,7 +252,7 @@ def main():
         "z_over_m_stokes_basset_at_published_radius": float(a0),
     }
     dec["memory_supported"] = dec["memory_supported_L_minus_B2"] > 25
-    dec["z_interval_contains_stokes_basset"] = dec["z_over_m_B3"][1][0] <= a0 <= dec["z_over_m_B3"][1][1]
+    dec["z_interval_contains_stokes_basset"] = bool(dec["z_over_m_B3"][1][0] <= a0 <= dec["z_over_m_B3"][1][1])
 
     out = {
         "meta": {"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "protocol_sha256": sha256(PROTOCOL),
