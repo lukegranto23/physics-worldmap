@@ -20,6 +20,13 @@ Decision (fixed): noise transfer ACCOUNTS for the residual if N2 has SE-correcte
   (chi2/1.44/14) < 2 with both scales in [0.5, 2]; PARTIAL if N2 improves on lab 35's E chi2
   (3906) by more than half; otherwise NOT EXPLAINED. N5 is reported, not decisive.
 
+Amendment 2026-10-08, before any fit: the first run stopped at the decomposition check
+(max rel diff 0.019 > 2e-3; no fits run). Cause: autocovariances with lag-dependent
+normalisation do not cancel the large slow-drift variance exactly in the stencil sums.
+Replaced gamma(n) by half increment variances V(n) = E[(Y_{j+n} - Y_j)^2]/2 (gamma(n) =
+gamma(0) - V(n); the constant drops out because the stencil sums to zero). The short/long
+split, check, fits and decision are otherwise unchanged; the split is applied to V.
+
     python 42_noise_transfer_test.py --data <dir with Dryad files>
 """
 from __future__ import annotations
@@ -45,15 +52,15 @@ S8 = lab34.STENCIL8
 N0 = 3
 
 
-def autocov(traces, nmax):
+def half_increment_var(traces, nmax):
+    """V(n) = E[(Y_{j+n} - Y_j)^2]/2, pooled over traces with increments centred."""
     num = np.zeros(nmax + 1)
     cnt = np.zeros(nmax + 1)
-    mu = np.mean(np.concatenate(traces))
-    for y in traces:
-        y = np.asarray(y, float) - mu
-        for n in range(nmax + 1):
-            num[n] += np.dot(y[: len(y) - n], y[n:])
-            cnt[n] += len(y) - n
+    for n in range(1, nmax + 1):
+        d = np.concatenate([np.asarray(y, float)[n:] - np.asarray(y, float)[:-n] for y in traces])
+        num[n] = np.sum((d - d.mean())**2)/2
+        cnt[n] = len(d)
+    cnt[0] = 1
     return num/cnt
 
 
@@ -66,8 +73,8 @@ def split(gamma):
     return gamma - long, long
 
 
-def stencil_moments(gamma, lags, dt):
-    g = lambda n: gamma[abs(n)]
+def stencil_moments(V, lags, dt):
+    g = lambda n: -V[abs(n)]          # gamma(n) up to a constant that the zero-sum stencil removes
     ls = range(-4, 5)
     s = sum(S8[a + 4]*S8[b + 4]*g(a - b) for a in ls for b in ls)/dt**2
     r = np.array([sum(S8[a + 4]*g(k - a) for a in ls)/dt for k in lags])
@@ -98,7 +105,7 @@ def main():
     rp, sp = lab35.moments(halves)
     R35 = lab35.estimate_R(halves, empty)
 
-    gamma = autocov(En, max(lags) + 8)
+    gamma = half_increment_var(En, max(lags) + 8)   # V(n); name kept for the split helper
     gs, gl = split(gamma)
     rs, ss = stencil_moments(gs, lags, dt)
     rl, sl = stencil_moments(gl, lags, dt)
@@ -147,7 +154,7 @@ def main():
                     "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                     "status": "stage-4 post hoc; frozen before running"},
            "decomposition_check_max_rel": check,
-           "empty_trap_gamma_0_to_8": gamma[:9].tolist(), "gamma_short_0_to_3": gs[:4].tolist(),
+           "empty_trap_half_increment_var_0_to_8": gamma[:9].tolist(), "V_short_0_to_3": gs[:4].tolist(),
            "E_chi2_lab35_subtraction": E1,
            "N2": {"a_short": float(a_s), "a_long": float(a_l), "chi2": c2, "dof": dof2, "p": float(chi2_dist.sf(c2, dof2)),
                   "chi2_per_dof_se_corrected": c2/1.44/dof2,
