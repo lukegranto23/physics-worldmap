@@ -1,6 +1,6 @@
 # Conditioning on estimated velocities — manuscript draft
 
-**Status:** complete draft, 8 October 2026. Not submitted or posted anywhere.
+**Status: NOT READY.** An internal review on 8 October 2026 found major errors in the theory framing and in several numbers. See `REVIEW_STATUS.md`. Do not submit or post this draft as it stands.
 
 | File | What it is |
 |---|---|

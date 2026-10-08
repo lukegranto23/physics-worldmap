@@ -12,6 +12,13 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 
 # Benchmark 017 — Processing Dependence of the Conditioned Super-Ballistic Signal
 
+> [!warning] Correction after internal review (2026-10-08)
+> - **The "no clean window" reading is withdrawn.** Beyond the stencil reach, the operator suppression is a t² term, $r_k^2(1/c-1/s)$. The noise leak, $r_k^2(1/s-1/S)$, has the same form, so the two sum to $r_k^2(1/c-1/S)$ and cancel when the measured Var W ≈ kT/m. The authors report this condition (SD 98% of theory), so the agreement of their curve is not a coincidence.
+> - **The noise shares (71/51/27/16/9%) are shares of the forward prediction.** As shares of the measured value they are 88/51/25/16/9%.
+> - **The processing-invariance hypothesis H_cont was not the authors' claim.** The extreme ratios occur when the coarse bins are as long as the lag.
+> - **The forward model has its own misfit** at the published processing: −20% at 0.75 µs and +8.6% at 3 µs.
+
+
 **Status:** a reanalysis result on public data. The hypothesis was formed post hoc and then tested with a confirmatory protocol that was frozen and committed (`c908437`, 2026-10-08T08:39Z) before the confirmatory statistic was computed on the real data. The protocol's synthetic self-test passed.
 
 What it changes is how the published conditioned mean-square displacement should be read. It does **not** challenge Basset–Boussinesq hydrodynamics. [[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]] finds the published Basset model within 1.6% of a gain-free observable. No new physical effect is claimed.
