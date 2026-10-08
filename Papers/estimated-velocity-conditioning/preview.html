@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Luke Granto" />
+  <meta name="dcterms.date" content="2026-10-08" />
+  <title>Conditioning on estimated velocities: estimator artifacts in short-time Brownian motion</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="/usr/share/javascript/mathjax/MathJax.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Conditioning on estimated velocities: estimator
+artifacts in short-time Brownian motion</h1>
+<p class="author">Luke Granto</p>
+<p class="date">2026-10-08</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>Selecting trajectory segments by their initial velocity is a powerful
+way to expose short-time dynamics, but in practice the selected velocity
+is never instantaneous: it is a finite-difference estimate from
+time-averaged positions. We show that this changes what a
+velocity-conditioned mean-squared displacement (MSD) measures. For any
+stationary Gaussian process whose velocity autocorrelation has a
+short-time cusp, <span
+class="math inline">\(C_v(\tau)=c-a|\tau|^{\alpha}\)</span>, the
+measured zero-velocity conditioned MSD separates into three parts. The
+first is the physical cusp term, distorted by a universal factor that
+depends only on <span class="math inline">\(\alpha\)</span>, the
+stencil, and the lag in units of the averaging time. The second is a
+ballistic contribution leaking back through noise in the velocity
+estimate, whose size is given by an exact identity. The third is a
+constant noise floor. The distortion of the apparent exponent decays
+most slowly for soft cusps, which is precisely the hydrodynamic-memory
+case <span class="math inline">\(\alpha=1/2\)</span> in which a <span
+class="math inline">\(t^{5/2}\)</span> law has recently been reported.
+Applying the framework to the public data of that experiment, we find
+that the published hydrodynamic model is accurate. A calibration-free
+regression observable agrees with it to within 1.6% from 0.75 to
+192 <span class="math inline">\(\mu\)</span>s. Even so, the conditioned
+MSD is not a processing-independent quantity. In a preregistered test,
+recomputing velocity nine ways from the same positions changed the
+conditioned MSD by up to a factor of four, as a parameter-free forward
+model predicts (<span class="math inline">\(\chi^2\)</span>-type
+statistic 20.9 over 32 cells, versus 4773 for the processing-independent
+reading). Over the same 3–12 <span class="math inline">\(\mu\)</span>s
+window the apparent exponent ranges from 2.29 to 2.96. The same
+mechanism makes stencil velocities appear smoother at short lags. It
+turns a passing value <span class="math inline">\(H_v=1/4\)</span> of
+the velocity roughness exponent into an apparent plateau when detector
+noise is not removed. We give a design criterion and remedies.</p>
+</div>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>Brownian motion in a liquid departs from the textbook Langevin
+picture at short times because the particle drags fluid with it: the
+Basset–Boussinesq history force gives the velocity autocorrelation a
+<span class="math inline">\(t^{1/2}\)</span> cusp and a long-time tail
+<span class="citation"
+data-cites="HaugeMartinLof1973 Hinch1975 Clercx1992"></span>.
+High-bandwidth optical tracking has resolved the ballistic-to-diffusive
+transition, hydrodynamic resonances and the instantaneous velocity
+distribution <span class="citation"
+data-cites="Huang2011 Franosch2011 Kheifets2014"></span>. A recent
+experiment <span class="citation" data-cites="Boynewicz2026"></span>
+went further, selecting moments when the measured velocity is near zero
+and reporting that the subsequent MSD grows as <span
+class="math inline">\(t^{5/2}\)</span>, a “super-ballistic” signature of
+the colored thermal force. Follow-up work discusses velocity-increment
+scaling with roughness exponent <span
+class="math inline">\(H_v=1/4\)</span> (fractal dimension <span
+class="math inline">\(7/4\)</span>) <span class="citation"
+data-cites="FractalPreprint2026 PreparedPreprint2026"></span>.</p>
+<p>Both kinds of analysis condition on, or difference, an
+<em>estimated</em> velocity. In practice positions are averaged over a
+bin of width <span class="math inline">\(\Delta\)</span> and velocity is
+a finite-difference stencil over several bins. The question we address
+is simple: how much of a velocity-conditioned statistic is the
+estimator? We derive a general answer, test it on the public data of
+Ref. <span class="citation" data-cites="Boynewicz2026"></span> <span
+class="citation" data-cites="Dryad2026"></span> with protocols frozen
+before the confirmatory statistics were computed, and give a criterion
+for when the physical exponent is observable.</p>
+<h1 id="theory">Theory</h1>
+<div class="figure*">
+<p><img src="figures/universal_operator_curves.png" style="width:85.0%"
+alt="image" /></p>
+</div>
+<h2 id="setup">Setup</h2>
+<p>Let <span class="math inline">\(x(t)\)</span> be stationary and
+Gaussian with velocity autocorrelation <span
+class="math display">\[C_v(\tau)=c-a|\tau|^{\alpha}+o(|\tau|^\alpha),\qquad
+0&lt;\alpha\le 1,\]</span> (<span
+class="math inline">\(\alpha=1/2\)</span> for Basset memory, <span
+class="math inline">\(\alpha=1\)</span> for ordinary Langevin dynamics).
+The measured positions are bin averages <span
+class="math inline">\(Y_n=\Delta^{-1}\int_{n\Delta}^{(n+1)\Delta}x\,dt\)</span>
+and the velocity estimate is <span
+class="math inline">\(W_n=\Delta^{-1}\sum_l d_l Y_{n+l}\)</span> with a
+central stencil satisfying <span class="math inline">\(\sum_l
+d_l=0\)</span> and <span class="math inline">\(\sum_l l\,d_l=1\)</span>.
+Selecting <span class="math inline">\(W\approx 0\)</span> and setting
+<span class="math inline">\(D_k=Y_k-Y_0\)</span>, Gaussian conditioning
+gives the measured conditioned MSD <span
+class="math display">\[M_k=u_k-\frac{r_k^2}{s},\]</span> with <span
+class="math inline">\(u_k=\mathrm{Var}\,D_k\)</span>, <span
+class="math inline">\(r_k=\mathrm{Cov}(D_k,W)\)</span> and <span
+class="math inline">\(s=\mathrm{Var}\,W\)</span>.</p>
+<h2 id="three-term-decomposition">Three-term decomposition</h2>
+<p><em>Cusp term.</em> The constant part <span
+class="math inline">\(c\)</span> of <span
+class="math inline">\(C_v\)</span> is ballistic motion, <span
+class="math inline">\(x=v_0t\)</span>, for which <span
+class="math inline">\(D_k=v_0k\Delta\)</span> and <span
+class="math inline">\(W=v_0\)</span> exactly; its contribution to <span
+class="math inline">\(M_k\)</span> cancels identically. To first order
+in <span class="math inline">\(a\)</span>, <span
+class="math inline">\(M_k\)</span> is therefore the variance of the
+residual functional <span class="math inline">\(L_k=Y_k-Y_0-k\sum_l
+d_lY_l\)</span>, which annihilates constant and linear motion, evaluated
+with the generalized position covariance <span
+class="math inline">\(\gamma(\tau)=a|\tau|^{\alpha+2}/[(\alpha+1)(\alpha+2)]\)</span>
+(so that <span
+class="math inline">\(-\gamma&#39;&#39;=-a|\tau|^\alpha\)</span>). After
+bin averaging and scaling out <span
+class="math inline">\(\Delta\)</span>, <span
+class="math display">\[M_k^{\rm
+cusp}=a\,\Delta^{\alpha+2}\,\Phi_\alpha(k),\]</span> with <span
+class="math inline">\(\Phi_\alpha\)</span> a universal function of the
+lag in bins that depends only on <span
+class="math inline">\(\alpha\)</span> and the stencil. Its continuum
+limit <span class="math inline">\(\Phi_\alpha\to
+2k^{\alpha+2}/(\alpha+2)\)</span> reproduces the instantaneous result
+<span
+class="math inline">\(E[D^2|v_0=0]=2at^{\alpha+2}/(\alpha+2)\)</span>,
+i.e. <span class="math inline">\(\tfrac45 a t^{5/2}\)</span> for <span
+class="math inline">\(\alpha=1/2\)</span> <span class="citation"
+data-cites="Boynewicz2026"></span>.</p>
+<p><em>Ballistic leak.</em> Independent white position noise of variance
+<span class="math inline">\(\sigma^2\)</span> adds <span
+class="math inline">\(\sigma_W^2=\sigma^2\sum_l d_l^2/\Delta^2\)</span>
+to <span class="math inline">\(s\)</span> and, beyond the stencil reach,
+leaves <span class="math inline">\(r_k\)</span> unchanged. Exactly,
+<span class="math display">\[\delta
+M_k=2\sigma^2+\frac{\varepsilon}{1+\varepsilon}\,\frac{r_k^2}{s},\qquad
+\varepsilon=\frac{\sigma_W^2}{s}.\]</span> Since <span
+class="math inline">\(r_k^2/s\approx c\,t_k^2\)</span> at short times,
+noise in the selection variable leaks a fraction <span
+class="math inline">\(\varepsilon/(1+\varepsilon)\)</span> of the
+ballistic <span class="math inline">\(t^2\)</span> term back into a
+quantity that should have cancelled it.</p>
+<p><em>Floor.</em> The term <span
+class="math inline">\(2\sigma^2\)</span> is lag-independent.</p>
+<p>The measured curve is thus a sum of terms with local exponents above
+<span class="math inline">\(\alpha+2\)</span> (the distorted cusp),
+equal to 2 (the leak) and equal to 0 (the floor).</p>
+<h2 id="universal-distortion-and-a-design-criterion">Universal
+distortion and a design criterion</h2>
+<p>Figure <a href="#fig:universal" data-reference-type="ref"
+data-reference="fig:universal">[fig:universal]</a> shows <span
+class="math inline">\(\Phi_\alpha\)</span>. For <span
+class="math inline">\(\alpha=1/2\)</span> and an eighth-order stencil,
+the measured cusp term is 0.24, 0.62 and 0.82 of its continuum value at
+<span class="math inline">\(k=1,4,16\)</span>. Its apparent exponent at
+<span class="math inline">\(k=1\)</span> is 3.41 rather than 2.5. The
+exponent is within 0.1 (0.05) of <span
+class="math inline">\(\alpha+2\)</span> only for <span
+class="math inline">\(k\gtrsim 23\)</span> (71) bins. For <span
+class="math inline">\(\alpha=1\)</span> the corresponding values are
+<span class="math inline">\(k\gtrsim 7\)</span> (13); for <span
+class="math inline">\(\alpha=1/4\)</span> the 0.1 threshold needs <span
+class="math inline">\(k\gtrsim82\)</span>. Softer cusps, meaning
+stronger memory, recover most slowly. A clean <span
+class="math inline">\(t^{\alpha+2}\)</span> therefore requires all of
+the following:</p>
+<ul>
+<li><p><span class="math inline">\(t\gtrsim k_{\min}\Delta\)</span>, the
+operator condition;</p></li>
+<li><p><span class="math inline">\(\varepsilon c t^2\ll
+at^{\alpha+2}\)</span>, the velocity-noise condition;</p></li>
+<li><p><span class="math inline">\(2\sigma^2\ll at^{\alpha+2}\)</span>,
+the position-noise condition;</p></li>
+<li><p><span class="math inline">\(t\)</span> well below the onset of
+higher-order dynamics, for Basset memory <span
+class="math inline">\(\min(\tau_f,\tau_p)\)</span> with <span
+class="math inline">\(\tau_f=\rho_f R^2/\eta\)</span> and <span
+class="math inline">\(\tau_p=m/6\pi\eta R\)</span>.</p></li>
+</ul>
+<p>To first order in <span class="math inline">\(a\)</span> the theory
+agrees with the full Basset forward model (below) to within 1–5% up to
+about 3 <span class="math inline">\(\mu\)</span>s at the parameters of
+Ref. <span class="citation" data-cites="Boynewicz2026"></span>. The leak
+identity is exact, and holds to machine precision numerically.</p>
+<h2 id="velocity-roughness">Velocity roughness</h2>
+<p>The same construction with weights <span
+class="math inline">\(d_{l-k}-d_l\)</span> gives <span
+class="math inline">\(\mathrm{Var}(W_k-W_0)=a\Delta^\alpha\Psi_\alpha(k)\)</span>,
+with <span class="math inline">\(\Psi_\alpha\to 2k^\alpha\)</span>. The
+apparent roughness exponent, half the local log-slope of <span
+class="math inline">\(\Psi_\alpha\)</span>, is biased upward at short
+lags. For <span class="math inline">\(\alpha=1/2\)</span> (true <span
+class="math inline">\(H_v=1/4\)</span>) with an eighth-order stencil it
+is 0.67, 0.50, 0.36, 0.31 and 0.29 at <span
+class="math inline">\(k=1,2,4,8,16\)</span>: stencil velocities look
+smoother than the physical velocity.</p>
+<h1 id="application-to-public-data">Application to public data</h1>
+<p>We analyzed the six processed traces of Ref. <span class="citation"
+data-cites="Dryad2026"></span>: an optically trapped BaTiO<span
+class="math inline">\(_3\)</span> sphere in acetone (<span
+class="math inline">\(R=3.40\,\mu\)</span>m), 750 ns bins, an
+eighth-order stencil, and six empty-trap noise traces. All seven files
+matched their published SHA-256 digests. The authors’ notebooks were
+read as text, not executed. Confirmatory protocols were committed before
+the corresponding real-data statistics were computed, each with
+synthetic positive and negative controls. Amendments are dated, and one
+inadvertent protocol deviation is disclosed (Methods).</p>
+<p><em>The hydrodynamic model is accurate.</em> The regression slope
+<span
+class="math inline">\(R_k=\mathrm{Cov}(D_k,W)/\mathrm{Var}\,W\)</span>,
+after subtracting empty-trap moments, has units of seconds and is
+independent of the volts-to-meters calibration. In equilibrium it equals
+the impulse response <span class="math inline">\(m\chi(t)\)</span> seen
+through the operator. With the published parameters and no free
+parameter, the Basset model matches <span
+class="math inline">\(R_k\)</span> to within 1.6% from 0.75 to 192 <span
+class="math inline">\(\mu\)</span>s. A memoryless Langevin model with
+free damping and stiffness is rejected (<span
+class="math inline">\(\Delta\chi^2=5483\)</span>). Equipartition through
+the operator reproduces the published calibration to 0.7–1.6%; ignoring
+the operator gives an 8% discrepancy. The power spectrum agrees with the
+model to 1–4% from 2 to 100 kHz (Fig. <a href="#fig:psd"
+data-reference-type="ref" data-reference="fig:psd">3</a>).</p>
+<p><em>The conditioned MSD is processing-dependent.</em> Through the
+published operator, the zero-velocity conditioned MSD of the Basset
+model is 0.26, 0.49, 0.67, 0.79 and 0.87 of the continuum curve at 0.75,
+1.5, 3, 6 and 12 <span class="math inline">\(\mu\)</span>s. Empty-trap
+noise contributes an upper estimate of 71, 51, 27, 16 and 9% of the
+measured value at the same lags. Over 0.75–6 <span
+class="math inline">\(\mu\)</span>s the log-log slopes are:</p>
+<ul>
+<li><p>operator alone: 2.93;</p></li>
+<li><p>operator plus measured noise: 2.42;</p></li>
+<li><p>data: 2.52;</p></li>
+<li><p>continuum curve: 2.41.</p></li>
+</ul>
+<p>To test this explanation we recomputed velocity from the supplied
+positions with stencils of order 2, 4 and 8, on positions coarsened by
+factors of 1, 2 and 4, giving nine variants. We compared ratios of
+conditioned MSDs to the published processing at 3, 6, 12 and 24 <span
+class="math inline">\(\mu\)</span>s; these ratios do not depend on the
+calibration. The forward model predicts ratios between 0.25 and 0.98.
+The processing-independent reading predicts 1. The frozen decision
+statistic was 20.9 for the forward model and 4773 for the
+processing-independent reading, over 32 cells. The median absolute log
+deviation from the forward model was 0.024, and the synthetic self-test
+returned the same verdict. Over 3–12 <span
+class="math inline">\(\mu\)</span>s the apparent exponent ranges from
+2.29 to 2.96 with processing alone (Fig. <a href="#fig:processing"
+data-reference-type="ref" data-reference="fig:processing">1</a>). At the
+published nonzero conditioning speeds the effect changes sign. Coarser
+processing suppresses the curve at <span
+class="math inline">\(v_0=0.5\sigma\)</span> and enhances it at <span
+class="math inline">\(2\sigma\)</span>, both favoring the forward model,
+with a predicted crossover near <span
+class="math inline">\(1\sigma\)</span>.</p>
+<figure id="fig:processing">
+<img src="figures/processing_dependence_figure.png" />
+<figcaption>Zero-velocity conditioned MSD from the same positions under
+three velocity estimators (points), the parameter-free forward model for
+each (dashed), and the continuum curve (solid). Only the published
+choice lands on the continuum curve.</figcaption>
+</figure>
+<p><em>Velocity roughness.</em> Noise-subtracted increment variances of
+recomputed stencil velocities follow the full Basset forward model to
+within 1–6% beyond the fourth lag. In that model the local roughness
+exponent passes through <span class="math inline">\(1/4\)</span> near
+11 <span class="math inline">\(\mu\)</span>s on its way down to the
+trap-dominated regime, and never plateaus. Without noise subtraction the
+data show an apparent plateau, <span
+class="math inline">\(H_v\approx0.21\)</span>–0.25 over 1.5–12 <span
+class="math inline">\(\mu\)</span>s (Fig. <a href="#fig:roughness"
+data-reference-type="ref" data-reference="fig:roughness">2</a>),
+produced by detector noise flattening a falling curve. We could not
+access the full text of Refs. <span class="citation"
+data-cites="FractalPreprint2026 PreparedPreprint2026"></span> and do not
+know their estimators. Reference <span class="citation"
+data-cites="PreparedPreprint2026"></span> concerns displacement
+statistics of prepared (conditioned) states from equilibrium
+trajectories and may treat aspects of the question addressed here. We
+therefore state only that a plateau near <span
+class="math inline">\(1/4\)</span> in stencil-velocity increments is
+not, by itself, evidence of a scaling regime.</p>
+<figure id="fig:roughness">
+<img src="figures/apparent_velocity_roughness.png" />
+<figcaption>Apparent velocity roughness exponent. Black: full Basset
+model through the published operator; dotted: first-order cusp theory;
+points: noise-subtracted data; crosses: raw data.</figcaption>
+</figure>
+<p><em>Noise is not particle-independent.</em> Above 400 kHz the
+particle traces are quieter than the empty-trap traces (Fig. <a
+href="#fig:psd" data-reference-type="ref"
+data-reference="fig:psd">3</a>), so the noise floor with a particle
+present is roughly 0.5–0.7 of the empty-trap floor. Between 100 and
+400 kHz the particle spectrum exceeds model plus noise by about 23%.
+This is the spectral counterpart of a 1–2% structured residual in <span
+class="math inline">\(R_k\)</span> at 2–12 <span
+class="math inline">\(\mu\)</span>s. We could not resolve that residual
+with a free memory exponent, a detector low-pass, single- or
+two-component noise rescaling, or per-trace fits.</p>
+<figure id="fig:psd">
+<img src="figures/noise_additivity_psd.png" />
+<figcaption>Power spectra of particle and empty-trap traces with the
+published Basset spectrum (binned and aliased).</figcaption>
+</figure>
+<h1 id="discussion">Discussion</h1>
+<p>Nothing here contradicts the hydrodynamics of Refs. <span
+class="citation"
+data-cites="HaugeMartinLof1973 Hinch1975 Boynewicz2026"></span>. The
+model is accurate. What changes is the evidential status of a plotted
+curve: a velocity-conditioned MSD built from estimated velocities is a
+property of the physics <em>and</em> of the estimator. At the published
+settings its agreement with the continuum <span
+class="math inline">\(t^{5/2}\)</span> curve reflects two large effects
+that nearly cancel. The physical super-ballistic law is still
+recoverable, but only through a forward model or an
+estimator-independent observable such as <span
+class="math inline">\(R_k\)</span>. Practical remedies are:</p>
+<ul>
+<li><p>model the operator and the noise explicitly;</p></li>
+<li><p>report processing variants;</p></li>
+<li><p>sample fast enough that <span
+class="math inline">\(k_{\min}\Delta\ll\min(\tau_f,\tau_p)\)</span>; for
+this experiment <span
+class="math inline">\(k_{\min}\Delta\approx17\,\mu\)</span>s while <span
+class="math inline">\(\tau_f\approx28\,\mu\)</span>s, leaving
+essentially no clean window;</p></li>
+<li><p>select on an independent velocity measurement, for example
+Doppler velocimetry, rather than on differences of the same
+positions.</p></li>
+</ul>
+<p>The decomposition applies to any velocity-selected statistic, for
+instance in single-particle tracking and molecular dynamics.</p>
+<p><em>Limitations.</em> The analysis covers one particle and one
+dataset, and the authors’ upstream high-pass inversion was not varied.
+The theory is first order in <span class="math inline">\(a\)</span> and
+assumes stationary Gaussian statistics with white position noise;
+Fig. <a href="#fig:psd" data-reference-type="ref"
+data-reference="fig:psd">3</a> shows the real noise is neither white nor
+particle-independent. A limited literature search found no prior
+treatment of this estimator effect, but Refs. <span class="citation"
+data-cites="FractalPreprint2026 PreparedPreprint2026"></span> could not
+be read in full, and we do not claim priority.</p>
+<h1 class="unnumbered" id="methods-and-data-availability">Methods and
+data availability</h1>
+<p>All code, frozen protocols, results and digests are public at <a
+href="https://github.com/lukegranto23/physics-worldmap"
+class="uri">https://github.com/lukegranto23/physics-worldmap</a> (labs
+34–47 in the folder “62 Computational Labs”), with write-ups as
+Benchmarks 014–018. Data are from Ref. <span class="citation"
+data-cites="Dryad2026"></span> (CC0) and are not redistributed. One
+disclosed protocol deviation concerns the calibration-free test: before
+its run, a rough first-lag value of <span
+class="math inline">\(R/\Delta\)</span> was computed while estimating
+noise levels from earlier saved results. No decision rule was
+changed.</p>
+<h1 class="unnumbered" id="acknowledgments">Acknowledgments</h1>
+<p>We thank J. Boynewicz, M. C. Thumann and M. G. Raizen for making
+their processed data and analysis notebooks public. The analysis and
+code were developed with assistance from an AI system (Claude,
+Anthropic); the author takes responsibility for the content.</p>
+<div class="thebibliography">
+<p><span>99</span> E. H. Hauge and A. Martin-Löf, J. Stat. Phys.
+<strong>7</strong>, 259 (1973). E. J. Hinch, J. Fluid Mech.
+<strong>72</strong>, 499 (1975). H. J. H. Clercx and P. P. J. M. Schram,
+Phys. Rev. A <strong>46</strong>, 1942 (1992). R. Huang, I. Chavez,
+K. M. Taute, B. Lukić, S. Jeney, M. G. Raizen, and E.-L. Florin, Nat.
+Phys. <strong>7</strong>, 576 (2011), doi:10.1038/nphys1953.
+T. Franosch, M. Grimm, M. Belushkin, F. M. Mor, G. Foffi, L. Forró, and
+S. Jeney, Nature <strong>478</strong>, 85 (2011). S. Kheifets, A. Simha,
+K. Melin, T. Li, and M. G. Raizen, Science <strong>343</strong>, 1493
+(2014), doi:10.1126/science.1248091. J. Boynewicz, M. C. Thumann, and
+M. G. Raizen, Sci. Adv. <strong>12</strong>, eaeb4579 (2026),
+doi:10.1126/sciadv.aeb4579. J. Boynewicz, M. C. Thumann, and M. G.
+Raizen, Dryad dataset, doi:10.5061/dryad.pvmcvdnz4 (2026). “The fractal
+dimension of Brownian dynamics in liquids,” arXiv:2605.16252 (2026).
+J. Boynewicz, M. C. Thumann, G. Procopio, and M. Giona, “Brownian
+motion: non-equilibrium states from equilibrium trajectories –
+recovering hydrodynamic regimes from prepared displacement
+measurements,” arXiv:2605.16247 (2026).</p>
+</div>
+</body>
+</html>

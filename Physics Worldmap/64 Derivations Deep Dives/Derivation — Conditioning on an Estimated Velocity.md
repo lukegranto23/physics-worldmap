@@ -100,7 +100,7 @@ For the published experiment, criterion 1 requires $t\gtrsim17$ µs, while crite
 
 - **What is standard.** The underlying mathematics is standard: Gaussian conditioning and the linear-functional variance of a process with a power-law structure function.
 - **Prior-art screen.** Two web searches on 2026-10-08 found no treatment of finite-difference velocity estimation in velocity-conditioned MSDs. The nearest hit was a different mechanism: apparent superballistic motion from biased detachment in random walks. A limited screen does not establish novelty.
-- **Sensitivity of related work.** A 2026 preprint on the fractal dimension of Brownian dynamics in liquids builds on the same conditioned $t^{5/2}$ result. It should be checked for the same sensitivity.
+- **Sensitivity of related work.** A 2026 preprint on the fractal dimension of Brownian dynamics in liquids builds on the same physics. The velocity-increment version of this analysis is in [[Benchmark 018 — Apparent Velocity Roughness and the 7-4 Fractal Dimension]].
 - **Validity.** The approximations are first order in $a$, with stationary Gaussian statistics and white position noise. Lab 45 shows that real noise is not white and not particle-independent.
 
 [[Derivation Atlas]] · [[Benchmark 017 — Processing Dependence of the Conditioned Super-Ballistic Signal]] · [[Statistical Physics Map]]
