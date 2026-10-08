@@ -1,0 +1,59 @@
+{
+  "utc": "2026-09-21T06:31:14.892322+00:00",
+  "revision": "c5895f04a64254068ee4ce85086baae80a363b9c",
+  "committed_hashes": {
+    "184.index.js": "a55876b6637888e84e212b9c7e3ca7b7f8d8d8a36e1eb1cc01ae93c276ad6bc9",
+    "50.index.js": "45195f12661aeef8aa7ffabfd780d02fffd45c2c37102ff2ecf217a56d6d4f92",
+    "606.index.js": "629225cc3e937e22ce6b90c21f1d938d1be0716257446593555696bf1d01523e",
+    "index.js": "289ccb9654b7113dcfd539f5b143fab30537b4045e53652161e8c88353ef7d90",
+    "licenses.txt": "ecaaf3e9799bcf31db16d25584213e1ef190a364d561a82164a5abc5b1327835",
+    "package.json": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+  },
+  "overlay_hashes": {
+    "184.index.js": "a55876b6637888e84e212b9c7e3ca7b7f8d8d8a36e1eb1cc01ae93c276ad6bc9",
+    "50.index.js": "45195f12661aeef8aa7ffabfd780d02fffd45c2c37102ff2ecf217a56d6d4f92",
+    "606.index.js": "629225cc3e937e22ce6b90c21f1d938d1be0716257446593555696bf1d01523e",
+    "index.js": "289ccb9654b7113dcfd539f5b143fab30537b4045e53652161e8c88353ef7d90",
+    "licenses.txt": "ecaaf3e9799bcf31db16d25584213e1ef190a364d561a82164a5abc5b1327835",
+    "package.json": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+  },
+  "overlay_status": "",
+  "overlay_original": [
+    false,
+    false,
+    false
+  ],
+  "overlay_patched": [
+    false,
+    false,
+    false
+  ],
+  "clean_hashes": {
+    "50.index.js": "45195f12661aeef8aa7ffabfd780d02fffd45c2c37102ff2ecf217a56d6d4f92",
+    "606.index.js": "629225cc3e937e22ce6b90c21f1d938d1be0716257446593555696bf1d01523e",
+    "index.js": "289ccb9654b7113dcfd539f5b143fab30537b4045e53652161e8c88353ef7d90",
+    "licenses.txt": "ecaaf3e9799bcf31db16d25584213e1ef190a364d561a82164a5abc5b1327835",
+    "package.json": "3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a"
+  },
+  "absent_in_clean": [
+    "184.index.js"
+  ],
+  "added_in_clean": [],
+  "changed_shared_files": [],
+  "clean_status_before_staging": " D dist/184.index.js\n",
+  "clean_original": [
+    true,
+    true,
+    true
+  ],
+  "clean_patched": [
+    true,
+    true,
+    true
+  ],
+  "source_delta": "",
+  "limits": [
+    "No action runtime, hosted workflow, remote exploit, or publication",
+    "Stale output presence alone does not establish reachability or execution"
+  ]
+}

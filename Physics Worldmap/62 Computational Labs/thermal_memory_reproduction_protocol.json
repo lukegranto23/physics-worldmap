@@ -1,0 +1,104 @@
+{
+  "title": "Published subdiffusion correlation-to-memory reproduction",
+  "version": "1.2",
+  "frozen_utc": "2026-09-05T00:00:00Z",
+  "status": "regression specification written after exploratory implementation checks; not externally preregistered",
+  "amendments": [
+    {
+      "version": "1.1",
+      "from_version": "1.0",
+      "reason": "After the first scoped run, the constructive Positive Real Lemma stage was independently tested and added because its Riccati and Lyapunov residuals could be verified directly.",
+      "changes": "Added regularized Riccati solution, positive-semidefinite covariance, noise factor, stationary-covariance checks, and their gates. Earlier VACF, kernel, sampling, and negative-control gates were unchanged."
+    },
+    {
+      "version": "1.2",
+      "from_version": "1.1",
+      "reason": "The final nonsymmetric Lanczos sweep was added after its similarity, coupling, kernel-invariance, and transformed-Lyapunov residuals could be checked independently.",
+      "changes": "Added finite-precision tridiagonalization and residual gates. All earlier gates were unchanged."
+    }
+  ],
+  "primary_source": {
+    "authors": "Bockius, Shea, Jung, Schmid, and Hanke",
+    "title": "Model reduction techniques for the computation of extended Markov parameterizations for generalized Langevin equations",
+    "year": 2021,
+    "doi": "10.1088/1361-648X/abe6df",
+    "arxiv": "https://arxiv.org/abs/2101.02657"
+  },
+  "published_target": {
+    "reduced_units": true,
+    "beta": 1.0,
+    "mass": 1.0,
+    "vacf": "E_(3/2)(-|t|^(3/2))",
+    "memory_kernel": "t^(-1/2)/sqrt(pi)"
+  },
+  "cases": [
+    {
+      "id": "published_primary",
+      "tau": 0.6,
+      "n": 10,
+      "constraint": "Newton-enforced Re(A_11)=0",
+      "paper_location": "Section 3.1"
+    },
+    {
+      "id": "published_coarse_unconstrained",
+      "tau": 1.0,
+      "n": 6,
+      "constraint": "omitted",
+      "paper_location": "Section 3.1 coarse-grid failure discussion"
+    }
+  ],
+  "implementation_scope": {
+    "implemented": [
+      "analytic target evaluation from an integral representation checked against the defining series",
+      "Appendix C Algorithm 2 moment-functional Jacobi construction and analytic derivative",
+      "Appendix A Newton update using the block matrix logarithm",
+      "stable system matrix for the primary case",
+      "diagnostic memory kernel b^T exp(t A0) c",
+      "sampled positive-real frequency diagnostic",
+      "regularized Riccati solution from Equation 62",
+      "positive-semidefinite auxiliary covariance and rank-one noise factor",
+      "full stationary Lyapunov covariance identity",
+      "final nonsymmetric Lanczos sweep with finite-precision residual audit"
+    ],
+    "not_claimed": [
+      "authors' source-code reproduction",
+      "all six parameter cases",
+      "spectral deletion or negative-real-mode duplication",
+      "experimental molecular-dynamics reproduction"
+    ]
+  },
+  "evaluation": {
+    "dense_vacf_interval": [0.0, 30.0],
+    "dense_vacf_points": 601,
+    "kernel_interval": [0.05, 12.0],
+    "kernel_points": 180,
+    "frequency_interval": [1e-5, 1e4],
+    "frequency_points": 3000,
+    "newton_tolerance": 1e-5,
+    "newton_max_iterations": 10,
+    "regularization_delta_recorded_but_not_used_in_kernel": 1e-5
+  },
+  "regression_gates": {
+    "mittag_leffler_series_max_abs_error": 2e-11,
+    "moment_identity_max_abs_error": 1e-8,
+    "newton_constraint_abs_residual": 1e-5,
+    "primary_y1_abs_perturbation": 0.01,
+    "primary_max_real_system_eigenvalue": -1e-6,
+    "primary_dense_vacf_rmse": 0.002,
+    "primary_kernel_log_rmse": 0.2,
+    "primary_sampled_positive_real_min": -1e-8,
+    "primary_riccati_residual_frobenius": 1e-10,
+    "primary_covariance_min_eigenvalue": -1e-8,
+    "primary_lyapunov_residual_frobenius": 1e-8,
+    "primary_regularized_vacf_rmse": 0.002,
+    "lanczos_biorthogonality_max_abs_error": 2e-6,
+    "lanczos_similarity_frobenius_error": 1e-9,
+    "lanczos_off_tridiagonal_max_abs": 2e-5,
+    "lanczos_block_structure_max_abs_error": 2e-6,
+    "lanczos_first_coupling_max_abs_error": 1e-10,
+    "lanczos_kernel_max_abs_error": 1e-6,
+    "lanczos_transformed_lyapunov_frobenius_error": 1e-8,
+    "coarse_unconstrained_derivative_target": -0.204,
+    "coarse_unconstrained_derivative_tolerance": 0.01
+  }
+}

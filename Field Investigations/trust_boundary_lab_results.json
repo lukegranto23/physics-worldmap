@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "generated_utc": "2026-09-18T05:41:11.989526+00:00",
+  "source_sha256": "823372f34676bfeb128bdd3d7ca5cd0a4df19a1f127d1c1f6219ed24e1d0e032",
+  "scope": "Deterministic reachability under declared toy-graph assumptions only",
+  "not_demonstrated": [
+    "live exploitation",
+    "real repository configuration",
+    "credential theft",
+    "malware detection",
+    "security certification"
+  ],
+  "scenarios": [
+    {
+      "scenario": "shared_cache_and_privileged_release",
+      "assumption": "Untrusted cache contents are executed in a publisher-capable job.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "publishing_authority"
+        ],
+        "published_bytes": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "short_lived_credentials_only",
+      "assumption": "Credential lifetime changes, but authority is available during execution.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "publishing_authority"
+        ],
+        "published_bytes": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "fresh_runner_with_same_shared_cache",
+      "assumption": "A new machine still restores the same untrusted persistent state.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "publishing_authority"
+        ],
+        "published_bytes": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "dependency_install_scripts_disabled",
+      "assumption": "Build-tool execution remains; blocking one execution phase is not all phases.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "publishing_authority"
+        ],
+        "published_bytes": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "separate_nonexecuting_publisher",
+      "assumption": "Publisher does not execute artifact code, but accepts its bytes without an integrity gate.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": null,
+        "published_bytes": [
+          "untrusted_pr_execution",
+          "shared_cache",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "untrusted_pr_cache_path_removed",
+      "assumption": "Only the modeled PR-to-cache route is considered in this row.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": null,
+        "published_bytes": null
+      }
+    },
+    {
+      "scenario": "cache_cut_but_different_dependency_entry",
+      "assumption": "A separate unreviewed code input survives the cache-specific control.",
+      "entry": "unreviewed_dependency",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "built_artifact",
+          "published_bytes"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "release_execution",
+          "publishing_authority"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "unreviewed_dependency",
+          "build_tool_execution"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": [
+          "unreviewed_dependency",
+          "build_tool_execution",
+          "release_execution",
+          "publishing_authority"
+        ],
+        "published_bytes": [
+          "unreviewed_dependency",
+          "build_tool_execution",
+          "release_execution",
+          "built_artifact",
+          "published_bytes"
+        ]
+      }
+    },
+    {
+      "scenario": "isolated_authority_and_effective_artifact_gate",
+      "assumption": "Assumes the gate actually rejects these influenced bytes; no detector is implemented.",
+      "entry": "untrusted_pr_execution",
+      "edges": [
+        [
+          "build_tool_execution",
+          "release_execution"
+        ],
+        [
+          "dependency_install_execution",
+          "release_execution"
+        ],
+        [
+          "release_execution",
+          "built_artifact"
+        ],
+        [
+          "shared_cache",
+          "build_tool_execution"
+        ],
+        [
+          "shared_cache",
+          "dependency_install_execution"
+        ],
+        [
+          "untrusted_pr_execution",
+          "shared_cache"
+        ]
+      ],
+      "influence_paths": {
+        "publishing_authority": null,
+        "published_bytes": null
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "shared_cache_and_privileged_release",
+      "passed": true
+    },
+    {
+      "name": "short_lived_credentials_only",
+      "passed": true
+    },
+    {
+      "name": "fresh_runner_with_same_shared_cache",
+      "passed": true
+    },
+    {
+      "name": "dependency_install_scripts_disabled",
+      "passed": true
+    },
+    {
+      "name": "separate_nonexecuting_publisher",
+      "passed": true
+    },
+    {
+      "name": "untrusted_pr_cache_path_removed",
+      "passed": true
+    },
+    {
+      "name": "cache_cut_but_different_dependency_entry",
+      "passed": true
+    },
+    {
+      "name": "isolated_authority_and_effective_artifact_gate",
+      "passed": true
+    },
+    {
+      "name": "directed_not_reversible",
+      "passed": true
+    },
+    {
+      "name": "cycle_terminates",
+      "passed": true
+    },
+    {
+      "name": "identity_path",
+      "passed": true
+    },
+    {
+      "name": "disconnected",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true
+}

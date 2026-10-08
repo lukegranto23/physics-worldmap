@@ -1,0 +1,21 @@
+{
+  "title": "Post-hoc physical response and diffusion-horizon audit",
+  "created": "2026-09-12",
+  "status": "Post-hoc diagnostic motivated by the original noisy study and known finite-memory cutoff theory. This is not an independent held-out discovery test.",
+  "inputs": ["results/thermal_memory_reproduction/curves.npz", "results/noisy_memory_stress/inputs_and_models.npz"],
+  "fit_changes": "none; evaluate already accepted regularized matrices",
+  "units": "beta=mass=1; dimensionless time, frequency and diffusivity",
+  "response_definition": "stationary mean velocity amplitude per additive force for F(t)=Re(F0 exp(i omega t))",
+  "frequency_bands": {"very_slow": [0.0001, 0.01], "slow": [0.03, 0.3], "intermediate": [0.3, 3.0], "fast": [3.0, 30.0]},
+  "points_per_band": 101,
+  "error_measure": "maximum complex relative mobility error per logarithmically sampled band; summaries conditional on prior acceptance",
+  "time_grid": {"minimum": 0.05, "maximum": 100000.0, "points": 350},
+  "clean_checks_at_times": [1.0, 10.0, 30.0, 100.0, 1000.0, 10000.0],
+  "time_horizon_threshold": 0.1,
+  "interpretation": [
+    "Numerical horizons are first grid-point exceedances, not uniform confidence bounds.",
+    "Normal-diffusion asymptotics require finite real stable full and auxiliary matrices; singular auxiliary blocks are explicit exceptions.",
+    "The fractional target has no physical low-frequency cutoff by construction; a real material may have one.",
+    "Equilibrium linear response is fixed by the exact all-time VACF. These are predicted response diagnostics, not measured forces or evidence for new physics."
+  ]
+}

@@ -1,0 +1,20 @@
+--- a/.github/workflows/check-dist.yml
++++ b/.github/workflows/check-dist.yml
+@@ -59,9 +59,15 @@
+             ls -la ./
+             exit 1
+           fi
+-          if [ "$(git diff --ignore-space-at-eol --text dist/ | wc -l)" -gt "0" ]; then
++          git add -- dist/
++          diff_status=0
++          git diff --cached --quiet -- dist/ || diff_status=$?
++          if [ "$diff_status" -gt 1 ]; then
++            exit "$diff_status"
++          fi
++          if [ "$diff_status" -eq 1 ]; then
+             echo "Detected uncommitted changes after build. See status below:"
+-            git diff --ignore-space-at-eol --text dist/
++            git diff --cached -- dist/
+             exit 1
+           fi
+ 

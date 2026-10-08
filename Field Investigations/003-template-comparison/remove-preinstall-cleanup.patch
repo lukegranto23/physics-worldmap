@@ -1,0 +1,13 @@
+--- a/.github/workflows/check-dist.yml
++++ b/.github/workflows/check-dist.yml
+@@ -37,10 +37,6 @@
+           node-version-file: .node-version
+           cache: npm
+ 
+-      - name: Remove dist/ Directory
+-        id: remove-dist
+-        run: npx rimraf ./dist
+-
+       - name: Install Dependencies
+         id: install
+         run: npm ci

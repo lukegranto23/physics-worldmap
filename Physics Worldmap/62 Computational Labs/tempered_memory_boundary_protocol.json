@@ -1,0 +1,32 @@
+{
+  "title": "Finite sampled observations versus the asymptotic diffusion class",
+  "version": "1.0",
+  "created": "2026-09-13",
+  "status": "Exploratory deterministic calculation specified after preliminary covariance and KL calculations. Not a preregistered discovery test or a new fitted-model benchmark.",
+  "units": "Mass, thermal energy, and fractional friction scale equal one; all times, frequencies, and diffusion coefficients are dimensionless.",
+  "family": "gamma_epsilon(t) = exp(-epsilon*t)/sqrt(pi*t); Ctilde_epsilon(s) = 1/(s + (s+epsilon)^(-1/2)), principal square root",
+  "observation_model": "M independent, exactly sampled, stationary zero-mean Gaussian velocity vectors; each vector has 20 entries at times 0, 0.6, ..., 11.4. No sensor error, nuisance parameters, forcing, or reconstruction compression is included.",
+  "samples_per_trajectory": 20,
+  "sample_spacing": 0.6,
+  "ensemble_sizes": [64, 256, 1024, 4096],
+  "cutoffs": [0.00001, 0.0001, 0.001, 0.01, 0.1],
+  "null_cutoff": 0.0,
+  "test_size": 0.05,
+  "bound": "For any test with size at most alpha at epsilon=0, power at epsilon>0 is at most min(1, alpha + sqrt(M*KL(N(0,K_epsilon)||N(0,K_0))/2)). This is a rigorous statistical inequality evaluated in floating-point arithmetic, not an achieved detector power or interval-certified numerical bound.",
+  "covariance_method": "Analytic inverse Laplace transform using the three roots of z^3-epsilon*z+1, partial fractions, and scaled complementary error functions; checked against independent zero-cutoff quadrature and the Volterra equation.",
+  "kl_method": "Cholesky-whitened covariance difference and eigenvalues; use a small-argument series for a-log1p(a); independently compare with direct trace/log-determinant and generalized-eigenvalue formulas.",
+  "curve_points": 401,
+  "frequency_grid": {"minimum": 0.00000001, "maximum": 10.0, "points": 500},
+  "plot_cutoffs": [0.0001, 0.001, 0.01],
+  "validation_cutoffs": [0.0, 0.001, 0.01, 0.1],
+  "validation_times": [0.1, 1.0, 5.0, 20.0],
+  "validation_laplace_arguments": [0.5, 1.0, 2.0],
+  "scope_limits": [
+    "No finite-data result for ideal continuous-path observation or exact correlation oracles is claimed.",
+    "Gaussian equilibrium preparation and independent repetitions are assumptions. FDT alone does not imply Gaussian statistics.",
+    "The asymptotic exponent is discontinuous at zero cutoff; D_epsilon=sqrt(epsilon) itself is continuous.",
+    "A large upper bound is inconclusive; a small bound constrains every test under the stated experiment.",
+    "These cutoffs are development examples. The physical tempered-memory family has established prior art."
+  ],
+  "primary_sources": ["https://arxiv.org/html/0905.0826", "https://arxiv.org/html/2009.04896"]
+}

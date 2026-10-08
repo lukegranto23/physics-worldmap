@@ -1,0 +1,29 @@
+{
+  "started_utc": "2026-09-20T20:51:56.036686+00:00",
+  "revision": "c5895f04a64254068ee4ce85086baae80a363b9c",
+  "image_tag": "node:24.5.0-bookworm",
+  "lab": "/var/tmp/attest-build-xesld1iy",
+  "steps": [
+    {
+      "name": "image-pull",
+      "exit": 0
+    },
+    {
+      "name": "fetch-and-install",
+      "exit": 0
+    },
+    {
+      "name": "offline-build",
+      "exit": 0
+    },
+    {
+      "name": "offline-regression",
+      "exit": 0
+    }
+  ],
+  "image_id": "sha256:9ab9d965aa8b5bd1ea513e5d4d50b1e8c5275c01aa7b577ae67089dba5678ea0",
+  "image_digests": [
+    "node@sha256:14fe96d5b60b7fe5ac5eeed9e5866a23412cb8503d8a2fd215f6a923cca6de58"
+  ],
+  "completed_utc": "2026-09-20T20:53:24.472228+00:00"
+}

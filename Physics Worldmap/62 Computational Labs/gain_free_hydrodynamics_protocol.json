@@ -1,0 +1,69 @@
+{
+  "title": "Gain-free test of hydrodynamic memory from velocity-conditioned mean displacement",
+  "version": "1.2",
+  "created": "2026-10-06",
+  "status": "Stage-2 analysis of data already used in Benchmark 014. Frozen before the regression slope Cov(D_k,W)/Var(W) was expressed in seconds, compared with any theory, or fitted. Benchmark 014 computed r_k and s internally but did not inspect or compare them. Any amendment must be dated and its results labelled post hoc. No novelty claim.",
+  "data": "Same digest-verified Dryad v3 files; empty-trap traces now enter the primary observable as the noise reference.",
+  "observable": {
+    "definition": "R_k = Cov(D_k, W)/Var(W), D_k = Y(j+k) - Y(j), W = supplied velocity at j, pooled over all six traces and both halves; units seconds after dividing volt-unit quantities. The volts-to-metres gain cancels exactly.",
+    "lags_samples": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      11,
+      16,
+      23,
+      32,
+      45,
+      64,
+      90,
+      128,
+      181,
+      256
+    ],
+    "sample_time_s": 7.5e-07
+  },
+  "measurement_operator": {
+    "position": "Y_j = average of x(t) over the bin [j*Delta, (j+1)*Delta], Delta = 750 ns (150 raw 5 ns samples; continuum average).",
+    "velocity": "W_j = sum_l d_l Y_{j+l} / Delta, d = eighth-order central stencil (verified in Benchmark 014).",
+    "covariances": "G(n) = Cov(Y_{j+n}, Y_j) = integral over u in [-Delta, Delta] of (1-|u|/Delta)/Delta * C_x(n Delta + u); r_k = sum_l d_l G(k-l)/Delta; s = sum_{l,l'} d_l d_l' G(l-l')/Delta^2.",
+    "neglected": "Detector bandwidth (>50 MHz) and the Tikhonov-inverted 40 Hz high-pass; the latter shifts G(n) by a near-constant that cancels in D_k and W. Stated, not tested."
+  },
+  "models": {
+    "E_published": "Equilibrium Basset-Boussinesq trapped sphere, chi(s) = 1/(m s^2 + z s^{3/2} + gamma s + K), C_x(t) = kT (1/K - int_0^t chi). Authors' fitted radius 3.398436e-6 m and stiffness 7.795184e-5 N/m; rho_p 4200, rho_f 790 kg/m^3, eta 0.32 mPa s, T 293 K; m includes half the displaced fluid mass. No free parameters.",
+    "V_initial_value_variant": "Conditional mean with the commented-out term: E[X(t)|v0] = (m chi + z psi) v0, psi = L^{-1}[s^{-1/2}/P(s)]. Not a stationary covariance model; its prediction is the continuum curve multiplied by the operator correction factor of E_published at the same lag. No free parameters.",
+    "B2_fit": "Basset model with radius and stiffness free, densities fixed.",
+    "B3_fit": "Basset model with gamma/m, z/m, K/m free (gain-free combinations). The fitted z/m is compared with 6 pi r^2 sqrt(rho_f eta)/m at the authors' radius.",
+    "L_fit": "Memoryless Langevin, z = 0, with gamma/m and K/m free."
+  },
+  "inference": {
+    "uncertainty": "Moving-block bootstrap, block 2000 samples, 400 replicates, seed 2026100611, resampling start indices within each trace; covariance of R across lags from replicates.",
+    "fit": "Generalised least squares with the bootstrap covariance; parameters by Nelder-Mead on log-parameters from the published values (Langevin starts at the published gamma/m and K/m).",
+    "reporting": "chi^2, dof, p-value for every model; fitted parameters with bootstrap-refit 16-84% intervals (100 refits).",
+    "decision": [
+      "E_published is CONSISTENT if p > 0.01.",
+      "V is REJECTED relative to E if chi2_V - chi2_E > 25 (both zero-parameter).",
+      "Hydrodynamic memory is SUPPORTED by this gain-free observable if chi2_L - chi2_B2 > 25 with equal parameter count.",
+      "B3 z/m is reported with its interval; agreement with Stokes-Basset if the interval contains it."
+    ],
+    "caveat": "Bootstrap SEs were about 20% too small in Benchmark 014 self-tests; chi^2 values are reported raw and also divided by 1.44."
+  },
+  "amendments": [
+    {
+      "date": "2026-10-06",
+      "before_any_model_comparison": true,
+      "change": "Primary observable becomes noise-subtracted R_k = (Cov_p(D_k,W) - Cov_e(D_k,W)) / (Var_p(W) - Var_e(W)), using empty-trap traces (e) processed identically; raw particle R_k is reported as secondary with the same models. Bootstrap resamples particle and empty-trap traces independently.",
+      "reason": "Detector noise on Y adds sigma^2 d_k to Cov(D_k,W) for k<=4 and sigma^2 sum d^2 to Var(W); the v1.0 model omitted it. Subtraction stays in volt units, so the gain still cancels.",
+      "assumption": "Noise is additive, independent of particle motion, and statistically identical with and without the particle (the article reports empty-trap noise at matched detection power). Not verified; particle scattering may change shot noise."
+    },
+    {
+      "date": "2026-10-06",
+      "before_any_model_comparison": true,
+      "change": "Numerical only: operator quadrature 48 -> 12 Gauss-Legendre nodes (max relative change 4.4e-10 vs 96 nodes at published and Langevin parameters); bootstrap refits parallelised. No statistical or decision change.",
+      "reason": "First run exceeded 30 minutes without output; it was stopped before printing or writing any result."
+    }
+  ]
+}

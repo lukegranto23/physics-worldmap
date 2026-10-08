@@ -1,0 +1,28 @@
+{
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "node": "v24.4.0",
+  "npm": "11.4.2",
+  "lock_sha256": "cdf2473127064e76a2eef78201dc1ac83e399e94c7836586d93c04ad33f308d7",
+  "declared_direct_rimraf": false,
+  "locked_rimraf": {
+    "node_modules/rimraf": "3.0.2"
+  },
+  "resolved_local_binary": "/work/repo/node_modules/rimraf/bin.js",
+  "before_dependencies": {
+    "exit": 1,
+    "stdout": "",
+    "stderr": "npm error code ENOTCACHED\nnpm error request to https://registry.npmjs.org/rimraf failed: cache mode is 'only-if-cached' but no cached response is available.\nnpm error A complete log of this run can be found in: /tmp/preinstall-9zxo3rai-before/_logs/2026-09-21T07_08_00_141Z-debug-0.log\n",
+    "dist_exists_after": true
+  },
+  "after_dependencies": {
+    "exit": 0,
+    "stdout": "",
+    "stderr": "",
+    "dist_exists_after": false
+  },
+  "limits": [
+    "Offline cache-miss evidence, not observation of live registry version selection",
+    "Existing locked dependencies reused via symlink for command resolution only",
+    "No malicious package, registry modification, external execution, or exploit"
+  ]
+}

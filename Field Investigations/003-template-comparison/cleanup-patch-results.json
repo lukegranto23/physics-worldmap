@@ -1,0 +1,7 @@
+{
+  "cleanup_patch_applied_exactly": true,
+  "comparison_patch_composes": true,
+  "install_still_precedes_bundle": true,
+  "patch_sha256": "f66d65f8be3ebdd0b180d911c0b6deeed0efc8bfd35531f2b149bf4df522fca6",
+  "limit": "Patch application and step-order checks only; no hosted workflow execution"
+}

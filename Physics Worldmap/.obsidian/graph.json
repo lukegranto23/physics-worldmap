@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "-path:\"99 Templates\"",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#map",
+      "color": {
+        "a": 1,
+        "rgb": 16750848
+      }
+    },
+    {
+      "query": "tag:#frontier",
+      "color": {
+        "a": 1,
+        "rgb": 16733525
+      }
+    },
+    {
+      "query": "tag:#synthesis",
+      "color": {
+        "a": 1,
+        "rgb": 10181046
+      }
+    },
+    {
+      "query": "tag:#experiment",
+      "color": {
+        "a": 1,
+        "rgb": 3581519
+      }
+    },
+    {
+      "query": "tag:#status/open",
+      "color": {
+        "a": 1,
+        "rgb": 16744448
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.35,
+  "repelStrength": 11,
+  "linkStrength": 0.8,
+  "linkDistance": 250,
+  "scale": 0.65,
+  "close": false
+}

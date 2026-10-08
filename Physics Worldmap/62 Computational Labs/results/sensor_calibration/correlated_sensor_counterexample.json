@@ -1,0 +1,152 @@
+{
+  "analysis_type": "post-hoc constructive identifiability example; not part of frozen benchmark outcomes",
+  "script_sha256": "0002b65a76963ac714ba65ba69963db4d7d40f53fc5f9e68af6d5c86410d6aa4",
+  "dependency_sha256": "c146ccf768090bfae5681abae15993edcc71f01ae787abc8682395efae19a590",
+  "models": {
+    "A": "Changed physical damping 0.13, independent sensor noise variance 0.1225.",
+    "B": "Nominal physical damping 0.20, same marginal sensor variance, specified correlated errors within each dynamic pair."
+  },
+  "calibration": "Each calibration trial is one isolated noise-only reading N(0,0.1225), independent of all other trials in both models.",
+  "sampling": "Each dynamic pair is a freshly prepared independent trial; sensor errors are independent of signal and other trials. The within-pair error correlation may depend on the scheduled lag.",
+  "scope": "This defines valid finite independent-pair experiment laws. No single stationary colored-noise process across an uninterrupted trajectory is constructed or claimed.",
+  "identifiability": "All measured Gaussian pair laws and isolated calibration laws coincide. Their arbitrary independent products coincide. No test on these observations can distinguish A from B with power greater than its size under B.",
+  "remedy": "Noise-only calibration PAIRS at the same lags would have cross covariance zero in A and delta in B, provided their noise law transfers to dynamic measurement.",
+  "relative_response_error_using_B_when_A_true": 0.3496962316665521,
+  "half_response_distance_absolute": 4.2269792216829245,
+  "response_A": [
+    0.2500802567859719,
+    -24.173855308519656
+  ],
+  "response_B": [
+    0.2501899291096806,
+    -15.719896865865191
+  ],
+  "checks": {
+    "same_observed_covariance_0.6": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "positive_noise_covariance_0.6": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "unchanged_noise_variance_0.6": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "same_gaussian_log_density_0.6": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "same_observed_covariance_0.85": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "positive_noise_covariance_0.85": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "unchanged_noise_variance_0.85": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "same_gaussian_log_density_0.85": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "same_observed_covariance_1.0": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "positive_noise_covariance_1.0": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "unchanged_noise_variance_1.0": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    "same_gaussian_log_density_1.0": {
+      "error": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "lags": [
+    {
+      "lag": 0.6,
+      "nominal_signal_covariance": -0.7341277972450713,
+      "changed_signal_covariance": -0.7595607662819245,
+      "required_sensor_cross_covariance": -0.025432969036853215,
+      "required_sensor_correlation": -0.20761607377023036,
+      "sensor_covariance_eigenvalues": [
+        0.09706703096314676,
+        0.1479329690368532
+      ],
+      "observed_covariance": [
+        [
+          1.1225,
+          -0.7595607662819245
+        ],
+        [
+          -0.7595607662819245,
+          1.1225
+        ]
+      ]
+    },
+    {
+      "lag": 0.85,
+      "nominal_signal_covariance": 0.474167840388381,
+      "changed_signal_covariance": 0.5113072974353996,
+      "required_sensor_cross_covariance": 0.0371394570470186,
+      "required_sensor_correlation": 0.3031792412001519,
+      "sensor_covariance_eigenvalues": [
+        0.08536054295298139,
+        0.1596394570470186
+      ],
+      "observed_covariance": [
+        [
+          1.1225,
+          0.5113072974353996
+        ],
+        [
+          0.5113072974353996,
+          1.1225
+        ]
+      ]
+    },
+    {
+      "lag": 1.0,
+      "nominal_signal_covariance": 0.8187307530779818,
+      "changed_signal_covariance": 0.8780954309205613,
+      "required_sensor_cross_covariance": 0.05936467784257948,
+      "required_sensor_correlation": 0.4846096150414652,
+      "sensor_covariance_eigenvalues": [
+        0.06313532215742049,
+        0.18186467784257948
+      ],
+      "observed_covariance": [
+        [
+          1.1225,
+          0.8780954309205613
+        ],
+        [
+          0.8780954309205613,
+          1.1225
+        ]
+      ]
+    }
+  ]
+}

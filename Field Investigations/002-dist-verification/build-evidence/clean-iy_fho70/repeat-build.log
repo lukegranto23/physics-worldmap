@@ -1,0 +1,33 @@
+
+> actions/attest@4.1.0 bundle
+> npm run format:write && npm run package
+
+
+> actions/attest@4.1.0 format:write
+> prettier --write **/*.ts
+
+__tests__/index.test.ts 113ms (unchanged)
+src/artifacts.ts 92ms (unchanged)
+src/attest.ts 39ms (unchanged)
+src/detect.ts 8ms (unchanged)
+src/endpoints.ts 2ms (unchanged)
+src/index.ts 9ms (unchanged)
+src/main.ts 57ms (unchanged)
+src/predicate.ts 9ms (unchanged)
+src/provenance.ts 4ms (unchanged)
+src/sbom.ts 12ms (unchanged)
+src/style.ts 5ms (unchanged)
+src/subject.ts 61ms (unchanged)
+
+> actions/attest@4.1.0 package
+> ncc build src/index.ts --license licenses.txt
+
+ncc: Version 0.45.0
+ncc: Compiling file index.js into ESM
+ncc: Using typescript@6.0.3 (local user-provided)
+   0kB  dist/package.json
+   0kB  dist/50.index.js
+   2kB  dist/licenses.txt
+   7kB  dist/606.index.js
+4755kB  dist/index.js
+4764kB  [13746ms] - ncc 0.45.0

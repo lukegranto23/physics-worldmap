@@ -1,0 +1,9 @@
+{
+  "platform": "win32",
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 5,
+  "success": true,
+  "details": "test_cli_exit_codes (__main__.TreeTests.test_cli_exit_codes) ... ok\ntest_crlf_lf (__main__.TreeTests.test_crlf_lf) ... ok\ntest_empty_directory_matters (__main__.TreeTests.test_empty_directory_matters) ... ok\ntest_empty_equal (__main__.TreeTests.test_empty_equal) ... ok\ntest_executable_policy (__main__.TreeTests.test_executable_policy) ... skipped 'POSIX executable mode fixture'\ntest_fifo_rejected_without_reading (__main__.TreeTests.test_fifo_rejected_without_reading) ... skipped 'POSIX FIFO fixture'\ntest_file_directory_change (__main__.TreeTests.test_file_directory_change) ... ok\ntest_identical_binary (__main__.TreeTests.test_identical_binary) ... ok\ntest_ignore_rules_not_applied (__main__.TreeTests.test_ignore_rules_not_applied) ... ok\ntest_missing_root_errors (__main__.TreeTests.test_missing_root_errors) ... ok\ntest_mtime_ignored (__main__.TreeTests.test_mtime_ignored) ... ok\ntest_new_untracked_output (__main__.TreeTests.test_new_untracked_output) ... ok\ntest_removed_stale_output (__main__.TreeTests.test_removed_stale_output) ... ok\ntest_root_symlink_rejected (__main__.TreeTests.test_root_symlink_rejected) ... skipped 'POSIX root symlink fixture'\ntest_same_size_change (__main__.TreeTests.test_same_size_change) ... ok\ntest_symlink_target_change (__main__.TreeTests.test_symlink_target_change) ... skipped 'POSIX symlink fixture'\ntest_symlinks_not_followed (__main__.TreeTests.test_symlinks_not_followed) ... skipped 'POSIX symlink fixture'\ntest_trailing_whitespace (__main__.TreeTests.test_trailing_whitespace) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.922s\n\nOK (skipped=5)\n"
+}

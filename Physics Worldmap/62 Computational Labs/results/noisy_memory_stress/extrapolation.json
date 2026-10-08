@@ -1,0 +1,3528 @@
+{
+  "study": "Post-hoc physical response and diffusion-horizon audit",
+  "scope": "Post-hoc diagnostic motivated by the original noisy study and known finite-memory cutoff theory. This is not an independent held-out discovery test.",
+  "clean_diffusivity": 0.07466356276163875,
+  "clean_msd_table": [
+    {
+      "time": 1.0,
+      "target_msd": 0.8437022600626736,
+      "clean_model_msd": 0.8484338752763616,
+      "relative_error": 0.005608157566552626
+    },
+    {
+      "time": 10.0,
+      "target_msd": 7.134797914364708,
+      "clean_model_msd": 7.199768426413218,
+      "relative_error": 0.009106146078461856
+    },
+    {
+      "time": 30.0,
+      "target_msd": 12.360945094603222,
+      "clean_model_msd": 12.561173330360024,
+      "relative_error": 0.016198456851347166
+    },
+    {
+      "time": 100.0,
+      "target_msd": 22.567591804420868,
+      "clean_model_msd": 24.224900703141834,
+      "relative_error": 0.07343756095394763
+    },
+    {
+      "time": 1000.0,
+      "target_msd": 71.36496467287272,
+      "clean_model_msd": 158.6546563281929,
+      "relative_error": 1.2231448870667037
+    },
+    {
+      "time": 10000.0,
+      "target_msd": 225.67583341918717,
+      "clean_model_msd": 1502.5987860376504,
+      "relative_error": 5.658217511693469
+    }
+  ],
+  "clean_first_grid_exceedance_after_training": 118.89582158793455,
+  "threshold": 0.1,
+  "clean_response": {
+    "very_slow": {
+      "max_complex_relative_error": 6.791496751066039,
+      "max_abs_phase_error_radians": 0.7791512301116376,
+      "amplitude_ratio_min": 0.9253457906097803,
+      "amplitude_ratio_max": 7.466558308493378
+    },
+    "slow": {
+      "max_complex_relative_error": 0.04711148489029541,
+      "max_abs_phase_error_radians": 0.01630775368564352,
+      "amplitude_ratio_min": 0.9531211740428582,
+      "amplitude_ratio_max": 1.0147330146632751
+    },
+    "intermediate": {
+      "max_complex_relative_error": 0.007680823679061682,
+      "max_abs_phase_error_radians": 0.004042316325274782,
+      "amplitude_ratio_min": 1.002492717138418,
+      "amplitude_ratio_max": 1.0065228956224042
+    },
+    "fast": {
+      "max_complex_relative_error": 0.011713659417826492,
+      "max_abs_phase_error_radians": 0.007114253003176092,
+      "amplitude_ratio_min": 0.9999734613942379,
+      "amplitude_ratio_max": 1.0115902693068568
+    }
+  },
+  "noisy_summary": [
+    {
+      "ensemble_size": 64,
+      "accepted_models": 16,
+      "diffusivity_median": 0.43429975869661375,
+      "median_band_max_errors": {
+        "very_slow": 42.72861563201954,
+        "slow": 1.8924505257735138,
+        "intermediate": 0.47315171059161043,
+        "fast": 0.4279719626227131
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "accepted_models": 17,
+      "diffusivity_median": 0.4064481772855407,
+      "median_band_max_errors": {
+        "very_slow": 39.943858625761024,
+        "slow": 1.7456107094651783,
+        "intermediate": 0.3745802464945959,
+        "fast": 0.18580529451322436
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "accepted_models": 31,
+      "diffusivity_median": 0.2758638304358491,
+      "median_band_max_errors": {
+        "very_slow": 26.888245525749127,
+        "slow": 1.017386210045428,
+        "intermediate": 0.27058123259108224,
+        "fast": 0.1114617579419384
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "accepted_models": 40,
+      "diffusivity_median": 0.23231230778056738,
+      "median_band_max_errors": {
+        "very_slow": 22.534766982682065,
+        "slow": 0.7871441690389438,
+        "intermediate": 0.1195849976117308,
+        "fast": 0.08613881754998758
+      }
+    }
+  ],
+  "models": [
+    {
+      "ensemble_size": "clean",
+      "replicate": 0,
+      "n": 10,
+      "diffusivity": 0.07466356276163875,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 6.791496751066039,
+          "max_abs_phase_error_radians": 0.7791512301116376,
+          "amplitude_ratio_min": 0.9253457906097803,
+          "amplitude_ratio_max": 7.466558308493378
+        },
+        "slow": {
+          "max_complex_relative_error": 0.04711148489029541,
+          "max_abs_phase_error_radians": 0.01630775368564352,
+          "amplitude_ratio_min": 0.9531211740428582,
+          "amplitude_ratio_max": 1.0147330146632751
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.007680823679061682,
+          "max_abs_phase_error_radians": 0.004042316325274782,
+          "amplitude_ratio_min": 1.002492717138418,
+          "amplitude_ratio_max": 1.0065228956224042
+        },
+        "fast": {
+          "max_complex_relative_error": 0.011713659417826492,
+          "max_abs_phase_error_radians": 0.007114253003176092,
+          "amplitude_ratio_min": 0.9999734613942379,
+          "amplitude_ratio_max": 1.0115902693068568
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 5,
+      "n": 6,
+      "diffusivity": 0.47363434101122354,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 46.66158698598951,
+          "max_abs_phase_error_radians": 0.7853065377693729,
+          "amplitude_ratio_min": 4.73388632233963,
+          "amplitude_ratio_max": 47.36340150156145
+        },
+        "slow": {
+          "max_complex_relative_error": 2.1144877274180214,
+          "max_abs_phase_error_radians": 0.7544804094460072,
+          "amplitude_ratio_min": 0.9050422439490404,
+          "amplitude_ratio_max": 2.7291165556156605
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.5389348196098012,
+          "max_abs_phase_error_radians": 0.47327395531670874,
+          "amplitude_ratio_min": 0.5064806966716847,
+          "amplitude_ratio_max": 1.0259186104494684
+        },
+        "fast": {
+          "max_complex_relative_error": 0.6827803832780708,
+          "max_abs_phase_error_radians": 0.6563337040570406,
+          "amplitude_ratio_min": 0.696463326745691,
+          "amplitude_ratio_max": 1.4208460083055345
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 18,
+      "n": 4,
+      "diffusivity": 0.32198239556155717,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 31.498987149742092,
+          "max_abs_phase_error_radians": 0.785313808284426,
+          "amplitude_ratio_min": 3.2179117354996833,
+          "amplitude_ratio_max": 32.19821715254027
+        },
+        "slow": {
+          "max_complex_relative_error": 1.3195086307697108,
+          "max_abs_phase_error_radians": 0.7566285056649769,
+          "amplitude_ratio_min": 0.5802569124745375,
+          "amplitude_ratio_max": 1.854033817294293
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.7250888906302526,
+          "max_abs_phase_error_radians": 0.7858478198506017,
+          "amplitude_ratio_min": 0.4092950117863251,
+          "amplitude_ratio_max": 1.3301595899889591
+        },
+        "fast": {
+          "max_complex_relative_error": 0.8154906227123323,
+          "max_abs_phase_error_radians": 0.891392908815417,
+          "amplitude_ratio_min": 0.5477156804242587,
+          "amplitude_ratio_max": 1.3695642461395867
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 19,
+      "n": 4,
+      "diffusivity": 0.4584389040181901,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 45.142216597799305,
+          "max_abs_phase_error_radians": 0.7852953929490448,
+          "amplitude_ratio_min": 4.581953051103562,
+          "amplitude_ratio_max": 45.84385879035781
+        },
+        "slow": {
+          "max_complex_relative_error": 2.0285843555772445,
+          "max_abs_phase_error_radians": 0.7511266050168778,
+          "amplitude_ratio_min": 0.8687006452798988,
+          "amplitude_ratio_max": 2.6412605458899208
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.45284768777216294,
+          "max_abs_phase_error_radians": 0.3817285550840857,
+          "amplitude_ratio_min": 0.6162773051185415,
+          "amplitude_ratio_max": 1.4465453559433215
+        },
+        "fast": {
+          "max_complex_relative_error": 0.5243710882525894,
+          "max_abs_phase_error_radians": 0.5484381446212567,
+          "amplitude_ratio_min": 0.6127416210610365,
+          "amplitude_ratio_max": 1.2393603736443455
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 24,
+      "n": 4,
+      "diffusivity": 0.5261467173692603,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 51.91227503925145,
+          "max_abs_phase_error_radians": 0.7853008788804181,
+          "amplitude_ratio_min": 5.258719323764774,
+          "amplitude_ratio_max": 52.61463550465133
+        },
+        "slow": {
+          "max_complex_relative_error": 2.401193003691886,
+          "max_abs_phase_error_radians": 0.7527772426724074,
+          "amplitude_ratio_min": 1.0041063614145558,
+          "amplitude_ratio_max": 3.031602180137935
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4306699127877965,
+          "max_abs_phase_error_radians": 0.40283252469885245,
+          "amplitude_ratio_min": 0.7023352479048489,
+          "amplitude_ratio_max": 1.393423737047191
+        },
+        "fast": {
+          "max_complex_relative_error": 0.5114382214053044,
+          "max_abs_phase_error_radians": 0.5332045691685989,
+          "amplitude_ratio_min": 0.6396401981987958,
+          "amplitude_ratio_max": 1.2434907484871571
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 28,
+      "n": 4,
+      "diffusivity": 0.48876932409057944,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 48.17491721330919,
+          "max_abs_phase_error_radians": 0.7853084876360469,
+          "amplitude_ratio_min": 4.8850207380464585,
+          "amplitude_ratio_max": 48.87689863077498
+        },
+        "slow": {
+          "max_complex_relative_error": 2.1970034300214305,
+          "max_abs_phase_error_radians": 0.755050369492075,
+          "amplitude_ratio_min": 0.9148984726141134,
+          "amplitude_ratio_max": 2.8156165386362457
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4051455821261578,
+          "max_abs_phase_error_radians": 0.41713749786485177,
+          "amplitude_ratio_min": 0.6311802784051862,
+          "amplitude_ratio_max": 1.365079011451533
+        },
+        "fast": {
+          "max_complex_relative_error": 0.5043451178051311,
+          "max_abs_phase_error_radians": 0.526943664461253,
+          "amplitude_ratio_min": 0.6218940653243118,
+          "amplitude_ratio_max": 1.224166062102327
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 45,
+      "n": 4,
+      "diffusivity": 0.46596785651611644,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 45.894999728083306,
+          "max_abs_phase_error_radians": 0.7852659396253061,
+          "amplitude_ratio_min": 4.6575815705896035,
+          "amplitude_ratio_max": 46.596753900283794
+        },
+        "slow": {
+          "max_complex_relative_error": 2.063573226546729,
+          "max_abs_phase_error_radians": 0.7423296915105762,
+          "amplitude_ratio_min": 0.936569977779319,
+          "amplitude_ratio_max": 2.6866007009315003
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.32032178243808024,
+          "max_abs_phase_error_radians": 0.3258768924613637,
+          "amplitude_ratio_min": 0.8753229475642218,
+          "amplitude_ratio_max": 1.2785197975605949
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1221165359837691,
+          "max_abs_phase_error_radians": 0.1221422639006737,
+          "amplitude_ratio_min": 0.912579794175927,
+          "amplitude_ratio_max": 1.0955454701118776
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 58,
+      "n": 4,
+      "diffusivity": 0.5472584209380028,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 54.023259889310104,
+          "max_abs_phase_error_radians": 0.7853065353881119,
+          "amplitude_ratio_min": 5.469790220768588,
+          "amplitude_ratio_max": 54.7258044718834
+        },
+        "slow": {
+          "max_complex_relative_error": 2.5198221440241633,
+          "max_abs_phase_error_radians": 0.7544854448696018,
+          "amplitude_ratio_min": 1.0510742953760672,
+          "amplitude_ratio_max": 3.1535769860110623
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4402490813131654,
+          "max_abs_phase_error_radians": 0.42982097758802335,
+          "amplitude_ratio_min": 0.8366778531347477,
+          "amplitude_ratio_max": 1.3129609476034467
+        },
+        "fast": {
+          "max_complex_relative_error": 0.3642643210165704,
+          "max_abs_phase_error_radians": 0.16285220784000087,
+          "amplitude_ratio_min": 0.9954872955315285,
+          "amplitude_ratio_max": 1.3191772098870573
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 93,
+      "n": 4,
+      "diffusivity": 0.18458508485222186,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 17.76531103187657,
+          "max_abs_phase_error_radians": 0.7851857705368908,
+          "amplitude_ratio_min": 1.8451303220499924,
+          "amplitude_ratio_max": 18.458496017749464
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7282818730315195,
+          "max_abs_phase_error_radians": 0.7183095353815487,
+          "amplitude_ratio_min": 0.38457774794110794,
+          "amplitude_ratio_max": 1.0648199305323653
+        },
+        "intermediate": {
+          "max_complex_relative_error": 1.2538690936809875,
+          "max_abs_phase_error_radians": 1.0791415018918804,
+          "amplitude_ratio_min": 0.36660974381305783,
+          "amplitude_ratio_max": 2.0067120895055375
+        },
+        "fast": {
+          "max_complex_relative_error": 0.7682553517899746,
+          "max_abs_phase_error_radians": 0.799667533083893,
+          "amplitude_ratio_min": 0.5336344481445854,
+          "amplitude_ratio_max": 1.3924070565983604
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 113,
+      "n": 4,
+      "diffusivity": 0.31724976583789133,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 31.025789590596233,
+          "max_abs_phase_error_radians": 0.7852357537930423,
+          "amplitude_ratio_min": 3.171065849436326,
+          "amplitude_ratio_max": 31.724954962113546
+        },
+        "slow": {
+          "max_complex_relative_error": 1.2757964836851223,
+          "max_abs_phase_error_radians": 0.7332702797750749,
+          "amplitude_ratio_min": 0.6364995710366846,
+          "amplitude_ratio_max": 1.8291250005217727
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.6219814712564813,
+          "max_abs_phase_error_radians": 0.5740741318452087,
+          "amplitude_ratio_min": 0.5940600072358899,
+          "amplitude_ratio_max": 1.5188226231462107
+        },
+        "fast": {
+          "max_complex_relative_error": 0.3180846074476477,
+          "max_abs_phase_error_radians": 0.14661216703650606,
+          "amplitude_ratio_min": 0.9988237349553664,
+          "amplitude_ratio_max": 1.2718247890490368
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 120,
+      "n": 4,
+      "diffusivity": 0.3416209859308092,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 33.46229054557839,
+          "max_abs_phase_error_radians": 0.785189714772563,
+          "amplitude_ratio_min": 3.4152486855942406,
+          "amplitude_ratio_max": 34.16207589154708
+        },
+        "slow": {
+          "max_complex_relative_error": 1.3871173755123551,
+          "max_abs_phase_error_radians": 0.7195623950049146,
+          "amplitude_ratio_min": 0.7630162243744194,
+          "amplitude_ratio_max": 1.972643390906278
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.31965988590750105,
+          "max_abs_phase_error_radians": 0.27614776309990474,
+          "amplitude_ratio_min": 0.7523378977306646,
+          "amplitude_ratio_max": 1.308930742769535
+        },
+        "fast": {
+          "max_complex_relative_error": 0.20206231961313686,
+          "max_abs_phase_error_radians": 0.20100514918838575,
+          "amplitude_ratio_min": 0.8642948593662623,
+          "amplitude_ratio_max": 1.1296738277207656
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 121,
+      "n": 4,
+      "diffusivity": 0.5409679007069877,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 53.39426281413244,
+          "max_abs_phase_error_radians": 0.7853062805452766,
+          "amplitude_ratio_min": 5.407103270356489,
+          "amplitude_ratio_max": 54.096753067528105
+        },
+        "slow": {
+          "max_complex_relative_error": 2.4858371660458287,
+          "max_abs_phase_error_radians": 0.7544319608133829,
+          "amplitude_ratio_min": 1.062328975688675,
+          "amplitude_ratio_max": 3.1182909663581344
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.46278981176057676,
+          "max_abs_phase_error_radians": 0.4486711763272275,
+          "amplitude_ratio_min": 0.7933295977196796,
+          "amplitude_ratio_max": 1.0783684252584633
+        },
+        "fast": {
+          "max_complex_relative_error": 0.3289543034143601,
+          "max_abs_phase_error_radians": 0.30603191367107346,
+          "amplitude_ratio_min": 0.9983569534717667,
+          "amplitude_ratio_max": 1.2429257725058915
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 164,
+      "n": 4,
+      "diffusivity": 0.24921175647566626,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 24.224216196557727,
+          "max_abs_phase_error_radians": 0.785180469261978,
+          "amplitude_ratio_min": 2.491268218421986,
+          "amplitude_ratio_max": 24.92115893855752
+        },
+        "slow": {
+          "max_complex_relative_error": 0.9486158191144077,
+          "max_abs_phase_error_radians": 0.7167505568825728,
+          "amplitude_ratio_min": 0.5354675032803331,
+          "amplitude_ratio_max": 1.438271879812432
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.9916731152627498,
+          "max_abs_phase_error_radians": 0.803226951528712,
+          "amplitude_ratio_min": 0.518952456926284,
+          "amplitude_ratio_max": 1.846533736020694
+        },
+        "fast": {
+          "max_complex_relative_error": 0.5064048662053368,
+          "max_abs_phase_error_radians": 0.5082050262706087,
+          "amplitude_ratio_min": 0.7064831294229685,
+          "amplitude_ratio_max": 1.2982797003056892
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 165,
+      "n": 4,
+      "diffusivity": 0.0747861159304061,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 6.807322373478293,
+          "max_abs_phase_error_radians": 0.784106164604333,
+          "amplitude_ratio_min": 0.7537922581803267,
+          "amplitude_ratio_max": 7.478612795658965
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6324740343889312,
+          "max_abs_phase_error_radians": 0.6068127856118307,
+          "amplitude_ratio_min": 0.37942491812763285,
+          "amplitude_ratio_max": 0.5479082342838001
+        },
+        "intermediate": {
+          "max_complex_relative_error": 2.752557452116778,
+          "max_abs_phase_error_radians": 1.0122976532107055,
+          "amplitude_ratio_min": 0.5479082342838001,
+          "amplitude_ratio_max": 3.6852388851115143
+        },
+        "fast": {
+          "max_complex_relative_error": 0.30282557248537834,
+          "max_abs_phase_error_radians": 0.3051362875838312,
+          "amplitude_ratio_min": 0.7844510271914518,
+          "amplitude_ratio_max": 1.1786799782365405
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 174,
+      "n": 4,
+      "diffusivity": 0.3799658029235867,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 37.296016022389814,
+          "max_abs_phase_error_radians": 0.7852096226510044,
+          "amplitude_ratio_min": 3.7984526136782137,
+          "amplitude_ratio_max": 37.99655490622715
+        },
+        "slow": {
+          "max_complex_relative_error": 1.5902332343967753,
+          "max_abs_phase_error_radians": 0.7255100196460498,
+          "amplitude_ratio_min": 0.832284373500715,
+          "amplitude_ratio_max": 2.1933554904840546
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.25827917702935715,
+          "max_abs_phase_error_radians": 0.21042787193006404,
+          "amplitude_ratio_min": 0.8164509236627445,
+          "amplitude_ratio_max": 1.2547402560709067
+        },
+        "fast": {
+          "max_complex_relative_error": 0.23661232594435966,
+          "max_abs_phase_error_radians": 0.23420001037800975,
+          "amplitude_ratio_min": 0.8555943201929516,
+          "amplitude_ratio_max": 1.1613572799712413
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 176,
+      "n": 4,
+      "diffusivity": 0.4101606133750374,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 40.31501466623977,
+          "max_abs_phase_error_radians": 0.7852401179651499,
+          "amplitude_ratio_min": 4.099884734014325,
+          "amplitude_ratio_max": 41.01603351346319
+        },
+        "slow": {
+          "max_complex_relative_error": 1.7563166959697831,
+          "max_abs_phase_error_radians": 0.7345971983660708,
+          "amplitude_ratio_min": 0.841346018705579,
+          "amplitude_ratio_max": 2.3654805972595656
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.48351360942264404,
+          "max_abs_phase_error_radians": 0.37442288492531517,
+          "amplitude_ratio_min": 0.7985309092275515,
+          "amplitude_ratio_max": 1.479977676522083
+        },
+        "fast": {
+          "max_complex_relative_error": 0.49167960422885576,
+          "max_abs_phase_error_radians": 0.42289747910650327,
+          "amplitude_ratio_min": 0.9114728401707602,
+          "amplitude_ratio_max": 1.4037818271651257
+        }
+      }
+    },
+    {
+      "ensemble_size": 64,
+      "replicate": 183,
+      "n": 4,
+      "diffusivity": 0.477957912518707,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 47.09392158328296,
+          "max_abs_phase_error_radians": 0.7853446671213881,
+          "amplitude_ratio_min": 4.776664308696337,
+          "amplitude_ratio_max": 47.79575791913435
+        },
+        "slow": {
+          "max_complex_relative_error": 2.146041297051475,
+          "max_abs_phase_error_radians": 0.765891077886187,
+          "amplitude_ratio_min": 0.8469701959486734,
+          "amplitude_ratio_max": 2.7517734319627896
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4917238450480559,
+          "max_abs_phase_error_radians": 0.5133890065713478,
+          "amplitude_ratio_min": 0.6225044101887821,
+          "amplitude_ratio_max": 1.1093213430554922
+        },
+        "fast": {
+          "max_complex_relative_error": 0.2311134499844602,
+          "max_abs_phase_error_radians": 0.22251600674240768,
+          "amplitude_ratio_min": 0.9045334722352499,
+          "amplitude_ratio_max": 1.1597408332657255
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 11,
+      "n": 5,
+      "diffusivity": 0.16270030303272837,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 15.578293011916532,
+          "max_abs_phase_error_radians": 0.7844704128142854,
+          "amplitude_ratio_min": 1.63608199191601,
+          "amplitude_ratio_max": 16.270029069347633
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5070955464001807,
+          "max_abs_phase_error_radians": 0.5158285428932077,
+          "amplitude_ratio_min": 0.7522022484691768,
+          "amplitude_ratio_max": 0.9875476434210534
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.23461364984266042,
+          "max_abs_phase_error_radians": 0.21722562165895054,
+          "amplitude_ratio_min": 0.799176869032177,
+          "amplitude_ratio_max": 1.0524346209938167
+        },
+        "fast": {
+          "max_complex_relative_error": 0.3794190655609004,
+          "max_abs_phase_error_radians": 0.3796772654460332,
+          "amplitude_ratio_min": 0.8000527055806541,
+          "amplitude_ratio_max": 1.2125147914618881
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 14,
+      "n": 4,
+      "diffusivity": 0.4521642889059871,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 44.514846526170324,
+          "max_abs_phase_error_radians": 0.7853137089012324,
+          "amplitude_ratio_min": 4.519042336715303,
+          "amplitude_ratio_max": 45.21639751376816
+        },
+        "slow": {
+          "max_complex_relative_error": 1.9985095691594956,
+          "max_abs_phase_error_radians": 0.7566089236668705,
+          "amplitude_ratio_min": 0.8260507008980156,
+          "amplitude_ratio_max": 2.6040840670231
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.45432315695566483,
+          "max_abs_phase_error_radians": 0.4253310316058152,
+          "amplitude_ratio_min": 0.6764472254228581,
+          "amplitude_ratio_max": 1.4131553462586663
+        },
+        "fast": {
+          "max_complex_relative_error": 0.15102349054071287,
+          "max_abs_phase_error_radians": 0.05973392953117797,
+          "amplitude_ratio_min": 0.9982513253503429,
+          "amplitude_ratio_max": 1.136939904349114
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 19,
+      "n": 4,
+      "diffusivity": 0.4490453628515677,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 44.20295316417984,
+          "max_abs_phase_error_radians": 0.7852564342686305,
+          "amplitude_ratio_min": 4.48841254792215,
+          "amplitude_ratio_max": 44.904505666674474
+        },
+        "slow": {
+          "max_complex_relative_error": 1.969014593709357,
+          "max_abs_phase_error_radians": 0.7394720215023622,
+          "amplitude_ratio_min": 0.9005679565458815,
+          "amplitude_ratio_max": 2.5889271815792236
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.6023845775438531,
+          "max_abs_phase_error_radians": 0.30953659265791883,
+          "amplitude_ratio_min": 0.8329254911042957,
+          "amplitude_ratio_max": 1.601586143011459
+        },
+        "fast": {
+          "max_complex_relative_error": 0.19760477232390639,
+          "max_abs_phase_error_radians": 0.19433957178860772,
+          "amplitude_ratio_min": 0.8195157499478473,
+          "amplitude_ratio_max": 1.106587842337483
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 21,
+      "n": 5,
+      "diffusivity": 0.3015125626437185,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 29.452401294187368,
+          "max_abs_phase_error_radians": 0.7850958102569964,
+          "amplitude_ratio_min": 3.0155251892392974,
+          "amplitude_ratio_max": 30.151237477641118
+        },
+        "slow": {
+          "max_complex_relative_error": 1.1671298105878125,
+          "max_abs_phase_error_radians": 0.6917888865910153,
+          "amplitude_ratio_min": 0.7995107801690859,
+          "amplitude_ratio_max": 1.7474777594291842
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.21374917889301173,
+          "max_abs_phase_error_radians": 0.1672027785638952,
+          "amplitude_ratio_min": 0.7996119227294216,
+          "amplitude_ratio_max": 1.1214060017079965
+        },
+        "fast": {
+          "max_complex_relative_error": 0.2782618563777257,
+          "max_abs_phase_error_radians": 0.2566945224027715,
+          "amplitude_ratio_min": 0.8823748450651527,
+          "amplitude_ratio_max": 1.2083405306591584
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 22,
+      "n": 4,
+      "diffusivity": 0.3857724104408805,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 37.87658778838906,
+          "max_abs_phase_error_radians": 0.7852296147556945,
+          "amplitude_ratio_min": 3.856238695443346,
+          "amplitude_ratio_max": 38.577215008219184
+        },
+        "slow": {
+          "max_complex_relative_error": 1.6249613643577805,
+          "max_abs_phase_error_radians": 0.7314677607208874,
+          "amplitude_ratio_min": 0.8089393738687503,
+          "amplitude_ratio_max": 2.225520325873093
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.28953312019952526,
+          "max_abs_phase_error_radians": 0.2428927970015256,
+          "amplitude_ratio_min": 0.7768768279556775,
+          "amplitude_ratio_max": 1.2484962032393792
+        },
+        "fast": {
+          "max_complex_relative_error": 0.18580529451322436,
+          "max_abs_phase_error_radians": 0.06986351356195743,
+          "amplitude_ratio_min": 0.9962787599143967,
+          "amplitude_ratio_max": 1.1844916998300208
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 55,
+      "n": 4,
+      "diffusivity": 0.43924000067866564,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 43.22254624878467,
+          "max_abs_phase_error_radians": 0.7852566590209134,
+          "amplitude_ratio_min": 4.390598703521064,
+          "amplitude_ratio_max": 43.92397031334838
+        },
+        "slow": {
+          "max_complex_relative_error": 1.9170277049793265,
+          "max_abs_phase_error_radians": 0.7395705332427249,
+          "amplitude_ratio_min": 0.9057373694834687,
+          "amplitude_ratio_max": 2.533405314524688
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3408033204434034,
+          "max_abs_phase_error_radians": 0.3460315767659783,
+          "amplitude_ratio_min": 0.8119842489741066,
+          "amplitude_ratio_max": 1.0740777784940285
+        },
+        "fast": {
+          "max_complex_relative_error": 0.38370493317667664,
+          "max_abs_phase_error_radians": 0.354183229516979,
+          "amplitude_ratio_min": 0.9740795392015612,
+          "amplitude_ratio_max": 1.293117269285072
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 58,
+      "n": 4,
+      "diffusivity": 0.43711998941420444,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 43.01057099502601,
+          "max_abs_phase_error_radians": 0.7852529742931966,
+          "amplitude_ratio_min": 4.3692805400606725,
+          "amplitude_ratio_max": 43.711969203653325
+        },
+        "slow": {
+          "max_complex_relative_error": 1.9039674502285493,
+          "max_abs_phase_error_radians": 0.7384432134613305,
+          "amplitude_ratio_min": 0.8859111015021633,
+          "amplitude_ratio_max": 2.520522162695946
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.37709922385199235,
+          "max_abs_phase_error_radians": 0.288915079754531,
+          "amplitude_ratio_min": 0.8353988305022853,
+          "amplitude_ratio_max": 1.3770965238069084
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06757583332320966,
+          "max_abs_phase_error_radians": 0.04985473521947545,
+          "amplitude_ratio_min": 0.9961274588661813,
+          "amplitude_ratio_max": 1.0620352591620246
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 85,
+      "n": 5,
+      "diffusivity": 0.4607724523582193,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 45.37543054857515,
+          "max_abs_phase_error_radians": 0.7851336571117753,
+          "amplitude_ratio_min": 4.609136696176875,
+          "amplitude_ratio_max": 46.07721733007907
+        },
+        "slow": {
+          "max_complex_relative_error": 2.0184348157912533,
+          "max_abs_phase_error_radians": 0.7034770850866925,
+          "amplitude_ratio_min": 1.2031151524255623,
+          "amplitude_ratio_max": 2.674568843773096
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.382233683196735,
+          "max_abs_phase_error_radians": 0.2962877888206735,
+          "amplitude_ratio_min": 0.9459679107822734,
+          "amplitude_ratio_max": 1.2031151524255623
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11980135423551908,
+          "max_abs_phase_error_radians": 0.10592751391162801,
+          "amplitude_ratio_min": 0.8820642204439754,
+          "amplitude_ratio_max": 1.0598975294914137
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 111,
+      "n": 4,
+      "diffusivity": 0.4064481772855407,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 39.943858625761024,
+          "max_abs_phase_error_radians": 0.7852820682711698,
+          "amplitude_ratio_min": 4.062292447962284,
+          "amplitude_ratio_max": 40.64478967245088
+        },
+        "slow": {
+          "max_complex_relative_error": 1.7456107094651783,
+          "max_abs_phase_error_radians": 0.7471184975024455,
+          "amplitude_ratio_min": 0.7690473171536686,
+          "amplitude_ratio_max": 2.34156757931538
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3745802464945959,
+          "max_abs_phase_error_radians": 0.36094148026551054,
+          "amplitude_ratio_min": 0.6906898692855525,
+          "amplitude_ratio_max": 1.31819431762566
+        },
+        "fast": {
+          "max_complex_relative_error": 0.0849289853428745,
+          "max_abs_phase_error_radians": 0.037284042820290186,
+          "amplitude_ratio_min": 0.9987382752938933,
+          "amplitude_ratio_max": 1.0759284447182271
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 113,
+      "n": 4,
+      "diffusivity": 0.3756892795822179,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 36.86842162864507,
+          "max_abs_phase_error_radians": 0.7851813038582839,
+          "amplitude_ratio_min": 3.756026046605647,
+          "amplitude_ratio_max": 37.56890318320102
+        },
+        "slow": {
+          "max_complex_relative_error": 1.5616311559156903,
+          "max_abs_phase_error_radians": 0.7170718242265623,
+          "amplitude_ratio_min": 0.8661639781135462,
+          "amplitude_ratio_max": 2.1703510127063903
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.31362684698877286,
+          "max_abs_phase_error_radians": 0.22255319071490703,
+          "amplitude_ratio_min": 0.8613719816011587,
+          "amplitude_ratio_max": 1.306814025337788
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08542689640550506,
+          "max_abs_phase_error_radians": 0.08149617800553313,
+          "amplitude_ratio_min": 0.9978120671056088,
+          "amplitude_ratio_max": 1.0772272286022373
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 115,
+      "n": 5,
+      "diffusivity": 0.16939172659307863,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 16.24682033928457,
+          "max_abs_phase_error_radians": 0.7845349962592197,
+          "amplitude_ratio_min": 1.7008916033805348,
+          "amplitude_ratio_max": 16.93916887751332
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5291709318977169,
+          "max_abs_phase_error_radians": 0.5309637680524946,
+          "amplitude_ratio_min": 0.736732559917954,
+          "amplitude_ratio_max": 1.0159967583618217
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.2277927231653727,
+          "max_abs_phase_error_radians": 0.2266455305746576,
+          "amplitude_ratio_min": 0.8778112287104733,
+          "amplitude_ratio_max": 1.207253036160092
+        },
+        "fast": {
+          "max_complex_relative_error": 0.12678562258722326,
+          "max_abs_phase_error_radians": 0.04555303106261244,
+          "amplitude_ratio_min": 0.8778112287104733,
+          "amplitude_ratio_max": 1.0202573012847254
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 126,
+      "n": 4,
+      "diffusivity": 0.3365383913103709,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 32.954100806204366,
+          "max_abs_phase_error_radians": 0.7851252641211806,
+          "amplitude_ratio_min": 3.365157949090388,
+          "amplitude_ratio_max": 33.653817488862586
+        },
+        "slow": {
+          "max_complex_relative_error": 1.3466753918758385,
+          "max_abs_phase_error_radians": 0.7003864839852543,
+          "amplitude_ratio_min": 0.8443921122153955,
+          "amplitude_ratio_max": 1.947021709140594
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4372693791453118,
+          "max_abs_phase_error_radians": 0.24458360674575824,
+          "amplitude_ratio_min": 0.8445789413909373,
+          "amplitude_ratio_max": 1.4369513649081513
+        },
+        "fast": {
+          "max_complex_relative_error": 0.16659320359658142,
+          "max_abs_phase_error_radians": 0.11066502477524878,
+          "amplitude_ratio_min": 0.9924999783117957,
+          "amplitude_ratio_max": 1.1226314556881278
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 132,
+      "n": 7,
+      "diffusivity": 0.15115763562794945,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 14.425072390577464,
+          "max_abs_phase_error_radians": 0.7841424051641174,
+          "amplitude_ratio_min": 1.5263262156929485,
+          "amplitude_ratio_max": 15.115768789203148
+        },
+        "slow": {
+          "max_complex_relative_error": 0.4188796665815342,
+          "max_abs_phase_error_radians": 0.43017424964954926,
+          "amplitude_ratio_min": 0.8019854934572852,
+          "amplitude_ratio_max": 1.03706004215338
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.14974266735366973,
+          "max_abs_phase_error_radians": 0.14982337614320299,
+          "amplitude_ratio_min": 0.8818721399439725,
+          "amplitude_ratio_max": 1.1049779005981148
+        },
+        "fast": {
+          "max_complex_relative_error": 0.31705522038866196,
+          "max_abs_phase_error_radians": 0.3018021287517979,
+          "amplitude_ratio_min": 0.7168450693657483,
+          "amplitude_ratio_max": 1.0885600603377557
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 140,
+      "n": 4,
+      "diffusivity": 0.51537550694497,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 50.835253075957816,
+          "max_abs_phase_error_radians": 0.7852955910956324,
+          "amplitude_ratio_min": 5.151166415861769,
+          "amplitude_ratio_max": 51.53751530699831
+        },
+        "slow": {
+          "max_complex_relative_error": 2.3409122345317,
+          "max_abs_phase_error_radians": 0.7512042272520658,
+          "amplitude_ratio_min": 0.9961181569313386,
+          "amplitude_ratio_max": 2.97007212135653
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3949067579956549,
+          "max_abs_phase_error_radians": 0.39828363486782403,
+          "amplitude_ratio_min": 0.8752112583976556,
+          "amplitude_ratio_max": 1.1816964733074453
+        },
+        "fast": {
+          "max_complex_relative_error": 0.31995362180923753,
+          "max_abs_phase_error_radians": 0.260047187534767,
+          "amplitude_ratio_min": 0.9949831941757841,
+          "amplitude_ratio_max": 1.2860188750282862
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 141,
+      "n": 4,
+      "diffusivity": 0.5789885425872687,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 57.19602167896653,
+          "max_abs_phase_error_radians": 0.7853186173896121,
+          "amplitude_ratio_min": 5.786774538055641,
+          "amplitude_ratio_max": 57.898814300470825
+        },
+        "slow": {
+          "max_complex_relative_error": 2.6985318840562456,
+          "max_abs_phase_error_radians": 0.7580989567991745,
+          "amplitude_ratio_min": 1.0894458315445834,
+          "amplitude_ratio_max": 3.3356194077778616
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.48065993678792013,
+          "max_abs_phase_error_radians": 0.45641327285418826,
+          "amplitude_ratio_min": 0.8601890417063526,
+          "amplitude_ratio_max": 1.177272081281164
+        },
+        "fast": {
+          "max_complex_relative_error": 0.36318420296511283,
+          "max_abs_phase_error_radians": 0.31610892441590216,
+          "amplitude_ratio_min": 0.8549942476722028,
+          "amplitude_ratio_max": 1.3033502582644838
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 143,
+      "n": 4,
+      "diffusivity": 0.5124952063315528,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 50.54727568155925,
+          "max_abs_phase_error_radians": 0.7853303132988988,
+          "amplitude_ratio_min": 5.121937422120352,
+          "amplitude_ratio_max": 51.24948500264483
+        },
+        "slow": {
+          "max_complex_relative_error": 2.33189233730019,
+          "max_abs_phase_error_radians": 0.7615844645498813,
+          "amplitude_ratio_min": 0.9279510056201565,
+          "amplitude_ratio_max": 2.95119197348458
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.45474102737109817,
+          "max_abs_phase_error_radians": 0.4704277877380013,
+          "amplitude_ratio_min": 0.7574837057962065,
+          "amplitude_ratio_max": 1.1870854223789276
+        },
+        "fast": {
+          "max_complex_relative_error": 0.0980863856147289,
+          "max_abs_phase_error_radians": 0.0957644645712998,
+          "amplitude_ratio_min": 0.9992550757498199,
+          "amplitude_ratio_max": 1.0565683633312821
+        }
+      }
+    },
+    {
+      "ensemble_size": 256,
+      "replicate": 169,
+      "n": 6,
+      "diffusivity": 0.18633300993519078,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 17.93963512939499,
+          "max_abs_phase_error_radians": 0.7847278749129626,
+          "amplitude_ratio_min": 1.867557758840706,
+          "amplitude_ratio_max": 18.633293373221733
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6128180580599716,
+          "max_abs_phase_error_radians": 0.5846306453740993,
+          "amplitude_ratio_min": 0.7165130692640296,
+          "amplitude_ratio_max": 1.1003026314854536
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.23444534181379229,
+          "max_abs_phase_error_radians": 0.20701618261712149,
+          "amplitude_ratio_min": 0.8424105165462799,
+          "amplitude_ratio_max": 1.086796698593073
+        },
+        "fast": {
+          "max_complex_relative_error": 0.2992918993009034,
+          "max_abs_phase_error_radians": 0.2834397697745942,
+          "amplitude_ratio_min": 0.8460655222274857,
+          "amplitude_ratio_max": 1.1847072875403168
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 8,
+      "n": 4,
+      "diffusivity": 0.4937422278174392,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 48.672226968383434,
+          "max_abs_phase_error_radians": 0.7861355608986828,
+          "amplitude_ratio_min": 4.933270953584389,
+          "amplitude_ratio_max": 49.37418720721093
+        },
+        "slow": {
+          "max_complex_relative_error": 2.2444956829112717,
+          "max_abs_phase_error_radians": 0.7860022449553186,
+          "amplitude_ratio_min": 0.7013926549250733,
+          "amplitude_ratio_max": 2.836739780330964
+        },
+        "intermediate": {
+          "max_complex_relative_error": 1.9456149211804286,
+          "max_abs_phase_error_radians": 1.1965130731777294,
+          "amplitude_ratio_min": 0.36678823753237233,
+          "amplitude_ratio_max": 2.757860813336382
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07357252988996929,
+          "max_abs_phase_error_radians": 0.06260593968795491,
+          "amplitude_ratio_min": 0.9997292531740154,
+          "amplitude_ratio_max": 1.0463190374134725
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 18,
+      "n": 5,
+      "diffusivity": 0.07408399054022607,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 6.7365375476989415,
+          "max_abs_phase_error_radians": 0.7828491098083464,
+          "amplitude_ratio_min": 0.7668923263633556,
+          "amplitude_ratio_max": 7.408420885626177
+        },
+        "slow": {
+          "max_complex_relative_error": 0.46411132754085005,
+          "max_abs_phase_error_radians": 0.3571817730119549,
+          "amplitude_ratio_min": 0.5421263851915296,
+          "amplitude_ratio_max": 1.0116801688550687
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3054758642881825,
+          "max_abs_phase_error_radians": 0.30466214938773184,
+          "amplitude_ratio_min": 0.9734678328466273,
+          "amplitude_ratio_max": 1.1722338015118816
+        },
+        "fast": {
+          "max_complex_relative_error": 0.4144577708068629,
+          "max_abs_phase_error_radians": 0.08849745452734281,
+          "amplitude_ratio_min": 0.9022070401494842,
+          "amplitude_ratio_max": 1.4010111775175675
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 23,
+      "n": 4,
+      "diffusivity": 0.3645658700460993,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 35.75630897568753,
+          "max_abs_phase_error_radians": 0.7852048770728671,
+          "amplitude_ratio_min": 3.644518977180058,
+          "amplitude_ratio_max": 36.45656266425341
+        },
+        "slow": {
+          "max_complex_relative_error": 1.5086698403151375,
+          "max_abs_phase_error_radians": 0.7240952521675263,
+          "amplitude_ratio_min": 0.7973427144357409,
+          "amplitude_ratio_max": 2.104545184986615
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.27058123259108224,
+          "max_abs_phase_error_radians": 0.24024605240328548,
+          "amplitude_ratio_min": 0.7785495828529747,
+          "amplitude_ratio_max": 1.2202411561496482
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08156898785322639,
+          "max_abs_phase_error_radians": 0.04965134759827469,
+          "amplitude_ratio_min": 0.9966045344326183,
+          "amplitude_ratio_max": 1.080542931571644
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 29,
+      "n": 5,
+      "diffusivity": 0.19530773460239167,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 18.836102608650144,
+          "max_abs_phase_error_radians": 0.7842429187080961,
+          "amplitude_ratio_min": 1.971345399352666,
+          "amplitude_ratio_max": 19.53077942242254
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5497720486565428,
+          "max_abs_phase_error_radians": 0.4595508614377004,
+          "amplitude_ratio_min": 1.0194021428644355,
+          "amplitude_ratio_max": 1.2210849845677934
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3597801748837663,
+          "max_abs_phase_error_radians": 0.29865367006389637,
+          "amplitude_ratio_min": 0.8957406467248469,
+          "amplitude_ratio_max": 1.2834150553883736
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1380266755764611,
+          "max_abs_phase_error_radians": 0.056109932547794235,
+          "amplitude_ratio_min": 0.9971797595739391,
+          "amplitude_ratio_max": 1.1290393700422523
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 30,
+      "n": 5,
+      "diffusivity": 0.20847423378124058,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 20.15223345793082,
+          "max_abs_phase_error_radians": 0.7847356306385702,
+          "amplitude_ratio_min": 2.0902352760143175,
+          "amplitude_ratio_max": 20.847415620029935
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6854595300144448,
+          "max_abs_phase_error_radians": 0.5879518965332015,
+          "amplitude_ratio_min": 0.8156803031971265,
+          "amplitude_ratio_max": 1.234830534148158
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.11736195530752642,
+          "max_abs_phase_error_radians": 0.10867753740177517,
+          "amplitude_ratio_min": 0.8922568079989963,
+          "amplitude_ratio_max": 1.0664945758002427
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07140802396064479,
+          "max_abs_phase_error_radians": 0.05955703414500303,
+          "amplitude_ratio_min": 0.9829911808013884,
+          "amplitude_ratio_max": 1.0644994929653477
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 31,
+      "n": 5,
+      "diffusivity": 0.3227386390809102,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 31.574410580214302,
+          "max_abs_phase_error_radians": 0.7850579070546043,
+          "amplitude_ratio_min": 3.2285246732211785,
+          "amplitude_ratio_max": 32.273844510361435
+        },
+        "slow": {
+          "max_complex_relative_error": 1.2646819048759246,
+          "max_abs_phase_error_radians": 0.6806513597485437,
+          "amplitude_ratio_min": 0.9242415893350231,
+          "amplitude_ratio_max": 1.8741600769019162
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1422976630073887,
+          "max_abs_phase_error_radians": 0.11516103689132465,
+          "amplitude_ratio_min": 0.9332133697210421,
+          "amplitude_ratio_max": 1.1262282596847561
+        },
+        "fast": {
+          "max_complex_relative_error": 0.21724078419031723,
+          "max_abs_phase_error_radians": 0.16598021941917057,
+          "amplitude_ratio_min": 0.7832081368587346,
+          "amplitude_ratio_max": 1.0274892366921067
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 37,
+      "n": 4,
+      "diffusivity": 0.4388423341954788,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 43.182782788872416,
+          "max_abs_phase_error_radians": 0.7852537912239997,
+          "amplitude_ratio_min": 4.386520396382727,
+          "amplitude_ratio_max": 43.88420358860726
+        },
+        "slow": {
+          "max_complex_relative_error": 1.913599588939347,
+          "max_abs_phase_error_radians": 0.7386938075881022,
+          "amplitude_ratio_min": 0.8914719295402471,
+          "amplitude_ratio_max": 2.5305772663731947
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.307809406413502,
+          "max_abs_phase_error_radians": 0.29560169331051067,
+          "amplitude_ratio_min": 0.8390335132138066,
+          "amplitude_ratio_max": 1.3077359696159052
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07891514966835503,
+          "max_abs_phase_error_radians": 0.05495294950998817,
+          "amplitude_ratio_min": 0.995723104743012,
+          "amplitude_ratio_max": 1.075317307774676
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 41,
+      "n": 5,
+      "diffusivity": 0.07907573385575511,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 7.232381710391199,
+          "max_abs_phase_error_radians": 0.7818016974687035,
+          "amplitude_ratio_min": 0.847331742907211,
+          "amplitude_ratio_max": 7.9076270635461325
+        },
+        "slow": {
+          "max_complex_relative_error": 0.30373784950627164,
+          "max_abs_phase_error_radians": 0.27761610243357043,
+          "amplitude_ratio_min": 0.6962968181731671,
+          "amplitude_ratio_max": 1.2654078031974378
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.27568780593952946,
+          "max_abs_phase_error_radians": 0.13278488205188418,
+          "amplitude_ratio_min": 0.9652339123214734,
+          "amplitude_ratio_max": 1.2686053898525005
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1304693241472608,
+          "max_abs_phase_error_radians": 0.11132902169004212,
+          "amplitude_ratio_min": 0.9475832188482336,
+          "amplitude_ratio_max": 1.1172774987121254
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 65,
+      "n": 7,
+      "diffusivity": 0.19969023496098412,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 19.27431906050196,
+          "max_abs_phase_error_radians": 0.7846235772274798,
+          "amplitude_ratio_min": 2.0045449819038486,
+          "amplitude_ratio_max": 19.969018457838786
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6318475613941342,
+          "max_abs_phase_error_radians": 0.5570999744812991,
+          "amplitude_ratio_min": 0.8473446107875942,
+          "amplitude_ratio_max": 1.1947388155434902
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.14094260024934616,
+          "max_abs_phase_error_radians": 0.13255703050887954,
+          "amplitude_ratio_min": 0.9145870891035108,
+          "amplitude_ratio_max": 1.1118378987362594
+        },
+        "fast": {
+          "max_complex_relative_error": 0.15940547499764673,
+          "max_abs_phase_error_radians": 0.15401438166929768,
+          "amplitude_ratio_min": 0.8686762908736892,
+          "amplitude_ratio_max": 1.073688915376627
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 67,
+      "n": 5,
+      "diffusivity": 0.12849564548334236,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 12.161969444855256,
+          "max_abs_phase_error_radians": 0.783968044058667,
+          "amplitude_ratio_min": 1.3008241192301195,
+          "amplitude_ratio_max": 12.849572361568262
+        },
+        "slow": {
+          "max_complex_relative_error": 0.3913473467213486,
+          "max_abs_phase_error_radians": 0.38679188308264706,
+          "amplitude_ratio_min": 0.7229276036204998,
+          "amplitude_ratio_max": 0.9919890975500377
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.12848378487751808,
+          "max_abs_phase_error_radians": 0.1284566101515616,
+          "amplitude_ratio_min": 0.8995985697665905,
+          "amplitude_ratio_max": 1.0803464729772265
+        },
+        "fast": {
+          "max_complex_relative_error": 0.04741397616618457,
+          "max_abs_phase_error_radians": 0.03563037028424756,
+          "amplitude_ratio_min": 0.9893456937629674,
+          "amplitude_ratio_max": 1.0451293963251873
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 69,
+      "n": 4,
+      "diffusivity": 0.3376606103908007,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 33.0663544115859,
+          "max_abs_phase_error_radians": 0.7852061126596702,
+          "amplitude_ratio_min": 3.375520437606934,
+          "amplitude_ratio_max": 33.76603846497748
+        },
+        "slow": {
+          "max_complex_relative_error": 1.3710317808514771,
+          "max_abs_phase_error_radians": 0.724459603366854,
+          "amplitude_ratio_min": 0.7347992702662324,
+          "amplitude_ratio_max": 1.9490726296691891
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.31593598161479364,
+          "max_abs_phase_error_radians": 0.2568527125552594,
+          "amplitude_ratio_min": 0.7162713838813083,
+          "amplitude_ratio_max": 1.1371035270965124
+        },
+        "fast": {
+          "max_complex_relative_error": 0.14033076822830384,
+          "max_abs_phase_error_radians": 0.1401262376116394,
+          "amplitude_ratio_min": 0.9373994754994088,
+          "amplitude_ratio_max": 1.0922451837722913
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 72,
+      "n": 5,
+      "diffusivity": 0.1620785759688691,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 15.51629495885182,
+          "max_abs_phase_error_radians": 0.7846254133780469,
+          "amplitude_ratio_min": 1.6258930791497421,
+          "amplitude_ratio_max": 16.207852404854897
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5400131773082836,
+          "max_abs_phase_error_radians": 0.5558492902456293,
+          "amplitude_ratio_min": 0.663907240088438,
+          "amplitude_ratio_max": 0.96427403917339
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.2969351864078876,
+          "max_abs_phase_error_radians": 0.27586095965400814,
+          "amplitude_ratio_min": 0.7833607312942442,
+          "amplitude_ratio_max": 1.149990087853777
+        },
+        "fast": {
+          "max_complex_relative_error": 0.24315551911176642,
+          "max_abs_phase_error_radians": 0.08509217070427953,
+          "amplitude_ratio_min": 0.998490422684676,
+          "amplitude_ratio_max": 1.2376152755858785
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 76,
+      "n": 5,
+      "diffusivity": 0.22374375243454733,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.67828003277125,
+          "max_abs_phase_error_radians": 0.784689971408438,
+          "amplitude_ratio_min": 2.2448053265413517,
+          "amplitude_ratio_max": 22.374368397487597
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7351539640779546,
+          "max_abs_phase_error_radians": 0.5758336664344447,
+          "amplitude_ratio_min": 0.9141800704120256,
+          "amplitude_ratio_max": 1.3326352296337365
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.11972758471161632,
+          "max_abs_phase_error_radians": 0.10962973631872999,
+          "amplitude_ratio_min": 0.9354837746336878,
+          "amplitude_ratio_max": 1.1075102196806488
+        },
+        "fast": {
+          "max_complex_relative_error": 0.09102357566266434,
+          "max_abs_phase_error_radians": 0.05193283309380071,
+          "amplitude_ratio_min": 0.9972804762108988,
+          "amplitude_ratio_max": 1.0859215989531255
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 88,
+      "n": 4,
+      "diffusivity": 0.48346513900484267,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 47.644547137672255,
+          "max_abs_phase_error_radians": 0.7852947476248061,
+          "amplitude_ratio_min": 4.832166310548248,
+          "amplitude_ratio_max": 48.346480647319225
+        },
+        "slow": {
+          "max_complex_relative_error": 2.1651634873228516,
+          "max_abs_phase_error_radians": 0.7509463232430489,
+          "amplitude_ratio_min": 0.9257751491678066,
+          "amplitude_ratio_max": 2.7858810785345947
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3814348596902564,
+          "max_abs_phase_error_radians": 0.3913453197237116,
+          "amplitude_ratio_min": 0.8137164602768372,
+          "amplitude_ratio_max": 1.1730948789440179
+        },
+        "fast": {
+          "max_complex_relative_error": 0.12767429044930198,
+          "max_abs_phase_error_radians": 0.0761187408815162,
+          "amplitude_ratio_min": 0.9950492635072699,
+          "amplitude_ratio_max": 1.1158335961128516
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 96,
+      "n": 4,
+      "diffusivity": 0.470105730727941,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 46.30876173681374,
+          "max_abs_phase_error_radians": 0.7852993012661231,
+          "amplitude_ratio_min": 4.69852953334935,
+          "amplitude_ratio_max": 47.01054062704332
+        },
+        "slow": {
+          "max_complex_relative_error": 2.092895859345639,
+          "max_abs_phase_error_radians": 0.7522984823026689,
+          "amplitude_ratio_min": 0.8858820323464364,
+          "amplitude_ratio_max": 2.7083235768107974
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3848508922920297,
+          "max_abs_phase_error_radians": 0.3930231169776766,
+          "amplitude_ratio_min": 0.7722998173421205,
+          "amplitude_ratio_max": 1.2748775499677276
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11077040394174782,
+          "max_abs_phase_error_radians": 0.04908676220422528,
+          "amplitude_ratio_min": 0.9972311326698308,
+          "amplitude_ratio_max": 1.1096996475860572
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 98,
+      "n": 5,
+      "diffusivity": 0.24533845449310676,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 23.836629355129013,
+          "max_abs_phase_error_radians": 0.784579601725941,
+          "amplitude_ratio_min": 2.4650184564264834,
+          "amplitude_ratio_max": 24.533841519233835
+        },
+        "slow": {
+          "max_complex_relative_error": 0.812436898535362,
+          "max_abs_phase_error_radians": 0.5464127430862203,
+          "amplitude_ratio_min": 1.0881246985116788,
+          "amplitude_ratio_max": 1.4789281925776485
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.22666992774598588,
+          "max_abs_phase_error_radians": 0.17246885837953993,
+          "amplitude_ratio_min": 0.9741425098326373,
+          "amplitude_ratio_max": 1.1937304035820002
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07305583279752279,
+          "max_abs_phase_error_radians": 0.04259636832335078,
+          "amplitude_ratio_min": 0.9821344057692518,
+          "amplitude_ratio_max": 1.0729962100447954
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 101,
+      "n": 7,
+      "diffusivity": 0.1657289340665742,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 15.88079238935114,
+          "max_abs_phase_error_radians": 0.7843900376751659,
+          "amplitude_ratio_min": 1.6677179375153781,
+          "amplitude_ratio_max": 16.572893337726548
+        },
+        "slow": {
+          "max_complex_relative_error": 0.49157764444698454,
+          "max_abs_phase_error_radians": 0.4935557595137583,
+          "amplitude_ratio_min": 0.7912310135710999,
+          "amplitude_ratio_max": 1.0118018110922269
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10503638890351324,
+          "max_abs_phase_error_radians": 0.10069661058730062,
+          "amplitude_ratio_min": 0.910886854225354,
+          "amplitude_ratio_max": 1.0594321109980915
+        },
+        "fast": {
+          "max_complex_relative_error": 0.15517656774481753,
+          "max_abs_phase_error_radians": 0.15577573254997304,
+          "amplitude_ratio_min": 0.8968305701243391,
+          "amplitude_ratio_max": 1.0659178299197527
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 103,
+      "n": 4,
+      "diffusivity": 0.4088112760188021,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 40.18009713077059,
+          "max_abs_phase_error_radians": 0.7852333280973585,
+          "amplitude_ratio_min": 4.086569783117115,
+          "amplitude_ratio_max": 40.88110004225826
+        },
+        "slow": {
+          "max_complex_relative_error": 1.7481346695528655,
+          "max_abs_phase_error_radians": 0.7325832839014381,
+          "amplitude_ratio_min": 0.8642177283124711,
+          "amplitude_ratio_max": 2.3585936381176196
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.2736839874206027,
+          "max_abs_phase_error_radians": 0.2563136780048876,
+          "amplitude_ratio_min": 0.8367553366168416,
+          "amplitude_ratio_max": 1.1446229150406597
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1114617579419384,
+          "max_abs_phase_error_radians": 0.050788104296356586,
+          "amplitude_ratio_min": 0.9971149489081281,
+          "amplitude_ratio_max": 1.110337551485111
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 109,
+      "n": 5,
+      "diffusivity": 0.19329464881023126,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 18.63529011431744,
+          "max_abs_phase_error_radians": 0.7847435538407576,
+          "amplitude_ratio_min": 1.9373152620457947,
+          "amplitude_ratio_max": 19.329456959948896
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6365024888461772,
+          "max_abs_phase_error_radians": 0.589432329568299,
+          "amplitude_ratio_min": 0.7376127236944572,
+          "amplitude_ratio_max": 1.1412927906956458
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.21923129481711254,
+          "max_abs_phase_error_radians": 0.1923510289030334,
+          "amplitude_ratio_min": 0.8313720475444089,
+          "amplitude_ratio_max": 1.0996788909610529
+        },
+        "fast": {
+          "max_complex_relative_error": 0.6635342841002432,
+          "max_abs_phase_error_radians": 0.6510031487476239,
+          "amplitude_ratio_min": 0.8425504258936843,
+          "amplitude_ratio_max": 1.3811372695162663
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 111,
+      "n": 4,
+      "diffusivity": 0.48381324139404425,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 47.67936308949855,
+          "max_abs_phase_error_radians": 0.7853084503420964,
+          "amplitude_ratio_min": 4.835381924206471,
+          "amplitude_ratio_max": 48.38129059847563
+        },
+        "slow": {
+          "max_complex_relative_error": 2.169362181380916,
+          "max_abs_phase_error_radians": 0.7550308244601108,
+          "amplitude_ratio_min": 0.889496495547725,
+          "amplitude_ratio_max": 2.786521768409976
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.8928842839141679,
+          "max_abs_phase_error_radians": 0.4755808807600131,
+          "amplitude_ratio_min": 0.7454468844296546,
+          "amplitude_ratio_max": 1.8914362996752807
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07856754777099638,
+          "max_abs_phase_error_radians": 0.05239716880507226,
+          "amplitude_ratio_min": 0.9963621460219457,
+          "amplitude_ratio_max": 1.0689170816397107
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 112,
+      "n": 4,
+      "diffusivity": 0.3464518102288046,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 33.94522977722703,
+          "max_abs_phase_error_radians": 0.7851379815368719,
+          "amplitude_ratio_min": 3.464282183099646,
+          "amplitude_ratio_max": 34.64515873987264
+        },
+        "slow": {
+          "max_complex_relative_error": 1.400821163244123,
+          "max_abs_phase_error_radians": 0.7042033020365491,
+          "amplitude_ratio_min": 0.8696025709332742,
+          "amplitude_ratio_max": 2.004358818001389
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.18757507745582597,
+          "max_abs_phase_error_radians": 0.1622082426764715,
+          "amplitude_ratio_min": 0.8697842201321456,
+          "amplitude_ratio_max": 1.1741046311884131
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06444084171376369,
+          "max_abs_phase_error_radians": 0.02996934667730797,
+          "amplitude_ratio_min": 0.998222646827086,
+          "amplitude_ratio_max": 1.0627905951218792
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 117,
+      "n": 4,
+      "diffusivity": 0.2497349910118112,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 24.27639023659552,
+          "max_abs_phase_error_radians": 0.7850029186962931,
+          "amplitude_ratio_min": 2.4984694232070797,
+          "amplitude_ratio_max": 24.97348433016716
+        },
+        "slow": {
+          "max_complex_relative_error": 0.906091069817964,
+          "max_abs_phase_error_radians": 0.6642311668524131,
+          "amplitude_ratio_min": 0.740068213667968,
+          "amplitude_ratio_max": 1.451458406861166
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.2594302775731287,
+          "max_abs_phase_error_radians": 0.25594778190086864,
+          "amplitude_ratio_min": 0.7601906955480634,
+          "amplitude_ratio_max": 1.2166240426796056
+        },
+        "fast": {
+          "max_complex_relative_error": 0.12106143303079583,
+          "max_abs_phase_error_radians": 0.052433229328125636,
+          "amplitude_ratio_min": 0.9971931078817551,
+          "amplitude_ratio_max": 1.1203076616859107
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 130,
+      "n": 4,
+      "diffusivity": 0.4015614860101963,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 39.455248317857844,
+          "max_abs_phase_error_radians": 0.7852550986441598,
+          "amplitude_ratio_min": 4.013834931806589,
+          "amplitude_ratio_max": 40.156121265635974
+        },
+        "slow": {
+          "max_complex_relative_error": 1.7142079983726406,
+          "max_abs_phase_error_radians": 0.7390837787850844,
+          "amplitude_ratio_min": 0.8089021038026774,
+          "amplitude_ratio_max": 2.315397323352281
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.32800726658480533,
+          "max_abs_phase_error_radians": 0.29750832644023456,
+          "amplitude_ratio_min": 0.7524430674656883,
+          "amplitude_ratio_max": 1.1864887020195503
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06335549253597228,
+          "max_abs_phase_error_radians": 0.044230142354307674,
+          "amplitude_ratio_min": 0.998257232020388,
+          "amplitude_ratio_max": 1.0624843436219327
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 158,
+      "n": 4,
+      "diffusivity": 0.4483726839912314,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 44.135714933814015,
+          "max_abs_phase_error_radians": 0.7852860985504458,
+          "amplitude_ratio_min": 4.4813742035892945,
+          "amplitude_ratio_max": 44.83723751166045
+        },
+        "slow": {
+          "max_complex_relative_error": 1.9717248619717516,
+          "max_abs_phase_error_radians": 0.7483407078326315,
+          "amplitude_ratio_min": 0.853917338340184,
+          "amplitude_ratio_max": 2.5834194690275787
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.4316925258178676,
+          "max_abs_phase_error_radians": 0.35584641396851774,
+          "amplitude_ratio_min": 0.7579454549830213,
+          "amplitude_ratio_max": 1.4195234113977202
+        },
+        "fast": {
+          "max_complex_relative_error": 0.05833913006822266,
+          "max_abs_phase_error_radians": 0.041288390235615806,
+          "amplitude_ratio_min": 0.9971541869223672,
+          "amplitude_ratio_max": 1.0533654339247316
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 165,
+      "n": 5,
+      "diffusivity": 0.14971372254094048,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 14.280401720002978,
+          "max_abs_phase_error_radians": 0.7834982434544854,
+          "amplitude_ratio_min": 1.5338712600872806,
+          "amplitude_ratio_max": 14.971400019551206
+        },
+        "slow": {
+          "max_complex_relative_error": 0.3040535440421941,
+          "max_abs_phase_error_radians": 0.29694929150851224,
+          "amplitude_ratio_min": 0.9928183930982906,
+          "amplitude_ratio_max": 1.1884975492789254
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.19637648205939628,
+          "max_abs_phase_error_radians": 0.14667227734737687,
+          "amplitude_ratio_min": 0.9306214294779254,
+          "amplitude_ratio_max": 1.157040016202919
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06414943692977576,
+          "max_abs_phase_error_radians": 0.043251847555024765,
+          "amplitude_ratio_min": 0.9970891674339473,
+          "amplitude_ratio_max": 1.061002232902326
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 172,
+      "n": 4,
+      "diffusivity": 0.46107856204317577,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 45.40619317176206,
+          "max_abs_phase_error_radians": 0.7853568273720951,
+          "amplitude_ratio_min": 4.607371283148252,
+          "amplitude_ratio_max": 46.10782344585292
+        },
+        "slow": {
+          "max_complex_relative_error": 2.0545908145246474,
+          "max_abs_phase_error_radians": 0.7694795318862961,
+          "amplitude_ratio_min": 0.7314189467381988,
+          "amplitude_ratio_max": 2.6514721430423225
+        },
+        "intermediate": {
+          "max_complex_relative_error": 1.4875658416965036,
+          "max_abs_phase_error_radians": 0.9343657716030749,
+          "amplitude_ratio_min": 0.5158579899008046,
+          "amplitude_ratio_max": 2.372685711296915
+        },
+        "fast": {
+          "max_complex_relative_error": 0.05489819880960846,
+          "max_abs_phase_error_radians": 0.03249458512981397,
+          "amplitude_ratio_min": 0.9980575402800669,
+          "amplitude_ratio_max": 1.051638174166022
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 173,
+      "n": 6,
+      "diffusivity": 0.2684506180783568,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.14720435635613,
+          "max_abs_phase_error_radians": 0.784987352888939,
+          "amplitude_ratio_min": 2.686201744197594,
+          "amplitude_ratio_max": 26.845046422969535
+        },
+        "slow": {
+          "max_complex_relative_error": 0.9862702242263487,
+          "max_abs_phase_error_radians": 0.659817147314731,
+          "amplitude_ratio_min": 0.8255195169025172,
+          "amplitude_ratio_max": 1.5627580702561386
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1501349644995503,
+          "max_abs_phase_error_radians": 0.13155336821559865,
+          "amplitude_ratio_min": 0.8523571880848011,
+          "amplitude_ratio_max": 1.1275274908757607
+        },
+        "fast": {
+          "max_complex_relative_error": 0.17774752989796297,
+          "max_abs_phase_error_radians": 0.16811602176794058,
+          "amplitude_ratio_min": 0.8988802601130305,
+          "amplitude_ratio_max": 1.1371963145483883
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 181,
+      "n": 4,
+      "diffusivity": 0.3521349678969387,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 34.51344541898518,
+          "max_abs_phase_error_radians": 0.7851683599881131,
+          "amplitude_ratio_min": 3.520661965911253,
+          "amplitude_ratio_max": 35.21347369281187
+        },
+        "slow": {
+          "max_complex_relative_error": 1.4363316996714395,
+          "max_abs_phase_error_radians": 0.713219210561391,
+          "amplitude_ratio_min": 0.8250071279016642,
+          "amplitude_ratio_max": 2.0349218583060624
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.24341267743291364,
+          "max_abs_phase_error_radians": 0.18438931186383214,
+          "amplitude_ratio_min": 0.8215923649890321,
+          "amplitude_ratio_max": 1.2417918009195508
+        },
+        "fast": {
+          "max_complex_relative_error": 0.04892796873227074,
+          "max_abs_phase_error_radians": 0.02990911471596647,
+          "amplitude_ratio_min": 0.9980285722974876,
+          "amplitude_ratio_max": 1.0486380682554524
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 182,
+      "n": 5,
+      "diffusivity": 0.22903913291789985,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.20760301935766,
+          "max_abs_phase_error_radians": 0.7847753361263395,
+          "amplitude_ratio_min": 2.295500178744221,
+          "amplitude_ratio_max": 22.90390383812434
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7710899367872346,
+          "max_abs_phase_error_radians": 0.5989471979955308,
+          "amplitude_ratio_min": 0.8699167488413527,
+          "amplitude_ratio_max": 1.3519898940518216
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.11136219740539333,
+          "max_abs_phase_error_radians": 0.10409280995481482,
+          "amplitude_ratio_min": 0.9457878737151449,
+          "amplitude_ratio_max": 1.1002520109197014
+        },
+        "fast": {
+          "max_complex_relative_error": 0.16695889468661582,
+          "max_abs_phase_error_radians": 0.16686546950325334,
+          "amplitude_ratio_min": 0.8816857424701295,
+          "amplitude_ratio_max": 1.074222609748618
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 184,
+      "n": 6,
+      "diffusivity": 0.3439221142359106,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 33.692319063467586,
+          "max_abs_phase_error_radians": 0.7851430871500505,
+          "amplitude_ratio_min": 3.438751864886402,
+          "amplitude_ratio_max": 34.39218906793701
+        },
+        "slow": {
+          "max_complex_relative_error": 1.3881477984368582,
+          "max_abs_phase_error_radians": 0.7056697891216138,
+          "amplitude_ratio_min": 0.837952933207214,
+          "amplitude_ratio_max": 1.9885099082741404
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.3690807398851898,
+          "max_abs_phase_error_radians": 0.21709651769257313,
+          "amplitude_ratio_min": 0.837952933207214,
+          "amplitude_ratio_max": 1.3684643493077429
+        },
+        "fast": {
+          "max_complex_relative_error": 0.14222212052070937,
+          "max_abs_phase_error_radians": 0.08498051845578386,
+          "amplitude_ratio_min": 0.9957817177767223,
+          "amplitude_ratio_max": 1.1347095402063065
+        }
+      }
+    },
+    {
+      "ensemble_size": 1024,
+      "replicate": 196,
+      "n": 5,
+      "diffusivity": 0.2758638304358491,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.888245525749127,
+          "max_abs_phase_error_radians": 0.7849638993586012,
+          "amplitude_ratio_min": 2.7611830170043183,
+          "amplitude_ratio_max": 27.586368038215383
+        },
+        "slow": {
+          "max_complex_relative_error": 1.017386210045428,
+          "max_abs_phase_error_radians": 0.6532500201073992,
+          "amplitude_ratio_min": 0.8873080842375075,
+          "amplitude_ratio_max": 1.6100108408193246
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.0918045214598848,
+          "max_abs_phase_error_radians": 0.041501616448357696,
+          "amplitude_ratio_min": 0.9132059442339591,
+          "amplitude_ratio_max": 1.0272764579387657
+        },
+        "fast": {
+          "max_complex_relative_error": 0.20372688510122752,
+          "max_abs_phase_error_radians": 0.18693081984303547,
+          "amplitude_ratio_min": 0.8448256208647169,
+          "amplitude_ratio_max": 1.0747891693840477
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 12,
+      "n": 5,
+      "diffusivity": 0.20151141377042853,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 19.45632794052997,
+          "max_abs_phase_error_radians": 0.7846415467886676,
+          "amplitude_ratio_min": 2.0219881552182155,
+          "amplitude_ratio_max": 20.151135449064128
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6398376192708443,
+          "max_abs_phase_error_radians": 0.5613742882232905,
+          "amplitude_ratio_min": 0.8371577903514485,
+          "amplitude_ratio_max": 1.201482874013565
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.31305765504273064,
+          "max_abs_phase_error_radians": 0.21746137358791182,
+          "amplitude_ratio_min": 0.9102691218045171,
+          "amplitude_ratio_max": 1.2032883233346123
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07692877029554894,
+          "max_abs_phase_error_radians": 0.03226114798495781,
+          "amplitude_ratio_min": 0.9982363489825831,
+          "amplitude_ratio_max": 1.0734302872192383
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 23,
+      "n": 5,
+      "diffusivity": 0.22660304162233516,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.964003581090026,
+          "max_abs_phase_error_radians": 0.7846106735544803,
+          "amplitude_ratio_min": 2.2759536320528624,
+          "amplitude_ratio_max": 22.66029970765209
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7346519902883892,
+          "max_abs_phase_error_radians": 0.5550047773686927,
+          "amplitude_ratio_min": 0.9776404545497994,
+          "amplitude_ratio_max": 1.3617963757881082
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.11405433659855072,
+          "max_abs_phase_error_radians": 0.058719483128322696,
+          "amplitude_ratio_min": 1.0183397554195777,
+          "amplitude_ratio_max": 1.1131262555076527
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08427502129782971,
+          "max_abs_phase_error_radians": 0.059238580036982395,
+          "amplitude_ratio_min": 0.9955096898767245,
+          "amplitude_ratio_max": 1.0776872454931534
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 25,
+      "n": 7,
+      "diffusivity": 0.15354119049221437,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 14.663180108914913,
+          "max_abs_phase_error_radians": 0.7841888818265773,
+          "amplitude_ratio_min": 1.5493639745077914,
+          "amplitude_ratio_max": 15.354123316121083
+        },
+        "slow": {
+          "max_complex_relative_error": 0.43107489817922673,
+          "max_abs_phase_error_radians": 0.4418840419614733,
+          "amplitude_ratio_min": 0.8006259170015314,
+          "amplitude_ratio_max": 1.0250524660842386
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1014068219201718,
+          "max_abs_phase_error_radians": 0.09709342709799754,
+          "amplitude_ratio_min": 0.9737516252508995,
+          "amplitude_ratio_max": 1.0673815574189434
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11619592831333497,
+          "max_abs_phase_error_radians": 0.10579273442620112,
+          "amplitude_ratio_min": 0.9568352630496345,
+          "amplitude_ratio_max": 1.0965147945273268
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 44,
+      "n": 5,
+      "diffusivity": 0.2347403014687674,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.77748019919612,
+          "max_abs_phase_error_radians": 0.7848347346383224,
+          "amplitude_ratio_min": 2.3514327820654186,
+          "amplitude_ratio_max": 23.47401924763115
+        },
+        "slow": {
+          "max_complex_relative_error": 0.8067394905816646,
+          "max_abs_phase_error_radians": 0.6157932476865041,
+          "amplitude_ratio_min": 0.8459600648315494,
+          "amplitude_ratio_max": 1.3795203060169197
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1025141469754937,
+          "max_abs_phase_error_radians": 0.08623230290576554,
+          "amplitude_ratio_min": 0.9157047850146371,
+          "amplitude_ratio_max": 1.074924820182173
+        },
+        "fast": {
+          "max_complex_relative_error": 0.05431599639965165,
+          "max_abs_phase_error_radians": 0.04204206660459945,
+          "amplitude_ratio_min": 0.9915313997378663,
+          "amplitude_ratio_max": 1.05052199910043
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 48,
+      "n": 5,
+      "diffusivity": 0.25431246899040455,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 24.733843851012942,
+          "max_abs_phase_error_radians": 0.7848564508450322,
+          "amplitude_ratio_min": 2.5472582226586256,
+          "amplitude_ratio_max": 25.43123485817031
+        },
+        "slow": {
+          "max_complex_relative_error": 0.8961249064959252,
+          "max_abs_phase_error_radians": 0.6221552181836011,
+          "amplitude_ratio_min": 0.9061543763696347,
+          "amplitude_ratio_max": 1.493357823835871
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10814267629796978,
+          "max_abs_phase_error_radians": 0.0874619767104279,
+          "amplitude_ratio_min": 0.9724072683870799,
+          "amplitude_ratio_max": 1.1004826218941668
+        },
+        "fast": {
+          "max_complex_relative_error": 0.2323483025510826,
+          "max_abs_phase_error_radians": 0.21737294440871596,
+          "amplitude_ratio_min": 0.9033313586714141,
+          "amplitude_ratio_max": 1.1457416278999846
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 49,
+      "n": 7,
+      "diffusivity": 0.21049260123556662,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 20.353904479500127,
+          "max_abs_phase_error_radians": 0.7846755730043166,
+          "amplitude_ratio_min": 2.1115992265478614,
+          "amplitude_ratio_max": 21.049253422064126
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6791281147411256,
+          "max_abs_phase_error_radians": 0.5710658352942978,
+          "amplitude_ratio_min": 0.8592998774759107,
+          "amplitude_ratio_max": 1.2524741201438798
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.0675031173490781,
+          "max_abs_phase_error_radians": 0.06266661252165617,
+          "amplitude_ratio_min": 0.9709463660934864,
+          "amplitude_ratio_max": 1.0508618918460617
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1516943444330874,
+          "max_abs_phase_error_radians": 0.13657309520574543,
+          "amplitude_ratio_min": 0.8717172338540905,
+          "amplitude_ratio_max": 1.0595518581116228
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 54,
+      "n": 5,
+      "diffusivity": 0.3254262627294373,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 31.843129604975996,
+          "max_abs_phase_error_radians": 0.785091334764723,
+          "amplitude_ratio_min": 3.2548748052696626,
+          "amplitude_ratio_max": 32.542606177299284
+        },
+        "slow": {
+          "max_complex_relative_error": 1.2850297647894615,
+          "max_abs_phase_error_radians": 0.6904966960448896,
+          "amplitude_ratio_min": 0.885130424227334,
+          "amplitude_ratio_max": 1.8870095824202402
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.14459365480198796,
+          "max_abs_phase_error_radians": 0.09586630017449194,
+          "amplitude_ratio_min": 0.8870335448513785,
+          "amplitude_ratio_max": 1.0608418121544125
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08193208048402183,
+          "max_abs_phase_error_radians": 0.08171527038212197,
+          "amplitude_ratio_min": 0.9394253034300241,
+          "amplitude_ratio_max": 1.0316645726692117
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 59,
+      "n": 5,
+      "diffusivity": 0.2217489370763436,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.47899190394947,
+          "max_abs_phase_error_radians": 0.7848128896281953,
+          "amplitude_ratio_min": 2.2214955730165533,
+          "amplitude_ratio_max": 22.174883611486063
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7496863511768154,
+          "max_abs_phase_error_radians": 0.6093756294221233,
+          "amplitude_ratio_min": 0.8089058015294934,
+          "amplitude_ratio_max": 1.304194253048177
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.14409784777733237,
+          "max_abs_phase_error_radians": 0.12820659919431465,
+          "amplitude_ratio_min": 0.8889900363711534,
+          "amplitude_ratio_max": 1.1037798365879117
+        },
+        "fast": {
+          "max_complex_relative_error": 0.1060816877941182,
+          "max_abs_phase_error_radians": 0.09754433006963967,
+          "amplitude_ratio_min": 0.9293096297111123,
+          "amplitude_ratio_max": 1.033207011835567
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 63,
+      "n": 9,
+      "diffusivity": 0.07641066157521122,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 6.967209608561263,
+          "max_abs_phase_error_radians": 0.7818279554214056,
+          "amplitude_ratio_min": 0.8193617425310926,
+          "amplitude_ratio_max": 7.641118683783722
+        },
+        "slow": {
+          "max_complex_relative_error": 0.3260902503325635,
+          "max_abs_phase_error_radians": 0.23284458552981063,
+          "amplitude_ratio_min": 0.6742459397841126,
+          "amplitude_ratio_max": 1.1071909038985206
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.16128917007736596,
+          "max_abs_phase_error_radians": 0.08391250465081934,
+          "amplitude_ratio_min": 0.8474876637647395,
+          "amplitude_ratio_max": 1.1040253274893927
+        },
+        "fast": {
+          "max_complex_relative_error": 0.20175611895614448,
+          "max_abs_phase_error_radians": 0.20242829089387498,
+          "amplitude_ratio_min": 0.8481473131213861,
+          "amplitude_ratio_max": 1.107357093401083
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 74,
+      "n": 7,
+      "diffusivity": 0.06308723600601256,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 5.642486823392384,
+          "max_abs_phase_error_radians": 0.7807604754431844,
+          "amplitude_ratio_min": 0.7043096771430983,
+          "amplitude_ratio_max": 6.3087974945184735
+        },
+        "slow": {
+          "max_complex_relative_error": 0.35751919801751214,
+          "max_abs_phase_error_radians": 0.2769226610328332,
+          "amplitude_ratio_min": 0.6505307735542694,
+          "amplitude_ratio_max": 1.1311306415271016
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.12342328410403973,
+          "max_abs_phase_error_radians": 0.08533779652858131,
+          "amplitude_ratio_min": 0.9141488807937221,
+          "amplitude_ratio_max": 1.1232367537702375
+        },
+        "fast": {
+          "max_complex_relative_error": 0.09970375872692401,
+          "max_abs_phase_error_radians": 0.07821392399119773,
+          "amplitude_ratio_min": 0.982957541638832,
+          "amplitude_ratio_max": 1.092859057901709
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 82,
+      "n": 4,
+      "diffusivity": 0.3645982390200208,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 35.75950781234527,
+          "max_abs_phase_error_radians": 0.7851518249530327,
+          "amplitude_ratio_min": 3.645655741980105,
+          "amplitude_ratio_max": 36.45980037349809
+        },
+        "slow": {
+          "max_complex_relative_error": 1.4981373883009792,
+          "max_abs_phase_error_radians": 0.7083555053536259,
+          "amplitude_ratio_min": 0.8953427321875963,
+          "amplitude_ratio_max": 2.108934099740506
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.17323033702719856,
+          "max_abs_phase_error_radians": 0.14601672665768425,
+          "amplitude_ratio_min": 0.8945797582792842,
+          "amplitude_ratio_max": 1.1349650682056718
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06081654365238029,
+          "max_abs_phase_error_radians": 0.04146013013007419,
+          "amplitude_ratio_min": 0.9969942463400365,
+          "amplitude_ratio_max": 1.0577237134723871
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 86,
+      "n": 5,
+      "diffusivity": 0.21873226002422572,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.177361463124647,
+          "max_abs_phase_error_radians": 0.7846309174013578,
+          "amplitude_ratio_min": 2.195546245237732,
+          "amplitude_ratio_max": 21.873220334784367
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7022437458040526,
+          "max_abs_phase_error_radians": 0.5591029285649671,
+          "amplitude_ratio_min": 0.9256194292899605,
+          "amplitude_ratio_max": 1.3079427605799439
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10171795760231477,
+          "max_abs_phase_error_radians": 0.083887551361908,
+          "amplitude_ratio_min": 0.965503133162327,
+          "amplitude_ratio_max": 1.0926780690238609
+        },
+        "fast": {
+          "max_complex_relative_error": 0.14928934300174226,
+          "max_abs_phase_error_radians": 0.14543987583216697,
+          "amplitude_ratio_min": 0.9170264922892934,
+          "amplitude_ratio_max": 1.1062649622696614
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 102,
+      "n": 5,
+      "diffusivity": 0.2747952133756874,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.781383658029046,
+          "max_abs_phase_error_radians": 0.784911103534182,
+          "amplitude_ratio_min": 2.7514791263146012,
+          "amplitude_ratio_max": 27.479507385093264
+        },
+        "slow": {
+          "max_complex_relative_error": 1.001816350990756,
+          "max_abs_phase_error_radians": 0.6380008766137004,
+          "amplitude_ratio_min": 0.9326880790351896,
+          "amplitude_ratio_max": 1.6088360630019032
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.06715777580781156,
+          "max_abs_phase_error_radians": 0.029342341613947182,
+          "amplitude_ratio_min": 0.9710269838234644,
+          "amplitude_ratio_max": 1.0668827672947334
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11155918890074555,
+          "max_abs_phase_error_radians": 0.08060731273704957,
+          "amplitude_ratio_min": 0.9963393950164772,
+          "amplitude_ratio_max": 1.0946634532230488
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 106,
+      "n": 5,
+      "diffusivity": 0.22197995151961591,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.50205502963412,
+          "max_abs_phase_error_radians": 0.7847764296804376,
+          "amplitude_ratio_min": 2.224592684801009,
+          "amplitude_ratio_max": 22.19798583077777
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7429386463054274,
+          "max_abs_phase_error_radians": 0.5991199190161097,
+          "amplitude_ratio_min": 0.8382617535653751,
+          "amplitude_ratio_max": 1.309522931423584
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10409198640068694,
+          "max_abs_phase_error_radians": 0.09470021711426765,
+          "amplitude_ratio_min": 0.9321434905193016,
+          "amplitude_ratio_max": 1.0939480481226695
+        },
+        "fast": {
+          "max_complex_relative_error": 0.04547020860299494,
+          "max_abs_phase_error_radians": 0.04375687177777008,
+          "amplitude_ratio_min": 0.9841183048774129,
+          "amplitude_ratio_max": 1.0342917965825345
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 108,
+      "n": 5,
+      "diffusivity": 0.30998791718769375,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 30.2996818824341,
+          "max_abs_phase_error_radians": 0.7850716360457516,
+          "amplitude_ratio_min": 3.100755304432464,
+          "amplitude_ratio_max": 30.998772869971123
+        },
+        "slow": {
+          "max_complex_relative_error": 1.2038910520947477,
+          "max_abs_phase_error_radians": 0.6847024895019709,
+          "amplitude_ratio_min": 0.8650817231667696,
+          "amplitude_ratio_max": 1.7989948816764096
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.15191448016119133,
+          "max_abs_phase_error_radians": 0.08075754373373133,
+          "amplitude_ratio_min": 0.8680148391187631,
+          "amplitude_ratio_max": 1.0511464944741875
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07947532883615308,
+          "max_abs_phase_error_radians": 0.049542521822636014,
+          "amplitude_ratio_min": 0.9986499892407862,
+          "amplitude_ratio_max": 1.0745628547530897
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 110,
+      "n": 5,
+      "diffusivity": 0.14813586627623332,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 14.123332900461389,
+          "max_abs_phase_error_radians": 0.7842371799833076,
+          "amplitude_ratio_min": 1.4930817901858482,
+          "amplitude_ratio_max": 14.813588986404255
+        },
+        "slow": {
+          "max_complex_relative_error": 0.4374032677188203,
+          "max_abs_phase_error_radians": 0.45235125941967425,
+          "amplitude_ratio_min": 0.7492771393841731,
+          "amplitude_ratio_max": 1.0026383244781583
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.18161672042801522,
+          "max_abs_phase_error_radians": 0.18160794008058867,
+          "amplitude_ratio_min": 0.9750928092485808,
+          "amplitude_ratio_max": 1.1385019128372773
+        },
+        "fast": {
+          "max_complex_relative_error": 0.042630004213908376,
+          "max_abs_phase_error_radians": 0.027214041093005747,
+          "amplitude_ratio_min": 0.998828399845981,
+          "amplitude_ratio_max": 1.0420579462911745
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 112,
+      "n": 7,
+      "diffusivity": 0.17238933830704936,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 16.546254905382266,
+          "max_abs_phase_error_radians": 0.7844669199442895,
+          "amplitude_ratio_min": 1.7329665216104146,
+          "amplitude_ratio_max": 17.238931970755534
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5208739942977418,
+          "max_abs_phase_error_radians": 0.5136692345355847,
+          "amplitude_ratio_min": 0.7901128615067097,
+          "amplitude_ratio_max": 1.0437452333200625
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.12155995268453712,
+          "max_abs_phase_error_radians": 0.11645243535534454,
+          "amplitude_ratio_min": 0.9314336233883027,
+          "amplitude_ratio_max": 1.0573341621220127
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11584421506492691,
+          "max_abs_phase_error_radians": 0.1160965290160545,
+          "amplitude_ratio_min": 0.9111248557770192,
+          "amplitude_ratio_max": 1.0622016389763151
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 114,
+      "n": 5,
+      "diffusivity": 0.23275590017115858,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.579112253248773,
+          "max_abs_phase_error_radians": 0.7848004990227537,
+          "amplitude_ratio_min": 2.3322082636428205,
+          "amplitude_ratio_max": 23.275579865739104
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7913128078095414,
+          "max_abs_phase_error_radians": 0.6060524309857003,
+          "amplitude_ratio_min": 0.8637592924436449,
+          "amplitude_ratio_max": 1.3711758503390867
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.09190343207493443,
+          "max_abs_phase_error_radians": 0.08161532727532769,
+          "amplitude_ratio_min": 0.9448680377863278,
+          "amplitude_ratio_max": 1.0894749087990603
+        },
+        "fast": {
+          "max_complex_relative_error": 0.139649695320327,
+          "max_abs_phase_error_radians": 0.08726712628967433,
+          "amplitude_ratio_min": 0.9974979244010327,
+          "amplitude_ratio_max": 1.1314260437127304
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 115,
+      "n": 5,
+      "diffusivity": 0.17359315785445517,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 16.666508944127738,
+          "max_abs_phase_error_radians": 0.7844403889134935,
+          "amplitude_ratio_min": 1.7456623599822672,
+          "amplitude_ratio_max": 17.359314510851622
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5174118425809743,
+          "max_abs_phase_error_radians": 0.5066412728780036,
+          "amplitude_ratio_min": 0.8075789152170952,
+          "amplitude_ratio_max": 1.0539733984089845
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10749495448940016,
+          "max_abs_phase_error_radians": 0.10752868741759562,
+          "amplitude_ratio_min": 0.9548257174969279,
+          "amplitude_ratio_max": 1.064272916400359
+        },
+        "fast": {
+          "max_complex_relative_error": 0.23084095070603375,
+          "max_abs_phase_error_radians": 0.23206269091288054,
+          "amplitude_ratio_min": 0.928062408972047,
+          "amplitude_ratio_max": 1.1857573687647087
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 116,
+      "n": 5,
+      "diffusivity": 0.30433031964068213,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 29.73406450655015,
+          "max_abs_phase_error_radians": 0.7850506259814626,
+          "amplitude_ratio_min": 3.0444863305986716,
+          "amplitude_ratio_max": 30.43301378277193
+        },
+        "slow": {
+          "max_complex_relative_error": 1.1716198904055894,
+          "max_abs_phase_error_radians": 0.6785213375989407,
+          "amplitude_ratio_min": 0.8767405576854689,
+          "amplitude_ratio_max": 1.7678236171421575
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.13056921381883635,
+          "max_abs_phase_error_radians": 0.06401127177320234,
+          "amplitude_ratio_min": 0.8841254873443951,
+          "amplitude_ratio_max": 1.0386691295484307
+        },
+        "fast": {
+          "max_complex_relative_error": 0.14705860159946746,
+          "max_abs_phase_error_radians": 0.0627629416026082,
+          "amplitude_ratio_min": 0.9990631166184689,
+          "amplitude_ratio_max": 1.1437479196851728
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 118,
+      "n": 5,
+      "diffusivity": 0.23468872509283398,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.772349565478816,
+          "max_abs_phase_error_radians": 0.7848691735072925,
+          "amplitude_ratio_min": 2.3503521360978192,
+          "amplitude_ratio_max": 23.468861046894556
+        },
+        "slow": {
+          "max_complex_relative_error": 0.8143390473423513,
+          "max_abs_phase_error_radians": 0.625717983770372,
+          "amplitude_ratio_min": 0.8203403170849196,
+          "amplitude_ratio_max": 1.3763411476272984
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.13512749457888465,
+          "max_abs_phase_error_radians": 0.08338930384281033,
+          "amplitude_ratio_min": 0.8714903776885631,
+          "amplitude_ratio_max": 1.015359999624483
+        },
+        "fast": {
+          "max_complex_relative_error": 0.04668370881596497,
+          "max_abs_phase_error_radians": 0.0422914452296062,
+          "amplitude_ratio_min": 0.985106648015684,
+          "amplitude_ratio_max": 1.040419127608634
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 121,
+      "n": 4,
+      "diffusivity": 0.367598646988122,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 36.059559931868776,
+          "max_abs_phase_error_radians": 0.7852505876021127,
+          "amplitude_ratio_min": 3.6741450197642647,
+          "amplitude_ratio_max": 36.75983946302495
+        },
+        "slow": {
+          "max_complex_relative_error": 1.533763928830447,
+          "max_abs_phase_error_radians": 0.7376692650256454,
+          "amplitude_ratio_min": 0.726320618759422,
+          "amplitude_ratio_max": 2.1184750189485153
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.34116843787909706,
+          "max_abs_phase_error_radians": 0.3135468306585661,
+          "amplitude_ratio_min": 0.6944954097875276,
+          "amplitude_ratio_max": 1.2236824525059646
+        },
+        "fast": {
+          "max_complex_relative_error": 0.048770883570075446,
+          "max_abs_phase_error_radians": 0.04290520066568498,
+          "amplitude_ratio_min": 0.9996008327518412,
+          "amplitude_ratio_max": 1.0348485611271976
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 122,
+      "n": 4,
+      "diffusivity": 0.3536157794263399,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 34.66148814077592,
+          "max_abs_phase_error_radians": 0.785157660721165,
+          "amplitude_ratio_min": 3.5357843016000756,
+          "amplitude_ratio_max": 35.361555066143524
+        },
+        "slow": {
+          "max_complex_relative_error": 1.442526746709424,
+          "max_abs_phase_error_radians": 0.7100989168783592,
+          "amplitude_ratio_min": 0.8582013007020082,
+          "amplitude_ratio_max": 2.0451145358180582
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.20435254562076777,
+          "max_abs_phase_error_radians": 0.1590094736719616,
+          "amplitude_ratio_min": 0.855919181540822,
+          "amplitude_ratio_max": 1.0686167104223827
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07050193431065616,
+          "max_abs_phase_error_radians": 0.037143319750667904,
+          "amplitude_ratio_min": 0.997680436279079,
+          "amplitude_ratio_max": 1.0703666798937799
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 126,
+      "n": 7,
+      "diffusivity": 0.2231148353863706,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 21.615448123082345,
+          "max_abs_phase_error_radians": 0.7847275823056259,
+          "amplitude_ratio_min": 2.2373295888146303,
+          "amplitude_ratio_max": 22.311475539360213
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7386429748095993,
+          "max_abs_phase_error_radians": 0.5858116926775822,
+          "amplitude_ratio_min": 0.8834124359381643,
+          "amplitude_ratio_max": 1.3230815849166855
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.07725328974169776,
+          "max_abs_phase_error_radians": 0.07528909903988354,
+          "amplitude_ratio_min": 0.9245556499270343,
+          "amplitude_ratio_max": 1.0524836107243996
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08402871708883539,
+          "max_abs_phase_error_radians": 0.03945628329069049,
+          "amplitude_ratio_min": 0.998909120602166,
+          "amplitude_ratio_max": 1.0808575117615542
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 136,
+      "n": 7,
+      "diffusivity": 0.2087419717982544,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 20.178801210356042,
+          "max_abs_phase_error_radians": 0.7844659613278352,
+          "amplitude_ratio_min": 2.1003745870852577,
+          "amplitude_ratio_max": 20.874196918215652
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6379835779570457,
+          "max_abs_phase_error_radians": 0.516640147058028,
+          "amplitude_ratio_min": 0.9823692610714782,
+          "amplitude_ratio_max": 1.2732472540733097
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.09432411386696449,
+          "max_abs_phase_error_radians": 0.0827273030361561,
+          "amplitude_ratio_min": 0.9428962330400655,
+          "amplitude_ratio_max": 1.0937272737815165
+        },
+        "fast": {
+          "max_complex_relative_error": 0.11141010414329092,
+          "max_abs_phase_error_radians": 0.07420152156096084,
+          "amplitude_ratio_min": 0.9965416110745171,
+          "amplitude_ratio_max": 1.0995523338706445
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 137,
+      "n": 4,
+      "diffusivity": 0.4082411698617378,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 40.123091677807835,
+          "max_abs_phase_error_radians": 0.7852280820248225,
+          "amplitude_ratio_min": 4.080930298955647,
+          "amplitude_ratio_max": 40.824089524476435
+        },
+        "slow": {
+          "max_complex_relative_error": 1.743970222637892,
+          "max_abs_phase_error_radians": 0.7310210830355056,
+          "amplitude_ratio_min": 0.869039480511378,
+          "amplitude_ratio_max": 2.3556113580582587
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.2653972149740061,
+          "max_abs_phase_error_radians": 0.2482553681056479,
+          "amplitude_ratio_min": 0.841697438920039,
+          "amplitude_ratio_max": 1.1724570230622386
+        },
+        "fast": {
+          "max_complex_relative_error": 0.07843065732200885,
+          "max_abs_phase_error_radians": 0.0504392575076365,
+          "amplitude_ratio_min": 0.9965996476698917,
+          "amplitude_ratio_max": 1.0730558803769967
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 141,
+      "n": 5,
+      "diffusivity": 0.26334460083005107,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 25.636780938796633,
+          "max_abs_phase_error_radians": 0.7849698548777825,
+          "amplitude_ratio_min": 2.6355194818756575,
+          "amplitude_ratio_max": 26.334445401889006
+        },
+        "slow": {
+          "max_complex_relative_error": 0.9598973927034331,
+          "max_abs_phase_error_radians": 0.6548075994870365,
+          "amplitude_ratio_min": 0.831060167194419,
+          "amplitude_ratio_max": 1.5351313589492561
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.14196909475223446,
+          "max_abs_phase_error_radians": 0.09242733225773578,
+          "amplitude_ratio_min": 0.8585227845351859,
+          "amplitude_ratio_max": 1.0633421939192758
+        },
+        "fast": {
+          "max_complex_relative_error": 0.04799480640143905,
+          "max_abs_phase_error_radians": 0.04643201688593494,
+          "amplitude_ratio_min": 0.9838745179772618,
+          "amplitude_ratio_max": 1.033577213721541
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 149,
+      "n": 7,
+      "diffusivity": 0.09624804530896942,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 8.944162122068288,
+          "max_abs_phase_error_radians": 0.783368387985099,
+          "amplitude_ratio_min": 0.985301675765325,
+          "amplitude_ratio_max": 9.62482153346831
+        },
+        "slow": {
+          "max_complex_relative_error": 0.3923864918939894,
+          "max_abs_phase_error_radians": 0.25208055400284596,
+          "amplitude_ratio_min": 0.637162966580453,
+          "amplitude_ratio_max": 1.0066898401433892
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.23945128780543964,
+          "max_abs_phase_error_radians": 0.23016429944412425,
+          "amplitude_ratio_min": 0.8476988519395221,
+          "amplitude_ratio_max": 1.0798012518892643
+        },
+        "fast": {
+          "max_complex_relative_error": 0.13844985975834687,
+          "max_abs_phase_error_radians": 0.1267177349336382,
+          "amplitude_ratio_min": 0.9617833362339354,
+          "amplitude_ratio_max": 1.108150215833336
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 152,
+      "n": 5,
+      "diffusivity": 0.26773639813879746,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.075772186275604,
+          "max_abs_phase_error_radians": 0.7849354957227953,
+          "amplitude_ratio_min": 2.680297095566592,
+          "amplitude_ratio_max": 26.77362571510823
+        },
+        "slow": {
+          "max_complex_relative_error": 0.9736307804729185,
+          "max_abs_phase_error_radians": 0.644999324964061,
+          "amplitude_ratio_min": 0.8855200714288612,
+          "amplitude_ratio_max": 1.5649447933137135
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.08295477737694207,
+          "max_abs_phase_error_radians": 0.02567512190411579,
+          "amplitude_ratio_min": 0.9180710512557684,
+          "amplitude_ratio_max": 1.0224185445310843
+        },
+        "fast": {
+          "max_complex_relative_error": 0.05355817220508961,
+          "max_abs_phase_error_radians": 0.03787274754004655,
+          "amplitude_ratio_min": 0.9987919932546756,
+          "amplitude_ratio_max": 1.0514047106445026
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 155,
+      "n": 5,
+      "diffusivity": 0.19485517599731747,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 18.791186836951862,
+          "max_abs_phase_error_radians": 0.7846808486545851,
+          "amplitude_ratio_min": 1.9542678572752212,
+          "amplitude_ratio_max": 19.48551093219014
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6270130732772498,
+          "max_abs_phase_error_radians": 0.5720595479774842,
+          "amplitude_ratio_min": 0.7841823320198419,
+          "amplitude_ratio_max": 1.1571254374258495
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.15353242115536642,
+          "max_abs_phase_error_radians": 0.13043361024875283,
+          "amplitude_ratio_min": 0.8979666432281106,
+          "amplitude_ratio_max": 1.0524498325753664
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06826469278118932,
+          "max_abs_phase_error_radians": 0.05523519933827439,
+          "amplitude_ratio_min": 0.9939266304933401,
+          "amplitude_ratio_max": 1.060661777426989
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 156,
+      "n": 7,
+      "diffusivity": 0.18729557637869512,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 18.03567966181342,
+          "max_abs_phase_error_radians": 0.7845343197044409,
+          "amplitude_ratio_min": 1.8814372491335674,
+          "amplitude_ratio_max": 18.72955423193727
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5724228112766508,
+          "max_abs_phase_error_radians": 0.5319392810059054,
+          "amplitude_ratio_min": 0.829345936904968,
+          "amplitude_ratio_max": 1.1271745434298484
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.10187329799729454,
+          "max_abs_phase_error_radians": 0.10183272591895783,
+          "amplitude_ratio_min": 0.9824759200231629,
+          "amplitude_ratio_max": 1.0784397691994134
+        },
+        "fast": {
+          "max_complex_relative_error": 0.0647426455092041,
+          "max_abs_phase_error_radians": 0.026398348797849767,
+          "amplitude_ratio_min": 0.9984820672938762,
+          "amplitude_ratio_max": 1.0614612611293597
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 160,
+      "n": 7,
+      "diffusivity": 0.2571430303153783,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 25.01673677972202,
+          "max_abs_phase_error_radians": 0.7847863235658444,
+          "amplitude_ratio_min": 2.5777356437699814,
+          "amplitude_ratio_max": 25.714292991561916
+        },
+        "slow": {
+          "max_complex_relative_error": 0.8985043057343588,
+          "max_abs_phase_error_radians": 0.6028902682915589,
+          "amplitude_ratio_min": 0.983066263378223,
+          "amplitude_ratio_max": 1.52068801335525
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.0950185244265058,
+          "max_abs_phase_error_radians": 0.05202304817711442,
+          "amplitude_ratio_min": 1.001243076024579,
+          "amplitude_ratio_max": 1.094285973406321
+        },
+        "fast": {
+          "max_complex_relative_error": 0.10678512036140562,
+          "max_abs_phase_error_radians": 0.07153841570205666,
+          "amplitude_ratio_min": 0.9959349008126706,
+          "amplitude_ratio_max": 1.097784786538885
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 162,
+      "n": 5,
+      "diffusivity": 0.18353881820791115,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 17.660122372873843,
+          "max_abs_phase_error_radians": 0.7842855892418749,
+          "amplitude_ratio_min": 1.8502465530206225,
+          "amplitude_ratio_max": 18.35388508425181
+        },
+        "slow": {
+          "max_complex_relative_error": 0.5127452966033373,
+          "max_abs_phase_error_radians": 0.4678150460742584,
+          "amplitude_ratio_min": 0.9294106263525534,
+          "amplitude_ratio_max": 1.1366118516937431
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1631856644329749,
+          "max_abs_phase_error_radians": 0.1389092496271574,
+          "amplitude_ratio_min": 0.924030860048848,
+          "amplitude_ratio_max": 1.151328265293931
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08800261380214544,
+          "max_abs_phase_error_radians": 0.04715510854529277,
+          "amplitude_ratio_min": 0.997695403393835,
+          "amplitude_ratio_max": 1.0856753538635213
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 166,
+      "n": 5,
+      "diffusivity": 0.2062343776677975,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 19.92823727720925,
+          "max_abs_phase_error_radians": 0.7845239366870246,
+          "amplitude_ratio_min": 2.072602822778755,
+          "amplitude_ratio_max": 20.623434943605204
+        },
+        "slow": {
+          "max_complex_relative_error": 0.6342778063310267,
+          "max_abs_phase_error_radians": 0.5301318857754419,
+          "amplitude_ratio_min": 0.9301062307599208,
+          "amplitude_ratio_max": 1.2456624669615426
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.11761004253892449,
+          "max_abs_phase_error_radians": 0.09845504825849628,
+          "amplitude_ratio_min": 0.9548438963049855,
+          "amplitude_ratio_max": 1.1074176905800408
+        },
+        "fast": {
+          "max_complex_relative_error": 0.08172306846205858,
+          "max_abs_phase_error_radians": 0.04084259795058477,
+          "amplitude_ratio_min": 0.9977284574300271,
+          "amplitude_ratio_max": 1.0816166059270695
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 168,
+      "n": 5,
+      "diffusivity": 0.27381771904884333,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.683702972792606,
+          "max_abs_phase_error_radians": 0.784960121369982,
+          "amplitude_ratio_min": 2.74067198010646,
+          "amplitude_ratio_max": 27.381756979672467
+        },
+        "slow": {
+          "max_complex_relative_error": 1.0065957331067696,
+          "max_abs_phase_error_radians": 0.6520949246929691,
+          "amplitude_ratio_min": 0.8795311429920192,
+          "amplitude_ratio_max": 1.5979111348385262
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.09462376316355237,
+          "max_abs_phase_error_radians": 0.044760916355541386,
+          "amplitude_ratio_min": 0.9061745255476177,
+          "amplitude_ratio_max": 1.0453941984524124
+        },
+        "fast": {
+          "max_complex_relative_error": 0.10559155418319366,
+          "max_abs_phase_error_radians": 0.05563116271467904,
+          "amplitude_ratio_min": 0.9980646260844721,
+          "amplitude_ratio_max": 1.1010509378414475
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 178,
+      "n": 5,
+      "diffusivity": 0.2699190831775378,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 26.294002763800684,
+          "max_abs_phase_error_radians": 0.7849946801575909,
+          "amplitude_ratio_min": 2.7009240129815866,
+          "amplitude_ratio_max": 26.991892877307087
+        },
+        "slow": {
+          "max_complex_relative_error": 0.9952648752814587,
+          "max_abs_phase_error_radians": 0.6620585506259411,
+          "amplitude_ratio_min": 0.826509796346233,
+          "amplitude_ratio_max": 1.571444660278053
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.15469732483265633,
+          "max_abs_phase_error_radians": 0.10311952752478071,
+          "amplitude_ratio_min": 0.8453077758020762,
+          "amplitude_ratio_max": 1.064809904241609
+        },
+        "fast": {
+          "max_complex_relative_error": 0.06953004783700752,
+          "max_abs_phase_error_radians": 0.0659940368267222,
+          "amplitude_ratio_min": 0.971057300679749,
+          "amplitude_ratio_max": 1.0538509248202046
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 185,
+      "n": 5,
+      "diffusivity": 0.2834324364867937,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 27.64485079720331,
+          "max_abs_phase_error_radians": 0.7849630986527051,
+          "amplitude_ratio_min": 2.8369721130061523,
+          "amplitude_ratio_max": 28.3432282650363
+        },
+        "slow": {
+          "max_complex_relative_error": 1.0530767726533314,
+          "max_abs_phase_error_radians": 0.6530414363542546,
+          "amplitude_ratio_min": 0.9109353705418551,
+          "amplitude_ratio_max": 1.6543482243178305
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.0732715279304715,
+          "max_abs_phase_error_radians": 0.032610083947722565,
+          "amplitude_ratio_min": 0.9338506872818253,
+          "amplitude_ratio_max": 1.0440336590757209
+        },
+        "fast": {
+          "max_complex_relative_error": 0.0895735718292677,
+          "max_abs_phase_error_radians": 0.04538460345425503,
+          "amplitude_ratio_min": 0.9975432383554194,
+          "amplitude_ratio_max": 1.0895138308138128
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 186,
+      "n": 5,
+      "diffusivity": 0.2318687153899762,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.49042171211536,
+          "max_abs_phase_error_radians": 0.7847783092965974,
+          "amplitude_ratio_min": 2.3237471198826505,
+          "amplitude_ratio_max": 23.18686185618636
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7829755302683463,
+          "max_abs_phase_error_radians": 0.59974822841945,
+          "amplitude_ratio_min": 0.8763775431925449,
+          "amplitude_ratio_max": 1.368123302697003
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.1150437422369589,
+          "max_abs_phase_error_radians": 0.07966541653757132,
+          "amplitude_ratio_min": 0.968624025190063,
+          "amplitude_ratio_max": 1.1150370654313404
+        },
+        "fast": {
+          "max_complex_relative_error": 0.03535675614381924,
+          "max_abs_phase_error_radians": 0.024455696616142875,
+          "amplitude_ratio_min": 0.9984481630483291,
+          "amplitude_ratio_max": 1.032013824058069
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 189,
+      "n": 5,
+      "diffusivity": 0.25114947447056923,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 24.417725352622867,
+          "max_abs_phase_error_radians": 0.7849271445085197,
+          "amplitude_ratio_min": 2.514178447337014,
+          "amplitude_ratio_max": 25.1149341537352
+        },
+        "slow": {
+          "max_complex_relative_error": 0.896589535936473,
+          "max_abs_phase_error_radians": 0.6424289533180452,
+          "amplitude_ratio_min": 0.8298150031545867,
+          "amplitude_ratio_max": 1.4676523854256514
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.13608759818566502,
+          "max_abs_phase_error_radians": 0.08548159301652898,
+          "amplitude_ratio_min": 0.8660907671266056,
+          "amplitude_ratio_max": 1.0571361646680715
+        },
+        "fast": {
+          "max_complex_relative_error": 0.17632099177712768,
+          "max_abs_phase_error_radians": 0.08933334692560489,
+          "amplitude_ratio_min": 0.9984263363335872,
+          "amplitude_ratio_max": 1.1702674423882877
+        }
+      }
+    },
+    {
+      "ensemble_size": 4096,
+      "replicate": 199,
+      "n": 9,
+      "diffusivity": 0.2344731186549011,
+      "bands": {
+        "very_slow": {
+          "max_complex_relative_error": 22.750723168943072,
+          "max_abs_phase_error_radians": 0.7847612693521168,
+          "amplitude_ratio_min": 2.3506163992857045,
+          "amplitude_ratio_max": 23.447302846023383
+        },
+        "slow": {
+          "max_complex_relative_error": 0.7921395419285673,
+          "max_abs_phase_error_radians": 0.5953944274091988,
+          "amplitude_ratio_min": 0.9072500525686827,
+          "amplitude_ratio_max": 1.3873455862089379
+        },
+        "intermediate": {
+          "max_complex_relative_error": 0.06893469008641438,
+          "max_abs_phase_error_radians": 0.05567759040378696,
+          "amplitude_ratio_min": 0.9674134560484206,
+          "amplitude_ratio_max": 1.0681654547862571
+        },
+        "fast": {
+          "max_complex_relative_error": 0.29581970957619913,
+          "max_abs_phase_error_radians": 0.10951364582484897,
+          "amplitude_ratio_min": 0.998296248772778,
+          "amplitude_ratio_max": 1.2800690052345989
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "analytic MSD quadrature versus independent series",
+      "passed": true,
+      "value": 7.993605777301127e-15
+    },
+    {
+      "name": "target long-time coefficient",
+      "passed": true,
+      "value": 1.0000000000000002
+    },
+    {
+      "name": "clean zero-frequency identities",
+      "passed": true,
+      "value": 5.134781488891349e-16
+    },
+    {
+      "name": "clean long-time MSD slope",
+      "passed": true,
+      "value": 1.0006246374040957
+    },
+    {
+      "name": "independent MSD matrix-integration identity",
+      "passed": true,
+      "value": 4.263256414560601e-14
+    },
+    {
+      "name": "all accepted models have positive diffusivity",
+      "passed": true,
+      "value": 0.06308723600601256
+    },
+    {
+      "name": "all diffusion formulas agree",
+      "passed": true,
+      "value": 2.733091530870979e-13
+    },
+    {
+      "name": "full resolvent versus memory transfer",
+      "passed": true,
+      "value": 2.173992025742047e-12
+    }
+  ],
+  "passed_checks": 8,
+  "hashes": {
+    "memory_extrapolation_protocol.json": "1ee1d998e44da3c47a6d645d396c20f291fec8e5596cd6e1f0ade8cc312736e7",
+    "29_memory_extrapolation.py": "788e27ff0777d13bf0b35c19917652816ec1392ef042520796bfac8c48315647",
+    "results\\thermal_memory_reproduction\\curves.npz": "a21ddca8ae13a84e6b820cb1a8c675b10cca46cb28f7ebb3f1db2c7148729750",
+    "results\\noisy_memory_stress\\inputs_and_models.npz": "039ee2e963b437325296996b7c8ffc3d8a78de1ca46c0f2c61bf3441dc8289bf"
+  }
+}

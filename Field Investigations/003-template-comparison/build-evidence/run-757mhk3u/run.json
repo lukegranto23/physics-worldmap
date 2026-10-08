@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-21T06:59:09.315376+00:00",
+  "lab": "/var/tmp/template-build-ksy2az4x",
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "script_sha256": "c67ef1cd73fe38d495b9db40935526738204c201f2b128689c056c841a11f341",
+  "steps": [
+    {
+      "name": "image-pull",
+      "exit": 0
+    },
+    {
+      "name": "fetch-install",
+      "exit": 0
+    },
+    {
+      "name": "offline-test",
+      "exit": 0
+    }
+  ],
+  "image_id": "sha256:cd1e310a92ec2aef48184707654d89fb956224b144291da67ef8b4714dae88ac"
+}

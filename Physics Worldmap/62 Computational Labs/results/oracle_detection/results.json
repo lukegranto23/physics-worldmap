@@ -1,0 +1,4108 @@
+{
+  "protocol_sha256": "a79faec4ceb8949e441ce46db0412db08b3035e1c1a4f2523bf74df73a731c20",
+  "script_sha256": "bb9bd34dc07ea25f39b589b97d40ac1518fbe06f9c7faa0d5209c776a6221eee",
+  "dependency_sha256": "c146ccf768090bfae5681abae15993edcc71f01ae787abc8682395efae19a590",
+  "python": "3.14.3",
+  "numpy": "2.4.3",
+  "matplotlib": "3.10.8",
+  "scope": "Local near-resonance detection audit; standard tests and information bounds, not a new detector",
+  "selected_lags": {
+    "0.1": 0.91,
+    "0.35": 0.89,
+    "0.7": 0.8400000000000001
+  },
+  "oracle_rank": 97501,
+  "oracle_marginal_null_rejection_bound": 0.024999750002499974,
+  "calibration_evaluations": 5400000,
+  "evaluation_datasets": 540000,
+  "checks": {
+    "fisher_derivative_refinement_0.1": {
+      "error": 6.313068205961225e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "fisher_derivative_refinement_0.35": {
+      "error": 6.337077958937625e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "fisher_derivative_refinement_0.7": {
+      "error": 6.151099437668678e-10,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    "calibration_rank_valid": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "rank_marginal_size_control": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "same_model_zero_kl": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "kl_matrix_vs_diagonal_formula": {
+      "error": 1.214306433183765e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "fisher_matrix_formula": {
+      "error": 3.552713678800501e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "wishart_mean_audit": {
+      "error": 0.0014091437899380306,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    "wishart_positive_definite": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "information_limited_cells": 17,
+  "oracle_practical_gap_cells": 7,
+  "cells": [
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.6123910511218753,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.022,
+          "count": 110,
+          "total": 5000,
+          "wilson95": [
+            0.018286209661005734,
+            0.02644771339846888
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0524,
+          "count": 262,
+          "total": 5000,
+          "wilson95": [
+            0.046559956706276516,
+            0.05892729007493864
+          ]
+        },
+        "split": {
+          "estimate": 0.0026,
+          "count": 13,
+          "total": 5000,
+          "wilson95": [
+            0.0015201269998326155,
+            0.004443582895110212
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.06868532363000995,
+      "kl_null_to_alt": 0.07237281467894824,
+      "pinsker_power_upper_bound": 0.2103177320576878,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.2695242703649257,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0256,
+          "count": 128,
+          "total": 5000,
+          "wilson95": [
+            0.02157299196762935,
+            0.03035540363784086
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1242,
+          "count": 621,
+          "total": 5000,
+          "wilson95": [
+            0.11534577187026397,
+            0.133631232911641
+          ]
+        },
+        "split": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.35979327119086635,
+      "kl_null_to_alt": 0.40661119494625864,
+      "pinsker_power_upper_bound": 0.44914223509977547,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.9810132702834835,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0248,
+          "count": 124,
+          "total": 5000,
+          "wilson95": [
+            0.020840470557508064,
+            0.029489153371074234
+          ]
+        },
+        "split": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.3894,
+          "count": 1947,
+          "total": 5000,
+          "wilson95": [
+            0.3759741014550398,
+            0.402995714215207
+          ]
+        },
+        "split": {
+          "estimate": 0.0144,
+          "count": 72,
+          "total": 5000,
+          "wilson95": [
+            0.011450945038477642,
+            0.01809464709056184
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.4755767347715372,
+      "kl_null_to_alt": 1.9057781299840242,
+      "pinsker_power_upper_bound": 0.8839460794402455,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.107716931348989,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0254,
+          "count": 127,
+          "total": 5000,
+          "wilson95": [
+            0.02138975527962131,
+            0.03013894740662692
+          ]
+        },
+        "split": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0934,
+          "count": 467,
+          "total": 5000,
+          "wilson95": [
+            0.08564346098790364,
+            0.10178083423381683
+          ]
+        },
+        "split": {
+          "estimate": 0.0032,
+          "count": 16,
+          "total": 5000,
+          "wilson95": [
+            0.0019707278219023715,
+            0.0051920608307063874
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.25012008699994026,
+      "kl_null_to_alt": 0.27117762545803203,
+      "pinsker_power_upper_bound": 0.37863829473060484,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.9138434980166892,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0262,
+          "count": 131,
+          "total": 5000,
+          "wilson95": [
+            0.022123116236859242,
+            0.031004358126276898
+          ]
+        },
+        "split": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0,
+          "count": 0,
+          "total": 5000,
+          "wilson95": [
+            0.0,
+            0.0007677019450571244
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.336,
+          "count": 1680,
+          "total": 5000,
+          "wilson95": [
+            0.32303799930113547,
+            0.3492138069368434
+          ]
+        },
+        "split": {
+          "estimate": 0.011,
+          "count": 55,
+          "total": 5000,
+          "wilson95": [
+            0.008461172335733187,
+            0.014289640166532683
+          ]
+        },
+        "concentration": {
+          "estimate": 0.004,
+          "count": 20,
+          "total": 5000,
+          "wilson95": [
+            0.002590942718784777,
+            0.006170617610711892
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.2302780729771297,
+      "kl_null_to_alt": 1.4810177133137568,
+      "pinsker_power_upper_bound": 0.809307998485649,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.6250373338527595,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0288,
+          "count": 144,
+          "total": 5000,
+          "wilson95": [
+            0.024513740513153512,
+            0.03380974179986833
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.832,
+          "count": 4160,
+          "total": 5000,
+          "wilson95": [
+            0.8213831120788965,
+            0.8421071338295857
+          ]
+        },
+        "split": {
+          "estimate": 0.0916,
+          "count": 458,
+          "total": 5000,
+          "wilson95": [
+            0.08391488273466796,
+            0.09991217621405471
+          ]
+        },
+        "concentration": {
+          "estimate": 0.066,
+          "count": 330,
+          "total": 5000,
+          "wilson95": [
+            0.05944585882604755,
+            0.07322050646226204
+          ]
+        }
+      },
+      "kl_alt_to_null": 3.9618787775473563,
+      "kl_null_to_alt": 5.619577988633724,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.168092750858989,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0238,
+          "count": 119,
+          "total": 5000,
+          "wilson95": [
+            0.01992646446433773,
+            0.028404694868134687
+          ]
+        },
+        "split": {
+          "estimate": 0.0026,
+          "count": 13,
+          "total": 5000,
+          "wilson95": [
+            0.0015201269998326155,
+            0.004443582895110212
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.119,
+          "count": 595,
+          "total": 5000,
+          "wilson95": [
+            0.11031637850955725,
+            0.12826861037257628
+          ]
+        },
+        "split": {
+          "estimate": 0.0048,
+          "count": 24,
+          "total": 5000,
+          "wilson95": [
+            0.003227780878929331,
+            0.007132551127455243
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.2747412945200398,
+      "kl_null_to_alt": 0.28949125871579295,
+      "pinsker_power_upper_bound": 0.39563546411537565,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.948739531352885,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0264,
+          "count": 132,
+          "total": 5000,
+          "wilson95": [
+            0.022306626510353804,
+            0.031220540772004313
+          ]
+        },
+        "split": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.3886,
+          "count": 1943,
+          "total": 5000,
+          "wilson95": [
+            0.3751797584178914,
+            0.40219128557546735
+          ]
+        },
+        "split": {
+          "estimate": 0.0146,
+          "count": 73,
+          "total": 5000,
+          "wilson95": [
+            0.01162844344183671,
+            0.018316841606424748
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0076,
+          "count": 38,
+          "total": 5000,
+          "wilson95": [
+            0.0055422231900968295,
+            0.010413809685395427
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.4391730847634654,
+      "kl_null_to_alt": 1.6264447797850345,
+      "pinsker_power_upper_bound": 0.8732844701995509,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 0.690041623806394,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.022,
+          "count": 110,
+          "total": 5000,
+          "wilson95": [
+            0.018286209661005734,
+            0.02644771339846888
+          ]
+        },
+        "split": {
+          "estimate": 0.0026,
+          "count": 13,
+          "total": 5000,
+          "wilson95": [
+            0.0015201269998326155,
+            0.004443582895110212
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.9474,
+          "count": 4737,
+          "total": 5000,
+          "wilson95": [
+            0.9408617705245412,
+            0.9532512897750218
+          ]
+        },
+        "split": {
+          "estimate": 0.1324,
+          "count": 662,
+          "total": 5000,
+          "wilson95": [
+            0.12328722199815104,
+            0.142077192471855
+          ]
+        },
+        "concentration": {
+          "estimate": 0.1884,
+          "count": 942,
+          "total": 5000,
+          "wilson95": [
+            0.17780210247474487,
+            0.19947632937741483
+          ]
+        }
+      },
+      "kl_alt_to_null": 5.902306939086149,
+      "kl_null_to_alt": 7.623112519936097,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.7941632986356808,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0238,
+          "count": 119,
+          "total": 5000,
+          "wilson95": [
+            0.01992646446433773,
+            0.028404694868134687
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.2884,
+          "count": 1442,
+          "total": 5000,
+          "wilson95": [
+            0.27600942386116734,
+            0.30111546760198094
+          ]
+        },
+        "split": {
+          "estimate": 0.0124,
+          "count": 62,
+          "total": 5000,
+          "wilson95": [
+            0.009685385642423546,
+            0.015863277294396162
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0188,
+          "count": 94,
+          "total": 5000,
+          "wilson95": [
+            0.015388157833120277,
+            0.022950678518802708
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.000480347999761,
+      "kl_null_to_alt": 1.0847105018321281,
+      "pinsker_power_upper_bound": 0.7322765894612097,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.1950838166959556,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0272,
+          "count": 136,
+          "total": 5000,
+          "wilson95": [
+            0.02304132562570655,
+            0.03208461333353947
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.8936,
+          "count": 4468,
+          "total": 5000,
+          "wilson95": [
+            0.8847489338057319,
+            0.9018467312231191
+          ]
+        },
+        "split": {
+          "estimate": 0.1594,
+          "count": 797,
+          "total": 5000,
+          "wilson95": [
+            0.14951583913193098,
+            0.16980711943304197
+          ]
+        },
+        "concentration": {
+          "estimate": 0.311,
+          "count": 1555,
+          "total": 5000,
+          "wilson95": [
+            0.29831842588011226,
+            0.3239717654551194
+          ]
+        }
+      },
+      "kl_alt_to_null": 4.921112291908519,
+      "kl_null_to_alt": 5.924070853255027,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -7.350591442051609,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0258,
+          "count": 129,
+          "total": 5000,
+          "wilson95": [
+            0.021756298207420387,
+            0.030571790317271794
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.7722,
+          "count": 3861,
+          "total": 5000,
+          "wilson95": [
+            0.760368297914805,
+            0.783613765146306
+          ]
+        },
+        "concentration": {
+          "estimate": 0.9916,
+          "count": 4958,
+          "total": 5000,
+          "wilson95": [
+            0.9886658498349266,
+            0.9937793456126935
+          ]
+        }
+      },
+      "kl_alt_to_null": 15.847515110189425,
+      "kl_null_to_alt": 22.478311954534895,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.818966152904295,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0244,
+          "count": 122,
+          "total": 5000,
+          "wilson95": [
+            0.02047464350657034,
+            0.029055594583568007
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0026,
+          "count": 13,
+          "total": 5000,
+          "wilson95": [
+            0.0015201269998326155,
+            0.004443582895110212
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.3128,
+          "count": 1564,
+          "total": 5000,
+          "wilson95": [
+            0.30009681083913897,
+            0.3257906167690905
+          ]
+        },
+        "split": {
+          "estimate": 0.0118,
+          "count": 59,
+          "total": 5000,
+          "wilson95": [
+            0.009159421922706208,
+            0.015190162256447572
+          ]
+        },
+        "concentration": {
+          "estimate": 0.012,
+          "count": 60,
+          "total": 5000,
+          "wilson95": [
+            0.009334535211612843,
+            0.015414741886762912
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.0989651780801593,
+      "kl_null_to_alt": 1.1579650348631718,
+      "pinsker_power_upper_bound": 0.7662709282307513,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 0.7958665725511764,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0232,
+          "count": 116,
+          "total": 5000,
+          "wilson95": [
+            0.019378981328847723,
+            0.02775309924595875
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.9392,
+          "count": 4696,
+          "total": 5000,
+          "wilson95": [
+            0.932233191279953,
+            0.9454924593315089
+          ]
+        },
+        "split": {
+          "estimate": 0.14,
+          "count": 700,
+          "total": 5000,
+          "wilson95": [
+            0.130658280578895,
+            0.14989446482154617
+          ]
+        },
+        "concentration": {
+          "estimate": 0.3404,
+          "count": 1702,
+          "total": 5000,
+          "wilson95": [
+            0.32739296042730204,
+            0.35365209003356024
+          ]
+        }
+      },
+      "kl_alt_to_null": 5.756692339053862,
+      "kl_null_to_alt": 6.505779119140138,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -13.411769040134914,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0278,
+          "count": 139,
+          "total": 5000,
+          "wilson95": [
+            0.023593021362704494,
+            0.03273199635420746
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.8364,
+          "count": 4182,
+          "total": 5000,
+          "wilson95": [
+            0.8258891735847778,
+            0.8463943165465879
+          ]
+        },
+        "concentration": {
+          "estimate": 0.9998,
+          "count": 4999,
+          "total": 5000,
+          "wilson95": [
+            0.9988679109191605,
+            0.9999646942165608
+          ]
+        }
+      },
+      "kl_alt_to_null": 23.609227756344595,
+      "kl_null_to_alt": 30.492450079744387,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.552556182301032,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.026,
+          "count": 130,
+          "total": 5000,
+          "wilson95": [
+            0.021939673218923005,
+            0.030788108224991152
+          ]
+        },
+        "split": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        },
+        "concentration": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.8174,
+          "count": 4087,
+          "total": 5000,
+          "wilson95": [
+            0.8064491166458874,
+            0.8278635461593904
+          ]
+        },
+        "split": {
+          "estimate": 0.1106,
+          "count": 553,
+          "total": 5000,
+          "wilson95": [
+            0.1022037493179392,
+            0.11959413695687131
+          ]
+        },
+        "concentration": {
+          "estimate": 0.2874,
+          "count": 1437,
+          "total": 5000,
+          "wilson95": [
+            0.2750231596488262,
+            0.3001032672182121
+          ]
+        }
+      },
+      "kl_alt_to_null": 4.001921391999044,
+      "kl_null_to_alt": 4.3388420073285126,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": -9.060677467625283,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0256,
+          "count": 128,
+          "total": 5000,
+          "wilson95": [
+            0.02157299196762935,
+            0.03035540363784086
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.854,
+          "count": 4270,
+          "total": 5000,
+          "wilson95": [
+            0.8439407922553399,
+            0.8635156747675596
+          ]
+        },
+        "concentration": {
+          "estimate": 0.9984,
+          "count": 4992,
+          "total": 5000,
+          "wilson95": [
+            0.9968457298408953,
+            0.9991890248602717
+          ]
+        }
+      },
+      "kl_alt_to_null": 19.684449167634074,
+      "kl_null_to_alt": 23.696283413020108,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.1,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.91
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -59.07743889245012,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0288,
+          "count": 144,
+          "total": 5000,
+          "wilson95": [
+            0.024513740513153512,
+            0.03380974179986833
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.9992,
+          "count": 4996,
+          "total": 5000,
+          "wilson95": [
+            0.9979446733541565,
+            0.9996888530238984
+          ]
+        },
+        "concentration": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        }
+      },
+      "kl_alt_to_null": 63.3900604407577,
+      "kl_null_to_alt": 89.91324781813958,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.4135261659324243,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.022,
+          "count": 110,
+          "total": 5000,
+          "wilson95": [
+            0.018286209661005734,
+            0.02644771339846888
+          ]
+        },
+        "split": {
+          "estimate": 0.0018,
+          "count": 9,
+          "total": 5000,
+          "wilson95": [
+            0.0009472935076811986,
+            0.003417644710373721
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0366,
+          "count": 183,
+          "total": 5000,
+          "wilson95": [
+            0.031740768074030964,
+            0.04217073808864799
+          ]
+        },
+        "split": {
+          "estimate": 0.0026,
+          "count": 13,
+          "total": 5000,
+          "wilson95": [
+            0.0015201269998326155,
+            0.004443582895110212
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.028974242671065964,
+      "kl_null_to_alt": 0.029823114771120318,
+      "pinsker_power_upper_bound": 0.14536245816504823,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 0.8791009132703493,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0266,
+          "count": 133,
+          "total": 5000,
+          "wilson95": [
+            0.022490203302556452,
+            0.031436656899023634
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0724,
+          "count": 362,
+          "total": 5000,
+          "wilson95": [
+            0.0655404134654297,
+            0.07991612523798315
+          ]
+        },
+        "split": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.14824480689486796,
+      "kl_null_to_alt": 0.15825816800119108,
+      "pinsker_power_upper_bound": 0.2972542992267229,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.5285182866167446,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0246,
+          "count": 123,
+          "total": 5000,
+          "wilson95": [
+            0.02065752018768066,
+            0.02927241082167966
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0,
+          "count": 0,
+          "total": 5000,
+          "wilson95": [
+            0.0,
+            0.0007677019450571244
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1686,
+          "count": 843,
+          "total": 5000,
+          "wilson95": [
+            0.15847768231064177,
+            0.17923115053854213
+          ]
+        },
+        "split": {
+          "estimate": 0.006,
+          "count": 30,
+          "total": 5000,
+          "wilson95": [
+            0.004206136160498105,
+            0.008552353361218335
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.5827032897464767,
+      "kl_null_to_alt": 0.661540441406529,
+      "pinsker_power_upper_bound": 0.5647699925646463,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.883750247723043,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0212,
+          "count": 106,
+          "total": 5000,
+          "wilson95": [
+            0.01755941437195323,
+            0.025575737010633478
+          ]
+        },
+        "split": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0686,
+          "count": 343,
+          "total": 5000,
+          "wilson95": [
+            0.06191967726930518,
+            0.0759426959688901
+          ]
+        },
+        "split": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.14756308259739037,
+      "kl_null_to_alt": 0.156295572580319,
+      "pinsker_power_upper_bound": 0.2966275783102577,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.6766450368133974,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0246,
+          "count": 123,
+          "total": 5000,
+          "wilson95": [
+            0.02065752018768066,
+            0.02927241082167966
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.2018,
+          "count": 1009,
+          "total": 5000,
+          "wilson95": [
+            0.190906368299216,
+            0.21315148914081614
+          ]
+        },
+        "split": {
+          "estimate": 0.0058,
+          "count": 29,
+          "total": 5000,
+          "wilson95": [
+            0.004041457970253664,
+            0.008317338632240798
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.7436563929381201,
+      "kl_null_to_alt": 0.8501359368317416,
+      "pinsker_power_upper_bound": 0.6347771695210145,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.9684097201595137,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.022,
+          "count": 110,
+          "total": 5000,
+          "wilson95": [
+            0.018286209661005734,
+            0.02644771339846888
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.6574,
+          "count": 3287,
+          "total": 5000,
+          "wilson95": [
+            0.6441292414238872,
+            0.6704290860038088
+          ]
+        },
+        "split": {
+          "estimate": 0.0422,
+          "count": 211,
+          "total": 5000,
+          "wilson95": [
+            0.03696993196904638,
+            0.04813297593184793
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0218,
+          "count": 109,
+          "total": 5000,
+          "wilson95": [
+            0.018104377913406702,
+            0.026229852226845936
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.680148786911123,
+      "kl_null_to_alt": 3.505611245238298,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.8144163776578353,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0236,
+          "count": 118,
+          "total": 5000,
+          "wilson95": [
+            0.01974389149873783,
+            0.028187574914512604
+          ]
+        },
+        "split": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0714,
+          "count": 357,
+          "total": 5000,
+          "wilson95": [
+            0.06458701559947405,
+            0.07887105850782894
+          ]
+        },
+        "split": {
+          "estimate": 0.0024,
+          "count": 12,
+          "total": 5000,
+          "wilson95": [
+            0.0013734655564128324,
+            0.004190551419308018
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.11589697068426386,
+      "kl_null_to_alt": 0.11929245908448127,
+      "pinsker_power_upper_bound": 0.26572491633009643,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.5477365666296805,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0232,
+          "count": 116,
+          "total": 5000,
+          "wilson95": [
+            0.019378981328847723,
+            0.02775309924595875
+          ]
+        },
+        "split": {
+          "estimate": 0.0028,
+          "count": 14,
+          "total": 5000,
+          "wilson95": [
+            0.0016686770757911352,
+            0.00469472573837367
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1818,
+          "count": 909,
+          "total": 5000,
+          "wilson95": [
+            0.17135529840851516,
+            0.1927332671093192
+          ]
+        },
+        "split": {
+          "estimate": 0.0072,
+          "count": 36,
+          "total": 5000,
+          "wilson95": [
+            0.005205395997454866,
+            0.009951251039593437
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0032,
+          "count": 16,
+          "total": 5000,
+          "wilson95": [
+            0.0019707278219023715,
+            0.0051920608307063874
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.5929792275794719,
+      "kl_null_to_alt": 0.6330326720047643,
+      "pinsker_power_upper_bound": 0.5695085984534458,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.9670053725282628,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.027,
+          "count": 135,
+          "total": 5000,
+          "wilson95": [
+            0.022857553563632692,
+            0.031868692476391354
+          ]
+        },
+        "split": {
+          "estimate": 0.0046,
+          "count": 23,
+          "total": 5000,
+          "wilson95": [
+            0.003067252025343836,
+            0.0068933870618187645
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0,
+          "count": 0,
+          "total": 5000,
+          "wilson95": [
+            0.0,
+            0.0007677019450571244
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.5714,
+          "count": 2857,
+          "total": 5000,
+          "wilson95": [
+            0.5576333380283564,
+            0.5850570341338895
+          ]
+        },
+        "split": {
+          "estimate": 0.0262,
+          "count": 131,
+          "total": 5000,
+          "wilson95": [
+            0.022123116236859242,
+            0.031004358126276898
+          ]
+        },
+        "concentration": {
+          "estimate": 0.014,
+          "count": 70,
+          "total": 5000,
+          "wilson95": [
+            0.011096433554600585,
+            0.017649772735994947
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.3308131589859067,
+      "kl_null_to_alt": 2.646161765626116,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.5371481630020298,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0248,
+          "count": 124,
+          "total": 5000,
+          "wilson95": [
+            0.020840470557508064,
+            0.029489153371074234
+          ]
+        },
+        "split": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1916,
+          "count": 958,
+          "total": 5000,
+          "wilson95": [
+            0.18092965245387257,
+            0.2027438661058387
+          ]
+        },
+        "split": {
+          "estimate": 0.0044,
+          "count": 22,
+          "total": 5000,
+          "wilson95": [
+            0.002907564752999219,
+            0.006653381414941403
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0064,
+          "count": 32,
+          "total": 5000,
+          "wilson95": [
+            0.004537188108410646,
+            0.009020687251749749
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.5902523303895615,
+      "kl_null_to_alt": 0.625182290321276,
+      "pinsker_power_upper_bound": 0.5682551566205154,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.8361152942901526,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0264,
+          "count": 132,
+          "total": 5000,
+          "wilson95": [
+            0.022306626510353804,
+            0.031220540772004313
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.7004,
+          "count": 3502,
+          "total": 5000,
+          "wilson95": [
+            0.6875529211700551,
+            0.7129393838903662
+          ]
+        },
+        "split": {
+          "estimate": 0.0586,
+          "count": 293,
+          "total": 5000,
+          "wilson95": [
+            0.052422276742432335,
+            0.0654554505346641
+          ]
+        },
+        "concentration": {
+          "estimate": 0.1116,
+          "count": 558,
+          "total": 5000,
+          "wilson95": [
+            0.1031687392725768,
+            0.12062761159834359
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.9746255717524805,
+      "kl_null_to_alt": 3.4005437473269664,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -2.57470702212197,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0256,
+          "count": 128,
+          "total": 5000,
+          "wilson95": [
+            0.02157299196762935,
+            0.03035540363784086
+          ]
+        },
+        "split": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0018,
+          "count": 9,
+          "total": 5000,
+          "wilson95": [
+            0.0009472935076811986,
+            0.003417644710373721
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.999,
+          "count": 4995,
+          "total": 5000,
+          "wilson95": [
+            0.9976610469499418,
+            0.9995727865088913
+          ]
+        },
+        "split": {
+          "estimate": 0.5426,
+          "count": 2713,
+          "total": 5000,
+          "wilson95": [
+            0.5287639136652087,
+            0.5563706781290725
+          ]
+        },
+        "concentration": {
+          "estimate": 0.8698,
+          "count": 4349,
+          "total": 5000,
+          "wilson95": [
+            0.8601875843129738,
+            0.8788446233284621
+          ]
+        }
+      },
+      "kl_alt_to_null": 10.720595147644492,
+      "kl_null_to_alt": 14.022444980953193,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.4257550349909707,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0288,
+          "count": 144,
+          "total": 5000,
+          "wilson95": [
+            0.024513740513153512,
+            0.03380974179986833
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1592,
+          "count": 796,
+          "total": 5000,
+          "wilson95": [
+            0.14932114605140703,
+            0.169602119594344
+          ]
+        },
+        "split": {
+          "estimate": 0.0064,
+          "count": 32,
+          "total": 5000,
+          "wilson95": [
+            0.004537188108410646,
+            0.009020687251749749
+          ]
+        },
+        "concentration": {
+          "estimate": 0.004,
+          "count": 20,
+          "total": 5000,
+          "wilson95": [
+            0.002590942718784777,
+            0.006170617610711892
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.4635878827370554,
+      "kl_null_to_alt": 0.4771698363379251,
+      "pinsker_power_upper_bound": 0.5064498326601928,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.9272628662406532,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0264,
+          "count": 132,
+          "total": 5000,
+          "wilson95": [
+            0.022306626510353804,
+            0.031220540772004313
+          ]
+        },
+        "split": {
+          "estimate": 0.003,
+          "count": 15,
+          "total": 5000,
+          "wilson95": [
+            0.0018189297776376753,
+            0.004944165955749107
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.5836,
+          "count": 2918,
+          "total": 5000,
+          "wilson95": [
+            0.5698769707099327,
+            0.5971946695248538
+          ]
+        },
+        "split": {
+          "estimate": 0.0252,
+          "count": 126,
+          "total": 5000,
+          "wilson95": [
+            0.021206588938665706,
+            0.029922420828360545
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0424,
+          "count": 212,
+          "total": 5000,
+          "wilson95": [
+            0.03715721151196373,
+            0.04834538930815256
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.3719169103178874,
+      "kl_null_to_alt": 2.5321306880190573,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -1.166896406380829,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0258,
+          "count": 129,
+          "total": 5000,
+          "wilson95": [
+            0.021756298207420387,
+            0.030571790317271794
+          ]
+        },
+        "split": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.9952,
+          "count": 4976,
+          "total": 5000,
+          "wilson95": [
+            0.9928674488725447,
+            0.9967722191210707
+          ]
+        },
+        "split": {
+          "estimate": 0.307,
+          "count": 1535,
+          "total": 5000,
+          "wilson95": [
+            0.294367270191595,
+            0.31992906275919714
+          ]
+        },
+        "concentration": {
+          "estimate": 0.6088,
+          "count": 3044,
+          "total": 5000,
+          "wilson95": [
+            0.595194460970415,
+            0.6222384870863407
+          ]
+        }
+      },
+      "kl_alt_to_null": 9.323252635943627,
+      "kl_null_to_alt": 10.584647062504464,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.9187424552355878,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0246,
+          "count": 123,
+          "total": 5000,
+          "wilson95": [
+            0.02065752018768066,
+            0.02927241082167966
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0018,
+          "count": 9,
+          "total": 5000,
+          "wilson95": [
+            0.0009472935076811986,
+            0.003417644710373721
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.5934,
+          "count": 2967,
+          "total": 5000,
+          "wilson95": [
+            0.5797182439692002,
+            0.6069383493074633
+          ]
+        },
+        "split": {
+          "estimate": 0.0436,
+          "count": 218,
+          "total": 5000,
+          "wilson95": [
+            0.038281587437894005,
+            0.049619170897554146
+          ]
+        },
+        "concentration": {
+          "estimate": 0.099,
+          "count": 495,
+          "total": 5000,
+          "wilson95": [
+            0.09102696588909821,
+            0.10758873107083762
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.361009321558246,
+      "kl_null_to_alt": 2.500729161285104,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": -2.885529858056998,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0234,
+          "count": 117,
+          "total": 5000,
+          "wilson95": [
+            0.01956139679590935,
+            0.027970376698119106
+          ]
+        },
+        "split": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0028,
+          "count": 14,
+          "total": 5000,
+          "wilson95": [
+            0.0016686770757911352,
+            0.00469472573837367
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.9992,
+          "count": 4996,
+          "total": 5000,
+          "wilson95": [
+            0.9979446733541565,
+            0.9996888530238984
+          ]
+        },
+        "split": {
+          "estimate": 0.5916,
+          "count": 2958,
+          "total": 5000,
+          "wilson95": [
+            0.5779102445141346,
+            0.605149112489531
+          ]
+        },
+        "concentration": {
+          "estimate": 0.9312,
+          "count": 4656,
+          "total": 5000,
+          "wilson95": [
+            0.9238480264127613,
+            0.9378899074298215
+          ]
+        }
+      },
+      "kl_alt_to_null": 11.898502287009922,
+      "kl_null_to_alt": 13.602174989307866,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.35,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.89
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -32.756500096278614,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0252,
+          "count": 126,
+          "total": 5000,
+          "wilson95": [
+            0.021206588938665706,
+            0.029922420828360545
+          ]
+        },
+        "split": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        },
+        "concentration": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.9936,
+          "count": 4968,
+          "total": 5000,
+          "wilson95": [
+            0.9909793127482504,
+            0.9954628118915895
+          ]
+        },
+        "concentration": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        }
+      },
+      "kl_alt_to_null": 42.88238059057797,
+      "kl_null_to_alt": 56.08977992381277,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.21651908085317473,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0264,
+          "count": 132,
+          "total": 5000,
+          "wilson95": [
+            0.022306626510353804,
+            0.031220540772004313
+          ]
+        },
+        "split": {
+          "estimate": 0.0028,
+          "count": 14,
+          "total": 5000,
+          "wilson95": [
+            0.0016686770757911352,
+            0.00469472573837367
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0334,
+          "count": 167,
+          "total": 5000,
+          "wilson95": [
+            0.028766903125880962,
+            0.03874951632924636
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.0071471850527161235,
+      "kl_null_to_alt": 0.007213601785698673,
+      "pinsker_power_upper_bound": 0.08477953267095739,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 0.4753957030815599,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0268,
+          "count": 134,
+          "total": 5000,
+          "wilson95": [
+            0.022673845890277048,
+            0.03165270723052502
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0,
+          "count": 0,
+          "total": 5000,
+          "wilson95": [
+            0.0,
+            0.0007677019450571244
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0444,
+          "count": 222,
+          "total": 5000,
+          "wilson95": [
+            0.03903182088142633,
+            0.05046770913090974
+          ]
+        },
+        "split": {
+          "estimate": 0.0032,
+          "count": 16,
+          "total": 5000,
+          "wilson95": [
+            0.0019707278219023715,
+            0.0051920608307063874
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.03623287741038747,
+      "kl_null_to_alt": 0.03695755825341476,
+      "pinsker_power_upper_bound": 0.15959732057211887,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 0.8802400711913805,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.023,
+          "count": 115,
+          "total": 5000,
+          "wilson95": [
+            0.019196646091299507,
+            0.027535741564284996
+          ]
+        },
+        "split": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0646,
+          "count": 323,
+          "total": 5000,
+          "wilson95": [
+            0.058115054348139225,
+            0.07175346050561653
+          ]
+        },
+        "split": {
+          "estimate": 0.0032,
+          "count": 16,
+          "total": 5000,
+          "wilson95": [
+            0.0019707278219023715,
+            0.0051920608307063874
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0002,
+          "count": 1,
+          "total": 5000,
+          "wilson95": [
+            3.530578343936526e-05,
+            0.0011320890808397363
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.14182549070403377,
+      "kl_null_to_alt": 0.14665343825340654,
+      "pinsker_power_upper_bound": 0.29129447112551343,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.6026529015093445,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0224,
+          "count": 112,
+          "total": 5000,
+          "wilson95": [
+            0.018650132017796132,
+            0.026883176880122435
+          ]
+        },
+        "split": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0568,
+          "count": 284,
+          "total": 5000,
+          "wilson95": [
+            0.050718061546595514,
+            0.06356242945750314
+          ]
+        },
+        "split": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.060875059170191204,
+      "kl_null_to_alt": 0.062374206043147584,
+      "pinsker_power_upper_bound": 0.19946354801245902,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.2223607207510554,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.027,
+          "count": 135,
+          "total": 5000,
+          "wilson95": [
+            0.022857553563632692,
+            0.031868692476391354
+          ]
+        },
+        "split": {
+          "estimate": 0.0018,
+          "count": 9,
+          "total": 5000,
+          "wilson95": [
+            0.0009472935076811986,
+            0.003417644710373721
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1182,
+          "count": 591,
+          "total": 5000,
+          "wilson95": [
+            0.10954310667883399,
+            0.12744311052641163
+          ]
+        },
+        "split": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.3174979967357028,
+      "kl_null_to_alt": 0.3369474246532502,
+      "pinsker_power_upper_bound": 0.4234331793009355,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 64,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.8996629987602205,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.025,
+          "count": 125,
+          "total": 5000,
+          "wilson95": [
+            0.021023493755648905,
+            0.02970582309215537
+          ]
+        },
+        "split": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0004,
+          "count": 2,
+          "total": 5000,
+          "wilson95": [
+            0.00010970128207763504,
+            0.0014573865014234437
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.3518,
+          "count": 1759,
+          "total": 5000,
+          "wilson95": [
+            0.33868209898435203,
+            0.365145447872163
+          ]
+        },
+        "split": {
+          "estimate": 0.0122,
+          "count": 61,
+          "total": 5000,
+          "wilson95": [
+            0.009509858115682888,
+            0.015639111901914846
+          ]
+        },
+        "concentration": {
+          "estimate": 0.007,
+          "count": 35,
+          "total": 5000,
+          "wilson95": [
+            0.005037635094103144,
+            0.009719319023723182
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.2948490805021078,
+      "kl_null_to_alt": 1.4800513822420096,
+      "pinsker_power_upper_bound": 0.8296269571988338,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.4288887384388431,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0278,
+          "count": 139,
+          "total": 5000,
+          "wilson95": [
+            0.023593021362704494,
+            0.03273199635420746
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.041,
+          "count": 205,
+          "total": 5000,
+          "wilson95": [
+            0.03584697411255204,
+            0.04685777627301041
+          ]
+        },
+        "split": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.028588740210864494,
+      "kl_null_to_alt": 0.02885440714279469,
+      "pinsker_power_upper_bound": 0.1445590653419148,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 0.9022870948472246,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0272,
+          "count": 136,
+          "total": 5000,
+          "wilson95": [
+            0.02304132562570655,
+            0.03208461333353947
+          ]
+        },
+        "split": {
+          "estimate": 0.0028,
+          "count": 14,
+          "total": 5000,
+          "wilson95": [
+            0.0016686770757911352,
+            0.00469472573837367
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0652,
+          "count": 326,
+          "total": 5000,
+          "wilson95": [
+            0.05868528927131244,
+            0.07238230434010924
+          ]
+        },
+        "split": {
+          "estimate": 0.004,
+          "count": 20,
+          "total": 5000,
+          "wilson95": [
+            0.002590942718784777,
+            0.006170617610711892
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0018,
+          "count": 9,
+          "total": 5000,
+          "wilson95": [
+            0.0009472935076811986,
+            0.003417644710373721
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.14493150964154988,
+      "kl_null_to_alt": 0.14783023301365905,
+      "pinsker_power_upper_bound": 0.29419464114423777,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.52949255241208,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0262,
+          "count": 131,
+          "total": 5000,
+          "wilson95": [
+            0.022123116236859242,
+            0.031004358126276898
+          ]
+        },
+        "split": {
+          "estimate": 0.003,
+          "count": 15,
+          "total": 5000,
+          "wilson95": [
+            0.0018189297776376753,
+            0.004944165955749107
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0006,
+          "count": 3,
+          "total": 5000,
+          "wilson95": [
+            0.00020407465419434642,
+            0.001762706048528709
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1842,
+          "count": 921,
+          "total": 5000,
+          "wilson95": [
+            0.1736989946005831,
+            0.19518588594791506
+          ]
+        },
+        "split": {
+          "estimate": 0.0076,
+          "count": 38,
+          "total": 5000,
+          "wilson95": [
+            0.0055422231900968295,
+            0.010413809685395427
+          ]
+        },
+        "concentration": {
+          "estimate": 0.004,
+          "count": 20,
+          "total": 5000,
+          "wilson95": [
+            0.002590942718784777,
+            0.006170617610711892
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.5673019628161351,
+      "kl_null_to_alt": 0.5866137530136262,
+      "pinsker_power_upper_bound": 0.5575889422510268,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.122069527204303,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0242,
+          "count": 121,
+          "total": 5000,
+          "wilson95": [
+            0.02029184139202983,
+            0.028838703778886532
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0988,
+          "count": 494,
+          "total": 5000,
+          "wilson95": [
+            0.09083455407275796,
+            0.10738144996795589
+          ]
+        },
+        "split": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0034,
+          "count": 17,
+          "total": 5000,
+          "wilson95": [
+            0.0021239367958294426,
+            0.0054385447760012945
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.24350023668076481,
+      "kl_null_to_alt": 0.24949682417259034,
+      "pinsker_power_upper_bound": 0.3739270960249181,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.892637546670585,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0264,
+          "count": 132,
+          "total": 5000,
+          "wilson95": [
+            0.022306626510353804,
+            0.031220540772004313
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.3516,
+          "count": 1758,
+          "total": 5000,
+          "wilson95": [
+            0.3384839721890062,
+            0.3649438817482869
+          ]
+        },
+        "split": {
+          "estimate": 0.0134,
+          "count": 67,
+          "total": 5000,
+          "wilson95": [
+            0.010565931089532108,
+            0.01698119644339749
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0182,
+          "count": 91,
+          "total": 5000,
+          "wilson95": [
+            0.014847689638538625,
+            0.022292067955718423
+          ]
+        }
+      },
+      "kl_alt_to_null": 1.2699919869428111,
+      "kl_null_to_alt": 1.347789698613001,
+      "pinsker_power_upper_bound": 0.821866358601871,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 256,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.0496762937873427,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0242,
+          "count": 121,
+          "total": 5000,
+          "wilson95": [
+            0.02029184139202983,
+            0.028838703778886532
+          ]
+        },
+        "split": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.9098,
+          "count": 4549,
+          "total": 5000,
+          "wilson95": [
+            0.9015418677137799,
+            0.9174289237720514
+          ]
+        },
+        "split": {
+          "estimate": 0.1842,
+          "count": 921,
+          "total": 5000,
+          "wilson95": [
+            0.1736989946005831,
+            0.19518588594791506
+          ]
+        },
+        "concentration": {
+          "estimate": 0.284,
+          "count": 1420,
+          "total": 5000,
+          "wilson95": [
+            0.27167042119409224,
+            0.2966612260461725
+          ]
+        }
+      },
+      "kl_alt_to_null": 5.179396322008431,
+      "kl_null_to_alt": 5.920205528968038,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 0.8161638661010784,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0254,
+          "count": 127,
+          "total": 5000,
+          "wilson95": [
+            0.02138975527962131,
+            0.03013894740662692
+          ]
+        },
+        "split": {
+          "estimate": 0.003,
+          "count": 15,
+          "total": 5000,
+          "wilson95": [
+            0.0018189297776376753,
+            0.004944165955749107
+          ]
+        },
+        "concentration": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.0708,
+          "count": 354,
+          "total": 5000,
+          "wilson95": [
+            0.06401517037352825,
+            0.0782438249761088
+          ]
+        },
+        "split": {
+          "estimate": 0.0036,
+          "count": 18,
+          "total": 5000,
+          "wilson95": [
+            0.002278440754413015,
+            0.005683733736639698
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.11435496084345798,
+      "kl_null_to_alt": 0.11541762857117877,
+      "pinsker_power_upper_bound": 0.26411813068382956,
+      "information_limited_below_half": true,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.5329719208123151,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.0244,
+          "count": 122,
+          "total": 5000,
+          "wilson95": [
+            0.02047464350657034,
+            0.029055594583568007
+          ]
+        },
+        "split": {
+          "estimate": 0.0016,
+          "count": 8,
+          "total": 5000,
+          "wilson95": [
+            0.0008109751397282834,
+            0.0031542701591046594
+          ]
+        },
+        "concentration": {
+          "estimate": 0.001,
+          "count": 5,
+          "total": 5000,
+          "wilson95": [
+            0.00042721349110879964,
+            0.002338953050058211
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.1784,
+          "count": 892,
+          "total": 5000,
+          "wilson95": [
+            0.1680362534215306,
+            0.1892575324695302
+          ]
+        },
+        "split": {
+          "estimate": 0.0056,
+          "count": 28,
+          "total": 5000,
+          "wilson95": [
+            0.003877382638215079,
+            0.008081721045057406
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0042,
+          "count": 21,
+          "total": 5000,
+          "wilson95": [
+            0.002748774410314672,
+            0.006412478838403972
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.5797260385661995,
+      "kl_null_to_alt": 0.5913209320546362,
+      "pinsker_power_upper_bound": 0.5633892822884755,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "previous_two_lags",
+      "lags": [
+        0.17,
+        0.43
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": 1.9198935848367,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0242,
+          "count": 121,
+          "total": 5000,
+          "wilson95": [
+            0.02029184139202983,
+            0.028838703778886532
+          ]
+        },
+        "split": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.57,
+          "count": 2850,
+          "total": 5000,
+          "wilson95": [
+            0.5562288764692809,
+            0.583663645258411
+          ]
+        },
+        "split": {
+          "estimate": 0.029,
+          "count": 145,
+          "total": 5000,
+          "wilson95": [
+            0.024698062696600596,
+            0.03402511253564323
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0348,
+          "count": 174,
+          "total": 5000,
+          "wilson95": [
+            0.03006656962326064,
+            0.04024770026642051
+          ]
+        }
+      },
+      "kl_alt_to_null": 2.2692078512645404,
+      "kl_null_to_alt": 2.3464550120545047,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.015,
+      "oracle_threshold": 1.7730476313113286,
+      "response_relative_error": 0.4612649745741467,
+      "null": {
+        "oracle": {
+          "estimate": 0.0258,
+          "count": 129,
+          "total": 5000,
+          "wilson95": [
+            0.021756298207420387,
+            0.030571790317271794
+          ]
+        },
+        "split": {
+          "estimate": 0.0008,
+          "count": 4,
+          "total": 5000,
+          "wilson95": [
+            0.00031114697610156263,
+            0.0020553266458434704
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.285,
+          "count": 1425,
+          "total": 5000,
+          "wilson95": [
+            0.272656430601625,
+            0.29767368123474963
+          ]
+        },
+        "split": {
+          "estimate": 0.0106,
+          "count": 53,
+          "total": 5000,
+          "wilson95": [
+            0.008113451615220025,
+            0.013837975048601892
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0204,
+          "count": 102,
+          "total": 5000,
+          "wilson95": [
+            0.016834083015783124,
+            0.02470229668991568
+          ]
+        }
+      },
+      "kl_alt_to_null": 0.9740009467230593,
+      "kl_null_to_alt": 0.9979872966903613,
+      "pinsker_power_upper_bound": 0.7228541920498361,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.035,
+      "oracle_threshold": 1.203826409222529,
+      "response_relative_error": 1.0454044479683202,
+      "null": {
+        "oracle": {
+          "estimate": 0.03,
+          "count": 150,
+          "total": 5000,
+          "wilson95": [
+            0.025620533254951595,
+            0.035101106573402104
+          ]
+        },
+        "split": {
+          "estimate": 0.0014,
+          "count": 7,
+          "total": 5000,
+          "wilson95": [
+            0.0006783326019524562,
+            0.0028872197776585087
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0022,
+          "count": 11,
+          "total": 5000,
+          "wilson95": [
+            0.001228915407138813,
+            0.003935408649360061
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 0.895,
+          "count": 4475,
+          "total": 5000,
+          "wilson95": [
+            0.8861975374051063,
+            0.9031959780582988
+          ]
+        },
+        "split": {
+          "estimate": 0.1754,
+          "count": 877,
+          "total": 5000,
+          "wilson95": [
+            0.165108866518422,
+            0.18618952558430912
+          ]
+        },
+        "concentration": {
+          "estimate": 0.3264,
+          "count": 1632,
+          "total": 5000,
+          "wilson95": [
+            0.3135406965171112,
+            0.3395258495982128
+          ]
+        }
+      },
+      "kl_alt_to_null": 5.0799679477712445,
+      "kl_null_to_alt": 5.391158794452004,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": true
+    },
+    {
+      "noise_sd": 0.7,
+      "pairs": 1024,
+      "design": "local_fisher_lag",
+      "lags": [
+        0.8400000000000001
+      ],
+      "alternative_alias": 1.075,
+      "oracle_threshold": -9.432693989686413,
+      "response_relative_error": 2.117507681469043,
+      "null": {
+        "oracle": {
+          "estimate": 0.0262,
+          "count": 131,
+          "total": 5000,
+          "wilson95": [
+            0.022123116236859242,
+            0.031004358126276898
+          ]
+        },
+        "split": {
+          "estimate": 0.002,
+          "count": 10,
+          "total": 5000,
+          "wilson95": [
+            0.0010867468609438852,
+            0.0036778842763330113
+          ]
+        },
+        "concentration": {
+          "estimate": 0.0012,
+          "count": 6,
+          "total": 5000,
+          "wilson95": [
+            0.0005500831677591556,
+            0.002615776292629832
+          ]
+        }
+      },
+      "alternative": {
+        "oracle": {
+          "estimate": 1.0,
+          "count": 5000,
+          "total": 5000,
+          "wilson95": [
+            0.9992322980549431,
+            1.0
+          ]
+        },
+        "split": {
+          "estimate": 0.8638,
+          "count": 4319,
+          "total": 5000,
+          "wilson95": [
+            0.8540129343233634,
+            0.8730284857414131
+          ]
+        },
+        "concentration": {
+          "estimate": 0.9972,
+          "count": 4986,
+          "total": 5000,
+          "wilson95": [
+            0.9953052742616263,
+            0.9983313229242089
+          ]
+        }
+      },
+      "kl_alt_to_null": 20.717585288033725,
+      "kl_null_to_alt": 23.680822115872154,
+      "pinsker_power_upper_bound": 1.0,
+      "information_limited_below_half": false,
+      "oracle_practical_gap": false
+    }
+  ],
+  "limits": [
+    "The oracle knows the alternative and controls null 1 only; not an information-matched method.",
+    "Oracle power is a calibrated Monte Carlo approximation to ideal NP power, not a rigorous numerical ceiling.",
+    "Rank calibration controls null rejection marginally over calibration; conditional size varies.",
+    "Evaluation Wilson intervals do not include calibration variability.",
+    "Pinsker bound applies to any level-alpha test at null 1, including randomized tests.",
+    "Fisher design uses null sensitivity, not held-out alternatives; local criterion is not globally optimal power.",
+    "All candidate parameters and Gaussian noise are known; not an unknown-memory reconstruction.",
+    "No new theory, nonlinear validation, or universal response certificate is claimed."
+  ]
+}

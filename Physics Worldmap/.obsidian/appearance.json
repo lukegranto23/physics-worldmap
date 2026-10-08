@@ -1,0 +1,9 @@
+{
+  "accentColor": "#5d8bf4",
+  "enabledCssSnippets": [
+    "physics-worldmap"
+  ],
+  "showViewHeader": true,
+  "showRibbon": true,
+  "nativeMenus": true
+}

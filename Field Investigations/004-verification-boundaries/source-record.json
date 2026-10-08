@@ -1,0 +1,72 @@
+{
+  "repository": "sigstore/sigstore-python",
+  "revision": "d03f956b94ed239f47c936923ae7a4386c3db8e1",
+  "utc": "2026-09-23T04:58:00.952333+00:00",
+  "files": {
+    "LICENSE": {
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "COPYRIGHT.txt": {
+      "git_blob": "5f2c003d6d169bf7351c8368da9172aa978e5e21",
+      "sha256": "0e486357a67e9e49da7200e773fb0a8474f055ad73422d07e6a7769a949af8a2",
+      "bytes": 562
+    },
+    "pyproject.toml": {
+      "git_blob": "0b242b00fb481e7dbd38602af749332d3c0ae7a3",
+      "sha256": "5a364d8a45a02f81486df0cd2b11beef50b4729d38471121a2adb773eeb33770",
+      "bytes": 3985
+    },
+    "sigstore/verify/verifier.py": {
+      "git_blob": "7dccb6670be977cbafee71087176dad6cd87e826",
+      "sha256": "b3cef7d53aaa63e238ee29233ae2f7761506e46a400a6cf1779d5ecb98c690db",
+      "bytes": 27324
+    },
+    "sigstore/verify/policy.py": {
+      "git_blob": "d272c54144cb4f47f29787cb1a274c53e56481fa",
+      "sha256": "9f7542b048bc0a914edababafcbb68440e1bba62594b68972393d57b866e1422",
+      "bytes": 15172
+    },
+    "sigstore/models.py": {
+      "git_blob": "2237b772ea54b49bfd89b8893c2baca126a8f5d7",
+      "sha256": "36e77d2eeeff512f761350f9661bea888eb354414f7d9f22eb8f5d7a626f7d10",
+      "bytes": 34521
+    },
+    "sigstore/_cli.py": {
+      "git_blob": "7573b6436e819af0b81b32b9b7bb9a6a170578d9",
+      "sha256": "376adc57a74f8bedfcb707bf5f59d42fb8a8e3aff75d9c68ad18d19f7e4a70a1",
+      "bytes": 48073
+    },
+    "test/unit/verify/test_policy.py": {
+      "git_blob": "68c41a690031f3e686d02d7ed5e152426daa6d12",
+      "sha256": "88656bc6f5cd15429bac3538e491277c97564d6bbf48b805dd34f92647868de2",
+      "bytes": 7093
+    },
+    "test/unit/verify/test_verifier.py": {
+      "git_blob": "de4de1a3c8dc9470b0610b4bcb610ded64d810e4",
+      "sha256": "67e07541922ef7da955b94c72cf4e61abfa2bb6fa61db54f2361ae9664403785",
+      "bytes": 16664
+    },
+    "test/integration/cli/test_verify.py": {
+      "git_blob": "1455cc90f397a8833c8d0464c35c74da18423087",
+      "sha256": "d361185d8a4fd004f108033bc57028c7b51074f419ff55dee04206f6c7ca5514",
+      "bytes": 1917
+    },
+    "sigstore/dsse/__init__.py": {
+      "git_blob": "0f9eaa66496d20e5af5c23b3ec5a43b8c6728c8f",
+      "sha256": "355c4592e9023a137ca47d1d4cf23604e8f93be87396ade2f529c20eaa3a94aa",
+      "bytes": 9524
+    },
+    "sigstore/_utils.py": {
+      "git_blob": "f9e7d89bfa5f9582cfcfd1fe38fa517eaf1e59cb",
+      "sha256": "720eea57786d6696d7d829d2ee2191896c1f485703d845655a2bb57f2748933f",
+      "bytes": 12291
+    },
+    "test/unit/test_dsse.py": {
+      "git_blob": "d791082abcc104fb080e9d33b735bdc72cd0da13",
+      "sha256": "26a3424621d2ded9ea2a40937a8f8485dec02cdcc89a29cd4eae6633f4bbf07c",
+      "bytes": 3680
+    }
+  }
+}

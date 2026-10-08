@@ -1,0 +1,7 @@
+# packaged release bundles of the vault
+*.zip
+# nested fixture repos (regenerable test scaffolding)
+**/local-fixtures/
+**/fixtures/
+__pycache__/
+.DS_Store

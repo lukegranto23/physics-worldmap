@@ -1,0 +1,278 @@
+{
+  "protocol_sha256": "ced715912bfaf5c482739677fd55a1bdde43fdd043b4f6c9032a710646085647",
+  "script_sha256": "ae5bf6d74f70b0e87f196851b423e39a4d91484e9d51cecc374078c9a034e470",
+  "python": "3.14.3",
+  "numpy": "2.4.3",
+  "matplotlib": "3.10.8",
+  "scope": "Exact linear Gaussian pilot, not a novelty or four-system validation claim",
+  "effective_stiffness": 1.55,
+  "fitted_damping": 0.3606793303852239,
+  "equilibrium_baseline_damping": 0.3,
+  "hankel_singular_values": [
+    1.2220890251010634,
+    0.9043500321815885,
+    0.0520171408440468,
+    0.04717548860223185
+  ],
+  "training_grid_index": 270,
+  "training_objective": 0.018186898375449602,
+  "metrics": {
+    "full": {
+      "states": 4,
+      "stationary_qp_covariance_relative_error": 2.6407373400015483e-16,
+      "stationary_q_variance_relative_error": 4.440892098500626e-16,
+      "max_real_eigenvalue": -0.17233799327401636,
+      "train_relative_l2": 0.0,
+      "interpolation_relative_l2": 0.0,
+      "extrapolation_relative_l2": 0.0,
+      "pulse_relative_l2": 0.0,
+      "chirp_relative_l2": 0.0
+    },
+    "equilibrium": {
+      "states": 2,
+      "stationary_qp_covariance_relative_error": 2.086065128075896e-16,
+      "stationary_q_variance_relative_error": 2.220446049250313e-16,
+      "max_real_eigenvalue": -0.15000000000000002,
+      "train_relative_l2": 0.028982305254731094,
+      "interpolation_relative_l2": 0.02713823186469343,
+      "extrapolation_relative_l2": 0.41697395736927984,
+      "pulse_relative_l2": 0.3327293324370761,
+      "chirp_relative_l2": 0.4481694585104985
+    },
+    "response_fit": {
+      "states": 2,
+      "stationary_qp_covariance_relative_error": 0.0,
+      "stationary_q_variance_relative_error": 0.0,
+      "max_real_eigenvalue": -0.18033966519261196,
+      "train_relative_l2": 0.018186898375449602,
+      "interpolation_relative_l2": 0.016666263524181657,
+      "extrapolation_relative_l2": 0.3070157368809316,
+      "pulse_relative_l2": 0.24169229113244953,
+      "chirp_relative_l2": 0.32959595473986303
+    },
+    "balanced_reference": {
+      "states": 2,
+      "stationary_qp_covariance_relative_error": 0.068973881971821,
+      "stationary_q_variance_relative_error": 0.03503002893452578,
+      "max_real_eigenvalue": -0.17563956539272613,
+      "train_relative_l2": 0.014149983262423347,
+      "interpolation_relative_l2": 0.014206828054415688,
+      "extrapolation_relative_l2": 0.055862145603082884,
+      "pulse_relative_l2": 0.021754504839630033,
+      "chirp_relative_l2": 0.036078442625756914
+    }
+  },
+  "retained_qp_covariances": {
+    "full": [
+      [
+        0.6451612903225808,
+        -8.755346279939606e-18
+      ],
+      [
+        -8.755346279939606e-18,
+        1.0000000000000002
+      ]
+    ],
+    "equilibrium": [
+      [
+        0.6451612903225807,
+        0.0
+      ],
+      [
+        0.0,
+        1.0000000000000002
+      ]
+    ],
+    "response_fit": [
+      [
+        0.6451612903225806,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "balanced_reference": [
+      [
+        0.6225612716551446,
+        2.8873219343289154e-05
+      ],
+      [
+        2.8873219343221994e-05,
+        0.9210897998530468
+      ]
+    ]
+  },
+  "validation": {
+    "positive_stiffness": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "balancing_inverse": {
+      "error": 1.596793041251851e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "controllability_gramian_balanced": {
+      "error": 8.338947591406351e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "observability_gramian_balanced": {
+      "error": 1.037633745173944e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "canonical_vs_lyapunov_covariance": {
+      "error": 2.622891144797517e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "schur_complement_vs_resolvent": {
+      "error": 2.584920719505983e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "zero_coupling_reduction": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "static_susceptibility": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "fit_not_on_search_boundary": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "full_stability": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "full_lyapunov_residual": {
+      "error": 3.656146983340867e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "equilibrium_stability": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "equilibrium_lyapunov_residual": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "response_fit_stability": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "response_fit_lyapunov_residual": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "balanced_reference_stability": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "balanced_reference_lyapunov_residual": {
+      "error": 1.3451771113383487e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "equilibrium_exact_stationary_marginal": {
+      "error": 2.086065128075896e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "response_fit_exact_stationary_marginal": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "full_fluctuation_dissipation_identity": {
+      "error": 2.858318983885229e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "equilibrium_fluctuation_dissipation_identity": {
+      "error": 2.769032103104884e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "response_fit_fluctuation_dissipation_identity": {
+      "error": 3.5784509440620816e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "alternative_damping_same_stationary_covariance": {
+      "error": 3.3636789484570597e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "alternative_damping_different_response": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "pulse_full_time_refinement": {
+      "error": 7.233189932699036e-10,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "pulse_equilibrium_time_refinement": {
+      "error": 1.0346375513514807e-09,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "pulse_response_fit_time_refinement": {
+      "error": 8.503412122212551e-10,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "pulse_balanced_reference_time_refinement": {
+      "error": 6.451157960324505e-10,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "chirp_full_time_refinement": {
+      "error": 9.857788093662013e-10,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "chirp_equilibrium_time_refinement": {
+      "error": 1.2816224820121558e-09,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "chirp_response_fit_time_refinement": {
+      "error": 1.0980559666280843e-09,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    "chirp_balanced_reference_time_refinement": {
+      "error": 8.311214014232377e-10,
+      "tolerance": 1e-05,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "interpretation_limits": [
+    "One analytic linear system; not Session 001's four-system study.",
+    "Response fit uses noiseless forced data; equilibrium objective does not identify damping.",
+    "Balanced reference has full model information and a more flexible two-state realization.",
+    "Equilibrium means a one-time Gaussian marginal, not multi-time correlations.",
+    "Exact memory susceptibility is four-state-equivalent, not an equal-budget reduction.",
+    "No novelty, statistical confidence interval or experimental physics claim."
+  ]
+}

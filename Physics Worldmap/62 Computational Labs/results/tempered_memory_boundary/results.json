@@ -1,0 +1,317 @@
+{
+  "generated_utc": "2026-09-14T00:15:41.261674+00:00",
+  "status": "Exploratory deterministic calculation specified after preliminary covariance and KL calculations. Not a preregistered discovery test or a new fitted-model benchmark.",
+  "observation_model": "M independent, exactly sampled, stationary zero-mean Gaussian velocity vectors; each vector has 20 entries at times 0, 0.6, ..., 11.4. No sensor error, nuisance parameters, forcing, or reconstruction compression is included.",
+  "bound_interpretation": "For any test with size at most alpha at epsilon=0, power at epsilon>0 is at most min(1, alpha + sqrt(M*KL(N(0,K_epsilon)||N(0,K_0))/2)). This is a rigorous statistical inequality evaluated in floating-point arithmetic, not an achieved detector power or interval-certified numerical bound.",
+  "null_cutoff": 0.0,
+  "null_asymptotic_msd_exponent": 0.5,
+  "null_diffusivity": 0.0,
+  "sample_times": [
+    0.0,
+    0.6,
+    1.2,
+    1.7999999999999998,
+    2.4,
+    3.0,
+    3.5999999999999996,
+    4.2,
+    4.8,
+    5.3999999999999995,
+    6.0,
+    6.6,
+    7.199999999999999,
+    7.8,
+    8.4,
+    9.0,
+    9.6,
+    10.2,
+    10.799999999999999,
+    11.4
+  ],
+  "test_size": 0.05,
+  "null_minimum_covariance_eigenvalue": 0.0935900267359479,
+  "finite_window_bound_coefficient": 0.15045055561273504,
+  "cases": [
+    {
+      "cutoff": 1e-05,
+      "memory_cutoff_timescale": 99999.99999999999,
+      "asymptotic_msd_exponent": 1.0,
+      "diffusivity": 0.0031622776601683794,
+      "maximum_sampled_covariance_difference": 4.916938339150079e-06,
+      "kl_per_trajectory": 4.5450136779747547e-10,
+      "whitened_difference_eigenvalues": [
+        -5.932488635953761e-06,
+        -5.920502650373216e-06,
+        -3.1877163637393786e-06,
+        -2.5007794387387847e-06,
+        -4.112738344459075e-07,
+        -4.0616828636581656e-07,
+        5.821105212719671e-07,
+        6.841329838135949e-07,
+        7.834268347813486e-07,
+        7.977675855322557e-07,
+        8.248612818666669e-07,
+        8.519617506647703e-07,
+        8.921831676904399e-07,
+        9.173807981381308e-07,
+        9.516824792890491e-07,
+        9.551932949198951e-07,
+        9.931474514380521e-07,
+        9.96768304246741e-07,
+        6.422362975350577e-06,
+        4.099889433611653e-05
+      ],
+      "power_upper_bound_by_independent_trajectories": {
+        "64": 0.05012059868892123,
+        "256": 0.05024119737784246,
+        "1024": 0.05048239475568492,
+        "4096": 0.05096478951136983
+      }
+    },
+    {
+      "cutoff": 0.0001,
+      "memory_cutoff_timescale": 10000.0,
+      "asymptotic_msd_exponent": 1.0,
+      "diffusivity": 0.01,
+      "maximum_sampled_covariance_difference": 4.916606770055676e-05,
+      "kl_per_trajectory": 4.543059491033126e-08,
+      "whitened_difference_eigenvalues": [
+        -5.9321774206910654e-05,
+        -5.9201188694359384e-05,
+        -3.1876717642204645e-05,
+        -2.500739077501626e-05,
+        -4.112703523714491e-06,
+        -4.062924405663838e-06,
+        5.820532598419919e-06,
+        6.840427043710384e-06,
+        7.834123923505819e-06,
+        7.977524879283009e-06,
+        8.248414968919174e-06,
+        8.519419713196407e-06,
+        8.921537421826111e-06,
+        9.173467449231914e-06,
+        9.516310822721157e-06,
+        9.551461416715478e-06,
+        9.930952932542449e-06,
+        9.96719963131355e-06,
+        6.423208486440506e-05,
+        0.0004099436892145055
+      ],
+      "power_upper_bound_by_independent_trajectories": {
+        "64": 0.05120572759657006,
+        "256": 0.05241145519314011,
+        "1024": 0.05482291038628022,
+        "4096": 0.05964582077256044
+      }
+    },
+    {
+      "cutoff": 0.001,
+      "memory_cutoff_timescale": 1000.0,
+      "asymptotic_msd_exponent": 1.0,
+      "diffusivity": 0.03162277660168379,
+      "maximum_sampled_covariance_difference": 0.0004913293257588491,
+      "kl_per_trajectory": 4.523606296394878e-06,
+      "whitened_difference_eigenvalues": [
+        -0.0005929066202709035,
+        -0.0005916283853534952,
+        -0.00031872250103084975,
+        -0.00025003361557121746,
+        -4.1123554089685185e-05,
+        -4.075333803133181e-05,
+        5.8148142110070544e-05,
+        6.831397804770155e-05,
+        7.832680111715148e-05,
+        7.976015539795803e-05,
+        8.24643727438336e-05,
+        8.517442692814512e-05,
+        8.918594746521384e-05,
+        9.17006073116836e-05,
+        9.511175770087931e-05,
+        9.546744720042915e-05,
+        9.925740898132132e-05,
+        9.962368392681674e-05,
+        0.0006431627412721571,
+        0.00409491896877065
+      ],
+      "power_upper_bound_by_independent_trajectories": {
+        "64": 0.06203143389146265,
+        "256": 0.0740628677829253,
+        "1024": 0.09812573556585061,
+        "4096": 0.1462514711317012
+      }
+    },
+    {
+      "cutoff": 0.01,
+      "memory_cutoff_timescale": 100.0,
+      "asymptotic_msd_exponent": 1.0,
+      "diffusivity": 0.1,
+      "maximum_sampled_covariance_difference": 0.004880375448569063,
+      "kl_per_trajectory": 0.0004337553510973604,
+      "whitened_difference_eigenvalues": [
+        -0.005898048666467183,
+        -0.0058782087327979085,
+        -0.0031826842688231303,
+        -0.002496378584649003,
+        -0.00041988722499058766,
+        -0.00041089585959684324,
+        0.0005758360558331384,
+        0.0006740955418740815,
+        0.0007818254765370971,
+        0.0007960932260583878,
+        0.0008226722728666021,
+        0.0008497751153933566,
+        0.0008889121337133943,
+        0.0009135805555517328,
+        0.0009460272386289235,
+        0.0009499406294793172,
+        0.0009873959379538592,
+        0.0009914297466039682,
+        0.006512286249142081,
+        0.04050477077347876
+      ],
+      "power_upper_bound_by_independent_trajectories": {
+        "64": 0.16781413851960014,
+        "256": 0.2856282770392003,
+        "1024": 0.5212565540784007,
+        "4096": 0.9925131081568013
+      }
+    },
+    {
+      "cutoff": 0.1,
+      "memory_cutoff_timescale": 10.0,
+      "asymptotic_msd_exponent": 1.0,
+      "diffusivity": 0.31622776601683794,
+      "maximum_sampled_covariance_difference": 0.045717803355884434,
+      "kl_per_trajectory": 0.03058168129699776,
+      "whitened_difference_eigenvalues": [
+        -0.05597529205947035,
+        -0.05521913240048661,
+        -0.031302205291720696,
+        -0.02463891625420095,
+        -0.00537719687740502,
+        -0.004125401680368585,
+        0.005246328526693513,
+        0.005830584667059458,
+        0.0076739852758484555,
+        0.007810841307956515,
+        0.008031703521810396,
+        0.008308650315581114,
+        0.008581902771295257,
+        0.008754692075415096,
+        0.009015734363033472,
+        0.009017785089877911,
+        0.009389657266935537,
+        0.009456492510299085,
+        0.07035897999077526,
+        0.3669021538578222
+      ],
+      "power_upper_bound_by_independent_trajectories": {
+        "64": 1.0,
+        "256": 1.0,
+        "1024": 1.0,
+        "4096": 1.0
+      }
+    }
+  ],
+  "checks": [
+    {
+      "name": "strictly positive null sampled covariance",
+      "passed": true,
+      "value": 0.0935900267359479
+    },
+    {
+      "name": "cubic root residuals",
+      "passed": true,
+      "value": 5.329070518200751e-15
+    },
+    {
+      "name": "unit initial variance and zero initial VACF derivative",
+      "passed": true,
+      "value": 1.1657341758564144e-15
+    },
+    {
+      "name": "conjugate cancellation on evaluation curves",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "zero cutoff versus independent pole-and-cut reference",
+      "passed": true,
+      "value": 5.551115123125783e-16
+    },
+    {
+      "name": "independent smooth Volterra convolution residual",
+      "passed": true,
+      "value": 2.4424906541753444e-15
+    },
+    {
+      "name": "analytic derivative versus centered differences",
+      "passed": true,
+      "value": 3.46837059073124e-10
+    },
+    {
+      "name": "quadrature Laplace transform versus declared mobility",
+      "passed": true,
+      "value": 1.354472090042691e-14
+    },
+    {
+      "name": "zero KL for identical covariance",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "all alternative sampled covariances positive definite",
+      "passed": true,
+      "value": 0.0935900267359479
+    },
+    {
+      "name": "stable KL versus direct trace-logdet formula",
+      "passed": true,
+      "value": 4.9682480351975755e-15
+    },
+    {
+      "name": "stable KL versus generalized covariance eigenvalues",
+      "passed": true,
+      "value": 1.0061396160665481e-16
+    },
+    {
+      "name": "positive KL for every positive declared cutoff",
+      "passed": true,
+      "value": 4.5450136779747547e-10
+    },
+    {
+      "name": "sampled verification of proved finite-window bound",
+      "passed": true,
+      "value": 0.9986697171257355
+    },
+    {
+      "name": "finite-cutoff DC mobility identity",
+      "passed": true,
+      "value": 4.336808689942018e-19
+    },
+    {
+      "name": "zero-cutoff low-frequency square-root response",
+      "passed": true,
+      "value": 1.0
+    }
+  ],
+  "hashes": {
+    "script": "8ff88728ff9f39c7c30e3d13b21c7feb0129b32be445ebf3250a70469cc25b7a",
+    "protocol": "7b8c2e66d833e14ad244c05f3e9438046095d5d7b1976842423c60ffa63da5e5",
+    "independent_reference_script": "435c6f2335f49af0bb2f0c46974dd8f78670972e4a642d9c6847178d62a0a62c",
+    "saved_arrays": "5a3a8f2977f0feec9066eed4f4e2c069f17f98a2cc8076a5744ffd9e834e993a"
+  },
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  },
+  "scope_limits": [
+    "No finite-data result for ideal continuous-path observation or exact correlation oracles is claimed.",
+    "Gaussian equilibrium preparation and independent repetitions are assumptions. FDT alone does not imply Gaussian statistics.",
+    "The asymptotic exponent is discontinuous at zero cutoff; D_epsilon=sqrt(epsilon) itself is continuous.",
+    "A large upper bound is inconclusive; a small bound constrains every test under the stated experiment.",
+    "These cutoffs are development examples. The physical tempered-memory family has established prior art."
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "kind": "static-syntax-audit-not-runtime-proof",
+  "files": {
+    "184.index.js": {
+      "sha256": "a55876b6637888e84e212b9c7e3ca7b7f8d8d8a36e1eb1cc01ae93c276ad6bc9",
+      "bytes": 7522
+    },
+    "50.index.js": {
+      "sha256": "45195f12661aeef8aa7ffabfd780d02fffd45c2c37102ff2ecf217a56d6d4f92",
+      "bytes": 169
+    },
+    "606.index.js": {
+      "sha256": "629225cc3e937e22ce6b90c21f1d938d1be0716257446593555696bf1d01523e",
+      "bytes": 7520
+    },
+    "index.js": {
+      "sha256": "289ccb9654b7113dcfd539f5b143fab30537b4045e53652161e8c88353ef7d90",
+      "bytes": 4869164
+    }
+  },
+  "chunkRequests": [
+    {
+      "file": "index.js",
+      "line": 68964,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 69707,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 69791,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 79125,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 79915,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 79999,
+      "code": "__nccwpck_require__.e(/* import() */ 606)",
+      "literalId": 606
+    },
+    {
+      "file": "index.js",
+      "line": 113332,
+      "code": "__nccwpck_require__.e(/* import() */ 50)",
+      "literalId": 50
+    }
+  ],
+  "chunkFilenameAssignments": [
+    {
+      "file": "index.js",
+      "line": 113640,
+      "code": "__nccwpck_require__.u = (chunkId) => {\n/******/ \t\t// return url for filenames based on template\n/******/ \t\treturn \"\" + chunkId + \".index.js\";\n/******/ \t}"
+    }
+  ],
+  "chunkLoaderAssignments": [
+    {
+      "file": "index.js",
+      "line": 113694,
+      "code": "__nccwpck_require__.f.j = (chunkId, promises) => {\n/******/ \t\t\t// import() chunk loading for javascript\n/******/ \t\t\tvar installedChunkData = __nccwpck_require__.o(installedChunks, chunkId) ? installedChunks[chunkId] : undefined;\n/******/ \t\t\tif(installedChunkData !== 0) { // 0 means \"already installed\".\n/******/ \t\n/******/ \t\t\t\t// a Promise means \"currently loading\".\n/******/ \t\t\t\tif(installedChunkData) {\n/******/ \t\t\t\t\tpromises.push(installedChunkData[1]);\n/******/ \t\t\t\t} else {\n/******/ \t\t\t\t\tif(true) { // all chunks have JS\n/******/ \t\t\t\t\t\t// setup Promise in chunk cache\n/******/ \t\t\t\t\t\tvar promise = import(\"./\" + __nccwpck_require__.u(chunkId)).then(installChunk, (e) => {\n/******/ \t\t\t\t\t\t\tif(installedChunks[chunkId] !== 0) installedChunks[chunkId] = undefined;\n/******/ \t\t\t\t\t\t\tthrow e;\n/******/ \t\t\t\t\t\t});\n/******/ \t\t\t\t\t\tvar promise = Promise.race([promise, new Promise((resolve) => (installedChunkData = installedChunks[chunkId] = [resolve]))])\n/******/ \t\t\t\t\t\tpromises.push(installedChunkData[1] = promise);\n/******/ \t\t\t\t\t}\n/******/ \t\t\t\t}\n/******/ \t\t\t}\n/******/ \t}"
+    }
+  ],
+  "dynamicImports": [
+    {
+      "file": "index.js",
+      "line": 113705,
+      "code": "import(\"./\" + __nccwpck_require__.u(chunkId))"
+    }
+  ],
+  "exportedChunkIds": [
+    {
+      "file": "184.index.js",
+      "line": 1,
+      "code": "id = 184"
+    },
+    {
+      "file": "184.index.js",
+      "line": 2,
+      "code": "ids = [184]"
+    },
+    {
+      "file": "50.index.js",
+      "line": 1,
+      "code": "id = 50"
+    },
+    {
+      "file": "50.index.js",
+      "line": 2,
+      "code": "ids = [50]"
+    },
+    {
+      "file": "606.index.js",
+      "line": 1,
+      "code": "id = 606"
+    },
+    {
+      "file": "606.index.js",
+      "line": 2,
+      "code": "ids = [606]"
+    }
+  ],
+  "referencesToOldModule": [
+    {
+      "file": "184.index.js",
+      "line": 5,
+      "code": "91184"
+    }
+  ],
+  "limitations": [
+    "No action runtime executed",
+    "Tracks direct syntax, not aliases, eval, computed property names, or external callers",
+    "No claim of general unreachability or absence of vulnerabilities"
+  ],
+  "requestedLiteralIds": [
+    50,
+    606
+  ],
+  "nonliteralRequestCount": 0,
+  "oldChunkEqualsCurrentAfterIdentityRenaming": true,
+  "identitySubstitutions": [
+    [
+      "export const id = 184;",
+      "export const id = 606;"
+    ],
+    [
+      "export const ids = [184];",
+      "export const ids = [606];"
+    ],
+    [
+      "/***/ 91184:",
+      "/***/ 606:"
+    ]
+  ]
+}

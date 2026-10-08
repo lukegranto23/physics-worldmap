@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-09-17T00:55:55.114003+00:00",
+  "counts": {
+    "json": 46,
+    "jsonl": 1,
+    "canvas": 1,
+    "python": 38,
+    "markdown": 865
+  },
+  "checkpoint_execution_records": [
+    {
+      "execution_record": "results/noisy_memory_stress/results.json",
+      "recorded_passing_groups": 13
+    },
+    {
+      "execution_record": "results/noisy_memory_stress/extrapolation.json",
+      "recorded_passing_groups": 8
+    },
+    {
+      "execution_record": "results/tempered_memory_boundary/results.json",
+      "recorded_passing_groups": 16
+    },
+    {
+      "execution_record": "results/tempered_memory_boundary/independent_audit.json",
+      "recorded_passing_groups": 8
+    },
+    {
+      "execution_record": "results/spectral_response/results.json",
+      "recorded_passing_groups": 17
+    },
+    {
+      "execution_record": "results/spectral_response/alias_diagnostic.json",
+      "recorded_passing_groups": 14
+    },
+    {
+      "execution_record": "results/camera_response/results.json",
+      "recorded_passing_groups": 22
+    },
+    {
+      "execution_record": "results/camera_response/independent_audit.json",
+      "recorded_passing_groups": 17
+    }
+  ],
+  "errors": [],
+  "scope": "Syntax, strict JSON/JSONL, Canvas references, display delimiters, metadata, links, inventory, and new checkpoint execution flags/input hashes; not scientific certification"
+}

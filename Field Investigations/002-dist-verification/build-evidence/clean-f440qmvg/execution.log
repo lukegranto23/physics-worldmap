@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/work/clean-f440qmvg.py", line 105, in <module>
+    inside(sys.argv[2])
+  File "/work/clean-f440qmvg.py", line 52, in inside
+    assert report['committed_hashes'] == report['overlay_hashes']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,66 @@
+{
+  "title": "Independent noisy-covariance stress test for thermal-memory reconstruction",
+  "version": "1.1",
+  "amendment_date": "2026-09-12",
+  "amendment": {
+    "reason": "Post-run audit found non-standard Infinity in JSON, hidden sign-changing kernels in plots, missing finite/real and regularized-stability gates, and incomplete failure accounting.",
+    "changes": "Save all noisy inputs and attempt reasons; fail on nonfinite/complex values and unstable regularized realizations; evaluate the actual regularized stochastic model; report nonpositive kernel values explicitly with null log-error plus extended-error status; add direct-matrix-exponential evaluation and verification. Sampling, seed, ensemble counts, order/window fallback, and original error thresholds are unchanged.",
+    "historical_outputs": "Original version preserved at workspace work/noisy-memory-v1-2026-09-05; its results are superseded by this audited rerun."
+  },
+  "frozen_utc": "2026-09-05T05:30:00Z",
+  "status": "local protocol frozen before the first full Monte Carlo execution; not externally preregistered",
+  "method_source": "https://arxiv.org/abs/2101.02657",
+  "relationship_to_source": "Restricted implementation using the published analytic target and order/window fallback. It does not implement Appendix B spectral deletion or negative-real-mode duplication and is not a test of the full published noisy-data method. The untransformed auxiliary realization is evaluated; the optional final Lanczos sweep is not run in this stress test.",
+  "data_provenance": {
+    "target": "C(t)=E_(3/2)(-|t|^(3/2)) in reduced units",
+    "generator": "Wishart scatter matrices for independent zero-mean Gaussian trajectory vectors with exact Toeplitz target covariance",
+    "estimator": "y_k = scatter[0,k] / scatter[0,0]",
+    "independence": "The generator uses only the analytic covariance and does not call the reconstruction or fitted model.",
+    "limitation": "Synthetic ensemble-covariance noise is not the correlated finite-trajectory noise of the paper's Lennard-Jones molecular dynamics."
+  },
+  "seed": 20260905,
+  "tau": 0.6,
+  "starting_n": 10,
+  "minimum_n": 4,
+  "ensemble_sizes": [64, 256, 1024, 4096],
+  "replicates_per_size": 200,
+  "newton_tolerance": 1e-5,
+  "newton_max_iterations": 10,
+  "regularization_delta": 1e-5,
+  "frequency_grid": {"minimum": 1e-4, "maximum": 1e3, "points": 160},
+  "evaluation": {
+    "vacf_interval": [0.0, 30.0],
+    "vacf_points": 301,
+    "kernel_interval": [0.05, 12.0],
+    "kernel_points": 120,
+    "good_vacf_rmse_threshold": 0.01,
+    "bad_kernel_log_rmse_threshold": 0.5
+  },
+  "acceptance": {
+    "maximum_discrete_pole_modulus": 0.9999999999,
+    "maximum_real_system_eigenvalue": -1e-9,
+    "maximum_real_auxiliary_eigenvalue": -1e-9,
+    "sampled_positive_real_minimum": -1e-8,
+    "riccati_residual_frobenius": 1e-6,
+    "covariance_minimum_eigenvalue": -1e-7,
+    "lyapunov_residual_frobenius": 1e-5,
+    "adjusted_sample_interpolation_max_abs_error": 1e-6
+  },
+  "predeclared_outputs": [
+    "full-order acceptance rate",
+    "acceptance rate after order fallback",
+    "accepted-order distribution",
+    "VACF RMSE and kernel log-RMSE among accepted fits",
+    "fraction of accepted fits with good VACF but bad kernel",
+    "failure-reason counts",
+    "Wilson 95 percent intervals for proportions"
+  ],
+  "interpretation_limits": [
+    "No monotonic trend is a required pass condition.",
+    "Acceptance means the numerical gates passed, not that the inferred kernel is unique.",
+    "Frequency positivity is sampled, not proved over the continuum.",
+    "Order fallback changes capacity AND truncates the fitted time window from 11.4 at n=10 to 4.2 at n=4.",
+    "Pointwise sign changes in a kernel are not by themselves violations of thermal admissibility; here they disagree with the strictly positive target and make the logarithmic error undefined.",
+    "This is not a reproduction of the paper's noisy molecular-dynamics experiment."
+  ]
+}

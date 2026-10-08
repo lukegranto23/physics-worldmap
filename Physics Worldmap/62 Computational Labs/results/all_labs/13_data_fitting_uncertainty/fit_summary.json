@@ -1,0 +1,23 @@
+{
+  "model": "T^2 = intercept + slope*L",
+  "seed": 20260730,
+  "intercept_s2": 0.012315591424226911,
+  "slope_s2_per_m": 4.010355245661607,
+  "covariance": [
+    [
+      2.062124882722258e-05,
+      -2.9419341066454387e-05
+    ],
+    [
+      -2.9419341066454387e-05,
+      5.491805767027572e-05
+    ]
+  ],
+  "g_m_per_s2": 9.844119831295517,
+  "sigma_g_m_per_s2": 0.01819079296470279,
+  "chi_square": 11.457395359856449,
+  "degrees_of_freedom": 14,
+  "monte_carlo_trials": 1000,
+  "one_sigma_coverage": 0.663,
+  "empirical_to_reported_sigma": 1.0461420200123293
+}

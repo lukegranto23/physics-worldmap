@@ -1,0 +1,46 @@
+
+> javascript-action@0.0.0 bundle
+> npm run format:write && npm run package
+
+
+> javascript-action@0.0.0 format:write
+> npx prettier --write .
+
+__fixtures__/core.js 71ms (unchanged)
+__fixtures__/wait.js 4ms (unchanged)
+__tests__/main.test.js 33ms (unchanged)
+__tests__/wait.test.js 15ms (unchanged)
+.checkov.yml 14ms (unchanged)
+.devcontainer/devcontainer.json 7ms (unchanged)
+.github/codeql/codeql-config.yml 4ms (unchanged)
+.github/copilot-instructions.md 95ms (unchanged)
+.github/dependabot.yml 7ms (unchanged)
+.github/prompts/create-release-notes.prompt.md 18ms (unchanged)
+.github/prompts/unit-test.prompt.md 31ms (unchanged)
+.github/workflows/check-dist.yml 14ms (unchanged)
+.github/workflows/ci.yml 11ms (unchanged)
+.github/workflows/codeql-analysis.yml 8ms (unchanged)
+.github/workflows/licensed.yml 7ms (unchanged)
+.github/workflows/linter.yml 7ms (unchanged)
+.licensed.yml 4ms (unchanged)
+.markdown-lint.yml 4ms (unchanged)
+.prettierrc.yml 3ms (unchanged)
+.vscode/launch.json 3ms (unchanged)
+.vscode/mcp.json 1ms (unchanged)
+.vscode/settings.json 2ms (unchanged)
+.yaml-lint.yml 3ms (unchanged)
+action.yml 4ms (unchanged)
+actionlint.yml 1ms (unchanged)
+eslint.config.mjs 12ms (unchanged)
+jest.config.js 3ms (unchanged)
+package-lock.json 200ms (unchanged)
+package.json 28ms (unchanged)
+README.md 60ms (unchanged)
+rollup.config.js 4ms (unchanged)
+src/index.js 2ms (unchanged)
+src/main.js 10ms (unchanged)
+src/wait.js 8ms (unchanged)
+
+> javascript-action@0.0.0 package
+> npx rimraf ./dist && npx rollup --config rollup.config.js
+

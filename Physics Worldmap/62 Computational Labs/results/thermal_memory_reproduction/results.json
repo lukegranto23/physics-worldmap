@@ -1,0 +1,261 @@
+{
+  "study": "Published subdiffusion correlation-to-memory reproduction",
+  "protocol_version": "1.2",
+  "protocol_sha256": "76e44242c4e6c9df594d98faa83eb19b140beee9920f522894bb62058ed6886c",
+  "script_sha256": "435c6f2335f49af0bb2f0c46974dd8f78670972e4a642d9c6847178d62a0a62c",
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  },
+  "scope": {
+    "implemented": [
+      "analytic target evaluation from an integral representation checked against the defining series",
+      "Appendix C Algorithm 2 moment-functional Jacobi construction and analytic derivative",
+      "Appendix A Newton update using the block matrix logarithm",
+      "stable system matrix for the primary case",
+      "diagnostic memory kernel b^T exp(t A0) c",
+      "sampled positive-real frequency diagnostic",
+      "regularized Riccati solution from Equation 62",
+      "positive-semidefinite auxiliary covariance and rank-one noise factor",
+      "full stationary Lyapunov covariance identity",
+      "final nonsymmetric Lanczos sweep with finite-precision residual audit"
+    ],
+    "not_claimed": [
+      "authors' source-code reproduction",
+      "all six parameter cases",
+      "spectral deletion or negative-real-mode duplication",
+      "experimental molecular-dynamics reproduction"
+    ]
+  },
+  "primary": {
+    "tau": 0.6,
+    "n": 10,
+    "newton_history": [
+      {
+        "iteration": 0,
+        "y1": 0.6845298938200838,
+        "residual": -0.13636325344446168,
+        "derivative": 420.1246595767069
+      },
+      {
+        "iteration": 1,
+        "y1": 0.6848544718955099,
+        "residual": -0.14102284894631908,
+        "derivative": -26.90206384638209
+      },
+      {
+        "iteration": 2,
+        "y1": 0.6796123889924435,
+        "residual": -0.3074180662860722,
+        "derivative": 34.40726434829912
+      },
+      {
+        "iteration": 3,
+        "y1": 0.6885470739233386,
+        "residual": 0.7846841790482663,
+        "derivative": 377.4153726191497
+      },
+      {
+        "iteration": 4,
+        "y1": 0.686467974247025,
+        "residual": 0.09936903575360151,
+        "derivative": 283.0455602178403
+      },
+      {
+        "iteration": 5,
+        "y1": 0.6861169034311566,
+        "residual": 0.0011376147974821735,
+        "derivative": 280.1383541934694
+      },
+      {
+        "iteration": 6,
+        "y1": 0.6861128425277478,
+        "residual": 1.4654625071094644e-06,
+        "derivative": 280.2677194773367
+      }
+    ],
+    "y1_original": 0.6845298938200838,
+    "y1_adjusted": 0.6861128425277478,
+    "jacobi_moment_max_abs_error": 9.55286197368288e-13,
+    "constraint_abs_residual": 1.4654625071028885e-06,
+    "max_discrete_pole_modulus": 0.9699403285347904,
+    "max_real_system_eigenvalue": -0.050867877252330516,
+    "vacf_dense_rmse_0_30": 0.0008184027415650358,
+    "vacf_adjusted_sample_max_abs_error": 9.552376251109607e-13,
+    "kernel_log_rmse_0p05_12": 0.1392102328810585,
+    "sampled_positive_real_min": 1.9704497777651385e-07,
+    "riccati_residual_frobenius": 3.618195571918038e-15,
+    "sigma0_min_eigenvalue": 5.658409759935246e-07,
+    "lyapunov_residual_frobenius": 1.593410878410935e-10,
+    "regularized_max_real_system_eigenvalue": -0.05086779239151115,
+    "regularized_stationary_vacf_rmse_0_30": 0.0008180112210312246,
+    "noise_factor_norm": 6.698324767725372,
+    "lanczos_biorthogonality_max_abs_error": 1.1670131606011409e-06,
+    "lanczos_similarity_frobenius_error": 4.740579811557608e-13,
+    "lanczos_off_tridiagonal_max_abs": 1.2875478039596924e-05,
+    "lanczos_block_structure_max_abs_error": 1.3510953576256444e-07,
+    "lanczos_coupling_k": 1.9865476048666815,
+    "lanczos_first_coupling_max_abs_error": 1.3322676295501878e-15,
+    "lanczos_kernel_max_abs_error": 8.049031163803733e-09,
+    "lanczos_transformed_lyapunov_frobenius_error": 2.2113754573165694e-10,
+    "kernel_at_zero_finite": 3.946371386401549,
+    "exact_kernel_limit_at_zero": "positive infinity"
+  },
+  "negative_control": {
+    "tau": 1.0,
+    "n": 6,
+    "unconstrained_derivative": -0.20422849537462454,
+    "paper_reported_rounded_value": -0.204
+  },
+  "checks": [
+    {
+      "name": "integral target agrees with defining Mittag-Leffler series",
+      "passed": true,
+      "value": 2.858824288409778e-15
+    },
+    {
+      "name": "normalized target starts at one",
+      "passed": true,
+      "value": 1.0
+    },
+    {
+      "name": "Jacobi moment identities",
+      "passed": true,
+      "value": 9.55286197368288e-13
+    },
+    {
+      "name": "Newton derivative constraint",
+      "passed": true,
+      "value": 1.4654625071028885e-06
+    },
+    {
+      "name": "Newton y1 perturbation remains small",
+      "passed": true,
+      "value": 0.001582948707664067
+    },
+    {
+      "name": "no primary discrete pole lies on or outside unit circle",
+      "passed": true,
+      "value": 0.9699403285347904
+    },
+    {
+      "name": "no primary discrete pole is negative real",
+      "passed": true,
+      "value": 0
+    },
+    {
+      "name": "primary continuous realization is stable",
+      "passed": true,
+      "value": -0.050867877252330516
+    },
+    {
+      "name": "dense primary VACF reproduction",
+      "passed": true,
+      "value": 0.0008184027415650358
+    },
+    {
+      "name": "adjusted samples interpolate",
+      "passed": true,
+      "value": 9.552376251109607e-13
+    },
+    {
+      "name": "reconstructed kernel is positive on evaluation interval",
+      "passed": true,
+      "value": 0.15960925203220672
+    },
+    {
+      "name": "kernel shape reproduction",
+      "passed": true,
+      "value": 0.1392102328810585
+    },
+    {
+      "name": "sampled positive-real diagnostic",
+      "passed": true,
+      "value": 1.9704497777651385e-07
+    },
+    {
+      "name": "auxiliary block is stable",
+      "passed": true,
+      "value": -0.013043561344072701
+    },
+    {
+      "name": "regularized Riccati equation residual",
+      "passed": true,
+      "value": 3.618195571918038e-15
+    },
+    {
+      "name": "auxiliary covariance is positive semidefinite",
+      "passed": true,
+      "value": 5.658409759935246e-07
+    },
+    {
+      "name": "full stationary Lyapunov identity",
+      "passed": true,
+      "value": 1.593410878410935e-10
+    },
+    {
+      "name": "stationary covariance has required first column",
+      "passed": true,
+      "value": 0.0
+    },
+    {
+      "name": "regularized stochastic realization is stable",
+      "passed": true,
+      "value": -0.05086779239151115
+    },
+    {
+      "name": "regularized stationary VACF reproduction",
+      "passed": true,
+      "value": 0.0008180112210312246
+    },
+    {
+      "name": "Lanczos biorthogonality residual",
+      "passed": true,
+      "value": 1.1670131606011409e-06
+    },
+    {
+      "name": "Lanczos similarity residual",
+      "passed": true,
+      "value": 4.740579811557608e-13
+    },
+    {
+      "name": "Lanczos off-tridiagonal leakage",
+      "passed": true,
+      "value": 1.2875478039596924e-05
+    },
+    {
+      "name": "Lanczos preserves first-coordinate block structure",
+      "passed": true,
+      "value": 1.3510953576256444e-07
+    },
+    {
+      "name": "Lanczos produces signed first coupling",
+      "passed": true,
+      "value": 1.3322676295501878e-15
+    },
+    {
+      "name": "Lanczos similarity preserves memory kernel",
+      "passed": true,
+      "value": 8.049031163803733e-09
+    },
+    {
+      "name": "Lanczos coordinates preserve Lyapunov identity",
+      "passed": true,
+      "value": 2.2113754573165694e-10
+    },
+    {
+      "name": "coarse-grid unconstrained derivative reproduces reported value",
+      "passed": true,
+      "value": -0.20422849537462454
+    },
+    {
+      "name": "coarse moment identities",
+      "passed": true,
+      "value": 8.430756093247282e-16
+    }
+  ],
+  "passed_checks": 29,
+  "interpretation": "Method-faithful scoped reproduction, not authors' code or a full Algorithm 1 implementation"
+}

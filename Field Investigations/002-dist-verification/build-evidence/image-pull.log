@@ -1,0 +1,38 @@
+24.5.0-bookworm: Pulling from library/node
+f014853ae203: Pulling fs layer
+6d6401b7636b: Pulling fs layer
+cffef7dc6f99: Pulling fs layer
+1e6ffe3614ab: Pulling fs layer
+a40d0e033209: Pulling fs layer
+9726dcf9c294: Pulling fs layer
+67649951c41e: Pulling fs layer
+3fca4abee32b: Pulling fs layer
+9726dcf9c294: Waiting
+67649951c41e: Waiting
+3fca4abee32b: Waiting
+1e6ffe3614ab: Waiting
+a40d0e033209: Waiting
+6d6401b7636b: Verifying Checksum
+6d6401b7636b: Download complete
+f014853ae203: Download complete
+cffef7dc6f99: Download complete
+a40d0e033209: Download complete
+67649951c41e: Verifying Checksum
+67649951c41e: Download complete
+3fca4abee32b: Verifying Checksum
+3fca4abee32b: Download complete
+9726dcf9c294: Verifying Checksum
+9726dcf9c294: Download complete
+1e6ffe3614ab: Verifying Checksum
+1e6ffe3614ab: Download complete
+f014853ae203: Pull complete
+6d6401b7636b: Pull complete
+cffef7dc6f99: Pull complete
+1e6ffe3614ab: Pull complete
+a40d0e033209: Pull complete
+9726dcf9c294: Pull complete
+67649951c41e: Pull complete
+3fca4abee32b: Pull complete
+Digest: sha256:14fe96d5b60b7fe5ac5eeed9e5866a23412cb8503d8a2fd215f6a923cca6de58
+Status: Downloaded newer image for node:24.5.0-bookworm
+docker.io/library/node:24.5.0-bookworm

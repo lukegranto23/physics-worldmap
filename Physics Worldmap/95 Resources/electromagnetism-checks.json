@@ -1,0 +1,303 @@
+{
+  "generated_utc": "2026-09-17T06:32:13.331394+00:00",
+  "schema_version": 1,
+  "numpy_version": "2.4.3",
+  "scipy_version": "1.17.1",
+  "constants": {
+    "epsilon0_F_per_m": 8.8541878188e-12,
+    "mu0_H_per_m": 1.25663706127e-06,
+    "c_m_per_s": 299792458.0,
+    "source": "scipy.constants; epsilon0 and mu0 are measured SI constants, not exactly their pre-2019 values"
+  },
+  "scope": "14 finite worked-example and consistency groups. Not a proof, a full note audit, full electromagnetism validation, experimental validation, or new physics.",
+  "limitations": [
+    "Idealized field geometries and constitutive laws are stated per check.",
+    "Floating-point numerics and reported quadrature errors are not interval-certified proofs.",
+    "Only the specified examples and signs are tested; hashes identify note snapshots but do not validate every claim in them."
+  ],
+  "source_sha256": {
+    "95 Resources/Tools/check_electromagnetism.py": "4b5cbce90f424b15241d2defb68594e8c6e5a55701586a51c0536c3e92a45b8f",
+    "23 Electromagnetism/Concepts/Maxwell Equations.md": "2763ec5884d1357506c3365c3dbc1a3a8ad6ca89a627936c033180dc431f8b3a",
+    "23 Electromagnetism/Concepts/Gausss Law.md": "715f092641af9ebe9484d0357c42519aea06eb3743d921d6fb63e1558d0151e5",
+    "23 Electromagnetism/Concepts/Faradays Law.md": "239ee9d9f531b27fe698eebfbde26d3a8a39d9c37e652eb4327ecaf5b50e2a35",
+    "23 Electromagnetism/Concepts/Poynting Theorem.md": "36a242581693236879df171e8c11ce304abc96f0a8bc4604a73432b15121003a",
+    "23 Electromagnetism/Concepts/Gauge Transformations.md": "f57a1a47e1c15b9596f8ceac6c97a419137cb8a71081c05d6129f7b910f2454d",
+    "23 Electromagnetism/Concepts/Electromagnetic Waves.md": "f9c6a12b92ea4422f4914a2916119bc2f58335e1f1117dca3a8c1e695ab95ea8"
+  },
+  "checks": [
+    {
+      "check": "check_si_dimensions",
+      "status": "PASS",
+      "values": {
+        "relations": [
+          "electric Gauss",
+          "Faraday",
+          "Ampere conduction",
+          "Ampere displacement",
+          "electric energy density",
+          "magnetic energy density",
+          "Poynting flux",
+          "local Joule power"
+        ],
+        "dimension_exponents": "M,L,T,I",
+        "epsilon0_mu0_c_squared": 1.0000000000011935,
+        "scope": "Dimensional consistency does not establish field equations."
+      }
+    },
+    {
+      "check": "check_uniform_charged_sphere",
+      "status": "PASS",
+      "values": {
+        "Q_C": 5e-09,
+        "R_m": 0.1,
+        "rho_C_per_m3": 1.193662073189215e-06,
+        "samples": [
+          {
+            "r_m": 0.05,
+            "field_Coulomb_V_per_m": 2246.88794654284,
+            "field_Gauss_V_per_m": 2246.8879465426994,
+            "relative_error": 6.261657858885883e-14,
+            "enclosed_charge_C": 6.25e-10
+          },
+          {
+            "r_m": 0.2,
+            "field_Coulomb_V_per_m": 1123.4439732713497,
+            "field_Gauss_V_per_m": 1123.4439732713497,
+            "relative_error": 0.0,
+            "enclosed_charge_C": 5e-09
+          }
+        ],
+        "divergence_inferred_rho_C_per_m3": 1.193662073189215e-06
+      }
+    },
+    {
+      "check": "check_gauss_off_center_flux",
+      "status": "PASS",
+      "values": {
+        "radius_m": 0.14,
+        "source_charge_C": 3e-09,
+        "samples": [
+          {
+            "offset_m": 0.051800000000000006,
+            "epsilon0_flux_C": 3e-09,
+            "expected_enclosed_C": 3e-09,
+            "quadrature_estimated_error_integral": 7.19119293476855e-12
+          },
+          {
+            "offset_m": 0.23800000000000002,
+            "epsilon0_flux_C": 2.6112445539183685e-26,
+            "expected_enclosed_C": 0.0,
+            "quadrature_estimated_error_integral": 1.0361741756622514e-12
+          }
+        ]
+      }
+    },
+    {
+      "check": "check_local_charge_conservation",
+      "status": "PASS",
+      "values": {
+        "rho_dot_C_per_m3_s": -3.487878755850582e-07,
+        "divJ_A_per_m3": 3.487878755850582e-07,
+        "outward_current_A": 7.533818112637258e-11,
+        "charge_loss_rate_A": 7.533818112637256e-11,
+        "relative_continuity_residual": 0.0
+      }
+    },
+    {
+      "check": "check_capacitor_displacement_current",
+      "status": "PASS",
+      "values": {
+        "plate_radius_m": 0.02,
+        "gap_m": 0.001,
+        "wire_current_A": 0.01,
+        "field_rate_V_per_m_s": 898755178617.0801,
+        "integrated_displacement_current_A": 0.010000000000000002,
+        "current_integral_error_A": 1.1102230246251568e-16,
+        "samples": [
+          {
+            "r_m": 0.01,
+            "B_phi_T": 4.999999999339837e-08,
+            "enclosed_current_A": 0.0025000000000000005
+          },
+          {
+            "r_m": 0.03,
+            "B_phi_T": 6.66666666578645e-08,
+            "enclosed_current_A": 0.010000000000000002
+          }
+        ],
+        "scope": "Ideal uniform circular gap; quasistatic, no fringing or radiation."
+      }
+    },
+    {
+      "check": "check_faraday_solenoid",
+      "status": "PASS",
+      "values": {
+        "solenoid_radius_m": 0.03,
+        "Bdot_T_per_s": 0.2,
+        "orientation": "positive circulation CCW as viewed from +z",
+        "samples": [
+          {
+            "r_m": 0.01,
+            "E_phi_V_per_m": -0.001,
+            "emf_V": -6.283185307179587e-05,
+            "minus_flux_rate_V": -6.283185307179586e-05,
+            "curlE_T_per_s": -0.1999999999998456
+          },
+          {
+            "r_m": 0.06,
+            "E_phi_V_per_m": -0.0015,
+            "emf_V": -0.0005654866776461627,
+            "minus_flux_rate_V": -0.0005654866776461626,
+            "curlE_T_per_s": 0.0
+          }
+        ],
+        "scope": "Ideal infinitely long solenoid, uniform internal B, zero external B."
+      }
+    },
+    {
+      "check": "check_motional_emf_and_power",
+      "status": "PASS",
+      "values": {
+        "emf_V": 0.30000000000000004,
+        "current_A": 0.15000000000000002,
+        "rod_magnetic_force_N": [
+          -0.015000000000000003,
+          0.0,
+          0.0
+        ],
+        "mechanical_input_W": 0.04500000000000001,
+        "Joule_power_W": 0.04500000000000001,
+        "particle_magnetic_work_per_unit_charge_W_per_C": 3.469446951953614e-18
+      }
+    },
+    {
+      "check": "check_resistor_poynting_flux",
+      "status": "PASS",
+      "values": {
+        "radius_m": 0.0005,
+        "length_m": 0.12,
+        "sigma_S_per_m": 2000000.0,
+        "current_A": 0.8,
+        "E_z_V_per_m": 0.5092958178940651,
+        "B_surface_T": 0.00031999999995774953,
+        "S_radial_W_per_m2": -129.69111506219235,
+        "resistance_ohm": 0.07639437268410976,
+        "inward_field_power_W": 0.048892398517830254,
+        "volume_Joule_power_W": 0.048892398517830254,
+        "circuit_power_W": 0.048892398517830254,
+        "local_balance_error_W_per_m3": 2.05356627702713e-07
+      }
+    },
+    {
+      "check": "check_vacuum_plane_wave",
+      "status": "PASS",
+      "values": {
+        "frequency_Hz": 150000000.0,
+        "peak_E_V_per_m": 12.0,
+        "peak_B_T": 4.0027691423778243e-08,
+        "wavelength_m": 1.9986163866666666,
+        "average_intensity_W_per_m2": 0.19111814854477502,
+        "detector_area_m2": 0.0008,
+        "incident_power_W": 0.00015289451883582003,
+        "Faraday_relative_residual": 0.0,
+        "Ampere_relative_residual": 2.9685427837979545e-13
+      }
+    },
+    {
+      "check": "check_standing_wave_local_energy",
+      "status": "PASS",
+      "values": {
+        "energy_per_transverse_area_J_per_m2": [
+          2.5482419806000418e-09,
+          2.5482419805984255e-09,
+          2.5482419805984255e-09,
+          2.5482419806000418e-09
+        ],
+        "maximum_normalized_local_balance_residual": 2.1547340327336156e-12,
+        "instantaneous_flux_at_sample_W_per_m2": 0.3220959403536005,
+        "time_averaged_flux_at_sample_W_per_m2": -5.301477974831277e-18,
+        "scope": "Equal coherent counterpropagating monochromatic vacuum plane waves."
+      }
+    },
+    {
+      "check": "check_uniform_field_gauge",
+      "status": "PASS",
+      "values": {
+        "original_phi_V": -1.8,
+        "gauge_chi_V_s": -0.007200000000000001,
+        "transformed_A_V_s_per_m": [
+          -0.3,
+          0.0,
+          0.0
+        ],
+        "force_x_N": 1.5000000000000002e-07,
+        "work_J": 3.6000000000000004e-09,
+        "canonical_momentum_change_kg_m_per_s": [
+          -6e-10,
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "check": "check_nontrivial_gauge_and_action",
+      "status": "PASS",
+      "values": {
+        "E_invariance_error_V_per_m": 0.0,
+        "B_invariance_error_T": 0.0,
+        "integrated_action_change_J_s": 8.651072231474541e-12,
+        "endpoint_action_change_J_s": 8.651072231474538e-12,
+        "wrong_gauge_sign_E_error_V_per_m": 0.25335271280162824
+      }
+    },
+    {
+      "check": "check_dielectric_free_and_total_charge",
+      "status": "PASS",
+      "values": {
+        "relative_permittivities": [
+          2.0,
+          5.0
+        ],
+        "normal_E1_V_per_m": 130.0,
+        "normal_E2_V_per_m": 119.7645439964608,
+        "sigma_free_C_per_m2": 3e-09,
+        "sigma_bound_C_per_m2": -3.0906266498664e-09,
+        "sigma_total_C_per_m2": -9.062664986639988e-11,
+        "normal_D_jump_C_per_m2": 2.999999999999999e-09,
+        "epsilon0_normal_E_jump_C_per_m2": -9.06266498664001e-11,
+        "tangential_E_both_V_per_m": 40.0,
+        "scope": "Static planar interface; linear, isotropic, nondispersive constitutive relation."
+      }
+    },
+    {
+      "check": "check_capacitor_energy_and_force",
+      "status": "PASS",
+      "values": {
+        "area_m2": 0.004,
+        "gap_m": 0.0012,
+        "voltage_V": 40.0,
+        "charge_C": 1.18055837584e-09,
+        "field_energy_J": 2.3611167516800006e-08,
+        "charging_work_J": 2.3611167516800003e-08,
+        "pressure_Pa": 0.004918993232666667,
+        "force_in_increasing_gap_direction_N": -1.9675972930593773e-05,
+        "fixed_voltage_example": {
+          "area_m2": 0.01,
+          "initial_gap_m": 0.002,
+          "final_gap_m": 0.00214,
+          "voltage_V": 100.0,
+          "effective_energy_force_N": -0.0001106773477468219,
+          "Maxwell_stress_force_N": -0.000110677347735,
+          "wrong_field_energy_only_force_N": 0.00011067734774549841,
+          "voltage_source_work_J": -2.8962296603551427e-08,
+          "stored_field_energy_change_J": -1.44811483017757e-08,
+          "mechanical_work_by_field_J": -1.4481148301775697e-08,
+          "energy_balance_residual_J": -2.9778502051908996e-23
+        },
+        "scope": "Vacuum parallel plates, no fringing; fixed-charge and ideal-source fixed-voltage force calculations are distinguished."
+      }
+    }
+  ],
+  "passed_groups": 14,
+  "total_groups": 14
+}

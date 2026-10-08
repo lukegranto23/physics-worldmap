@@ -1,0 +1,16 @@
+{
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "utc": "2026-09-21T07:00:00.823992+00:00",
+  "node": "v24.4.0",
+  "npm": "11.4.2",
+  "lock_sha256": "cdf2473127064e76a2eef78201dc1ac83e399e94c7836586d93c04ad33f308d7",
+  "committed_hashes": {
+    "dist/index.js": "fab0bda1b9aaee8adbae7652ac6988e92974adc28103429ab109cf668e66aa1f",
+    "dist/index.js.map": "5b4691fb86cb375e5435f3b1c67c6129c261e6753a5eb074b29004421915e461"
+  },
+  "baseline_hashes": {
+    "dist/index.js": "fab0bda1b9aaee8adbae7652ac6988e92974adc28103429ab109cf668e66aa1f",
+    "dist/index.js.map": "5b4691fb86cb375e5435f3b1c67c6129c261e6753a5eb074b29004421915e461"
+  },
+  "baseline_status": ""
+}

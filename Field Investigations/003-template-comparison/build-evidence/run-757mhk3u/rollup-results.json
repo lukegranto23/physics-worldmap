@@ -1,0 +1,31 @@
+{
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "utc": "2026-09-21T07:00:00.823992+00:00",
+  "node": "v24.4.0",
+  "npm": "11.4.2",
+  "lock_sha256": "cdf2473127064e76a2eef78201dc1ac83e399e94c7836586d93c04ad33f308d7",
+  "committed_hashes": {
+    "dist/index.js": "fab0bda1b9aaee8adbae7652ac6988e92974adc28103429ab109cf668e66aa1f",
+    "dist/index.js.map": "5b4691fb86cb375e5435f3b1c67c6129c261e6753a5eb074b29004421915e461"
+  },
+  "baseline_hashes": {
+    "dist/index.js": "fab0bda1b9aaee8adbae7652ac6988e92974adc28103429ab109cf668e66aa1f",
+    "dist/index.js.map": "5b4691fb86cb375e5435f3b1c67c6129c261e6753a5eb074b29004421915e461"
+  },
+  "baseline_status": "",
+  "regenerated_hashes": {
+    "dist/index.js": "fab0bda1b9aaee8adbae7652ac6988e92974adc28103429ab109cf668e66aa1f",
+    "dist/index.js.map": "5b4691fb86cb375e5435f3b1c67c6129c261e6753a5eb074b29004421915e461"
+  },
+  "status_after_rebuild": "?? dist/index.js.map\n",
+  "original_exit": 0,
+  "patched_exit": 1,
+  "patched_unchanged_exit": 0,
+  "source_delta": "",
+  "patch_sha256": "236f781255b77b5af47cbc87c714dd55d7abde406c4e9e6499bb915f0b4f5d1d",
+  "limits": [
+    "Deliberately omitted map, not a naturally occurring update",
+    "Source map affects debugging; no action runtime failure demonstrated",
+    "No action runtime, hosted workflow, or external submission"
+  ]
+}

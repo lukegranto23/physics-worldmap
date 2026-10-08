@@ -1,0 +1,4 @@
+24.4.0-bookworm: Pulling from library/node
+Digest: sha256:e7db48bc35ee8d2e8d1511dfe779d78076966bd101ab074ea2858da8d59efb7f
+Status: Image is up to date for node:24.4.0-bookworm
+docker.io/library/node:24.4.0-bookworm

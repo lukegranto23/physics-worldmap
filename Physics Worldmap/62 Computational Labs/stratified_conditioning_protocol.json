@@ -1,0 +1,31 @@
+{
+  "title": "Stage-2 test: does local variance heterogeneity explain the conditioned-moment shortfall?",
+  "version": "1.0",
+  "created": "2026-10-06",
+  "status": "Frozen after Benchmark 014 revealed a ~3% systematic shortfall (particle) and a lag-1/2 failure (empty trap), and before any stratified statistic was computed. The data are already inspected, so this is a post hoc hypothesis test on the same data; a confirmation would still need fresh data. No novelty claim.",
+  "hypothesis": "H: slowly varying variance of the measured velocity (noise power or otherwise) makes |W|<=b selection favour low-variance stretches, biasing observed conditional second moments below a single stationary Gaussian prediction.",
+  "design": {
+    "data_scope": "Second halves (Benchmark 014 test halves) of all six traces, particle and empty trap separately.",
+    "segments_samples": 2000,
+    "segment_sensitivity": [1000, 8000],
+    "proxy_primary": "Segment sample variance of W.",
+    "proxy_secondary": "Segment mean of (fourth difference of Y)^2 / 70, a high-frequency noise-power proxy.",
+    "strata": "Quartiles of the proxy across all segments of a role; the unstratified case (1 stratum) is the baseline.",
+    "placebo": "Segment-to-stratum labels randomly permuted (seed 2026100621), same stratum sizes.",
+    "lags_samples": [1, 2, 3, 4, 6, 8, 11, 16, 23, 32, 45, 64],
+    "bin_fractions": {"primary": 0.05, "secondary": [0.01, 0.2]},
+    "prediction": "For each stratum, u, r, s from that stratum's unconditional moments (centred by the role's global test-half means); stratum prediction from the measurement-level identity with the global b. Combined prediction = selected-count-weighted average of stratum predictions; observed = pooled conditional mean of D_k^2.",
+    "uncertainty": "Segment bootstrap within each trace, 300 replicates, seed 2026100622."
+  },
+  "self_tests": {
+    "positive": "Lab 34 stationary synthetic: stratification must change the mean signed relative error by less than 0.01 in absolute value.",
+    "negative": "Lab 34 modulated-noise synthetic: stratification must reduce |mean signed relative error| by at least 50%.",
+    "rule": "If either self-test fails, the real-data result is reported as NOT INTERPRETABLE."
+  },
+  "decision": {
+    "metric": "Mean signed relative error over the 12 lags at the primary bin, e_unstrat and e_strat; placebo e_placebo.",
+    "supported": "H SUPPORTED for a role if |e_strat| <= 0.5*|e_unstrat|, and |e_placebo| >= 0.75*|e_unstrat|.",
+    "not_supported": "H NOT SUPPORTED if |e_strat| > 0.75*|e_unstrat|.",
+    "otherwise": "PARTIAL."
+  }
+}

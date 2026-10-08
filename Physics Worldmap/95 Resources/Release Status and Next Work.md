@@ -1,0 +1,122 @@
+---
+type: guide
+field: Physics
+epistemic_status: reference
+level: all
+tags: [physics, release, maintenance, coverage]
+created: 2026-09-04
+updated: 2026-09-18
+---
+
+# Release Status and Next Work
+
+## What is ready
+
+This edition is a broad, navigable physics scaffold, not an exhaustive or fully source-audited encyclopedia. It contains 25 main field maps, 663 concept notes, 67 experiment/observation notes, 26 derivations, a 45-problem bank, reading routes, dated frontier reviews, and disciplined synthesis protocols. Counts exclude templates where relevant; the generated [[Vault Health Report]] supplies the live inventory.
+
+The concept layer currently has **631 orientation stubs and 32 more-developed notes**. An epistemic label such as “established” describes the underlying subject in its stated regime, not the completeness or correctness of every sentence in the note. Most notes still need canonical-source and claim-level expansion.
+
+## Foundation expansion
+
+[[Mechanics to Statistical Physics — Foundation Study Route]] now connects six expanded notes: Lagrangian mechanics, Noether's theorem, Hamiltonian mechanics, Liouville's theorem, Gibbs entropy, and partition functions. Each includes assumptions, reconstructible mathematics, worked examples, caveats, and canonical references. Eight groups of independent calculation checks passed; six additional held-out exercises include hidden solutions. This reduces the introductory-stub count by six, without claiming full source certification.
+
+The September 17–18 foundation checkpoint adds [[Electromagnetism — Fields Energy and Gauge Study Route]] and six expanded notes: Gauss's law, Faraday's law, Maxwell's equations, Poynting's theorem, electromagnetic waves, and gauge transformations. Fourteen independent calculation groups pass, with hashes tying the report to the checked sources. Six reconstruction exercises have hidden solutions; these are practice, not held-out evidence of mastery. The checks include deliberately wrong signs and the wrong fixed-voltage capacitor force obtained by omitting the voltage source. They validate selected examples, not all electromagnetism.
+
+## Response-preservation pilot
+
+[[Benchmark 001 — Equilibrium Versus Forced Response]] adds the first completed pilot for Session 001. A response-fitted oscillator matches the stationary observed marginal and reduces pulse/chirp errors by about 27%/26% against the equilibrium-only tie-break. A full-information balanced reference is substantially better on response, with some equilibrium error. All 32 numerical/algebraic checks passed. This is a limited exact-model demonstration, not the broader four-system validation or a new theory.
+
+## Identifiability boundary
+
+[[Benchmark 002 — The Sampling Boundary of Prediction]] constructs three thermal oscillators with identical regularly sampled equilibrium position laws and almost fourteen-fold variation in response amplitude to a declared force. All 31 checks passed. This is an example of established aliasing under unknown-mass, position-only assumptions, not a discovery or a general prohibition on prediction. [[Research Frontier — Identifiability Before Discovery]] records the updated direction and what remains unreproduced.
+
+## Noisy measurement design
+
+[[Benchmark 003 — Noisy Measurements and False Confidence]] extends the sampling example to finite noisy observations. A standard Gaussian-distance design makes 7 identification errors in 6,000 in-family trials at 32 pairs, but gives false singleton assurances in all 2,000 omitted-truth trials at 128 pairs. Eleven implementation checks passed across a 120,000-evaluation study. Results include uncertainty estimates and the missing-model failure; they are not a breakthrough or a general response guarantee. The next protocol must separate model discrimination from an independent family-adequacy check.
+
+## Candidate-family rejection
+
+[[Benchmark 004 — Rejecting Inadequate Models]] adds explicit “none of these models” checks using a published split-likelihood method and a concentration baseline. The 96,000-evaluation study catches several omitted systems with two observation lags, while mostly missing a 5% near-resonance detuning that causes about 146% response error. Eighteen implementation checks passed. The failure is retained as the next research target; no general response certificate is claimed.
+
+## Information limits and measurement timing
+
+[[Benchmark 005 — Information Limits and Better Measurements]] evaluates fresh detunings/noise levels. Analytic bounds put detection power below 50% in 17 of 54 declared observation settings. In another case, a standard sensitivity-based lag raises a practical check from 4.24% to 93.12% detection at the same reading count. Ten implementation checks passed. Oracle results carry explicit knowledge and calibration caveats; this is a controlled progress result, not a novel universal detector.
+
+## Unknown-shift measurement design
+
+[[Benchmark 006 — Unknown Shifts and Misfocused Tests]] adds a frozen 768,000-dataset comparison with no true-alternative oracle. Range-based timing improves some fresh shifts at equal reading count and under a declared time-cost proxy, but loses local sensitivity. Twenty-one implementation checks and three post-hoc diagnostic checks passed. [[When More Data Cannot Rescue a Misfocused Test]] explains an asymptotic failure of the fixed-mixture detector for a roughly 20% response mismatch. A sensor-only stress also causes strong rejection despite unchanged physical dynamics. No universal detector or novel physical law is claimed.
+
+## Sensor calibration and attribution
+
+[[Benchmark 007 — Calibration Before Physical Attribution]] adds 810,000 simulated dataset evaluations with costed independent calibration. In one fixed-reading-budget case, nuisance-aware damping-change detection rises from 15.10% to 89.83%. Calibration drift causes strong warnings without changed dynamics, and [[Sensor Correlations and the Boundary of Physical Attribution]] shows an exact ambiguity even with correctly calibrated marginal variance. Sixteen benchmark checks and twelve post-hoc algebraic checks passed. These are conditional measurement-model results, not proof of a universal detector or new physics.
+
+## Matched-lag calibration
+
+[[Benchmark 008 — Matched-Lag Calibration]] adds a 585,000-dataset, reading-budget-matched comparison. Isolated calibration cannot distinguish exact changed-dynamics and correlated-sensor twins. Paired noise calibration at the measurement lags separates the causes under a transfer assumption, while lowering physical-detection power under the broader sensor model. Twenty-seven checks passed. An invalid proposed covariance was caught and transparently amended before the accepted run. No hardware validation or universal attribution is claimed.
+
+## Published thermal-memory baseline
+
+[[Benchmark 009 — Published Subdiffusion Memory Reproduction]] adds a scoped independent reproduction of the clean $\tau=0.6$, $n=10$ subdiffusion case from Bockius et al. The moment identities, Newton constraint, stable realization, VACF, diagnostic kernel, sampled positive-real condition, regularized Riccati covariance, thermal noise-factor identity, final Lanczos invariants, and reported coarse-grid derivative passed twenty-nine checks. [[Correlation-to-Memory Reconstruction from a VACF]] records the derivation and structural limits. Spectral-modification cases, other parameter cases, the authors' code, and noisy molecular-dynamics examples are not yet reproduced.
+
+## Noisy memory and the prediction horizon
+
+[[Benchmark 010 — Noisy Memory and the Prediction Horizon]] adds 800 independently generated synthetic datasets, 5,504 logged fit attempts, and 104 accepted reconstructions after reducing order and the fitted time window. Thirteen verification groups passed. The restricted implementation omits the paper's spectral-repair branch, which dominates its rejections; this is not a reproduction of the paper's noisy molecular-dynamics experiment.
+
+Eight additional checks passed in a post-hoc physical extrapolation audit of the saved matrices. The clean reference eventually predicts ordinary diffusion while the analytic target remains subdiffusive. [[Finite Memory and the Return to Normal Diffusion]] derives the precise conditions and exceptions for this established finite-memory effect. Finite-window accuracy and thermal admissibility do not alone certify the eventual transport law.
+
+## Finite observations and infinite-time claims
+
+[[Benchmark 011 — Finite Observations and Infinite-Time Claims]] completes an analytic and numerical comparison of established fractional and tempered-memory models. All 16 verification groups passed. At cutoff $\epsilon=10^{-4}$, 4,096 independent Gaussian trajectories with 20 samples each on $0,0.6,\ldots,11.4$ imply a detection-power upper bound of about 5.96% at a 5% false-positive limit, even with exact knowledge of both models. Their eventual diffusion exponents differ, although the finite sampled laws are close. The calculation is exploratory and the bound is not an achieved test rate, an experimental measurement, or a novelty claim. The general conclusion fixes the finite observation resources before taking the cutoff toward zero.
+
+## Acceleration information and certified displacement
+
+[[Benchmark 012 — Acceleration Information and Certified Displacement]] adds an application of established spectral moment bounds with Gaussian confidence calibration and explicit continuous-frequency corrections. Seventeen main verification groups passed. Twenty-four inference datasets yield 288 intervals across three information modes and four horizons; a separate 20,000-dataset audit checks the common confidence event. [[Prior Art — Spectral Bounds and Physical Response]] records the direct mathematical predecessors, and [[Acceleration Sum Rules and the Sampling Ambiguity]] derives the physical assumptions.
+
+At $M=4096$ and $T=6$, 256 additional independent, ideal instantaneous acceleration readings reduce interval width by 77.20% at the median of paired comparisons. Known velocity variance, Gaussian observations, and the distinct acceleration observable are explicit requirements. This is not a matched-hardware or matched-cost improvement. Bounds remain broad at $T=30$, and the evaluated horizons do not constitute a numerical uniform-in-time certificate.
+
+The post-hoc calibration diagnostic adds fourteen passing checks and retains a concrete failure. A passive thermal model with finite acceleration can have the same lattice-sampled velocity and finite-difference laws but a much smaller true displacement response. Deliberately transferring finite-difference variance into an instantaneous-acceleration upper bound produces eleven returned intervals that all miss the truth; one declared trial is withheld after an unbounded-dual solver report. All twelve correctly supplied physical-bound controls include the truth. The diagnostic tests a misuse of the calibration assumption, not a failure of the main result under its stated ideal readings.
+
+No genuine breakthrough or new optimization method is claimed. The result redirects the next experiment toward sensor bandwidth, matched acquisition costs, and external-data validation.
+
+## Camera exposure and calibration transfer
+
+[[Benchmark 013 — Camera Exposure and Response Uncertainty]] adds 480,000 synthetic datasets, 1,440,000 interval attempts, and 22 passing verification groups for explicitly averaged position measurements. [[Camera Exposure and Finite-Time Response Bounds]] derives bounds without ideal acceleration readings, retaining known finite velocity variance and the equilibrium interpretation. It includes a sharp special case when exposure equals the target horizon, without claiming historical novelty.
+
+All calibration readings are counted. Across in-scope cells, empirical coverage is 97.40–100%, with no misses on the common confidence event. A 20% unmodeled calibration drift reduces one exact-transfer coverage rate to 28.33%. An explicit ±20% allowance restores coverage in that tested cell, but the median interval width is about 158% of the small true response. A separate independent audit passes seventeen checks, recomputes every interval, and verifies the camera covariance by a different integral. The result is a conditional synthetic measurement study, not a usable camera guarantee or forecasting breakthrough. Instrument feasibility and external calibration/reference data are the next gate.
+
+The September 18 feasibility checkpoint adds [[Instrument Feasibility — Response Bounds Before Data Claims]]: a conventional camera's broad allowance can be too loose to help, while optical velocity averaging cannot be substituted for camera exposure. [[Public Data Lead — Conditioned Hydrodynamic Brownian Motion]] identifies a public processed-data repository, records unresolved provenance/access details, and derives the standard Gaussian conditional-displacement baseline, including noisy and finite-bin selection. This is source review and mathematics, not a reproduced experiment.
+
+## Precision work
+
+The September 14 independent audit of Benchmark 011 adds eight passing verification groups, including 80- and 100-digit series calculations, truncation refinements, and analytic covariance comparisons. Its source and full results are included with the benchmark. This release also rejects nonstandard JSON constants and checks the new results against their recorded source and input hashes.
+
+The September 16 amendment to lab 31 adds explicit lattice and finite-coefficient guards and projects a tiny numerically negative quadratic coefficient back to its allowed nonnegative range before recomputing the certificate. The full main calculation was rerun, and the original development source, protocol, and outputs are preserved outside the portable vault. Lab 32 is explicitly post-hoc and does not retune the original development gate.
+
+- Corrected the exploratory SYK observable to a nonzero Hermitian operator and withdrew unsupported Page-time/memory-equivalence claims.
+- Corrected quantum information geometry, ETH, tensor-network, spin-liquid, holographic reconstruction, and thermodynamic qualifications in the newer notes.
+- Reframed synthesis sessions as candidate programs with falsifiers, not discoveries or novelty claims.
+- Separated 13 core teaching labs from three exploratory programs; the core quick suite passed all built-in checks on September 4.
+- Preserved ten historical exploratory result folders outside the current release. Their old plots are not evidence for revised hypotheses.
+- Repaired internal navigation and standardized maturity/source-audit metadata. Structural checks do not certify scientific truth.
+
+## The remaining work, in order
+
+1. **Expand the foundation layer.** Replace orientation summaries with worked derivations, assumptions, limiting cases, and pinpoint canonical citations. Start with mechanics, electromagnetism, quantum mechanics, and statistical physics.
+2. **Audit claims individually.** Track each important equation and factual assertion to its source; check notation and applicable regime. A bibliography alone is not a claim audit.
+3. **Deepen experiments.** Add apparatus diagrams, uncertainty budgets, analysis methods, and reproducible public data where licensing permits.
+4. **Demonstrate learning through work.** Solve held-out problems and reproduce results; navigation, storage, and fluent summaries do not establish mastery.
+5. **Extend Synthesis Session 001 beyond its completed pilot.** Freeze a new multi-system protocol with data-matched strong baselines, thermal-correlation alternatives, uncertainty estimates, and explicit structure constraints. The original four-system decision rule is not yet evaluated.
+6. **Redesign Sessions 002–004.** They need genuinely discriminating models: system–bath evaporation for a Page-time question, multi-coupling RG for a gradient-flow question, and independently validated reduced maps for non-Markovianity.
+7. **Maintain the frontier layer.** Refresh dated source reviews as primary evidence changes; never convert an old status statement into a timeless fact.
+
+Within the active response branch, the filtered-camera development comparison is complete at matched scalar reading counts, not matched total exposure or hardware costs. The physical-units screening is now documented. The next priority is permitted acquisition and provenance inspection of the processed public traces, followed by a frozen, detector-matched Gaussian-conditioning reproduction. The public repository's five traces versus the paper's six calibration traces must be reconciled; its files have not been inspected. Ordinary finite differences still cannot be promoted to instantaneous acceleration readings, and camera position averages cannot be relabeled integrated velocity. Published molecular-dynamics or hardware validation, general forcing bands, continuous-time prediction certification, and nonlinear transfer remain open. The full spectral-repair baseline versus fractional and tempered alternatives remains a parallel memory-model comparison on matched observations. These research priorities complement the broad foundation work rather than completing the vault's field coverage.
+
+## Release checks and limits
+
+The [[Computational Lab Index]] records the distinction between execution, numerical checks, and physical validation. The packaged audit checks filenames, Wikilinks, metadata, encoding, and graph connectivity. Neither test suite establishes that every field is completely covered or that every derivation is correct.
+
+No new theory is claimed by this edition. The vault is external, inspectable research memory whose contents must be retrieved and tested in context, not proof of permanent learning.
+
+## Navigation
+
+[[Physics Worldmap]] · [[Vault Health Report]] · [[Architecture and Completeness Audit]] · [[Epistemic Status and Claim Hygiene]] · [[Source and Citation Policy]] · [[Synthesis Lab]]

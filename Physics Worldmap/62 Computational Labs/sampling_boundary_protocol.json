@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "frozen_before_first_run": "2026-09-04",
+  "scope": "Constructive identifiability counterexample, not a new aliasing theorem or nonlinear benchmark",
+  "temperature": 1.0,
+  "stiffness": 1.0,
+  "decay_rate": 0.2,
+  "sampling_interval": 1.0,
+  "alias_integers": [1, 2, 3],
+  "observed_variable": "position only; mass and momentum are not supplied",
+  "sample_lag_count": 21,
+  "fine_time_end": 4.0,
+  "fine_time_count": 4001,
+  "force_frequency": 6.283185307179586,
+  "force_amplitude": 0.1,
+  "jittered_lag": 0.137,
+  "algebra_tolerance": 1e-9,
+  "response_separation_threshold": 0.5,
+  "evaluation": "Verify identical entire sampled position Gaussian law, distinct forced response, and an extra off-grid equilibrium lag that distinguishes this finite family",
+  "controls": ["known mass removes family ambiguity", "zero-frequency susceptibility agrees", "thermal covariance and FDT", "continuous-time response differs", "zero alias separation gives same system"],
+  "information_rule": "Exact stationary sampled positions only; off-grid covariance and model masses are withheld extra information, not training features"
+}

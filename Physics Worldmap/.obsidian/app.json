@@ -1,0 +1,10 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "03 Inbox",
+  "attachmentFolderPath": "98 Attachments",
+  "showUnsupportedFiles": true,
+  "useMarkdownLinks": false,
+  "promptDelete": true,
+  "strictLineBreaks": false
+}

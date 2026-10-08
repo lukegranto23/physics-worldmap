@@ -1,0 +1,218 @@
+{
+  "protocol_sha256": "96566563d8e3ca12908ebf7df9bdbb56d600686a4f2c800335f9994868090ff2",
+  "script_sha256": "d8dd8977319caad2d89283a7244a2c164ee3457f12b2cddc8f0e57a433033d5f",
+  "python": "3.14.3",
+  "numpy": "2.4.3",
+  "matplotlib": "3.10.8",
+  "scope": "Constructive identifiability counterexample, not a new aliasing theorem or nonlinear benchmark",
+  "models": [
+    {
+      "alias": 1,
+      "mass": 0.02530465693266364,
+      "friction": 0.010121862773065456,
+      "damped_angular_frequency": 6.283185307179586,
+      "sample_covariance_relative_error": 3.267644208299342e-17,
+      "offgrid_covariance": 0.6577029159315819,
+      "susceptibility_real": 0.25018992910970805,
+      "susceptibility_imag": -15.719896865865191,
+      "steady_forcing_amplitude": 1.5721887687999372,
+      "steady_forcing_phase_radians": -1.5548821760954445
+    },
+    {
+      "alias": 2,
+      "mass": 0.006330970324128998,
+      "friction": 0.0025323881296515994,
+      "damped_angular_frequency": 12.566370614359172,
+      "sample_covariance_relative_error": 3.267644208299342e-17,
+      "offgrid_covariance": -0.13085568967282507,
+      "susceptibility_real": 1.3326210963004828,
+      "susceptibility_imag": -0.028269550284981963,
+      "steady_forcing_amplitude": 0.1332920910548865,
+      "steady_forcing_phase_radians": -0.0212103132384415
+    },
+    {
+      "alias": 3,
+      "mass": 0.0028141605077609314,
+      "friction": 0.0011256642031043727,
+      "damped_angular_frequency": 18.84955592153876,
+      "sample_covariance_relative_error": 4.1554491117421235e-17,
+      "offgrid_covariance": -0.8192901150600829,
+      "susceptibility_real": 1.124912952665813,
+      "susceptibility_imag": -0.008950639236540919,
+      "steady_forcing_amplitude": 0.11249485610542648,
+      "steady_forcing_phase_radians": -0.00795657151521811
+    }
+  ],
+  "response_diameter": 15.735277935389515,
+  "absolute_susceptibility_minimax_lower_bound": 7.867638967694758,
+  "force_scaled_complex_amplitude_lower_bound": 0.7867638967694758,
+  "offgrid_minimum_pair_separation": 0.6884344253872579,
+  "sampled_position_ar1_coefficient": 0.8187307530779818,
+  "checks": {
+    "1_entire_finite_sample_covariance": {
+      "error": 3.267644208299342e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_thermal_lyapunov": {
+      "error": 1.1237525102753502e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_stable_and_positive_mass": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_sample_transition": {
+      "error": 2.861698584435122e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_covariance_matrix_vs_formula": {
+      "error": 1.755996451561068e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_susceptibility_matrix_vs_formula": {
+      "error": 1.7549275181355852e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_static_susceptibility": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_thermal_fdt": {
+      "error": 1.0743890281407299e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "1_sampled_hankel_rank_one": {
+      "error": 6.112133740444767e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_entire_finite_sample_covariance": {
+      "error": 3.267644208299342e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_thermal_lyapunov": {
+      "error": 1.1246062435306564e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_stable_and_positive_mass": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_sample_transition": {
+      "error": 2.0142565419098198e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_covariance_matrix_vs_formula": {
+      "error": 3.5710221741764195e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_susceptibility_matrix_vs_formula": {
+      "error": 5.205780664848267e-18,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_static_susceptibility": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_thermal_fdt": {
+      "error": 2.9073898056993198e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "2_sampled_hankel_rank_one": {
+      "error": 6.112133740444767e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_entire_finite_sample_covariance": {
+      "error": 4.1554491117421235e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_thermal_lyapunov": {
+      "error": 1.9995813060524844e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_stable_and_positive_mass": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_sample_transition": {
+      "error": 3.756364021780338e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_covariance_matrix_vs_formula": {
+      "error": 6.7877263225538846e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_susceptibility_matrix_vs_formula": {
+      "error": 1.5420469308846277e-18,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_static_susceptibility": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_thermal_fdt": {
+      "error": 4.084574646372069e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "3_sampled_hankel_rank_one": {
+      "error": 5.729271482808409e-17,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "chosen_family_separated_by_offgrid_covariance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "forced_response_separation": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "identical_parameters_identical_response": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "known_mass_recovers_frequency": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "limits": [
+    "Constructed resonant sampling, not a frequency-of-occurrence study.",
+    "Only equilibrium position samples are supplied; mass and momentum are unknown.",
+    "Entire sampled law equality is analytic for every integer lag, not inferred from this finite grid.",
+    "All models satisfy their own thermal fluctuation-dissipation relation.",
+    "Off-grid lag distinguishes this finite family only; it is not a universal finite-data guarantee.",
+    "The diameter lower bound is absolute complex-response error, not relative trajectory error.",
+    "No new aliasing theorem, warning algorithm, nonlinear experiment, or physical discovery is claimed."
+  ]
+}

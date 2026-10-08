@@ -1,0 +1,78 @@
+{
+  "generated_utc": "2026-09-04T05:39:27.860727+00:00",
+  "numpy_version": "2.4.3",
+  "checks": [
+    {
+      "check": "check_stationary_action",
+      "status": "PASS",
+      "values": {
+        "action_changes": [
+          -0.0018774336521663847,
+          0.007190265391334464
+        ],
+        "pendulum_period_s": 1.7373047071809469
+      }
+    },
+    {
+      "check": "check_legendre_oscillator",
+      "status": "PASS",
+      "values": {
+        "energy_J": 0.18,
+        "max_energy_error_J": 8.326672684688674e-17
+      }
+    },
+    {
+      "check": "check_noether",
+      "status": "PASS",
+      "values": {
+        "boost_charge_kg_m": 0.9199999999999999,
+        "broken_rotation_torque_Nm": 0.09999999999999998
+      }
+    },
+    {
+      "check": "check_phase_volume",
+      "status": "PASS",
+      "values": {
+        "explicit_area_factor_100_steps": 2.7048138294215174,
+        "symplectic_area_factor_100_steps": 0.9999999999999979
+      }
+    },
+    {
+      "check": "check_partition",
+      "status": "PASS",
+      "values": {
+        "excited_probability": 0.11920292202211755,
+        "U_over_kB_K": 14.304350642654105,
+        "S_over_kB": 0.3653338550872077,
+        "C_over_kB": 0.419974341614026
+      }
+    },
+    {
+      "check": "check_coarse_graining",
+      "status": "PASS",
+      "values": {
+        "fine_S_over_kB": 1.2798542258336676,
+        "reconstructed_S_over_kB": 1.3862943611198906,
+        "label_S_over_kB": 0.6931471805599453,
+        "increase_over_kB": 0.10644013528622298
+      }
+    },
+    {
+      "check": "check_free_energy",
+      "status": "PASS",
+      "values": {
+        "free_energy_excess_over_kB_K": 54.96382253928475,
+        "relative_entropy_nats": 0.916063708988079
+      }
+    },
+    {
+      "check": "check_quantum_entropy",
+      "status": "PASS",
+      "values": {
+        "entropy_change_over_kB": 0.0,
+        "seed": 20260904
+      }
+    }
+  ],
+  "scope": "Finite worked-example checks; not general theorem proofs or new-physics tests"
+}

@@ -1,0 +1,4380 @@
+{
+  "analysis_type": "post-hoc explanatory diagnostics, added after benchmark outcomes; no retuning",
+  "source_results_sha256": "3e9e047b136e43abb6194f7fd7ad52209ed9f32e519219008b41dafc9a94f6b5",
+  "script_sha256": "acaf22b7aca83e8e64300345953ad9f35bde875cc0905ba832db3e85a95754c0",
+  "protocol_sha256": "8b29bbf6766e76fc9334ccedcc0d7f7c6ae8d8fc4e66c5ae923ded0653c79973",
+  "definition": "For fixed positive finite mixture weights and fixed lag proportions, log e_N/N tends almost surely to min_j D(Ptruth||Pnull_j)-min_k D(Ptruth||Palt_k). Distances per pair average over scheduled lags.",
+  "limits": "Asymptotic growth is not finite-sample detection probability. A negative limit implies power tends to zero; positive implies power tends to one at a fixed threshold. Zero is inconclusive. Nominal false-alarm control remains distinct from power.",
+  "checks": {
+    "same_distribution_zero_kl": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "unequal_variance_matrix_kl": {
+      "error": 3.608224830031759e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "nominal_null_has_zero_min_kl": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    }
+  },
+  "cells": [
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001310467798274935,
+      "asymptotic_log_e_per_pair": -0.0001310467798274935
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7532424886250306,
+      "asymptotic_log_e_per_pair": -0.7532424886250306
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.82341447573078,
+      "asymptotic_log_e_per_pair": -0.82341447573078
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0016260519585627581,
+      "kl_truth_to_nearest_alternative_per_pair": 3.8433390908799325e-05,
+      "asymptotic_log_e_per_pair": 0.0015876185676539588
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0014147420410082798,
+      "kl_truth_to_nearest_alternative_per_pair": 6.427487374687684e-05,
+      "asymptotic_log_e_per_pair": 0.0013504671672614028
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006576837713129504,
+      "kl_truth_to_nearest_alternative_per_pair": 4.281609913323606e-05,
+      "asymptotic_log_e_per_pair": 0.006534021613996268
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00498002171245398,
+      "kl_truth_to_nearest_alternative_per_pair": 7.496271254640668e-05,
+      "asymptotic_log_e_per_pair": 0.004905058999907573
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.021433588196796572,
+      "kl_truth_to_nearest_alternative_per_pair": 2.1130753373536796e-05,
+      "asymptotic_log_e_per_pair": 0.021412457443423034
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.01285160287063509,
+      "kl_truth_to_nearest_alternative_per_pair": 4.642325794896229e-05,
+      "asymptotic_log_e_per_pair": 0.012805179612686127
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06731424359682145,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002383706970246544,
+      "asymptotic_log_e_per_pair": 0.0649305366265749
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02507488601423719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0005437915193107365,
+      "asymptotic_log_e_per_pair": 0.024531094494926454
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00040153887012101756,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00013070228366890608,
+      "asymptotic_log_e_per_pair": 0.0002708365864521115
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0003597730915102517,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001685157940862999,
+      "asymptotic_log_e_per_pair": 0.0001912572974239518
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008493427436054635,
+      "kl_truth_to_nearest_alternative_per_pair": 8.348911323680206e-05,
+      "asymptotic_log_e_per_pair": 0.008409938322817832
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0026185200385830092,
+      "kl_truth_to_nearest_alternative_per_pair": 6.804521806004645e-05,
+      "asymptotic_log_e_per_pair": 0.0025504748205229626
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.009719666179926008,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005224426412544392,
+      "asymptotic_log_e_per_pair": 0.004495239767381616
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.001181137424144326,
+      "asymptotic_log_e_per_pair": -0.001181137424144326
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 5.397029529201732e-10,
+      "asymptotic_log_e_per_pair": -5.397029529201732e-10
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.12311767859134229,
+      "asymptotic_log_e_per_pair": -0.12311767859134229
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008253964718357036,
+      "kl_truth_to_nearest_alternative_per_pair": 1.7470116281055104e-06,
+      "asymptotic_log_e_per_pair": 0.00825221770672893
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0071523169350501715,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5652718868904405e-05,
+      "asymptotic_log_e_per_pair": 0.007136664216181267
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03284279672134945,
+      "kl_truth_to_nearest_alternative_per_pair": 4.6515033644436207e-05,
+      "asymptotic_log_e_per_pair": 0.032796281687705015
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.024296428509981295,
+      "kl_truth_to_nearest_alternative_per_pair": 6.667474133755446e-06,
+      "asymptotic_log_e_per_pair": 0.02428976103584754
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006559775597462354,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001361818527206111,
+      "asymptotic_log_e_per_pair": 0.006423593744741743
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05483164882149077,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010058591507769487,
+      "asymptotic_log_e_per_pair": 0.054731062906413074
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014326832934905484,
+      "kl_truth_to_nearest_alternative_per_pair": 0.01269095553552703,
+      "asymptotic_log_e_per_pair": 0.0016358773993784548
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05738289018904179,
+      "kl_truth_to_nearest_alternative_per_pair": 1.3784931918104076e-05,
+      "asymptotic_log_e_per_pair": 0.05736910525712369
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0007873176577575108,
+      "kl_truth_to_nearest_alternative_per_pair": 3.2971168615436846e-05,
+      "asymptotic_log_e_per_pair": 0.000754346489142074
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0006820378773894986,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002646484567985566,
+      "asymptotic_log_e_per_pair": 0.00041738942059094206
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.038015092135799795,
+      "kl_truth_to_nearest_alternative_per_pair": 4.7856489782188965e-05,
+      "asymptotic_log_e_per_pair": 0.03796723564601761
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014436384693902172,
+      "kl_truth_to_nearest_alternative_per_pair": 3.049538122081811e-06,
+      "asymptotic_log_e_per_pair": 0.01443333515578009
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006417724745749143,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0019302244764553625,
+      "asymptotic_log_e_per_pair": 0.00448750026929378
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010797154612516293,
+      "asymptotic_log_e_per_pair": -0.00010797154612516293
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 1.51372199067381,
+      "asymptotic_log_e_per_pair": -1.51372199067381
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.5779787597736585,
+      "asymptotic_log_e_per_pair": -0.5779787597736585
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00028856952851875927,
+      "kl_truth_to_nearest_alternative_per_pair": 2.546424485205703e-05,
+      "asymptotic_log_e_per_pair": 0.00026310528366670224
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00020189375785132962,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5160347420996862e-05,
+      "asymptotic_log_e_per_pair": 0.00018673341043033275
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.001560577902244173,
+      "kl_truth_to_nearest_alternative_per_pair": 5.417724862818822e-05,
+      "asymptotic_log_e_per_pair": 0.0015064006536159849
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0009327813636791382,
+      "kl_truth_to_nearest_alternative_per_pair": 3.3958201019109564e-05,
+      "asymptotic_log_e_per_pair": 0.0008988231626600287
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.007688028095516323,
+      "kl_truth_to_nearest_alternative_per_pair": 9.337440372113532e-05,
+      "asymptotic_log_e_per_pair": 0.007594653691795187
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.004657098663762595,
+      "kl_truth_to_nearest_alternative_per_pair": 7.1223548924248e-05,
+      "asymptotic_log_e_per_pair": 0.004585875114838348
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03929380495950455,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018983193797534196,
+      "asymptotic_log_e_per_pair": 0.03739548557975113
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.027504066272144984,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018130457104048791,
+      "asymptotic_log_e_per_pair": 0.025691020561740104
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.000945357769322835,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010873015503721028,
+      "asymptotic_log_e_per_pair": 0.0008366276142856247
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0008139875030151439,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010790166209464693,
+      "asymptotic_log_e_per_pair": 0.000706085840920497
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0010605370573285328,
+      "kl_truth_to_nearest_alternative_per_pair": 4.05577525488366e-05,
+      "asymptotic_log_e_per_pair": 0.0010199793047796961
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.002243719858269452,
+      "kl_truth_to_nearest_alternative_per_pair": 2.908501372964696e-05,
+      "asymptotic_log_e_per_pair": 0.002214634844539805
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.016702023406127087,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002209225917099323,
+      "asymptotic_log_e_per_pair": 0.014492797489027764
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0030125469562070125,
+      "asymptotic_log_e_per_pair": -0.0030125469562070125
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.4784513123485575,
+      "asymptotic_log_e_per_pair": -0.4784513123485575
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7722958808898801,
+      "asymptotic_log_e_per_pair": -0.7722958808898801
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0056833261818047785,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003691648729706096,
+      "asymptotic_log_e_per_pair": 0.005314161308834169
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.005875039999382214,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00040181807504085934,
+      "asymptotic_log_e_per_pair": 0.005473221924341354
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02112504994882793,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00032261980395435633,
+      "asymptotic_log_e_per_pair": 0.02080243014487357
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.022510493993891156,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00039729261750287223,
+      "asymptotic_log_e_per_pair": 0.022113201376388284
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06006257612506674,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002566801143192106,
+      "asymptotic_log_e_per_pair": 0.05980589601074753
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06650450101022996,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00033225524933192885,
+      "asymptotic_log_e_per_pair": 0.06617224576089803
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.14742538700728844,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006724743240358723,
+      "asymptotic_log_e_per_pair": 0.14070064376692973
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.1646247707426719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005014141035114567,
+      "asymptotic_log_e_per_pair": 0.15961062970755732
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00033845239173382305,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0033709102194612326,
+      "asymptotic_log_e_per_pair": -0.0030324578277274097
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00030678554099836564,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0027704969390139533,
+      "asymptotic_log_e_per_pair": -0.002463711398015588
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.025410051956923134,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00043579224253508637,
+      "asymptotic_log_e_per_pair": 0.024974259714388047
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.020639674174639685,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003500097076271358,
+      "asymptotic_log_e_per_pair": 0.02028966446701255
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0069614091747879255,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006313279453335674,
+      "asymptotic_log_e_per_pair": 0.0006481297214522511
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001310467798274935,
+      "asymptotic_log_e_per_pair": -0.0001310467798274935
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7532424886250306,
+      "asymptotic_log_e_per_pair": -0.7532424886250306
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.82341447573078,
+      "asymptotic_log_e_per_pair": -0.82341447573078
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0016260519585627581,
+      "kl_truth_to_nearest_alternative_per_pair": 3.8433390908799325e-05,
+      "asymptotic_log_e_per_pair": 0.0015876185676539588
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0014147420410082798,
+      "kl_truth_to_nearest_alternative_per_pair": 6.427487374687684e-05,
+      "asymptotic_log_e_per_pair": 0.0013504671672614028
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006576837713129504,
+      "kl_truth_to_nearest_alternative_per_pair": 4.281609913323606e-05,
+      "asymptotic_log_e_per_pair": 0.006534021613996268
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00498002171245398,
+      "kl_truth_to_nearest_alternative_per_pair": 7.496271254640668e-05,
+      "asymptotic_log_e_per_pair": 0.004905058999907573
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.021433588196796572,
+      "kl_truth_to_nearest_alternative_per_pair": 2.1130753373536796e-05,
+      "asymptotic_log_e_per_pair": 0.021412457443423034
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.01285160287063509,
+      "kl_truth_to_nearest_alternative_per_pair": 4.642325794896229e-05,
+      "asymptotic_log_e_per_pair": 0.012805179612686127
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06731424359682145,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002383706970246544,
+      "asymptotic_log_e_per_pair": 0.0649305366265749
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02507488601423719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0005437915193107365,
+      "asymptotic_log_e_per_pair": 0.024531094494926454
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00040153887012101756,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00013070228366890608,
+      "asymptotic_log_e_per_pair": 0.0002708365864521115
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0003597730915102517,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001685157940862999,
+      "asymptotic_log_e_per_pair": 0.0001912572974239518
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008493427436054635,
+      "kl_truth_to_nearest_alternative_per_pair": 8.348911323680206e-05,
+      "asymptotic_log_e_per_pair": 0.008409938322817832
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0026185200385830092,
+      "kl_truth_to_nearest_alternative_per_pair": 6.804521806004645e-05,
+      "asymptotic_log_e_per_pair": 0.0025504748205229626
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.009719666179926008,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005224426412544392,
+      "asymptotic_log_e_per_pair": 0.004495239767381616
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.001181137424144326,
+      "asymptotic_log_e_per_pair": -0.001181137424144326
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 5.397029529201732e-10,
+      "asymptotic_log_e_per_pair": -5.397029529201732e-10
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.12311767859134229,
+      "asymptotic_log_e_per_pair": -0.12311767859134229
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008253964718357036,
+      "kl_truth_to_nearest_alternative_per_pair": 1.7470116281055104e-06,
+      "asymptotic_log_e_per_pair": 0.00825221770672893
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0071523169350501715,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5652718868904405e-05,
+      "asymptotic_log_e_per_pair": 0.007136664216181267
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03284279672134945,
+      "kl_truth_to_nearest_alternative_per_pair": 4.6515033644436207e-05,
+      "asymptotic_log_e_per_pair": 0.032796281687705015
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.024296428509981295,
+      "kl_truth_to_nearest_alternative_per_pair": 6.667474133755446e-06,
+      "asymptotic_log_e_per_pair": 0.02428976103584754
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006559775597462354,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001361818527206111,
+      "asymptotic_log_e_per_pair": 0.006423593744741743
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05483164882149077,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010058591507769487,
+      "asymptotic_log_e_per_pair": 0.054731062906413074
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014326832934905484,
+      "kl_truth_to_nearest_alternative_per_pair": 0.01269095553552703,
+      "asymptotic_log_e_per_pair": 0.0016358773993784548
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05738289018904179,
+      "kl_truth_to_nearest_alternative_per_pair": 1.3784931918104076e-05,
+      "asymptotic_log_e_per_pair": 0.05736910525712369
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0007873176577575108,
+      "kl_truth_to_nearest_alternative_per_pair": 3.2971168615436846e-05,
+      "asymptotic_log_e_per_pair": 0.000754346489142074
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0006820378773894986,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002646484567985566,
+      "asymptotic_log_e_per_pair": 0.00041738942059094206
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.038015092135799795,
+      "kl_truth_to_nearest_alternative_per_pair": 4.7856489782188965e-05,
+      "asymptotic_log_e_per_pair": 0.03796723564601761
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014436384693902172,
+      "kl_truth_to_nearest_alternative_per_pair": 3.049538122081811e-06,
+      "asymptotic_log_e_per_pair": 0.01443333515578009
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006417724745749143,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0019302244764553625,
+      "asymptotic_log_e_per_pair": 0.00448750026929378
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010797154612516293,
+      "asymptotic_log_e_per_pair": -0.00010797154612516293
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 1.51372199067381,
+      "asymptotic_log_e_per_pair": -1.51372199067381
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.5779787597736585,
+      "asymptotic_log_e_per_pair": -0.5779787597736585
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00028856952851875927,
+      "kl_truth_to_nearest_alternative_per_pair": 2.546424485205703e-05,
+      "asymptotic_log_e_per_pair": 0.00026310528366670224
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00020189375785132962,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5160347420996862e-05,
+      "asymptotic_log_e_per_pair": 0.00018673341043033275
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.001560577902244173,
+      "kl_truth_to_nearest_alternative_per_pair": 5.417724862818822e-05,
+      "asymptotic_log_e_per_pair": 0.0015064006536159849
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0009327813636791382,
+      "kl_truth_to_nearest_alternative_per_pair": 3.3958201019109564e-05,
+      "asymptotic_log_e_per_pair": 0.0008988231626600287
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.007688028095516323,
+      "kl_truth_to_nearest_alternative_per_pair": 9.337440372113532e-05,
+      "asymptotic_log_e_per_pair": 0.007594653691795187
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.004657098663762595,
+      "kl_truth_to_nearest_alternative_per_pair": 7.1223548924248e-05,
+      "asymptotic_log_e_per_pair": 0.004585875114838348
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03929380495950455,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018983193797534196,
+      "asymptotic_log_e_per_pair": 0.03739548557975113
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.027504066272144984,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018130457104048791,
+      "asymptotic_log_e_per_pair": 0.025691020561740104
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.000945357769322835,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010873015503721028,
+      "asymptotic_log_e_per_pair": 0.0008366276142856247
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0008139875030151439,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010790166209464693,
+      "asymptotic_log_e_per_pair": 0.000706085840920497
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0010605370573285328,
+      "kl_truth_to_nearest_alternative_per_pair": 4.05577525488366e-05,
+      "asymptotic_log_e_per_pair": 0.0010199793047796961
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.002243719858269452,
+      "kl_truth_to_nearest_alternative_per_pair": 2.908501372964696e-05,
+      "asymptotic_log_e_per_pair": 0.002214634844539805
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.016702023406127087,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002209225917099323,
+      "asymptotic_log_e_per_pair": 0.014492797489027764
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0030125469562070125,
+      "asymptotic_log_e_per_pair": -0.0030125469562070125
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.4784513123485575,
+      "asymptotic_log_e_per_pair": -0.4784513123485575
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7722958808898801,
+      "asymptotic_log_e_per_pair": -0.7722958808898801
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0056833261818047785,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003691648729706096,
+      "asymptotic_log_e_per_pair": 0.005314161308834169
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.005875039999382214,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00040181807504085934,
+      "asymptotic_log_e_per_pair": 0.005473221924341354
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02112504994882793,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00032261980395435633,
+      "asymptotic_log_e_per_pair": 0.02080243014487357
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.022510493993891156,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00039729261750287223,
+      "asymptotic_log_e_per_pair": 0.022113201376388284
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06006257612506674,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002566801143192106,
+      "asymptotic_log_e_per_pair": 0.05980589601074753
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06650450101022996,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00033225524933192885,
+      "asymptotic_log_e_per_pair": 0.06617224576089803
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.14742538700728844,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006724743240358723,
+      "asymptotic_log_e_per_pair": 0.14070064376692973
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.1646247707426719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005014141035114567,
+      "asymptotic_log_e_per_pair": 0.15961062970755732
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00033845239173382305,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0033709102194612326,
+      "asymptotic_log_e_per_pair": -0.0030324578277274097
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00030678554099836564,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0027704969390139533,
+      "asymptotic_log_e_per_pair": -0.002463711398015588
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.025410051956923134,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00043579224253508637,
+      "asymptotic_log_e_per_pair": 0.024974259714388047
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.020639674174639685,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003500097076271358,
+      "asymptotic_log_e_per_pair": 0.02028966446701255
+    },
+    {
+      "regime": "readings",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0069614091747879255,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006313279453335674,
+      "asymptotic_log_e_per_pair": 0.0006481297214522511
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001310467798274935,
+      "asymptotic_log_e_per_pair": -0.0001310467798274935
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7532424886250306,
+      "asymptotic_log_e_per_pair": -0.7532424886250306
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.82341447573078,
+      "asymptotic_log_e_per_pair": -0.82341447573078
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0016260519585627581,
+      "kl_truth_to_nearest_alternative_per_pair": 3.8433390908799325e-05,
+      "asymptotic_log_e_per_pair": 0.0015876185676539588
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0014147420410082798,
+      "kl_truth_to_nearest_alternative_per_pair": 6.427487374687684e-05,
+      "asymptotic_log_e_per_pair": 0.0013504671672614028
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006576837713129504,
+      "kl_truth_to_nearest_alternative_per_pair": 4.281609913323606e-05,
+      "asymptotic_log_e_per_pair": 0.006534021613996268
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00498002171245398,
+      "kl_truth_to_nearest_alternative_per_pair": 7.496271254640668e-05,
+      "asymptotic_log_e_per_pair": 0.004905058999907573
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.021433588196796572,
+      "kl_truth_to_nearest_alternative_per_pair": 2.1130753373536796e-05,
+      "asymptotic_log_e_per_pair": 0.021412457443423034
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.01285160287063509,
+      "kl_truth_to_nearest_alternative_per_pair": 4.642325794896229e-05,
+      "asymptotic_log_e_per_pair": 0.012805179612686127
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06731424359682145,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002383706970246544,
+      "asymptotic_log_e_per_pair": 0.0649305366265749
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02507488601423719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0005437915193107365,
+      "asymptotic_log_e_per_pair": 0.024531094494926454
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00040153887012101756,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00013070228366890608,
+      "asymptotic_log_e_per_pair": 0.0002708365864521115
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0003597730915102517,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001685157940862999,
+      "asymptotic_log_e_per_pair": 0.0001912572974239518
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008493427436054635,
+      "kl_truth_to_nearest_alternative_per_pair": 8.348911323680206e-05,
+      "asymptotic_log_e_per_pair": 0.008409938322817832
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0026185200385830092,
+      "kl_truth_to_nearest_alternative_per_pair": 6.804521806004645e-05,
+      "asymptotic_log_e_per_pair": 0.0025504748205229626
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "previous",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.009719666179926008,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005224426412544392,
+      "asymptotic_log_e_per_pair": 0.004495239767381616
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.001181137424144326,
+      "asymptotic_log_e_per_pair": -0.001181137424144326
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 5.397029529201732e-10,
+      "asymptotic_log_e_per_pair": -5.397029529201732e-10
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.12311767859134229,
+      "asymptotic_log_e_per_pair": -0.12311767859134229
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008253964718357036,
+      "kl_truth_to_nearest_alternative_per_pair": 1.7470116281055104e-06,
+      "asymptotic_log_e_per_pair": 0.00825221770672893
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0071523169350501715,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5652718868904405e-05,
+      "asymptotic_log_e_per_pair": 0.007136664216181267
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03284279672134945,
+      "kl_truth_to_nearest_alternative_per_pair": 4.6515033644436207e-05,
+      "asymptotic_log_e_per_pair": 0.032796281687705015
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.024296428509981295,
+      "kl_truth_to_nearest_alternative_per_pair": 6.667474133755446e-06,
+      "asymptotic_log_e_per_pair": 0.02428976103584754
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006559775597462354,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001361818527206111,
+      "asymptotic_log_e_per_pair": 0.006423593744741743
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05483164882149077,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010058591507769487,
+      "asymptotic_log_e_per_pair": 0.054731062906413074
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014326832934905484,
+      "kl_truth_to_nearest_alternative_per_pair": 0.01269095553552703,
+      "asymptotic_log_e_per_pair": 0.0016358773993784548
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05738289018904179,
+      "kl_truth_to_nearest_alternative_per_pair": 1.3784931918104076e-05,
+      "asymptotic_log_e_per_pair": 0.05736910525712369
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0007873176577575108,
+      "kl_truth_to_nearest_alternative_per_pair": 3.2971168615436846e-05,
+      "asymptotic_log_e_per_pair": 0.000754346489142074
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0006820378773894986,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002646484567985566,
+      "asymptotic_log_e_per_pair": 0.00041738942059094206
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.038015092135799795,
+      "kl_truth_to_nearest_alternative_per_pair": 4.7856489782188965e-05,
+      "asymptotic_log_e_per_pair": 0.03796723564601761
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014436384693902172,
+      "kl_truth_to_nearest_alternative_per_pair": 3.049538122081811e-06,
+      "asymptotic_log_e_per_pair": 0.01443333515578009
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "local_fisher",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006417724745749143,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0019302244764553625,
+      "asymptotic_log_e_per_pair": 0.00448750026929378
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010797154612516293,
+      "asymptotic_log_e_per_pair": -0.00010797154612516293
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 1.51372199067381,
+      "asymptotic_log_e_per_pair": -1.51372199067381
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.5779787597736585,
+      "asymptotic_log_e_per_pair": -0.5779787597736585
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00028856952851875927,
+      "kl_truth_to_nearest_alternative_per_pair": 2.546424485205703e-05,
+      "asymptotic_log_e_per_pair": 0.00026310528366670224
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00020189375785132962,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5160347420996862e-05,
+      "asymptotic_log_e_per_pair": 0.00018673341043033275
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.001560577902244173,
+      "kl_truth_to_nearest_alternative_per_pair": 5.417724862818822e-05,
+      "asymptotic_log_e_per_pair": 0.0015064006536159849
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0009327813636791382,
+      "kl_truth_to_nearest_alternative_per_pair": 3.3958201019109564e-05,
+      "asymptotic_log_e_per_pair": 0.0008988231626600287
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.007688028095516323,
+      "kl_truth_to_nearest_alternative_per_pair": 9.337440372113532e-05,
+      "asymptotic_log_e_per_pair": 0.007594653691795187
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.004657098663762595,
+      "kl_truth_to_nearest_alternative_per_pair": 7.1223548924248e-05,
+      "asymptotic_log_e_per_pair": 0.004585875114838348
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03929380495950455,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018983193797534196,
+      "asymptotic_log_e_per_pair": 0.03739548557975113
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.027504066272144984,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018130457104048791,
+      "asymptotic_log_e_per_pair": 0.025691020561740104
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.000945357769322835,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010873015503721028,
+      "asymptotic_log_e_per_pair": 0.0008366276142856247
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0008139875030151439,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010790166209464693,
+      "asymptotic_log_e_per_pair": 0.000706085840920497
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0010605370573285328,
+      "kl_truth_to_nearest_alternative_per_pair": 4.05577525488366e-05,
+      "asymptotic_log_e_per_pair": 0.0010199793047796961
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.002243719858269452,
+      "kl_truth_to_nearest_alternative_per_pair": 2.908501372964696e-05,
+      "asymptotic_log_e_per_pair": 0.002214634844539805
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "null_discrimination",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.016702023406127087,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002209225917099323,
+      "asymptotic_log_e_per_pair": 0.014492797489027764
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0030125469562070125,
+      "asymptotic_log_e_per_pair": -0.0030125469562070125
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.4784513123485575,
+      "asymptotic_log_e_per_pair": -0.4784513123485575
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7722958808898801,
+      "asymptotic_log_e_per_pair": -0.7722958808898801
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0056833261818047785,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003691648729706096,
+      "asymptotic_log_e_per_pair": 0.005314161308834169
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.005875039999382214,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00040181807504085934,
+      "asymptotic_log_e_per_pair": 0.005473221924341354
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02112504994882793,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00032261980395435633,
+      "asymptotic_log_e_per_pair": 0.02080243014487357
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.022510493993891156,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00039729261750287223,
+      "asymptotic_log_e_per_pair": 0.022113201376388284
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06006257612506674,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002566801143192106,
+      "asymptotic_log_e_per_pair": 0.05980589601074753
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06650450101022996,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00033225524933192885,
+      "asymptotic_log_e_per_pair": 0.06617224576089803
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.14742538700728844,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006724743240358723,
+      "asymptotic_log_e_per_pair": 0.14070064376692973
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.1646247707426719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005014141035114567,
+      "asymptotic_log_e_per_pair": 0.15961062970755732
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00033845239173382305,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0033709102194612326,
+      "asymptotic_log_e_per_pair": -0.0030324578277274097
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00030678554099836564,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0027704969390139533,
+      "asymptotic_log_e_per_pair": -0.002463711398015588
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.025410051956923134,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00043579224253508637,
+      "asymptotic_log_e_per_pair": 0.024974259714388047
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.020639674174639685,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003500097076271358,
+      "asymptotic_log_e_per_pair": 0.02028966446701255
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 256,
+      "design": "range_maximin",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0069614091747879255,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006313279453335674,
+      "asymptotic_log_e_per_pair": 0.0006481297214522511
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001310467798274935,
+      "asymptotic_log_e_per_pair": -0.0001310467798274935
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7532424886250306,
+      "asymptotic_log_e_per_pair": -0.7532424886250306
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.82341447573078,
+      "asymptotic_log_e_per_pair": -0.82341447573078
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0016260519585627581,
+      "kl_truth_to_nearest_alternative_per_pair": 3.8433390908799325e-05,
+      "asymptotic_log_e_per_pair": 0.0015876185676539588
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0014147420410082798,
+      "kl_truth_to_nearest_alternative_per_pair": 6.427487374687684e-05,
+      "asymptotic_log_e_per_pair": 0.0013504671672614028
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.96,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006576837713129504,
+      "kl_truth_to_nearest_alternative_per_pair": 4.281609913323606e-05,
+      "asymptotic_log_e_per_pair": 0.006534021613996268
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00498002171245398,
+      "kl_truth_to_nearest_alternative_per_pair": 7.496271254640668e-05,
+      "asymptotic_log_e_per_pair": 0.004905058999907573
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.021433588196796572,
+      "kl_truth_to_nearest_alternative_per_pair": 2.1130753373536796e-05,
+      "asymptotic_log_e_per_pair": 0.021412457443423034
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.01285160287063509,
+      "kl_truth_to_nearest_alternative_per_pair": 4.642325794896229e-05,
+      "asymptotic_log_e_per_pair": 0.012805179612686127
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06731424359682145,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002383706970246544,
+      "asymptotic_log_e_per_pair": 0.0649305366265749
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02507488601423719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0005437915193107365,
+      "asymptotic_log_e_per_pair": 0.024531094494926454
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00040153887012101756,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00013070228366890608,
+      "asymptotic_log_e_per_pair": 0.0002708365864521115
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0003597730915102517,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001685157940862999,
+      "asymptotic_log_e_per_pair": 0.0001912572974239518
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008493427436054635,
+      "kl_truth_to_nearest_alternative_per_pair": 8.348911323680206e-05,
+      "asymptotic_log_e_per_pair": 0.008409938322817832
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0026185200385830092,
+      "kl_truth_to_nearest_alternative_per_pair": 6.804521806004645e-05,
+      "asymptotic_log_e_per_pair": 0.0025504748205229626
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "previous",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.009719666179926008,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005224426412544392,
+      "asymptotic_log_e_per_pair": 0.004495239767381616
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.001181137424144326,
+      "asymptotic_log_e_per_pair": -0.001181137424144326
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 5.397029529201732e-10,
+      "asymptotic_log_e_per_pair": -5.397029529201732e-10
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.12311767859134229,
+      "asymptotic_log_e_per_pair": -0.12311767859134229
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.008253964718357036,
+      "kl_truth_to_nearest_alternative_per_pair": 1.7470116281055104e-06,
+      "asymptotic_log_e_per_pair": 0.00825221770672893
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0071523169350501715,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5652718868904405e-05,
+      "asymptotic_log_e_per_pair": 0.007136664216181267
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03284279672134945,
+      "kl_truth_to_nearest_alternative_per_pair": 4.6515033644436207e-05,
+      "asymptotic_log_e_per_pair": 0.032796281687705015
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.024296428509981295,
+      "kl_truth_to_nearest_alternative_per_pair": 6.667474133755446e-06,
+      "asymptotic_log_e_per_pair": 0.02428976103584754
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006559775597462354,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0001361818527206111,
+      "asymptotic_log_e_per_pair": 0.006423593744741743
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05483164882149077,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010058591507769487,
+      "asymptotic_log_e_per_pair": 0.054731062906413074
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014326832934905484,
+      "kl_truth_to_nearest_alternative_per_pair": 0.01269095553552703,
+      "asymptotic_log_e_per_pair": 0.0016358773993784548
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.05738289018904179,
+      "kl_truth_to_nearest_alternative_per_pair": 1.3784931918104076e-05,
+      "asymptotic_log_e_per_pair": 0.05736910525712369
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0007873176577575108,
+      "kl_truth_to_nearest_alternative_per_pair": 3.2971168615436846e-05,
+      "asymptotic_log_e_per_pair": 0.000754346489142074
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0006820378773894986,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002646484567985566,
+      "asymptotic_log_e_per_pair": 0.00041738942059094206
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.038015092135799795,
+      "kl_truth_to_nearest_alternative_per_pair": 4.7856489782188965e-05,
+      "asymptotic_log_e_per_pair": 0.03796723564601761
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.014436384693902172,
+      "kl_truth_to_nearest_alternative_per_pair": 3.049538122081811e-06,
+      "asymptotic_log_e_per_pair": 0.01443333515578009
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "local_fisher",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.006417724745749143,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0019302244764553625,
+      "asymptotic_log_e_per_pair": 0.00448750026929378
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010797154612516293,
+      "asymptotic_log_e_per_pair": -0.00010797154612516293
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 1.51372199067381,
+      "asymptotic_log_e_per_pair": -1.51372199067381
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.5779787597736585,
+      "asymptotic_log_e_per_pair": -0.5779787597736585
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00028856952851875927,
+      "kl_truth_to_nearest_alternative_per_pair": 2.546424485205703e-05,
+      "asymptotic_log_e_per_pair": 0.00026310528366670224
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00020189375785132962,
+      "kl_truth_to_nearest_alternative_per_pair": 1.5160347420996862e-05,
+      "asymptotic_log_e_per_pair": 0.00018673341043033275
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.001560577902244173,
+      "kl_truth_to_nearest_alternative_per_pair": 5.417724862818822e-05,
+      "asymptotic_log_e_per_pair": 0.0015064006536159849
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0009327813636791382,
+      "kl_truth_to_nearest_alternative_per_pair": 3.3958201019109564e-05,
+      "asymptotic_log_e_per_pair": 0.0008988231626600287
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.007688028095516323,
+      "kl_truth_to_nearest_alternative_per_pair": 9.337440372113532e-05,
+      "asymptotic_log_e_per_pair": 0.007594653691795187
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.004657098663762595,
+      "kl_truth_to_nearest_alternative_per_pair": 7.1223548924248e-05,
+      "asymptotic_log_e_per_pair": 0.004585875114838348
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.03929380495950455,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018983193797534196,
+      "asymptotic_log_e_per_pair": 0.03739548557975113
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.027504066272144984,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0018130457104048791,
+      "asymptotic_log_e_per_pair": 0.025691020561740104
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.000945357769322835,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010873015503721028,
+      "asymptotic_log_e_per_pair": 0.0008366276142856247
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0008139875030151439,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00010790166209464693,
+      "asymptotic_log_e_per_pair": 0.000706085840920497
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0010605370573285328,
+      "kl_truth_to_nearest_alternative_per_pair": 4.05577525488366e-05,
+      "asymptotic_log_e_per_pair": 0.0010199793047796961
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.002243719858269452,
+      "kl_truth_to_nearest_alternative_per_pair": 2.908501372964696e-05,
+      "asymptotic_log_e_per_pair": 0.002214634844539805
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "null_discrimination",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.016702023406127087,
+      "kl_truth_to_nearest_alternative_per_pair": 0.002209225917099323,
+      "asymptotic_log_e_per_pair": 0.014492797489027764
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_1",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0030125469562070125,
+      "asymptotic_log_e_per_pair": -0.0030125469562070125
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_2",
+      "nearest_null": [
+        2,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.04,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.4784513123485575,
+      "asymptotic_log_e_per_pair": -0.4784513123485575
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "null_3",
+      "nearest_null": [
+        3,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0,
+      "kl_truth_to_nearest_alternative_per_pair": 0.7722958808898801,
+      "asymptotic_log_e_per_pair": -0.7722958808898801
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0056833261818047785,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003691648729706096,
+      "asymptotic_log_e_per_pair": 0.005314161308834169
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_2.7pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.005875039999382214,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00040181807504085934,
+      "asymptotic_log_e_per_pair": 0.005473221924341354
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.94,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.02112504994882793,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00032261980395435633,
+      "asymptotic_log_e_per_pair": 0.02080243014487357
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_5.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.022510493993891156,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00039729261750287223,
+      "asymptotic_log_e_per_pair": 0.022113201376388284
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.9,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06006257612506674,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0002566801143192106,
+      "asymptotic_log_e_per_pair": 0.05980589601074753
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_9.3pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.1,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.06650450101022996,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00033225524933192885,
+      "asymptotic_log_e_per_pair": 0.06617224576089803
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "minus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.88,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.14742538700728844,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006724743240358723,
+      "asymptotic_log_e_per_pair": 0.14070064376692973
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "plus_16pct",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.12,
+        0.16
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.1646247707426719,
+      "kl_truth_to_nearest_alternative_per_pair": 0.005014141035114567,
+      "asymptotic_log_e_per_pair": 0.15961062970755732
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "damping_only_low",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00033845239173382305,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0033709102194612326,
+      "asymptotic_log_e_per_pair": -0.0030324578277274097
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "damping_only_high",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        0.98,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.00030678554099836564,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0027704969390139533,
+      "asymptotic_log_e_per_pair": -0.002463711398015588
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "shift_and_low_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.2
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.025410051956923134,
+      "kl_truth_to_nearest_alternative_per_pair": 0.00043579224253508637,
+      "asymptotic_log_e_per_pair": 0.024974259714388047
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "shift_and_high_damping",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.06,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.020639674174639685,
+      "kl_truth_to_nearest_alternative_per_pair": 0.0003500097076271358,
+      "asymptotic_log_e_per_pair": 0.02028966446701255
+    },
+    {
+      "regime": "time_proxy",
+      "reference_pairs": 1024,
+      "design": "range_maximin",
+      "scenario": "sensor_noise_miscalibrated",
+      "nearest_null": [
+        1,
+        0.2
+      ],
+      "nearest_alternative_component": [
+        1.02,
+        0.24
+      ],
+      "kl_truth_to_nearest_null_per_pair": 0.0069614091747879255,
+      "kl_truth_to_nearest_alternative_per_pair": 0.006313279453335674,
+      "asymptotic_log_e_per_pair": 0.0006481297214522511
+    }
+  ],
+  "all_checks_passed": true
+}

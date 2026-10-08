@@ -1,0 +1,383 @@
+{
+  "title": "Independent numerical audit of tempered-memory boundary Lab 30",
+  "generated_utc": "2026-09-15T00:00:11.072454+00:00",
+  "status": "Post-implementation numerical audit; not preregistered, an interval certificate, or a proof over the parameter domain.",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "six declared correlations versus independent Decimal series",
+      "passed": true,
+      "value": "1.16759859136292385197698194801737386632412540292803308441608919939E-15"
+    },
+    {
+      "name": "independent series n_refinement",
+      "passed": true,
+      "value": "2.3090488614548422055842E-63"
+    },
+    {
+      "name": "independent series k_refinement",
+      "passed": true,
+      "value": "0E-80"
+    },
+    {
+      "name": "independent series precision_refinement",
+      "passed": true,
+      "value": "4.5208277617969008143041330117352844329174935527E-59"
+    },
+    {
+      "name": "analytic Gaussian KL direction and noncommuting whitening examples",
+      "passed": true,
+      "value": "4.391591716202632894370730608516362237293965999525330318901515265E-17"
+    },
+    {
+      "name": "log remainder versus Decimal evaluation",
+      "passed": true,
+      "value": "1.253584211423160842221356906070000828247814322908694263760867633E-16"
+    },
+    {
+      "name": "tiny log remainder retains relative precision",
+      "passed": true,
+      "value": "5.8615711856566421411610596861304607004670648725172740194237904471153474970601794E-17"
+    },
+    {
+      "name": "log remainder sign and exact zero",
+      "passed": true,
+      "value": true
+    }
+  ],
+  "reference_method": "Termwise inverse Laplace series with Decimal arithmetic and integer/half-integer gamma recurrence; no cubic roots or special-function library used in the reference.",
+  "settings": {
+    "baseline": {
+      "precision": 80,
+      "n_max": 160,
+      "k_max": 120
+    },
+    "n_refinement": {
+      "precision": 80,
+      "n_max": 240,
+      "k_max": 120
+    },
+    "k_refinement": {
+      "precision": 80,
+      "n_max": 240,
+      "k_max": 160
+    },
+    "precision_refinement": {
+      "precision": 100,
+      "n_max": 240,
+      "k_max": 160
+    }
+  },
+  "pi_decimal": "3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148086513282306647093844609550",
+  "domain": {
+    "epsilon": [
+      0,
+      0.1
+    ],
+    "time": [
+      0,
+      50
+    ],
+    "scope": "Only the six listed cases are numerically compared."
+  },
+  "correlation_cases": [
+    {
+      "epsilon_decimal": "0",
+      "time_decimal": "0.1",
+      "epsilon_float_hex": "0x0.0p+0",
+      "time_float_hex": "0x1.999999999999ap-4",
+      "reference_values": {
+        "baseline": "0.97637774235675260573639255661650129672100738935525888319871290731007396585364898",
+        "n_refinement": "0.97637774235675260573639255661650129672100738935525888319871290731007396585364898",
+        "k_refinement": "0.97637774235675260573639255661650129672100738935525888319871290731007396585364898",
+        "precision_refinement": "0.9763777423567526057363925566165012967210073893552588831987129073100739658536489573569537041038977681"
+      },
+      "lab_correlation": 0.9763777423567526,
+      "absolute_error_against_80_digit_reference": "4.089126881361838930364659027509744638319871290731007396585364898E-17",
+      "refinement_absolute_differences": {
+        "n_refinement": "0E-80",
+        "k_refinement": "0E-80",
+        "precision_refinement": "2.26430462958961022319E-80"
+      }
+    },
+    {
+      "epsilon_decimal": "0",
+      "time_decimal": "11.4",
+      "epsilon_float_hex": "0x0.0p+0",
+      "time_float_hex": "0x1.6cccccccccccdp+3",
+      "reference_values": {
+        "baseline": "-0.011290534780846826471597665301669606438048456867950744436356719075534294532802343",
+        "n_refinement": "-0.011290534780846826471597665301669606438048456867950744436356719075534294532802343",
+        "k_refinement": "-0.011290534780846826471597665301669606438048456867950744436356719075534294532802343",
+        "precision_refinement": "-0.01129053478084682647159766530166960643804845686795074443635671907553429453411908693184655567195097177"
+      },
+      "lab_correlation": -0.011290534780846961,
+      "absolute_error_against_80_digit_reference": "1.34910796845718141427764527226725799255563643280924465705467197657E-16",
+      "refinement_absolute_differences": {
+        "n_refinement": "0E-81",
+        "k_refinement": "0E-81",
+        "precision_refinement": "1.31674393184655567195097177E-75"
+      }
+    },
+    {
+      "epsilon_decimal": "0.001",
+      "time_decimal": "1",
+      "epsilon_float_hex": "0x1.0624dd2f1a9fcp-10",
+      "time_float_hex": "0x1.0000000000000p+0",
+      "reference_values": {
+        "baseline": "0.39674295811295895455038221165967530205146334616446198290241294958222872482770476",
+        "n_refinement": "0.39674295811295895455038221165967530205146334616446198290241294958222872482770476",
+        "k_refinement": "0.39674295811295895455038221165967530205146334616446198290241294958222872482770476",
+        "precision_refinement": "0.3967429581129589545503822116596753020514633461644619829024129495822287248277047390069273942915537598"
+      },
+      "lab_correlation": 0.3967429581129584,
+      "absolute_error_against_80_digit_reference": "5.5524217004653554300411836169211172760790241294958222872482770476E-16",
+      "refinement_absolute_differences": {
+        "n_refinement": "0E-80",
+        "k_refinement": "0E-80",
+        "precision_refinement": "2.09930726057084462402E-80"
+      }
+    },
+    {
+      "epsilon_decimal": "0.001",
+      "time_decimal": "11.4",
+      "epsilon_float_hex": "0x1.0624dd2f1a9fcp-10",
+      "time_float_hex": "0x1.6cccccccccccdp+3",
+      "reference_values": {
+        "baseline": "-0.011192389404131441570275692938393090954014491527134616234175657737338554533335576",
+        "n_refinement": "-0.011192389404131441570275692938393090954014491527134616234175657737338554533335576",
+        "k_refinement": "-0.011192389404131441570275692938393090954014491527134616234175657737338554533335576",
+        "precision_refinement": "-0.01119238940413144157027569293839309095401449152713461623417565773733855453571471530188129929978552661"
+      },
+      "lab_correlation": -0.011192389404131434,
+      "absolute_error_against_80_digit_reference": "7.886922001616566318189689349620396334984175657737338554533335576E-18",
+      "refinement_absolute_differences": {
+        "n_refinement": "0E-81",
+        "k_refinement": "0E-81",
+        "precision_refinement": "2.37913930188129929978552661E-75"
+      }
+    },
+    {
+      "epsilon_decimal": "0.1",
+      "time_decimal": "1",
+      "epsilon_float_hex": "0x1.999999999999ap-4",
+      "time_float_hex": "0x1.0000000000000p+0",
+      "reference_values": {
+        "baseline": "0.40774740499145689840356365349458325176555931498128819912540292803308441608919939",
+        "n_refinement": "0.40774740499145689840356365349458325176555931498128819912540292803308441608919939",
+        "k_refinement": "0.40774740499145689840356365349458325176555931498128819912540292803308441608919939",
+        "precision_refinement": "0.4077474049914568984035636534945832517655593149812881991254029280330844160891993209265437827174547622"
+      },
+      "lab_correlation": 0.40774740499145573,
+      "absolute_error_against_80_digit_reference": "1.16759859136292385197698194801737386632412540292803308441608919939E-15",
+      "refinement_absolute_differences": {
+        "n_refinement": "0E-80",
+        "k_refinement": "0E-80",
+        "precision_refinement": "6.90734562172825452378E-80"
+      }
+    },
+    {
+      "epsilon_decimal": "0.1",
+      "time_decimal": "50",
+      "epsilon_float_hex": "0x1.999999999999ap-4",
+      "time_float_hex": "0x1.9000000000000p+5",
+      "reference_values": {
+        "baseline": "-0.0000053723203193099249184180038866718624045437705370746896011342643220878246806872904",
+        "n_refinement": "-0.0000053723203193099249184180038866718624045437705370746896011365733709492795228928746",
+        "k_refinement": "-0.0000053723203193099249184180038866718624045437705370746896011365733709492795228928746",
+        "precision_refinement": "-0.000005372320319309924918418003886671862404543770537074689646344850988918287665934204717352844329174935527"
+      },
+      "lab_correlation": -5.372320319310595e-06,
+      "absolute_error_against_80_digit_reference": "6.701180876305830759983440680857148803427474962391290507204771071254E-19",
+      "refinement_absolute_differences": {
+        "n_refinement": "2.3090488614548422055842E-63",
+        "k_refinement": "0E-85",
+        "precision_refinement": "4.5208277617969008143041330117352844329174935527E-59"
+      }
+    }
+  ],
+  "gaussian_kl_cases": [
+    {
+      "case": "diagonal alternative to null",
+      "alternative_covariance": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "null_covariance": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ],
+      "expected_kl_decimal": "0.47157359027997265470861606072908828403775006718012762706034000474669681098484736",
+      "computed_kl": 0.47157359027997264,
+      "absolute_error": "1.159523406923149807747427731937739325206034000474669681098484736E-17",
+      "whitened_covariance_shifts": [
+        -0.75,
+        1.0
+      ]
+    },
+    {
+      "case": "diagonal null to alternative",
+      "alternative_covariance": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          4.0
+        ]
+      ],
+      "null_covariance": [
+        [
+          2.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "expected_kl_decimal": "0.90342640972002734529138393927091171596224993281987237293965999525330318901515265",
+      "computed_kl": 0.9034264097200273,
+      "absolute_error": "4.391591716202632894370730608516362237293965999525330318901515265E-17",
+      "whitened_covariance_shifts": [
+        -0.4999999999999999,
+        3.0
+      ]
+    },
+    {
+      "case": "noncommuting covariances alternative to null",
+      "alternative_covariance": [
+        [
+          3.0,
+          0.5
+        ],
+        [
+          0.5,
+          2.0
+        ]
+      ],
+      "null_covariance": [
+        [
+          2.0,
+          1.0
+        ],
+        [
+          1.0,
+          3.0
+        ]
+      ],
+      "expected_kl_decimal": "0.13011902881242065131423537216617232861711065407429624407768626648898649283112444",
+      "computed_kl": 0.13011902881242063,
+      "absolute_error": "2.285389079837043509560419599648152280657768626648898649283112444E-17",
+      "whitened_covariance_shifts": [
+        -0.33851648071345036,
+        0.7385164807134503
+      ]
+    }
+  ],
+  "log_remainder_cases": [
+    {
+      "input": -0.999,
+      "input_float_hex": "-0x1.ff7ced916872bp-1",
+      "expected_decimal": "5.9087552789821361647637330836283799466894858333718812983284890731056481148963914",
+      "computed": 5.908755278982136,
+      "absolute_error": "9.61153547020961705389214760806906187016715109268943518851036086E-17",
+      "relative_error": "1.6266599336747849493958964206715386886697975194206607030901468009983470547287724E-17"
+    },
+    {
+      "input": -0.5,
+      "input_float_hex": "-0x1.0000000000000p-1",
+      "expected_decimal": "0.19314718055994530941723212145817656807550013436025525412068000949339362196969472",
+      "computed": 0.1931471805599453,
+      "absolute_error": "2.319046813846299615494855463875478650412068000949339362196969472E-17",
+      "relative_error": "1.2006630421025268033090153198976750766217427804211470044036661056092082357212131E-16"
+    },
+    {
+      "input": -0.0001,
+      "input_float_hex": "-0x1.a36e2eb1c432dp-14",
+      "expected_decimal": "5.00033335833533397927957373166653368246946147923054952397994148611889471438E-9",
+      "computed": 5.0003333583383425e-09,
+      "absolute_error": "3.00856108165839305722230489161201472697000727005851388110528562E-21",
+      "relative_error": "6.0167210184962071424510145691563264139927261753916095196972070955677514713404986E-13"
+    },
+    {
+      "input": -1e-08,
+      "input_float_hex": "-0x1.5798ee2308c3ap-27",
+      "expected_decimal": "5.0000000333333337925589457268741828774425928642559898036177854727725133E-17",
+      "computed": 5.000000033333334e-17,
+      "absolute_error": "2.93078561236689195861436537908591062462821008804064629815699291229248046875E-33",
+      "relative_error": "5.8615711856566421411610596861304607004670648725172740194237904471153474970601794E-17"
+    },
+    {
+      "input": 0.0,
+      "input_float_hex": "0x0.0p+0",
+      "expected_decimal": "0",
+      "computed": 0.0,
+      "absolute_error": "0",
+      "relative_error": "0"
+    },
+    {
+      "input": 1e-08,
+      "input_float_hex": "0x1.5798ee2308c3ap-27",
+      "expected_decimal": "4.99999996666666712589227087569535018508059941604985033888519174284475055E-17",
+      "computed": 4.999999966666667e-17,
+      "absolute_error": "1.87956746191081747349722697526076054377521357903203448657302188873291015625E-33",
+      "relative_error": "3.7591349488825342609531453827709001920474561134394604139348487325951547800698032E-17"
+    },
+    {
+      "input": 0.0001,
+      "input_float_hex": "0x1.a36e2eb1c432dp-14",
+      "expected_decimal": "4.999666691664667312488492163200062893713041621388354710839432121885366727911E-9",
+      "computed": 4.999666691665305e-09,
+      "absolute_error": "6.37411635194078709973293905929249583324976660567878114633272089E-22",
+      "relative_error": "1.2749082578979857948067561246278077001736903198100752426924071957584441500422151E-13"
+    },
+    {
+      "input": 0.5,
+      "input_float_hex": "0x1.0000000000000p-1",
+      "expected_decimal": "0.09453489189183561802198688453565086342800957653750580238598567585589932875108575",
+      "computed": 0.09453489189183562,
+      "absolute_error": "2.88113802596264253475178582165469330238598567585589932875108575E-18",
+      "relative_error": "3.0476980174253187488234929318617419460285600722301727701893040351107054335493197E-17"
+    },
+    {
+      "input": 10.0,
+      "input_float_hex": "0x1.4000000000000p+3",
+      "expected_decimal": "7.6021047272016294559380564220348707001782931460625828247814322908694263760867633",
+      "computed": 7.602104727201629,
+      "absolute_error": "1.253584211423160842221356906070000828247814322908694263760867633E-16",
+      "relative_error": "1.6489962403932984133723007842413659933963310775738782126499214186391088560443165E-17"
+    }
+  ],
+  "limitations": [
+    "Convergence under finite truncation and precision changes is evidence, not a rigorous error enclosure.",
+    "The reference and lab evaluate the same declared analytic model, so this does not validate that model against experimental data.",
+    "Decimal reference parameters use the listed decimal values; the lab receives their nearest binary floating-point representations.",
+    "The KL checks verify the numerical formula. The independence assumptions and Pinsker interpretation require the accompanying mathematical argument.",
+    "This audit imports Lab 30 without executing its main function or modifying its results."
+  ],
+  "hashes": {
+    "audit_script": "4f0305d7b1318103694fc5f11c20185c884b5106a248436f16c1740bfe9d7757",
+    "audited_lab_script": "8ff88728ff9f39c7c30e3d13b21c7feb0129b32be445ebf3250a70469cc25b7a",
+    "audited_lab_protocol": "7b8c2e66d833e14ad244c05f3e9438046095d5d7b1976842423c60ffa63da5e5"
+  },
+  "environment": {
+    "python": "3.14.3",
+    "decimal": "Python standard library",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1"
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "study": "Independent noisy-covariance stress test for thermal-memory reconstruction",
+  "protocol_version": "1.1",
+  "protocol_sha256": "248a5a27a833fb191a3a79eec3faf55f0c73cc0a16aa817b632680ee40811770",
+  "script_sha256": "b4ffbd4d1ed7884b9af8e6f88402fff2ea250457a81854642c3d03b3051b87df",
+  "reference_script_sha256": "435c6f2335f49af0bb2f0c46974dd8f78670972e4a642d9c6847178d62a0a62c",
+  "environment": {
+    "python": "3.14.3",
+    "numpy": "2.4.3",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8"
+  },
+  "clean_reference": {
+    "n": 10,
+    "vacf_rmse": 0.0008183493298565264,
+    "kernel_log_rmse": 0.13920604590439103,
+    "kernel_nonpositive": 0,
+    "kernel_relative_rmse": 0.15851905159635032,
+    "y1_adjustment": 0.001582948707664067,
+    "positive_real_min": 1.970433651192117e-05,
+    "riccati_residual": 3.618195571918038e-15,
+    "lyapunov_residual": 1.593410878410935e-10,
+    "interpolation_error": 9.552376251109607e-13,
+    "original_sample_rmse": 0.00035395809152332893,
+    "newton_evaluations": 7,
+    "regularized_max_real_eigenvalue": -0.05086779239151115
+  },
+  "total_trials": 800,
+  "total_attempts": 5504,
+  "summary": [
+    {
+      "ensemble_size": 64,
+      "trials": 200,
+      "full_order_accepted": 0,
+      "full_order_rate": 0.0,
+      "full_order_wilson95": [
+        1.734723475976807e-18,
+        0.018845326377266575
+      ],
+      "fallback_accepted": 16,
+      "fallback_acceptance_rate": 0.08,
+      "fallback_wilson95": [
+        0.049840585889759974,
+        0.12598948826714396
+      ],
+      "accepted_order_counts": {
+        "4": 15,
+        "6": 1
+      },
+      "median_vacf_rmse": 0.05077343253872639,
+      "median_kernel_log_rmse": null,
+      "median_kernel_log_rmse_status": "infinite_due_to_sign_mismatch",
+      "kernel_nonpositive_count": 15,
+      "kernel_nonpositive_wilson95": [
+        0.7167126242970107,
+        0.9888806552353576
+      ],
+      "good_vacf_bad_kernel": 0,
+      "good_vacf_bad_kernel_wilson95": [
+        0.0,
+        0.1936076805344365
+      ],
+      "good_vacf_bad_kernel_rate_among_accepted": 0.0,
+      "median_y1_adjustment_over_sampling_sd": 0.6928811444083446
+    },
+    {
+      "ensemble_size": 256,
+      "trials": 200,
+      "full_order_accepted": 0,
+      "full_order_rate": 0.0,
+      "full_order_wilson95": [
+        1.734723475976807e-18,
+        0.018845326377266575
+      ],
+      "fallback_accepted": 17,
+      "fallback_acceptance_rate": 0.085,
+      "fallback_wilson95": [
+        0.05374575017747561,
+        0.13189587071565567
+      ],
+      "accepted_order_counts": {
+        "4": 11,
+        "5": 4,
+        "6": 1,
+        "7": 1
+      },
+      "median_vacf_rmse": 0.03248765175718829,
+      "median_kernel_log_rmse": 1.7047098866440111,
+      "median_kernel_log_rmse_status": "finite",
+      "kernel_nonpositive_count": 7,
+      "kernel_nonpositive_wilson95": [
+        0.2161105679021481,
+        0.6399455735700021
+      ],
+      "good_vacf_bad_kernel": 0,
+      "good_vacf_bad_kernel_wilson95": [
+        0.0,
+        0.1843181350088518
+      ],
+      "good_vacf_bad_kernel_rate_among_accepted": 0.0,
+      "median_y1_adjustment_over_sampling_sd": 0.8235662185554486
+    },
+    {
+      "ensemble_size": 1024,
+      "trials": 200,
+      "full_order_accepted": 0,
+      "full_order_rate": 0.0,
+      "full_order_wilson95": [
+        1.734723475976807e-18,
+        0.018845326377266575
+      ],
+      "fallback_accepted": 31,
+      "fallback_acceptance_rate": 0.155,
+      "fallback_wilson95": [
+        0.11139636927689314,
+        0.21160690592342077
+      ],
+      "accepted_order_counts": {
+        "4": 14,
+        "5": 13,
+        "6": 2,
+        "7": 2
+      },
+      "median_vacf_rmse": 0.02151012937146374,
+      "median_kernel_log_rmse": 0.5575449306438844,
+      "median_kernel_log_rmse_status": "finite",
+      "kernel_nonpositive_count": 5,
+      "kernel_nonpositive_wilson95": [
+        0.070926244433653,
+        0.3263435395879326
+      ],
+      "good_vacf_bad_kernel": 1,
+      "good_vacf_bad_kernel_wilson95": [
+        0.005717221525416816,
+        0.16194105164724906
+      ],
+      "good_vacf_bad_kernel_rate_among_accepted": 0.03225806451612903,
+      "median_y1_adjustment_over_sampling_sd": 0.8821547470305352
+    },
+    {
+      "ensemble_size": 4096,
+      "trials": 200,
+      "full_order_accepted": 0,
+      "full_order_rate": 0.0,
+      "full_order_wilson95": [
+        1.734723475976807e-18,
+        0.018845326377266575
+      ],
+      "fallback_accepted": 40,
+      "fallback_acceptance_rate": 0.2,
+      "fallback_wilson95": [
+        0.15045200926098115,
+        0.2608551865653788
+      ],
+      "accepted_order_counts": {
+        "4": 4,
+        "5": 25,
+        "7": 9,
+        "9": 2
+      },
+      "median_vacf_rmse": 0.010622645749184366,
+      "median_kernel_log_rmse": 0.2657857858120495,
+      "median_kernel_log_rmse_status": "finite",
+      "kernel_nonpositive_count": 2,
+      "kernel_nonpositive_wilson95": [
+        0.013820667386148344,
+        0.16503877369140962
+      ],
+      "good_vacf_bad_kernel": 0,
+      "good_vacf_bad_kernel_wilson95": [
+        0.0,
+        0.08762160119728664
+      ],
+      "good_vacf_bad_kernel_rate_among_accepted": 0.0,
+      "median_y1_adjustment_over_sampling_sd": 1.8050448714313276
+    }
+  ],
+  "terminal_failure_counts": {
+    "spectral_repair_required_unstable_pole": 331,
+    "sampled_non_positive_real": 221,
+    "newton_nonconvergence": 41,
+    "unstable_auxiliary_block": 9,
+    "spectral_repair_required_negative_pole": 93,
+    "lyapunov_residual": 1
+  },
+  "all_attempt_reason_counts": {
+    "spectral_repair_required_unstable_pole": 4179,
+    "newton_nonconvergence": 414,
+    "spectral_repair_required_negative_pole": 377,
+    "sampled_non_positive_real": 364,
+    "accepted": 104,
+    "unstable_auxiliary_block": 55,
+    "riccati_solver": 10,
+    "lyapunov_residual": 1
+  },
+  "checks": [
+    {
+      "name": "analytic trajectory covariance positive definite",
+      "passed": true,
+      "value": 0.09359002673594742
+    },
+    {
+      "name": "nonfinite or nonreal guard",
+      "passed": true,
+      "value": "[nan]"
+    },
+    {
+      "name": "nonfinite or nonreal guard",
+      "passed": true,
+      "value": "[inf]"
+    },
+    {
+      "name": "nonfinite or nonreal guard",
+      "passed": true,
+      "value": "[1.+0.1j]"
+    },
+    {
+      "name": "explicit-trajectory estimator mean",
+      "passed": true,
+      "value": 0.0006054326229846946
+    },
+    {
+      "name": "explicit-trajectory estimator covariance",
+      "passed": true,
+      "value": 0.03944580964730541
+    },
+    {
+      "name": "clean-case regression",
+      "passed": true,
+      "value": "accepted"
+    },
+    {
+      "name": "clean VACF error",
+      "passed": true,
+      "value": 0.0008183493298565264
+    },
+    {
+      "name": "clean kernel error",
+      "passed": true,
+      "value": 0.13920604590439103
+    },
+    {
+      "name": "all trials accounted for",
+      "passed": true,
+      "value": 800
+    },
+    {
+      "name": "accepted-state inventory",
+      "passed": true,
+      "value": 104
+    },
+    {
+      "name": "every attempt has explicit reason",
+      "passed": true,
+      "value": 5504
+    },
+    {
+      "name": "kernel sign-status accounting",
+      "passed": true,
+      "value": 29
+    }
+  ],
+  "passed_checks": 13,
+  "scope": [
+    "No monotonic trend is a required pass condition.",
+    "Acceptance means the numerical gates passed, not that the inferred kernel is unique.",
+    "Frequency positivity is sampled, not proved over the continuum.",
+    "Order fallback changes capacity AND truncates the fitted time window from 11.4 at n=10 to 4.2 at n=4.",
+    "Pointwise sign changes in a kernel are not by themselves violations of thermal admissibility; here they disagree with the strictly positive target and make the logarithmic error undefined.",
+    "This is not a reproduction of the paper's noisy molecular-dynamics experiment."
+  ]
+}

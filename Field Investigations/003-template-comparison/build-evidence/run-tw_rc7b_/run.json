@@ -1,0 +1,21 @@
+{
+  "utc": "2026-09-21T06:54:55.342898+00:00",
+  "lab": "/var/tmp/template-build-ojn0mbg2",
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "script_sha256": "d3ed09fe93da4c487b5b392b5fbc1755d47dfcd9b084a4f7fc3ed8b838cdd35c",
+  "steps": [
+    {
+      "name": "image-pull",
+      "exit": 0
+    },
+    {
+      "name": "fetch-install",
+      "exit": 0
+    },
+    {
+      "name": "offline-test",
+      "exit": 1
+    }
+  ],
+  "image_id": "sha256:cd1e310a92ec2aef48184707654d89fb956224b144291da67ef8b4714dae88ac"
+}

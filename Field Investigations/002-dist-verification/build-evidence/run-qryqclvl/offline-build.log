@@ -1,0 +1,39 @@
+
+> actions/attest@4.1.0 bundle
+> npm run format:write && npm run package
+
+
+> actions/attest@4.1.0 format:write
+> prettier --write **/*.ts
+
+__tests__/index.test.ts 454ms (unchanged)
+src/artifacts.ts 386ms (unchanged)
+src/attest.ts 129ms (unchanged)
+src/detect.ts 25ms (unchanged)
+src/endpoints.ts 4ms (unchanged)
+src/index.ts 28ms (unchanged)
+src/main.ts 280ms (unchanged)
+src/predicate.ts 24ms (unchanged)
+src/provenance.ts 38ms (unchanged)
+src/sbom.ts 39ms (unchanged)
+src/style.ts 13ms (unchanged)
+src/subject.ts 175ms (unchanged)
+
+> actions/attest@4.1.0 package
+> ncc build src/index.ts --license licenses.txt
+
+ncc: Version 0.45.0
+ncc: Compiling file index.js into ESM
+ncc: Using typescript@6.0.3 (local user-provided)
+   0kB  dist/package.json
+   0kB  dist/50.index.js
+   2kB  dist/licenses.txt
+   7kB  dist/606.index.js
+4755kB  dist/index.js
+4764kB  [19954ms] - ncc 0.45.0
+289ccb9654b7113dcfd539f5b143fab30537b4045e53652161e8c88353ef7d90  dist/index.js
+629225cc3e937e22ce6b90c21f1d938d1be0716257446593555696bf1d01523e  dist/606.index.js
+a55876b6637888e84e212b9c7e3ca7b7f8d8d8a36e1eb1cc01ae93c276ad6bc9  dist/184.index.js
+ecaaf3e9799bcf31db16d25584213e1ef190a364d561a82164a5abc5b1327835  dist/licenses.txt
+45195f12661aeef8aa7ffabfd780d02fffd45c2c37102ff2ecf217a56d6d4f92  dist/50.index.js
+3ca9d4afd21425087cf31893b8f9f63c81b0b8408db5e343ca76e5f8aa26ab9a  dist/package.json

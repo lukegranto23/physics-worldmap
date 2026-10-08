@@ -1,0 +1,73 @@
+{
+  "title": "Preregistered measurement-level Gaussian reproduction of velocity-conditioned displacement",
+  "version": "1.0",
+  "created": "2026-10-06",
+  "status": "Frozen before any file content of the target dataset was inspected. On 2026-10-06 only Dryad API metadata (file names, sizes, SHA-256 digests, CC0 licence) was read; file downloads returned HTTP 401/403 and no data, notebook, or README content was obtained. Any later change must be recorded as a dated amendment with its reason, and results from amended settings reported as post hoc. No novelty claim.",
+  "target": {
+    "dataset": "doi:10.5061/dryad.pvmcvdnz4 version 3 (Dryad version id 418751)",
+    "article": "Boynewicz, Thumann, Raizen, Science Advances (2026), doi:10.1126/sciadv.aeb4579",
+    "files_sha256": {
+      "README.md": "eb5148075a2faa116727f392b36ca17d0cf5972c73d8ab143ec634af9f573fd9",
+      "fitting.ipynb": "65841edaa110cb19243cd337ddd036e48bf5d521c80eb695d9d99f929f2a121f",
+      "conditioning.ipynb": "7ffab88f443929163342ec98223ffa96c1fee621f92c719eb2cccb669e52f0e3",
+      "barium_titanate_in_acetone_position.csv": "0abcd4d8b0b8259b303caec4dab576961a9d9c407135d3fda6afa535ea14de0a",
+      "barium_titanate_in_acetone_velocity.csv": "fed9598f63825f6c5d9314af0ebc1ed04e115a2d6179c343aafb15c73f7188e0",
+      "noise_position.csv": "8e8e9753a004f8f36edd27e01544b2f23e0052ea81505acacdafcb8f300c9c37",
+      "noise_velocity.csv": "c76e3f50fbcccb9162ab9a91c3d0b5b01ec92e5e57f4569603c919a8cdcabe8e"
+    },
+    "pairs": [
+      {"role": "particle", "position": "barium_titanate_in_acetone_position.csv", "velocity": "barium_titanate_in_acetone_velocity.csv"},
+      {"role": "empty_trap_control", "position": "noise_position.csv", "velocity": "noise_velocity.csv"}
+    ]
+  },
+  "gates": {
+    "provenance": "Every file must match its digest; otherwise halt with no statistics computed.",
+    "notebooks_first": "Read conditioning.ipynb and fitting.ipynb as text before running this lab on real data; record velocity stencil, filtering, units, and trace layout in the vault note. Do not execute them.",
+    "schema": "CSV parsed as floats. A column that is strictly increasing with constant spacing is a time axis and is removed. Traces are the remaining columns if there are 2-12 of them and more than 10000 rows; otherwise the transposed layout is tried by the same rule. Any other layout halts. Position and velocity files must have equal trace count and length. The trace count is reported, not forced to 5 or 6.",
+    "finite": "Non-finite values halt; no imputation."
+  },
+  "observation": {
+    "displacement": "D_k(j) = Y(j+k) - Y(j) from the supplied processed position trace.",
+    "conditioning_variable": "W(j) = supplied processed velocity at the same index j. The lab also reports the best least-squares fit of W onto the symmetric eighth-order central-difference stencil of Y to document, not assume, how W was formed.",
+    "selection": "Velocity only. Initial position is not conditioned, matching the article description; the vault note shows position conditioning changes the target."
+  },
+  "split": {
+    "rule": "Each trace is cut at its midpoint. First half = calibration (estimate u_k = Var D_k, s = Var W, r_k = Cov(D_k, W), and means); second half = held-out test. Shared upstream preprocessing across halves is acknowledged; this split protects only against tuning on the test statistics.",
+    "pooling": "Moments are pooled over traces with equal weight per usable start index."
+  },
+  "prediction": {
+    "second_moment": "E[D_k^2 | |W| <= b] = u_k - r_k^2/s + (r_k^2/s^2) * m2(b), with m2(b) = s*(1 - 2 z phi(z)/(2 Phi(z) - 1)), z = b/sqrt(s); series m2 = b^2/3*(1 - z^2/5) for z < 1e-3.",
+    "conditional_mean": "E[D_k | W in [w0-b, w0+b]] = (r_k/s) * E[W | bin] under the fitted Gaussian law; reported for w0 = +sqrt(s) and -sqrt(s).",
+    "centering": "D_k and W are centered with calibration-half means before both prediction and test statistics."
+  },
+  "design": {
+    "lags_samples": [1, 2, 3, 4, 6, 8, 11, 16, 23, 32, 45, 64],
+    "primary_bin_fraction": 0.01,
+    "sensitivity_bin_fractions": [0.05, 0.2],
+    "nonzero_conditioning_bin_fraction": 0.05,
+    "bin_rule": "b = fraction * sqrt(s) with s from calibration; the 1% primary value follows the article's stated 1% velocity window."
+  },
+  "uncertainty": {
+    "method": "Moving-block bootstrap within each trace half, resampling blocks of start indices; calibration and test halves resampled independently; prediction and observation recomputed per replicate.",
+    "block_samples": 2000,
+    "block_sensitivity": [500, 8000],
+    "replicates": 400,
+    "seed": 2026100601,
+    "combined_se": "sqrt(se_obs^2 + se_pred^2) per lag",
+    "between_trace": "Leave-one-trace-out relative-error range reported as a descriptive check; with few traces it is not a confidence interval."
+  },
+  "decision": {
+    "minimum_selected_starts": "At least 200 selected test starts per lag for the primary bin; fewer makes the primary result INCONCLUSIVE.",
+    "precision": "If the median combined relative SE over primary lags exceeds 0.25, the result is INCONCLUSIVE.",
+    "agreement": "AGREE if every primary-lag |z_k| <= 3 and the median absolute relative error <= 0.15.",
+    "disagreement": "DISAGREE otherwise. A disagreement triggers, in order: notebook/processing check, block-length sensitivity, empty-trap control, non-Gaussianity diagnostics, nonstationarity across trace segments. It is not evidence of new forces.",
+    "control_expectation": "The empty-trap control is analysed identically. Its verdict is reported, not used to tune the particle analysis."
+  },
+  "diagnostics": ["excess kurtosis of W and of D_k at lags 1, 8, 64 on the test half", "per-quarter variance of W within each trace (nonstationarity screen)", "descriptive log-log slope of observed primary conditional second moment over lags 1-8; not a fitted exponent claim"],
+  "selftest": {
+    "positive_control": "Exactly discretized underdamped trapped Brownian particle, tau_p = 15 samples, trap relaxation gamma/K = 44 samples, 5 traces of 200000 samples, additive white Gaussian position noise, velocity from the eighth-order stencil of the noisy position. Expected verdict: AGREE.",
+    "negative_control": "Same dynamics, but position noise amplitude modulated by a lognormal factor (sigma_log 0.8) piecewise constant over 5000-sample segments, mimicking unmodeled detector-power fluctuation. Expected verdict: DISAGREE.",
+    "seed": 2026100602,
+    "scope": "Self-tests check that the pipeline can agree and can detect one specific violation of its Gaussian stationary assumption. They do not establish power against other violations."
+  }
+}

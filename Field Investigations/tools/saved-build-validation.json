@@ -1,0 +1,43 @@
+{
+  "changed_build_comparison": {
+    "equal": false,
+    "policy": {
+      "empty_directories": true,
+      "symlinks": "compare link text, do not follow",
+      "executable_bit": false,
+      "git_ignore_rules": "not applied",
+      "whitespace": "byte-significant"
+    },
+    "expected_entries": 6,
+    "rebuilt_entries": 5,
+    "differences": [
+      {
+        "path": "184.index.js",
+        "change": "removed",
+        "expected": {
+          "type": "file",
+          "bytes": 7522,
+          "sha256": "a55876b6637888e84e212b9c7e3ca7b7f8d8d8a36e1eb1cc01ae93c276ad6bc9"
+        },
+        "rebuilt": null
+      }
+    ]
+  },
+  "independent_clean_build_comparison": {
+    "equal": true,
+    "policy": {
+      "empty_directories": true,
+      "symlinks": "compare link text, do not follow",
+      "executable_bit": false,
+      "git_ignore_rules": "not applied",
+      "whitespace": "byte-significant"
+    },
+    "expected_entries": 5,
+    "rebuilt_entries": 5,
+    "differences": []
+  },
+  "matched_prior_build_hashes": true,
+  "source_artifacts_unchanged": true,
+  "tool_sha256": "d10e711b44166235b87c0a2eb5c70b9d4baed4da6bf05597d42c909ee9b65429",
+  "scope": "Saved actual-build outputs, not a newly executed build or security audit"
+}

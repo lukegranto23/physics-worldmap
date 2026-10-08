@@ -1,0 +1,12 @@
+/* Optional: enable in Settings → Appearance → CSS snippets. */
+.callout[data-callout="summary"] {
+  --callout-color: 66, 135, 245;
+  --callout-icon: lucide-orbit;
+}
+.markdown-rendered table {
+  width: 100%;
+}
+.markdown-rendered mjx-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}

@@ -1,0 +1,63 @@
+{
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "utc": "2026-09-21T06:59:00.380745+00:00",
+  "cases": [
+    {
+      "case": "unchanged",
+      "original_exit": 0,
+      "patched_exit": 0,
+      "semantic_before": null,
+      "semantic_after": null
+    },
+    {
+      "case": "tracked_edit",
+      "original_exit": 1,
+      "patched_exit": 1,
+      "semantic_before": null,
+      "semantic_after": null
+    },
+    {
+      "case": "new_output",
+      "original_exit": 0,
+      "patched_exit": 1,
+      "semantic_before": null,
+      "semantic_after": null
+    },
+    {
+      "case": "semantic_whitespace",
+      "original_exit": 0,
+      "patched_exit": 1,
+      "semantic_before": "\"left \\nright\"",
+      "semantic_after": "\"left  \\nright\""
+    },
+    {
+      "case": "staged_edit",
+      "original_exit": 0,
+      "patched_exit": 1,
+      "semantic_before": null,
+      "semantic_after": null
+    },
+    {
+      "case": "missing_dist",
+      "original_exit": 1,
+      "patched_exit": 1,
+      "semantic_before": null,
+      "semantic_after": null
+    },
+    {
+      "case": "tracked_deletion",
+      "original_exit": 1,
+      "patched_exit": 1,
+      "semantic_before": null,
+      "semantic_after": null
+    }
+  ],
+  "patch_applied_exactly": true,
+  "script_sha256": "22cde65aa37baf9f3e77f1dbb523981b420d27ebebace3c6867482e6e98d49b2",
+  "patch_sha256": "236f781255b77b5af47cbc87c714dd55d7abde406c4e9e6499bb915f0b4f5d1d",
+  "limitations": [
+    "Comparison block only; no Rollup/project build executed",
+    "Template already cleans dist; stale-output finding is not transferred",
+    "No external submission, remote exploit, or novelty claim"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1785392400000,
+      "path": "Physics Worldmap.md",
+      "title": "Start — Physics Worldmap"
+    },
+    {
+      "type": "file",
+      "ctime": 1785392400001,
+      "path": "Physics Worldmap.canvas",
+      "title": "Spatial Worldmap"
+    },
+    {
+      "type": "file",
+      "ctime": 1785392400002,
+      "path": "02 Learning/Learning Paths.md",
+      "title": "Learning Paths"
+    },
+    {
+      "type": "file",
+      "ctime": 1785392400003,
+      "path": "80 Frontiers/Open Problems Dashboard.md",
+      "title": "Open Problems"
+    },
+    {
+      "type": "file",
+      "ctime": 1785392400004,
+      "path": "90 Synthesis/Synthesis Lab.md",
+      "title": "Synthesis Lab"
+    },
+    {
+      "type": "file",
+      "ctime": 1785392400005,
+      "path": "95 Resources/Vault Health Report.md",
+      "title": "Vault Health"
+    }
+  ]
+}

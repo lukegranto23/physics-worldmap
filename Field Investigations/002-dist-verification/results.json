@@ -1,0 +1,146 @@
+{
+  "generated_utc": "2026-09-18T05:57:09.017799+00:00",
+  "upstream_revision": "c5895f04a64254068ee4ce85086baae80a363b9c",
+  "verified_git_blobs": {
+    ".github/workflows/check-dist.yml": "22569bf8df918d82a4d30af1efb3024edf0f296e",
+    ".github/workflows/commit-dist.yml": "b142a55b064eaaa86187020879701a1318708e93",
+    ".github/workflows/rebuild-dist.yml": "77f3f0558a2c49d64d0de66f3283ab2c10f0185e",
+    "LICENSE": "5f9e342dcc1e39277b96077541676ce6307de2c7",
+    "package.json": "3df6ba2623d7feaa919157762cbcdbdbdc397d74"
+  },
+  "script_sha256": "e85e327a36e35d2438a6e540cbc498133a784bde382bb0e37562ac39454d1318",
+  "patch_sha256": "a65b3da9209769f88edc9c0592a8733dc7c6651da4e1f6e57f14063b0f86ffec",
+  "git_version": "git version 2.53.0.windows.2",
+  "node_version": "v24.11.1",
+  "platform": "nt",
+  "cases": [
+    {
+      "case": "unchanged",
+      "change_expected": false,
+      "original_detected_check_producer_consumer": [
+        false,
+        false,
+        false
+      ],
+      "patched_detected_check_producer_consumer": [
+        false,
+        false,
+        false
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/unchanged"
+    },
+    {
+      "case": "tracked_content",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/tracked_content"
+    },
+    {
+      "case": "new_file_only",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        false,
+        false,
+        false
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/new_file_only"
+    },
+    {
+      "case": "tracked_delete",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/tracked_delete"
+    },
+    {
+      "case": "semantic_trailing_space",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        false,
+        false,
+        true
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left  \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/semantic_trailing_space"
+    },
+    {
+      "case": "nested_new_file",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        false,
+        false,
+        false
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/nested_new_file"
+    },
+    {
+      "case": "already_staged",
+      "change_expected": true,
+      "original_detected_check_producer_consumer": [
+        false,
+        false,
+        false
+      ],
+      "patched_detected_check_producer_consumer": [
+        true,
+        true,
+        true
+      ],
+      "node_output_before": "\"left \\nright\"",
+      "node_output_after": "\"left \\nright\"",
+      "fixture": "local-fixtures/run-k9hxmnqm/already_staged"
+    }
+  ],
+  "patch_application_verified": true,
+  "nonrepo_error_exit": 128,
+  "all_regressions_passed": true,
+  "limits": [
+    "No upstream ncc build or GitHub hosted job executed",
+    "Harmless generated-tree fixtures, not demonstrated exploit",
+    "Git-visible files; ignored-file and hostile filter policies not audited",
+    "No external disclosure or pull request submitted"
+  ]
+}

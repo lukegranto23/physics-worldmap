@@ -1,0 +1,19 @@
+{
+  "revision": "1fead38ed9c0cc1cee241ecea2e5b3e28772eab6",
+  "repository": "actions/javascript-action",
+  "utc": "2026-09-21T06:51:24.100845+00:00",
+  "files": {
+    ".github/workflows/check-dist.yml": {
+      "git_blob": "125ade30c29c9b9e74dd229351765c968ce4ed24",
+      "sha256": "aa371e87d9b7b25bba1d9c39265c780fc206bae7083e8f5a9523045ba3b88a0b"
+    },
+    "package.json": {
+      "git_blob": "bd19b82a6be763081453cebe9776d37c79a80abf",
+      "sha256": "6f94a1f6779bded126f51ffdad2f12aa71b8fc30bdb22fd758d1a706685c125a"
+    },
+    "LICENSE": {
+      "git_blob": "5f9e342dcc1e39277b96077541676ce6307de2c7",
+      "sha256": "32d0bae2419f014f5066af5915264c966efdb7b6e7fe8f90cf87dc75c5a8d6d0"
+    }
+  }
+}

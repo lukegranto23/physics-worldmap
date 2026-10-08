@@ -1,0 +1,87 @@
+--- a/.github/workflows/check-dist.yml
++++ b/.github/workflows/check-dist.yml
+@@ -43,7 +43,12 @@
+ 
+       - name: Build dist/ Directory
+         id: build
+-        run: npm run bundle
++        run: |
++          previous_dist="$(mktemp -d)"
++          if [ -e dist ] || [ -L dist ]; then
++            mv -- dist "$previous_dist/dist"
++          fi
++          npm run bundle
+ 
+       # Fail the workflow if the checked-in dist/ differs from a fresh build.
+       # Dependabot production-dependency bumps are rebuilt and committed
+@@ -52,9 +57,15 @@
+       - name: Compare Directories
+         id: diff
+         run: |
+-          if [ "$(git diff --ignore-space-at-eol --text dist/ | wc -l)" -gt "0" ]; then
++          git add -- dist/
++          diff_status=0
++          git diff --cached --quiet -- dist/ || diff_status=$?
++          if [ "$diff_status" -gt 1 ]; then
++            exit "$diff_status"
++          fi
++          if [ "$diff_status" -eq 1 ]; then
+             echo "Detected uncommitted changes after build. See status below:"
+-            git diff --ignore-space-at-eol --text dist/
++            git diff --cached -- dist/
+             exit 1
+           fi
+ 
+--- a/.github/workflows/commit-dist.yml
++++ b/.github/workflows/commit-dist.yml
+@@ -101,12 +101,17 @@
+         env:
+           HEAD_BRANCH: ${{ github.event.workflow_run.head_branch }}
+         run: |
+-          if git diff --quiet -- dist/; then
++          git add -- dist/
++          diff_status=0
++          git diff --cached --quiet -- dist/ || diff_status=$?
++          if [ "$diff_status" -gt 1 ]; then
++            exit "$diff_status"
++          fi
++          if [ "$diff_status" -eq 0 ]; then
+             echo "dist/ already current; nothing to commit."
+             exit 0
+           fi
+           git config user.name  "github-actions[bot]"
+           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+-          git add dist/
+           git commit -m "build: rebuild dist/ for dependency bump"
+           git push origin "HEAD:refs/heads/$HEAD_BRANCH"
+--- a/.github/workflows/rebuild-dist.yml
++++ b/.github/workflows/rebuild-dist.yml
+@@ -54,7 +54,12 @@
+         if: >
+           steps.meta.outputs.dependency-type == 'direct:production' ||
+           steps.meta.outputs.dependency-type == 'direct:development'
+-        run: npm run bundle
++        run: |
++          previous_dist="$(mktemp -d)"
++          if [ -e dist ] || [ -L dist ]; then
++            mv -- dist "$previous_dist/dist"
++          fi
++          npm run bundle
+ 
+       - name: Detect dist/ changes
+         id: diff
+@@ -62,7 +67,13 @@
+           steps.meta.outputs.dependency-type == 'direct:production' ||
+           steps.meta.outputs.dependency-type == 'direct:development'
+         run: |
+-          if [ "$(git diff --ignore-space-at-eol --text dist/ | wc -l)" -gt "0" ]; then
++          git add -- dist/
++          diff_status=0
++          git diff --cached --quiet -- dist/ || diff_status=$?
++          if [ "$diff_status" -gt 1 ]; then
++            exit "$diff_status"
++          fi
++          if [ "$diff_status" -eq 1 ]; then
+             echo "changed=true" >> "$GITHUB_OUTPUT"
+           else
+             echo "changed=false" >> "$GITHUB_OUTPUT"

@@ -1,0 +1,7117 @@
+{
+  "protocol_sha256": "c108674d1caed27a96bdb04d533dc1c5a7b6eec52d975c8f506424b57fd2cfcb",
+  "script_sha256": "c146ccf768090bfae5681abae15993edcc71f01ae787abc8682395efae19a590",
+  "python": "3.14.3",
+  "numpy": "2.4.3",
+  "matplotlib": "3.10.8",
+  "scope": "Finite known-family rejection controls with fresh thermal alternatives, not general missing-physics detection",
+  "dataset_evaluations": 96000,
+  "method_evaluations": 288000,
+  "checks": {
+    "likelihood_matrix_formula": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "identical_likelihood_all_retained": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "orthogonal_sum_squares": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "orthogonal_difference_squares": {
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "hidden_pair_weights_normalized": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "nominal_1_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "nominal_2_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "nominal_3_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "omitted_5_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "omitted_7_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "near_1_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "decay_shift_2_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "hidden_pair_unit_position_variance": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "all_fitted_covariances_positive": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "ungated_sets_nonempty": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "rejection_dominates_claims": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "split_denominator_bounds_true_likelihood": {
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    "batch_fitted_likelihood_matches_matrix": {
+      "error": 1.1368683772161603e-13,
+      "tolerance": 1e-07,
+      "passed": true
+    }
+  },
+  "all_checks_passed": true,
+  "cells": [
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9835,
+        "count": 1967,
+        "total": 2000,
+        "wilson95": [
+          0.9769190388862818,
+          0.9882271763927466
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0005083884087442806,
+        "count": 1,
+        "total": 1967,
+        "wilson95": [
+          8.974867534837332e-05,
+          0.0028741928403682275
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0005086157059248008,
+      "mean_retained_count": 1.0165
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.982,
+        "count": 1964,
+        "total": 2000,
+        "wilson95": [
+          0.9751819578651543,
+          0.9869700085557177
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0005091649694501018,
+        "count": 1,
+        "total": 1964,
+        "wilson95": [
+          8.988577461890683e-05,
+          0.0028785743086414835
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.000509392613825908,
+      "mean_retained_count": 1.015
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9835,
+        "count": 1967,
+        "total": 2000,
+        "wilson95": [
+          0.9769190388862818,
+          0.9882271763927466
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0005083884087442806,
+        "count": 1,
+        "total": 1967,
+        "wilson95": [
+          8.974867534837332e-05,
+          0.0028741928403682275
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0005086157059248008,
+      "mean_retained_count": 1.0165
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.002,
+        "count": 4,
+        "total": 2000,
+        "wilson95": [
+          0.0007780273070510575,
+          0.005131351785076866
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1996,
+        "wilson95": [
+          0.0,
+          0.0019208816797704718
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.998
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.002,
+        "count": 4,
+        "total": 2000,
+        "wilson95": [
+          0.0007780273070510575,
+          0.005131351785076866
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1996,
+        "wilson95": [
+          0.0,
+          0.0019208816797704718
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.998
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1999,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019180044450228424
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.003,
+        "count": 6,
+        "total": 2000,
+        "wilson95": [
+          0.0013756299236301083,
+          0.006529915073935308
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.997,
+        "count": 1994,
+        "total": 2000,
+        "wilson95": [
+          0.9934700849260646,
+          0.9986243700763698
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1994,
+        "wilson95": [
+          0.0,
+          0.0019228046368412537
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.997,
+        "count": 1994,
+        "total": 2000,
+        "wilson95": [
+          0.9934700849260646,
+          0.9986243700763698
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.997
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0025,
+        "count": 5,
+        "total": 2000,
+        "wilson95": [
+          0.0010683087284139143,
+          0.005839153316432755
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1995,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019218426772879553
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9975
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "nominal_1",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1999,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019180044450228424
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9755,
+        "count": 1951,
+        "total": 2000,
+        "wilson95": [
+          0.9677585183176651,
+          0.9814183697178633
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1951,
+        "wilson95": [
+          0.0,
+          0.0019650999334808353
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0245
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9755,
+        "count": 1951,
+        "total": 2000,
+        "wilson95": [
+          0.9677585183176651,
+          0.9814183697178633
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1951,
+        "wilson95": [
+          0.0,
+          0.0019650999334808353
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0235
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.975,
+        "count": 1950,
+        "total": 2000,
+        "wilson95": [
+          0.9671932285868021,
+          0.9809855764960074
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1950,
+        "wilson95": [
+          2.168404344971009e-19,
+          0.001966105695706122
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.024
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9915,
+        "count": 1983,
+        "total": 2000,
+        "wilson95": [
+          0.9864293102622139,
+          0.9946862322603145
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1983,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019334501017379889
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0085
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.003,
+        "count": 6,
+        "total": 2000,
+        "wilson95": [
+          0.0013756299236301083,
+          0.006529915073935308
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9885,
+        "count": 1977,
+        "total": 2000,
+        "wilson95": [
+          0.9828022720924287,
+          0.9923247727137873
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1977,
+        "wilson95": [
+          0.0,
+          0.0019393065525704217
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.997,
+        "count": 1994,
+        "total": 2000,
+        "wilson95": [
+          0.9934700849260646,
+          0.9986243700763698
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0055
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.991,
+        "count": 1982,
+        "total": 2000,
+        "wilson95": [
+          0.9858179592983869,
+          0.9942995002714226
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1982,
+        "wilson95": [
+          0.0,
+          0.0019344237192909664
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.008
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.003,
+        "count": 6,
+        "total": 2000,
+        "wilson95": [
+          0.0013756299236301083,
+          0.006529915073935308
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.997,
+        "count": 1994,
+        "total": 2000,
+        "wilson95": [
+          0.9934700849260646,
+          0.9986243700763698
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1994,
+        "wilson95": [
+          0.0,
+          0.0019228046368412537
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.997,
+        "count": 1994,
+        "total": 2000,
+        "wilson95": [
+          0.9934700849260646,
+          0.9986243700763698
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.997
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1999,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019180044450228424
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "nominal_2",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1999,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019180044450228424
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.986,
+        "count": 1972,
+        "total": 2000,
+        "wilson95": [
+          0.9798404131888422,
+          0.9902962168537798
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1972,
+        "wilson95": [
+          0.0,
+          0.0019442140985273934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.014
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.002,
+        "count": 4,
+        "total": 2000,
+        "wilson95": [
+          0.0007780273070510575,
+          0.005131351785076866
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.984,
+        "count": 1968,
+        "total": 2000,
+        "wilson95": [
+          0.9775005335818276,
+          0.9886437646499193
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1968,
+        "wilson95": [
+          0.0,
+          0.0019481580547513182
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.998,
+        "count": 1996,
+        "total": 2000,
+        "wilson95": [
+          0.994868648214923,
+          0.9992219726929489
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.012
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.986,
+        "count": 1972,
+        "total": 2000,
+        "wilson95": [
+          0.9798404131888422,
+          0.9902962168537798
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1972,
+        "wilson95": [
+          0.0,
+          0.0019442140985273934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.014
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1999,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019180044450228424
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0025,
+        "count": 5,
+        "total": 2000,
+        "wilson95": [
+          0.0010683087284139143,
+          0.005839153316432755
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1995,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019218426772879553
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9975
+    },
+    {
+      "scenario": "nominal_3",
+      "in_family": true,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1997,
+        "wilson95": [
+          0.0,
+          0.0019199216428463554
+        ]
+      },
+      "true_model_retained": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "mean_accepted_singleton_response_error": 0.0,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.992,
+        "count": 1984,
+        "total": 2000,
+        "wilson95": [
+          0.9870439223284629,
+          0.995069703146784
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.992,
+        "count": 1984,
+        "total": 2000,
+        "wilson95": [
+          0.9870439223284629,
+          0.995069703146784
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1984,
+        "total": 1984,
+        "wilson95": [
+          0.9980675225362423,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 1.008
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.991,
+        "count": 1982,
+        "total": 2000,
+        "wilson95": [
+          0.9858179592983869,
+          0.9942995002714226
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.991,
+        "count": 1982,
+        "total": 2000,
+        "wilson95": [
+          0.9858179592983869,
+          0.9942995002714226
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1982,
+        "total": 1982,
+        "wilson95": [
+          0.9980655762807091,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 1.007
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.992,
+        "count": 1984,
+        "total": 2000,
+        "wilson95": [
+          0.9870439223284629,
+          0.995069703146784
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.992,
+        "count": 1984,
+        "total": 2000,
+        "wilson95": [
+          0.9870439223284629,
+          0.995069703146784
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1984,
+        "total": 1984,
+        "wilson95": [
+          0.9980675225362423,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 1.008
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9275,
+        "count": 1855,
+        "total": 2000,
+        "wilson95": [
+          0.9152970932700819,
+          0.9380638313044467
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9275,
+        "count": 1855,
+        "total": 2000,
+        "wilson95": [
+          0.9152970932700819,
+          0.9380638313044467
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1855,
+        "total": 1855,
+        "wilson95": [
+          0.9979334123400004,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5841364271905234,
+      "mean_retained_count": 1.0725
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.257,
+        "count": 514,
+        "total": 2000,
+        "wilson95": [
+          0.23832742289347897,
+          0.27660426208520994
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.691,
+        "count": 1382,
+        "total": 2000,
+        "wilson95": [
+          0.6703987237896356,
+          0.7108689641489256
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.691,
+        "count": 1382,
+        "total": 2000,
+        "wilson95": [
+          0.6703987237896356,
+          0.7108689641489256
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1382,
+        "total": 1382,
+        "wilson95": [
+          0.9972280676146296,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5808049941669973,
+      "mean_retained_count": 0.795
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.447,
+        "count": 894,
+        "total": 2000,
+        "wilson95": [
+          0.4253326541106644,
+          0.4688705529011484
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.533,
+        "count": 1066,
+        "total": 2000,
+        "wilson95": [
+          0.5110923295059824,
+          0.554781145373455
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.533,
+        "count": 1066,
+        "total": 2000,
+        "wilson95": [
+          0.5110923295059824,
+          0.554781145373455
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1066,
+        "total": 1066,
+        "wilson95": [
+          0.9964093195407394,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.47512698786792396,
+      "mean_retained_count": 0.573
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0045,
+        "count": 9,
+        "total": 2000,
+        "wilson95": [
+          0.0023692806369618345,
+          0.008530513218759823
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9955,
+        "count": 1991,
+        "total": 2000,
+        "wilson95": [
+          0.9914694867812403,
+          0.9976307193630382
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9955,
+        "count": 1991,
+        "total": 2000,
+        "wilson95": [
+          0.9914694867812403,
+          0.9976307193630382
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1991,
+        "total": 1991,
+        "wilson95": [
+          0.9980743036978161,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 0.9955
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0035,
+        "count": 7,
+        "total": 2000,
+        "wilson95": [
+          0.0016964316970424177,
+          0.007207196253241745
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9965,
+        "count": 1993,
+        "total": 2000,
+        "wilson95": [
+          0.9927928037467583,
+          0.9983035683029576
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9965,
+        "count": 1993,
+        "total": 2000,
+        "wilson95": [
+          0.9927928037467583,
+          0.9983035683029576
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1993,
+        "total": 1993,
+        "wilson95": [
+          0.9980762324401243,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.107645935486582,
+      "mean_retained_count": 0.9965
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1998,
+        "total": 1998,
+        "wilson95": [
+          0.998081037434924,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.2803976482608315,
+      "mean_retained_count": 1.001
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.9605,
+        "count": 1921,
+        "total": 2000,
+        "wilson95": [
+          0.9510433073255731,
+          0.9681910921283929
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0395,
+        "count": 79,
+        "total": 2000,
+        "wilson95": [
+          0.03180890787160705,
+          0.0489566926744269
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0395,
+        "count": 79,
+        "total": 2000,
+        "wilson95": [
+          0.03180890787160705,
+          0.0489566926744269
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 79,
+        "total": 79,
+        "wilson95": [
+          0.9536287883460772,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.2803976482608314,
+      "mean_retained_count": 0.0395
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0535,
+        "count": 107,
+        "total": 2000,
+        "wilson95": [
+          0.04446618753651597,
+          0.06424573568564287
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9465,
+        "count": 1893,
+        "total": 2000,
+        "wilson95": [
+          0.935754264314357,
+          0.955533812463484
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9465,
+        "count": 1893,
+        "total": 2000,
+        "wilson95": [
+          0.935754264314357,
+          0.955533812463484
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1893,
+        "total": 1893,
+        "wilson95": [
+          0.99797481291711,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.107645935486582,
+      "mean_retained_count": 0.9465
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.103,
+        "count": 206,
+        "total": 2000,
+        "wilson95": [
+          0.09043075871520886,
+          0.11709137682610593
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.897,
+        "count": 1794,
+        "total": 2000,
+        "wilson95": [
+          0.8829086231738941,
+          0.9095692412847911
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.897,
+        "count": 1794,
+        "total": 2000,
+        "wilson95": [
+          0.8829086231738941,
+          0.9095692412847911
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1794,
+        "total": 1794,
+        "wilson95": [
+          0.9978632938951058,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.10764593548658,
+      "mean_retained_count": 0.897
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.28039764826083147,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "omitted_5",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9135,
+        "count": 1827,
+        "total": 2000,
+        "wilson95": [
+          0.9003740477452268,
+          0.9250405541531769
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9135,
+        "count": 1827,
+        "total": 2000,
+        "wilson95": [
+          0.9003740477452268,
+          0.9250405541531769
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1827,
+        "total": 1827,
+        "wilson95": [
+          0.9979018069521056,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.374920107500078,
+      "mean_retained_count": 1.0865
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9125,
+        "count": 1825,
+        "total": 2000,
+        "wilson95": [
+          0.8993120578362034,
+          0.9241063781567628
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9125,
+        "count": 1825,
+        "total": 2000,
+        "wilson95": [
+          0.8993120578362034,
+          0.9241063781567628
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1825,
+        "total": 1825,
+        "wilson95": [
+          0.9978995123923036,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.374874791178026,
+      "mean_retained_count": 1.0855
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.005,
+        "count": 10,
+        "total": 2000,
+        "wilson95": [
+          0.0027181808584985597,
+          0.009179695949941846
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9105,
+        "count": 1821,
+        "total": 2000,
+        "wilson95": [
+          0.897189514623585,
+          0.9222365895585062
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9105,
+        "count": 1821,
+        "total": 2000,
+        "wilson95": [
+          0.897189514623585,
+          0.9222365895585062
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1821,
+        "total": 1821,
+        "wilson95": [
+          0.9978949081838722,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.374783859909067,
+      "mean_retained_count": 1.0795
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9915,
+        "count": 1983,
+        "total": 2000,
+        "wilson95": [
+          0.9864293102622139,
+          0.9946862322603145
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9915,
+        "count": 1983,
+        "total": 2000,
+        "wilson95": [
+          0.9864293102622139,
+          0.9946862322603145
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1983,
+        "total": 1983,
+        "wilson95": [
+          0.9980665498982619,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.32942214314885926,
+      "mean_retained_count": 1.0085
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.3675,
+        "count": 735,
+        "total": 2000,
+        "wilson95": [
+          0.3466431068552237,
+          0.3888649106743082
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.6275,
+        "count": 1255,
+        "total": 2000,
+        "wilson95": [
+          0.6060858442270278,
+          0.6484253087162526
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.6275,
+        "count": 1255,
+        "total": 2000,
+        "wilson95": [
+          0.6060858442270278,
+          0.6484253087162526
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1255,
+        "total": 1255,
+        "wilson95": [
+          0.996948417297685,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.30656328086367385,
+      "mean_retained_count": 0.6375
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.357,
+        "count": 714,
+        "total": 2000,
+        "wilson95": [
+          0.3362947366265104,
+          0.3782535388959279
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.64,
+        "count": 1280,
+        "total": 2000,
+        "wilson95": [
+          0.6187135324744587,
+          0.6607496942867904
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.64,
+        "count": 1280,
+        "total": 2000,
+        "wilson95": [
+          0.6187135324744587,
+          0.6607496942867904
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1280,
+        "total": 1280,
+        "wilson95": [
+          0.9970078401859502,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.34197665891955087,
+      "mean_retained_count": 0.646
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.416271251371198,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0415,
+        "count": 83,
+        "total": 2000,
+        "wilson95": [
+          0.033602383185357104,
+          0.05115554917155182
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9585,
+        "count": 1917,
+        "total": 2000,
+        "wilson95": [
+          0.9488444508284481,
+          0.9663976168146429
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9585,
+        "count": 1917,
+        "total": 2000,
+        "wilson95": [
+          0.9488444508284481,
+          0.9663976168146429
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1917,
+        "total": 1917,
+        "wilson95": [
+          0.99800011666603,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.4162712513712,
+      "mean_retained_count": 0.9585
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0725,
+        "count": 145,
+        "total": 2000,
+        "wilson95": [
+          0.06193616869555324,
+          0.08470290672991801
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9275,
+        "count": 1855,
+        "total": 2000,
+        "wilson95": [
+          0.9152970932700819,
+          0.9380638313044467
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9275,
+        "count": 1855,
+        "total": 2000,
+        "wilson95": [
+          0.9152970932700819,
+          0.9380638313044467
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1855,
+        "total": 1855,
+        "wilson95": [
+          0.9979334123400004,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.4162712513712,
+      "mean_retained_count": 0.9275
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.30656328086367385,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.973,
+        "count": 1946,
+        "total": 2000,
+        "wilson95": [
+          0.9649388695134226,
+          0.9792476037585119
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.027,
+        "count": 54,
+        "total": 2000,
+        "wilson95": [
+          0.020752396241488,
+          0.035061130486577274
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.027,
+        "count": 54,
+        "total": 2000,
+        "wilson95": [
+          0.020752396241488,
+          0.035061130486577274
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 54,
+        "total": 54,
+        "wilson95": [
+          0.9335864119091037,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.3065632808636739,
+      "mean_retained_count": 0.027
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1,
+        "total": 1,
+        "wilson95": [
+          0.20654931437723745,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.3065632808636739,
+      "mean_retained_count": 0.0005
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.416271251371198,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.343,
+        "count": 686,
+        "total": 2000,
+        "wilson95": [
+          0.322513982684645,
+          0.36408797016166844
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.657,
+        "count": 1314,
+        "total": 2000,
+        "wilson95": [
+          0.6359120298383315,
+          0.6774860173153551
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.657,
+        "count": 1314,
+        "total": 2000,
+        "wilson95": [
+          0.6359120298383315,
+          0.6774860173153551
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1314,
+        "total": 1314,
+        "wilson95": [
+          0.9970850372061205,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.416271251371194,
+      "mean_retained_count": 0.657
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.6195,
+        "count": 1239,
+        "total": 2000,
+        "wilson95": [
+          0.598012070294439,
+          0.6405297554053416
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.3805,
+        "count": 761,
+        "total": 2000,
+        "wilson95": [
+          0.3594702445946584,
+          0.40198792970556096
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.3805,
+        "count": 761,
+        "total": 2000,
+        "wilson95": [
+          0.3594702445946584,
+          0.40198792970556096
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 761,
+        "total": 761,
+        "wilson95": [
+          0.9949774443103316,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 15.416271251371196,
+      "mean_retained_count": 0.3805
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.30656328086367385,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "omitted_7",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9695,
+        "count": 1939,
+        "total": 2000,
+        "wilson95": [
+          0.9610172880930726,
+          0.9761826045098309
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9695,
+        "count": 1939,
+        "total": 2000,
+        "wilson95": [
+          0.9610172880930726,
+          0.9761826045098309
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1939,
+        "total": 1939,
+        "wilson95": [
+          0.9980227625865954,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4612014677454122,
+      "mean_retained_count": 1.0305
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.969,
+        "count": 1938,
+        "total": 2000,
+        "wilson95": [
+          0.9604592717918264,
+          0.9757425378583581
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.969,
+        "count": 1938,
+        "total": 2000,
+        "wilson95": [
+          0.9604592717918264,
+          0.9757425378583581
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1938,
+        "total": 1938,
+        "wilson95": [
+          0.9980217443585598,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4612011562362752,
+      "mean_retained_count": 1.029
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.968,
+        "count": 1936,
+        "total": 2000,
+        "wilson95": [
+          0.9593447689480386,
+          0.9748608747967085
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.968,
+        "count": 1936,
+        "total": 2000,
+        "wilson95": [
+          0.9593447689480386,
+          0.9748608747967085
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1936,
+        "total": 1936,
+        "wilson95": [
+          0.9980197047530733,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4612005322525812,
+      "mean_retained_count": 1.029
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.005,
+        "count": 10,
+        "total": 2000,
+        "wilson95": [
+          0.0027181808584985597,
+          0.009179695949941846
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.995,
+        "count": 1990,
+        "total": 2000,
+        "wilson95": [
+          0.990820304050058,
+          0.9972818191415014
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.995,
+        "count": 1990,
+        "total": 2000,
+        "wilson95": [
+          0.990820304050058,
+          0.9972818191415014
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1990,
+        "total": 1990,
+        "wilson95": [
+          0.998073337875637,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.995
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1999,
+        "total": 1999,
+        "wilson95": [
+          0.9980819955549771,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.004,
+        "count": 8,
+        "total": 2000,
+        "wilson95": [
+          0.0020282466069651696,
+          0.007873464296037741
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.996,
+        "count": 1992,
+        "total": 2000,
+        "wilson95": [
+          0.9921265357039621,
+          0.9979717533930348
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.996,
+        "count": 1992,
+        "total": 2000,
+        "wilson95": [
+          0.9921265357039621,
+          0.9979717533930348
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1992,
+        "total": 1992,
+        "wilson95": [
+          0.9980752685521607,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.996
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.004,
+        "count": 8,
+        "total": 2000,
+        "wilson95": [
+          0.0020282466069651696,
+          0.007873464296037741
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.996,
+        "count": 1992,
+        "total": 2000,
+        "wilson95": [
+          0.9921265357039621,
+          0.9979717533930348
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.996,
+        "count": 1992,
+        "total": 2000,
+        "wilson95": [
+          0.9921265357039621,
+          0.9979717533930348
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1992,
+        "total": 1992,
+        "wilson95": [
+          0.9980752685521607,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.996
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.012,
+        "count": 24,
+        "total": 2000,
+        "wilson95": [
+          0.008077154276022635,
+          0.017793883870480226
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.988,
+        "count": 1976,
+        "total": 2000,
+        "wilson95": [
+          0.9822061161295197,
+          0.9919228457239773
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.988,
+        "count": 1976,
+        "total": 2000,
+        "wilson95": [
+          0.9822061161295197,
+          0.9919228457239773
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1976,
+        "total": 1976,
+        "wilson95": [
+          0.9980597139212438,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.988
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1997,
+        "total": 1997,
+        "wilson95": [
+          0.9980800783571536,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.9985
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0115,
+        "count": 23,
+        "total": 2000,
+        "wilson95": [
+          0.007675227286212753,
+          0.01719772790757136
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9885,
+        "count": 1977,
+        "total": 2000,
+        "wilson95": [
+          0.9828022720924287,
+          0.9923247727137873
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9885,
+        "count": 1977,
+        "total": 2000,
+        "wilson95": [
+          0.9828022720924287,
+          0.9923247727137873
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1977,
+        "total": 1977,
+        "wilson95": [
+          0.9980606934474295,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.9885
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.025,
+        "count": 50,
+        "total": 2000,
+        "wilson95": [
+          0.019014423503992475,
+          0.032806771413197815
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.975,
+        "count": 1950,
+        "total": 2000,
+        "wilson95": [
+          0.9671932285868021,
+          0.9809855764960074
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.975,
+        "count": 1950,
+        "total": 2000,
+        "wilson95": [
+          0.9671932285868021,
+          0.9809855764960074
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1950,
+        "total": 1950,
+        "wilson95": [
+          0.998033894304294,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.975
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0745,
+        "count": 149,
+        "total": 2000,
+        "wilson95": [
+          0.06378984993294572,
+          0.08684155730340053
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9255,
+        "count": 1851,
+        "total": 2000,
+        "wilson95": [
+          0.9131584426965994,
+          0.9362101500670542
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9255,
+        "count": 1851,
+        "total": 2000,
+        "wilson95": [
+          0.9131584426965994,
+          0.9362101500670542
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1851,
+        "total": 1851,
+        "wilson95": [
+          0.9979289557053914,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.9255
+    },
+    {
+      "scenario": "near_1",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.1185,
+        "count": 237,
+        "total": 2000,
+        "wilson95": [
+          0.10506147973311827,
+          0.1334012273424777
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.8815,
+        "count": 1763,
+        "total": 2000,
+        "wilson95": [
+          0.8665987726575222,
+          0.8949385202668816
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.8815,
+        "count": 1763,
+        "total": 2000,
+        "wilson95": [
+          0.8665987726575222,
+          0.8949385202668816
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1763,
+        "total": 1763,
+        "wilson95": [
+          0.9978258044594119,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 1.4618051724523158,
+      "mean_retained_count": 0.8815
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9715,
+        "count": 1943,
+        "total": 2000,
+        "wilson95": [
+          0.9632547404683076,
+          0.9779374839454709
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.000514668039114771,
+        "count": 1,
+        "total": 1943,
+        "wilson95": [
+          9.085732444957047e-05,
+          0.002909622655174763
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.021948888787466963,
+      "mean_retained_count": 1.0285
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9715,
+        "count": 1943,
+        "total": 2000,
+        "wilson95": [
+          0.9632547404683076,
+          0.9779374839454709
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.000514668039114771,
+        "count": 1,
+        "total": 1943,
+        "wilson95": [
+          9.085732444957047e-05,
+          0.002909622655174763
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.021948888787466963,
+      "mean_retained_count": 1.0285
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9705,
+        "count": 1941,
+        "total": 2000,
+        "wilson95": [
+          0.9621349108960856,
+          0.9770611476122554
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0005151983513652757,
+        "count": 1,
+        "total": 1941,
+        "wilson95": [
+          9.095094949754289e-05,
+          0.0029126146080961585
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.021955133784988794,
+      "mean_retained_count": 1.0275
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.993,
+        "count": 1986,
+        "total": 2000,
+        "wilson95": [
+          0.9882841374366056,
+          0.9958256539440788
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1986,
+        "wilson95": [
+          0.0,
+          0.0019305351206074562
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 1.007
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0035,
+        "count": 7,
+        "total": 2000,
+        "wilson95": [
+          0.0016964316970424177,
+          0.007207196253241745
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9895,
+        "count": 1979,
+        "total": 2000,
+        "wilson95": [
+          0.9840010980925269,
+          0.9931221126191265
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1979,
+        "wilson95": [
+          0.0,
+          0.0019373504642064801
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 1.0035
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.992,
+        "count": 1984,
+        "total": 2000,
+        "wilson95": [
+          0.9870439223284629,
+          0.995069703146784
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1984,
+        "wilson95": [
+          0.0,
+          0.0019324774637576518
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 1.006
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.005,
+        "count": 10,
+        "total": 2000,
+        "wilson95": [
+          0.0027181808584985597,
+          0.009179695949941846
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.995,
+        "count": 1990,
+        "total": 2000,
+        "wilson95": [
+          0.990820304050058,
+          0.9972818191415014
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1990,
+        "wilson95": [
+          0.0,
+          0.0019266621243628113
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 0.995
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.999,
+        "count": 1998,
+        "total": 2000,
+        "wilson95": [
+          0.9963610657309615,
+          0.9997257210823479
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1998,
+        "wilson95": [
+          0.0,
+          0.0019189625650760421
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 0.999
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0035,
+        "count": 7,
+        "total": 2000,
+        "wilson95": [
+          0.0016964316970424177,
+          0.007207196253241745
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9965,
+        "count": 1993,
+        "total": 2000,
+        "wilson95": [
+          0.9927928037467583,
+          0.9983035683029576
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1993,
+        "wilson95": [
+          0.0,
+          0.001923767559875703
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 0.9965
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0055,
+        "count": 11,
+        "total": 2000,
+        "wilson95": [
+          0.003073897009543817,
+          0.009822062751615332
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9945,
+        "count": 1989,
+        "total": 2000,
+        "wilson95": [
+          0.9901779372483848,
+          0.9969261029904561
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1989,
+        "wilson95": [
+          0.0,
+          0.0019276289158332693
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 0.9945
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531542,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.007,
+        "count": 14,
+        "total": 2000,
+        "wilson95": [
+          0.0041743460559210965,
+          0.011715862563394297
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.993,
+        "count": 1986,
+        "total": 2000,
+        "wilson95": [
+          0.9882841374366056,
+          0.9958256539440788
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1986,
+        "wilson95": [
+          0.0,
+          0.0019305351206074562
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 0.993
+    },
+    {
+      "scenario": "decay_shift_2",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.006,
+        "count": 12,
+        "total": 2000,
+        "wilson95": [
+          0.003435594376936234,
+          0.010458448336941664
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.994,
+        "count": 1988,
+        "total": 2000,
+        "wilson95": [
+          0.9895415516630582,
+          0.9965644056230637
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 1988,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.0019285966780551553
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.015888118692531546,
+      "mean_retained_count": 0.994
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9875,
+        "count": 1975,
+        "total": 2000,
+        "wilson95": [
+          0.9816119602893495,
+          0.9915189186114289
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9875,
+        "count": 1975,
+        "total": 2000,
+        "wilson95": [
+          0.9816119602893495,
+          0.9915189186114289
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1975,
+        "total": 1975,
+        "wilson95": [
+          0.9980587334050582,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030536,
+      "mean_retained_count": 1.0125
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.986,
+        "count": 1972,
+        "total": 2000,
+        "wilson95": [
+          0.9798404131888422,
+          0.9902962168537798
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.986,
+        "count": 1972,
+        "total": 2000,
+        "wilson95": [
+          0.9798404131888422,
+          0.9902962168537798
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1972,
+        "total": 1972,
+        "wilson95": [
+          0.9980557859014726,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 1.011
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.001,
+        "count": 2,
+        "total": 2000,
+        "wilson95": [
+          0.0002742789176520342,
+          0.003638934269038394
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9865,
+        "count": 1973,
+        "total": 2000,
+        "wilson95": [
+          0.9804292069930002,
+          0.9907055060023408
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9865,
+        "count": 1973,
+        "total": 2000,
+        "wilson95": [
+          0.9804292069930002,
+          0.9907055060023408
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1973,
+        "total": 1973,
+        "wilson95": [
+          0.9980567693966792,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 1.0115
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.7945,
+        "count": 1589,
+        "total": 2000,
+        "wilson95": [
+          0.7762347355183078,
+          0.8116361236330342
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.7945,
+        "count": 1589,
+        "total": 2000,
+        "wilson95": [
+          0.7762347355183078,
+          0.8116361236330342
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1589,
+        "total": 1589,
+        "wilson95": [
+          0.997588298069829,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5838045281885419,
+      "mean_retained_count": 1.2055
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.137,
+        "count": 274,
+        "total": 2000,
+        "wilson95": [
+          0.12262476751977995,
+          0.15276700880640964
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.702,
+        "count": 1404,
+        "total": 2000,
+        "wilson95": [
+          0.6815830639748468,
+          0.7216424489235269
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.702,
+        "count": 1404,
+        "total": 2000,
+        "wilson95": [
+          0.6815830639748468,
+          0.7216424489235269
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1404,
+        "total": 1404,
+        "wilson95": [
+          0.9972713839355802,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5793018160880048,
+      "mean_retained_count": 1.024
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 32,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.387,
+        "count": 774,
+        "total": 2000,
+        "wilson95": [
+          0.365889883259242,
+          0.4085433694263211
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.5025,
+        "count": 1005,
+        "total": 2000,
+        "wilson95": [
+          0.48060343126068417,
+          0.5243869835029094
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.5025,
+        "count": 1005,
+        "total": 2000,
+        "wilson95": [
+          0.48060343126068417,
+          0.5243869835029094
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1005,
+        "total": 1005,
+        "wilson95": [
+          0.9961922076188415,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5882521788896573,
+      "mean_retained_count": 0.7235
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0025,
+        "count": 5,
+        "total": 2000,
+        "wilson95": [
+          0.0010683087284139143,
+          0.005839153316432755
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1995,
+        "total": 1995,
+        "wilson95": [
+          0.9980781573227121,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 0.9975
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0005,
+        "count": 1,
+        "total": 2000,
+        "wilson95": [
+          8.826773070546787e-05,
+          0.0028268625032662133
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9995,
+        "count": 1999,
+        "total": 2000,
+        "wilson95": [
+          0.9971731374967338,
+          0.9999117322692944
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1999,
+        "total": 1999,
+        "wilson95": [
+          0.9980819955549771,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 0.9995
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.972,
+        "count": 1944,
+        "total": 2000,
+        "wilson95": [
+          0.9638155173143411,
+          0.9783747900521559
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.972,
+        "count": 1944,
+        "total": 2000,
+        "wilson95": [
+          0.9638155173143411,
+          0.9783747900521559
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1944,
+        "total": 1944,
+        "wilson95": [
+          0.9980278380443651,
+          0.9999999999999999
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5477622713693534,
+      "mean_retained_count": 1.028
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.8665,
+        "count": 1733,
+        "total": 2000,
+        "wilson95": [
+          0.8508892379702966,
+          0.8807055663725449
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.1335,
+        "count": 267,
+        "total": 2000,
+        "wilson95": [
+          0.119294433627455,
+          0.14911076202970336
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.1335,
+        "count": 267,
+        "total": 2000,
+        "wilson95": [
+          0.119294433627455,
+          0.14911076202970336
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 267,
+        "total": 267,
+        "wilson95": [
+          0.9858165775748635,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5434589476345388,
+      "mean_retained_count": 0.1335
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 128,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.9985,
+        "count": 1997,
+        "total": 2000,
+        "wilson95": [
+          0.9955989674442294,
+          0.9994897364163615
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0015,
+        "count": 3,
+        "total": 2000,
+        "wilson95": [
+          0.0005102635836384819,
+          0.004401032555770693
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 3,
+        "total": 3,
+        "wilson95": [
+          0.4385029682449546,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 0.0015
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 0.0025,
+        "count": 5,
+        "total": 2000,
+        "wilson95": [
+          0.0010683087284139143,
+          0.005839153316432755
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9975,
+        "count": 1995,
+        "total": 2000,
+        "wilson95": [
+          0.9941608466835673,
+          0.9989316912715861
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1995,
+        "total": 1995,
+        "wilson95": [
+          0.9980781573227121,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 0.9975
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "single_lag",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 0.0045,
+        "count": 9,
+        "total": 2000,
+        "wilson95": [
+          0.0023692806369618345,
+          0.008530513218759823
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.9955,
+        "count": 1991,
+        "total": 2000,
+        "wilson95": [
+          0.9914694867812403,
+          0.9976307193630382
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.9955,
+        "count": 1991,
+        "total": 2000,
+        "wilson95": [
+          0.9914694867812403,
+          0.9976307193630382
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 1991,
+        "total": 1991,
+        "wilson95": [
+          0.9980743036978161,
+          1.0
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 0.9955
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "discrimination_only",
+      "family_rejection": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "conditional_false_reassurance": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": 0.5382821770030537,
+      "mean_retained_count": 1.0
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "split_likelihood_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    },
+    {
+      "scenario": "hidden_pair",
+      "in_family": false,
+      "pairs": 512,
+      "design": "two_lags",
+      "method": "concentration_gate",
+      "family_rejection": {
+        "estimate": 1.0,
+        "count": 2000,
+        "total": 2000,
+        "wilson95": [
+          0.9980829527187469,
+          0.9999999999999998
+        ]
+      },
+      "singleton_rate": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "false_reassurance": {
+        "estimate": 0.0,
+        "count": 0,
+        "total": 2000,
+        "wilson95": [
+          1.0842021724855044e-19,
+          0.001917047281252934
+        ]
+      },
+      "conditional_false_reassurance": null,
+      "true_model_retained": null,
+      "mean_accepted_singleton_response_error": null,
+      "mean_retained_count": 0.0
+    }
+  ],
+  "guarantees": {
+    "nominal_family_rejection_upper_bound": 0.025,
+    "nominal_gated_true_exclusion_upper_bound": 0.05
+  },
+  "limits": [
+    "Known finite Gaussian candidate family and independent equilibrium pairs.",
+    "No lower bound on power against omitted systems; acceptance is not proof of correctness.",
+    "Gates are established statistical controls, not a new physical theory.",
+    "Common random numbers couple designs and methods; totals are evaluations.",
+    "Per-cell Wilson intervals are approximate Monte Carlo intervals, not simultaneous bounds.",
+    "No nonlinear experiment or thermal-memory algorithm reproduction completed."
+  ]
+}
