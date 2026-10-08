@@ -12,6 +12,12 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 
 # Benchmark 015 — Gain-Free Test of Hydrodynamic Memory
 
+> [!warning] Correction after internal review (2026-10-08)
+> - **The agreement is within 2.2%, not 1.6%.** Data/E − 1 reaches −1.91% at 96 µs and −2.14% at 135.75 µs.
+> - **The pre-committed consistency test rejected the published model:** χ² = 3906 on 16 dof, or 2712 after the SE correction.
+> - **The Langevin "rejection" compares two poorly fitting models** (χ²/dof of about 650 vs 260), so it is qualitative only.
+
+
 **Status:** a preregistered stage-2 analysis of the Dryad traces already used in [[Benchmark 014 — Preregistered Conditioned Brownian Reproduction]]. Hydrodynamic memory is confirmed without the theory-fitted volts-to-metres gain. The published Basset model is within 1.6% of the observable at every lag, yet formally rejected at the observable's 0.04–0.4% precision. No new physical effect is claimed.
 
 | Lab | Role | Files |

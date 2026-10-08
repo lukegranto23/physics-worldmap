@@ -13,6 +13,11 @@ source_audit: limited-prior-art-screen-no-direct-match
 
 # Derivation — Conditioning on an Estimated Velocity
 
+> [!warning] Correction after internal review (2026-10-08)
+> - **Beyond the stencil reach, $1-\Phi_\alpha/\Phi_\text{cont}\to\tfrac{\kappa(\alpha+2)}{2}k^{-\alpha}$.** For order 8 and α = ½ this is exactly 0.7577 $k^{-1/2}$, so the operator distortion is a **t² term**, $\approx-\kappa a\Delta^\alpha t^2$. It has the same form as the noise leak. The combined effect is $r_k^2(1/c-1/S)$, and it vanishes when the measured Var W equals kT/m. The k_min design criterion is therefore not a necessary condition and is withdrawn as a criterion.
+> - **The leak identity holds only beyond the stencil reach and for white noise.** Within the reach, $r$ shifts by $\sigma^2 d_k/\Delta$. At k = 1 the leak/cusp ratio is −0.42, not +1.8.
+
+
 > [!summary] Result
 > A velocity-conditioned MSD is never measured with the instantaneous velocity. Selection uses a stencil applied to binned positions. Suppose the velocity covariance has a short-time cusp, $C_v(\tau)=c-a|\tau|^\alpha$ with $0<\alpha\le1$. Then the measured zero-velocity conditioned MSD is a sum of three terms with different exponents:
 >

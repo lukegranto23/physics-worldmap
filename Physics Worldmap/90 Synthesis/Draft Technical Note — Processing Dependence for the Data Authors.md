@@ -12,6 +12,16 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 
 # Draft Technical Note — Processing Dependence for the Data Authors
 
+> [!warning] Errors in the sent note (found by internal review, 2026-10-08)
+> 1. **"Within 1.6%" should be about 2.1%.** The worst lag is 136 µs, and the formal consistency test rejected the model.
+> 2. **"Noise supplies 9–71% of the measured value" is mislabelled.** Those are shares of the forward prediction, and they assume the particle-run noise equals the empty trap's.
+> 3. **The "nearly cancelling" framing missed the point.** Both effects are t² terms whose sum vanishes when the measured Var W = kT/m, which the authors reported (98%).
+> 4. **The note missed that the paper already flags the first point** as set by finite differencing and laser noise.
+> 5. **"Frozen before each confirmatory statistic" overstates it.** The freezes were self-recorded commits, and the hypotheses were formed after the data were analysed.
+>
+> A correction email covering points 1–5 was **sent to the corresponding author on 2026-10-08**, in the same thread, with the owner's approval.
+
+
 > [!note] Sent 2026-10-08
 > An email version of this note was sent by the vault owner to the paper's corresponding author on 2026-10-08. It was shorter and in the first person. It disclosed AI assistance with the analysis and code, and linked this public repository. No reply had been received when this note was updated. Record any reply here, and keep the analysis notes unchanged until the authors' points have been checked.
 
