@@ -145,3 +145,5 @@ No new theory is claimed by this edition. The vault is external, inspectable res
 ## Navigation
 
 [[Physics Worldmap]] · [[Vault Health Report]] · [[Architecture and Completeness Audit]] · [[Epistemic Status and Claim Hygiene]] · [[Source and Citation Policy]] · [[Synthesis Lab]]
+
+**Withdrawn drafts (2026-10-08).** Both manuscript drafts were deleted after internal adversarial review: the estimated-velocity paper (see the correction notes in Benchmarks 015 and 017 and the derivation) and the speed–persistence paper (Benchmark 021). A correction email went to the Brownian-data author the same day. From now on, nothing is sent or posted before a hostile review has been run and its findings checked.
