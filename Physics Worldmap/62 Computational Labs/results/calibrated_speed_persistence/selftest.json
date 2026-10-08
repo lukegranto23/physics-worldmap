@@ -1,0 +1,143 @@
+{
+  "generated": "2026-10-08T13:41:06+00:00",
+  "script_sha256": "67d461f7af21646289e659d41944ee00c0b5382c914943eccb318e85aaea6d7d",
+  "data_sha256": "af1a9b15251f6ddc85d97d71d756c925e8f2c338087da4b4631efcc2dcc8af13",
+  "groups": {
+    "fish_T/control": {
+      "dt": 45.0,
+      "n_raw": 712,
+      "n_kept": 711,
+      "median_len": 104
+    },
+    "fish_T/rockout": {
+      "dt": 45.0,
+      "n_raw": 236,
+      "n_kept": 236,
+      "median_len": 200
+    },
+    "fish_T/highfreq_control": {
+      "dt": 12.0,
+      "n_raw": 29,
+      "n_kept": 29,
+      "median_len": 909
+    },
+    "Gerard_mouse_T/control": {
+      "dt": 30.0,
+      "n_raw": 42,
+      "n_kept": 42,
+      "median_len": 30
+    },
+    "Gerard_mouse_T/Myo1g_KO": {
+      "dt": 30.0,
+      "n_raw": 123,
+      "n_kept": 123,
+      "median_len": 36
+    },
+    "Gautreau_dicty/WT": {
+      "dt": 5.0,
+      "n_raw": 42,
+      "n_kept": 42,
+      "median_len": 180
+    },
+    "Gautreau_dicty/Arp_KO": {
+      "dt": 5.0,
+      "n_raw": 38,
+      "n_kept": 38,
+      "median_len": 164
+    },
+    "Gautreau_dicty/Arp_rescue": {
+      "dt": 5.0,
+      "n_raw": 42,
+      "n_kept": 42,
+      "median_len": 180
+    }
+  },
+  "selftest": {
+    "fish_T/control": {
+      "0.3": {
+        "median_est": 0.43303340052541944,
+        "quad_median": 0.0,
+        "ok": false
+      },
+      "1.0": {
+        "median_est": 1.0345955070938986,
+        "quad_median": 0.0,
+        "ok": true
+      },
+      "pass": false
+    },
+    "fish_T/rockout": {
+      "0.3": {
+        "median_est": 0.3710175937398962,
+        "quad_median": 0.0,
+        "ok": true
+      },
+      "1.0": {
+        "median_est": 1.024889278661706,
+        "quad_median": 0.8577436387242477,
+        "ok": true
+      },
+      "pass": true
+    },
+    "fish_T/highfreq_control": {
+      "0.3": {
+        "median_est": 0.3209145312152536,
+        "quad_median": 0.0,
+        "ok": true
+      },
+      "1.0": {
+        "median_est": 0.9952830267855537,
+        "quad_median": 0.961437202351621,
+        "ok": true
+      },
+      "pass": true
+    },
+    "Gerard_mouse_T/control": {
+      "pass": false,
+      "reason": "fewer than 5 tracks with >= 100 positions"
+    },
+    "Gerard_mouse_T/Myo1g_KO": {
+      "pass": false,
+      "reason": "fewer than 5 tracks with >= 100 positions"
+    },
+    "Gautreau_dicty/WT": {
+      "0.3": {
+        "median_est": 0.2988440183478572,
+        "quad_median": 0.2987997088626315,
+        "ok": true
+      },
+      "1.0": {
+        "median_est": 0.9964931352680307,
+        "quad_median": 1.0110873680311814,
+        "ok": true
+      },
+      "pass": true
+    },
+    "Gautreau_dicty/Arp_KO": {
+      "0.3": {
+        "median_est": 0.296511785341089,
+        "quad_median": 0.2563996471441842,
+        "ok": true
+      },
+      "1.0": {
+        "median_est": 1.0017111470433449,
+        "quad_median": 1.0017849071559481,
+        "ok": true
+      },
+      "pass": true
+    },
+    "Gautreau_dicty/Arp_rescue": {
+      "0.3": {
+        "median_est": 0.29915076298539167,
+        "quad_median": 0.30076863000514087,
+        "ok": true
+      },
+      "1.0": {
+        "median_est": 1.0051064671910663,
+        "quad_median": 1.004788931389967,
+        "ok": true
+      },
+      "pass": true
+    }
+  }
+}
