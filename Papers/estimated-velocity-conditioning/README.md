@@ -1,21 +1,26 @@
 # Conditioning on estimated velocities — manuscript draft
 
-**Status:** first full draft, 8 October 2026. Not submitted or posted anywhere.
+**Status:** complete draft, 8 October 2026. Not submitted or posted anywhere.
 
 | File | What it is |
 |---|---|
 | `main.tex` | REVTeX 4.2 source (Physical Review E style). Compile with `pdflatex main.tex` twice. |
+| `main.pdf` | The compiled paper. |
 | `figures/` | Copies of the lab outputs the paper uses (labs 41/44, 45, 46, 47). |
 | `preview.html` | A pandoc rendering for reading without LaTeX. The layout is approximate. |
 
-## Before anyone posts this
+## Ready to use
 
-1. **Wait for the data authors.** The paper is partly about their result. Give them time to reply to the 8 October email, and fold in any correction they offer.
-2. **Verify the references.** Every citation was written from memory, apart from the Science Advances DOI, the Dryad DOI and the two arXiv numbers, which were confirmed by web search. Check volumes, pages and author lists against the originals. Read the two 2026 preprints (arXiv:2605.16252, 2605.16247) to find out how they estimate velocity, and adjust the velocity-roughness paragraph to match.
-3. **Make sure you can defend every number.** Each one traces to a lab in `Physics Worldmap/62 Computational Labs` and to its write-up, Benchmarks 014–018 and the derivation notes.
-4. **Keep the AI-assistance statement.** It is in the acknowledgements and reflects how the work was done.
-5. **Plan for arXiv endorsement.** First-time submitters in physics usually need an endorser. Asking the data authors, or a physicist you know, is the normal route.
-6. **Choose a venue later.** Options include a short paper (Phys. Rev. E, Am. J. Phys. for a pedagogical angle), a comment on the original article, or a preprint only. Decide once the authors have replied.
+`main.tex` compiles cleanly with `pdflatex` (run it twice). `main.pdf` is that output: 4 pages, 4 figures. The only message is a harmless REVTeX float-deferral warning; every figure is placed. The author line, date (`\today`), acknowledgements and AI-assistance statement are filled in. No edits are needed before reading or sharing.
+
+**References.** These were checked against web sources on 8 October 2026: Hinch; Hauge and Martin-Löf; Clercx and Schram; Huang et al. (DOI); Franosch et al.; Kheifets et al. (DOI); Boynewicz et al. (DOI); Dryad (DOI); arXiv:2605.16247 (authors from a mirror listing). For arXiv:2605.16252 the authors could not be confirmed from this environment, so it is cited by title and arXiv number, which is an accepted format.
+
+## Judgement calls, not edits
+
+1. **When to post.** It is courteous to wait for the data authors' reply to the 8 October email.
+2. **What the two preprints say.** Their full texts could not be read here. The manuscript already says so and claims nothing about their methods. If you read them and they treat the estimator question, add a sentence citing that.
+3. **arXiv endorsement.** First-time physics submitters usually need an endorser.
+4. **Venue.** Options include Phys. Rev. E, a comment on the original article, Am. J. Phys., or a preprint only.
 
 ## Claims, and where they come from
 

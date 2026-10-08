@@ -5,6 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Luke Granto" />
+  <meta name="dcterms.date" content="2026-10-08" />
   <title>Conditioning on estimated velocities: estimator artifacts in short-time Brownian motion</title>
   <style>
     html {
@@ -183,7 +184,7 @@
 <h1 class="title">Conditioning on estimated velocities: estimator
 artifacts in short-time Brownian motion</h1>
 <p class="author">Luke Granto</p>
-<p class="date">Draft, 8 October 2026</p>
+<p class="date">2026-10-08</p>
 <div class="abstract">
 <div class="abstract-title">Abstract</div>
 <p>Selecting trajectory segments by their initial velocity is a powerful
@@ -252,6 +253,10 @@ class="citation" data-cites="Dryad2026"></span> with protocols frozen
 before the confirmatory statistics were computed, and give a criterion
 for when the physical exponent is observable.</p>
 <h1 id="theory">Theory</h1>
+<div class="figure*">
+<p><img src="figures/universal_operator_curves.png" style="width:85.0%"
+alt="image" /></p>
+</div>
 <h2 id="setup">Setup</h2>
 <p>Let <span class="math inline">\(x(t)\)</span> be stationary and
 Gaussian with velocity autocorrelation <span
@@ -268,9 +273,10 @@ d_l=0\)</span> and <span class="math inline">\(\sum_l l\,d_l=1\)</span>.
 Selecting <span class="math inline">\(W\approx 0\)</span> and setting
 <span class="math inline">\(D_k=Y_k-Y_0\)</span>, Gaussian conditioning
 gives the measured conditioned MSD <span
-class="math display">\[M_k=u_k-\frac{r_k^2}{s},\quad
-u_k=\mathrm{Var}\,D_k,\ r_k=\mathrm{Cov}(D_k,W),\ s=\mathrm{Var}\,W
-.\]</span></p>
+class="math display">\[M_k=u_k-\frac{r_k^2}{s},\]</span> with <span
+class="math inline">\(u_k=\mathrm{Var}\,D_k\)</span>, <span
+class="math inline">\(r_k=\mathrm{Cov}(D_k,W)\)</span> and <span
+class="math inline">\(s=\mathrm{Var}\,W\)</span>.</p>
 <h2 id="three-term-decomposition">Three-term decomposition</h2>
 <p><em>Cusp term.</em> The constant part <span
 class="math inline">\(c\)</span> of <span
@@ -321,17 +327,8 @@ class="math inline">\(2\sigma^2\)</span> is lag-independent.</p>
 equal to 2 (the leak) and equal to 0 (the floor).</p>
 <h2 id="universal-distortion-and-a-design-criterion">Universal
 distortion and a design criterion</h2>
-<figure id="fig:universal">
-<img src="figures/universal_operator_curves.png" />
-<figcaption>Universal estimator distortion of the cusp term. Left: <span
-class="math inline">\(\Phi_\alpha(k)\)</span> divided by its continuum
-limit. Right: apparent local exponent. Solid: <span
-class="math inline">\(\alpha=1/2\)</span>; dashed: <span
-class="math inline">\(\alpha=1\)</span>; stencils of order 2, 4,
-8.</figcaption>
-</figure>
 <p>Figure <a href="#fig:universal" data-reference-type="ref"
-data-reference="fig:universal">1</a> shows <span
+data-reference="fig:universal">[fig:universal]</a> shows <span
 class="math inline">\(\Phi_\alpha\)</span>. For <span
 class="math inline">\(\alpha=1/2\)</span> and an eighth-order stencil,
 the measured cusp term is 0.24, 0.62 and 0.82 of its continuum value at
@@ -403,7 +400,7 @@ class="math inline">\(\Delta\chi^2=5483\)</span>). Equipartition through
 the operator reproduces the published calibration to 0.7–1.6%; ignoring
 the operator gives an 8% discrepancy. The power spectrum agrees with the
 model to 1–4% from 2 to 100 kHz (Fig. <a href="#fig:psd"
-data-reference-type="ref" data-reference="fig:psd">4</a>).</p>
+data-reference-type="ref" data-reference="fig:psd">3</a>).</p>
 <p><em>The conditioned MSD is processing-dependent.</em> Through the
 published operator, the zero-velocity conditioned MSD of the Basset
 model is 0.26, 0.49, 0.67, 0.79 and 0.87 of the continuum curve at 0.75,
@@ -430,7 +427,7 @@ deviation from the forward model was 0.024, and the synthetic self-test
 returned the same verdict. Over 3–12 <span
 class="math inline">\(\mu\)</span>s the apparent exponent ranges from
 2.29 to 2.96 with processing alone (Fig. <a href="#fig:processing"
-data-reference-type="ref" data-reference="fig:processing">2</a>). At the
+data-reference-type="ref" data-reference="fig:processing">1</a>). At the
 published nonzero conditioning speeds the effect changes sign. Coarser
 processing suppresses the curve at <span
 class="math inline">\(v_0=0.5\sigma\)</span> and enhances it at <span
@@ -453,11 +450,15 @@ trap-dominated regime, and never plateaus. Without noise subtraction the
 data show an apparent plateau, <span
 class="math inline">\(H_v\approx0.21\)</span>–0.25 over 1.5–12 <span
 class="math inline">\(\mu\)</span>s (Fig. <a href="#fig:roughness"
-data-reference-type="ref" data-reference="fig:roughness">3</a>),
-produced by detector noise flattening a falling curve. We could not read
-the velocity-roughness preprints <span class="citation"
+data-reference-type="ref" data-reference="fig:roughness">2</a>),
+produced by detector noise flattening a falling curve. We could not
+access the full text of Refs. <span class="citation"
 data-cites="FractalPreprint2026 PreparedPreprint2026"></span> and do not
-know their estimator. We therefore state only that a plateau near <span
+know their estimators. Reference <span class="citation"
+data-cites="PreparedPreprint2026"></span> concerns displacement
+statistics of prepared (conditioned) states from equilibrium
+trajectories and may treat aspects of the question addressed here. We
+therefore state only that a plateau near <span
 class="math inline">\(1/4\)</span> in stencil-velocity increments is
 not, by itself, evidence of a scaling regime.</p>
 <figure id="fig:roughness">
@@ -469,7 +470,7 @@ points: noise-subtracted data; crosses: raw data.</figcaption>
 <p><em>Noise is not particle-independent.</em> Above 400 kHz the
 particle traces are quieter than the empty-trap traces (Fig. <a
 href="#fig:psd" data-reference-type="ref"
-data-reference="fig:psd">4</a>), so the noise floor with a particle
+data-reference="fig:psd">3</a>), so the noise floor with a particle
 present is roughly 0.5–0.7 of the empty-trap floor. Between 100 and
 400 kHz the particle spectrum exceeds model plus noise by about 23%.
 This is the spectral counterpart of a 1–2% structured residual in <span
@@ -515,18 +516,21 @@ dataset, and the authors’ upstream high-pass inversion was not varied.
 The theory is first order in <span class="math inline">\(a\)</span> and
 assumes stationary Gaussian statistics with white position noise;
 Fig. <a href="#fig:psd" data-reference-type="ref"
-data-reference="fig:psd">4</a> shows the real noise is neither white nor
+data-reference="fig:psd">3</a> shows the real noise is neither white nor
 particle-independent. A limited literature search found no prior
-treatment of this estimator effect, but we do not claim priority.</p>
+treatment of this estimator effect, but Refs. <span class="citation"
+data-cites="FractalPreprint2026 PreparedPreprint2026"></span> could not
+be read in full, and we do not claim priority.</p>
 <h1 class="unnumbered" id="methods-and-data-availability">Methods and
 data availability</h1>
-<p>All code, frozen protocols, results and digests are public in the
-repository <code>github.com/lukegranto23/physics-worldmap</code>: labs
-34–47 under <code>Physics Worldmap/62 Computational Labs</code>, with
-write-ups as Benchmarks 014–018. Data are from Ref. <span
-class="citation" data-cites="Dryad2026"></span> (CC0) and are not
-redistributed. One disclosed protocol deviation concerns the
-calibration-free test: before its run, a rough first-lag value of <span
+<p>All code, frozen protocols, results and digests are public at <a
+href="https://github.com/lukegranto23/physics-worldmap"
+class="uri">https://github.com/lukegranto23/physics-worldmap</a> (labs
+34–47 in the folder “62 Computational Labs”), with write-ups as
+Benchmarks 014–018. Data are from Ref. <span class="citation"
+data-cites="Dryad2026"></span> (CC0) and are not redistributed. One
+disclosed protocol deviation concerns the calibration-free test: before
+its run, a rough first-lag value of <span
 class="math inline">\(R/\Delta\)</span> was computed while estimating
 noise levels from earlier saved results. No decision rule was
 changed.</p>
@@ -539,16 +543,21 @@ Anthropic); the author takes responsibility for the content.</p>
 <p><span>99</span> E. H. Hauge and A. Martin-Löf, J. Stat. Phys.
 <strong>7</strong>, 259 (1973). E. J. Hinch, J. Fluid Mech.
 <strong>72</strong>, 499 (1975). H. J. H. Clercx and P. P. J. M. Schram,
-Phys. Rev. A <strong>46</strong>, 1942 (1992). R. Huang <em>et al.</em>,
-Nat. Phys. <strong>7</strong>, 576 (2011). T. Franosch <em>et al.</em>,
-Nature <strong>478</strong>, 85 (2011). S. Kheifets, A. Simha, K. Melin,
-T. Li, and M. G. Raizen, Science <strong>343</strong>, 1493 (2014).
-J. Boynewicz, M. C. Thumann, and M. G. Raizen, Sci. Adv.
-<strong>12</strong>, eaeb4579 (2026). J. Boynewicz, M. C. Thumann, and
-M. G. Raizen, Dryad dataset, doi:10.5061/dryad.pvmcvdnz4 (2026). “The
-fractal dimension of Brownian dynamics in liquids,” arXiv:2605.16252
-(2026). “Brownian motion: non-equilibrium states from equilibrium
-trajectories,” arXiv:2605.16247 (2026).</p>
+Phys. Rev. A <strong>46</strong>, 1942 (1992). R. Huang, I. Chavez,
+K. M. Taute, B. Lukić, S. Jeney, M. G. Raizen, and E.-L. Florin, Nat.
+Phys. <strong>7</strong>, 576 (2011), doi:10.1038/nphys1953.
+T. Franosch, M. Grimm, M. Belushkin, F. M. Mor, G. Foffi, L. Forró, and
+S. Jeney, Nature <strong>478</strong>, 85 (2011). S. Kheifets, A. Simha,
+K. Melin, T. Li, and M. G. Raizen, Science <strong>343</strong>, 1493
+(2014), doi:10.1126/science.1248091. J. Boynewicz, M. C. Thumann, and
+M. G. Raizen, Sci. Adv. <strong>12</strong>, eaeb4579 (2026),
+doi:10.1126/sciadv.aeb4579. J. Boynewicz, M. C. Thumann, and M. G.
+Raizen, Dryad dataset, doi:10.5061/dryad.pvmcvdnz4 (2026). “The fractal
+dimension of Brownian dynamics in liquids,” arXiv:2605.16252 (2026).
+J. Boynewicz, M. C. Thumann, G. Procopio, and M. Giona, “Brownian
+motion: non-equilibrium states from equilibrium trajectories –
+recovering hydrodynamic regimes from prepared displacement
+measurements,” arXiv:2605.16247 (2026).</p>
 </div>
 </body>
 </html>
