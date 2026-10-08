@@ -227,6 +227,8 @@ def gaps(tracks, sigma):
     ok = V - 2*sigma**2 >= 0.2*V
     r = C1/V
     rs = (C1 + sigma**2)/(V - 2*sigma**2)
+    if ok.sum() < 9:                     # robustness guard (code fix, no statistical change): too few cells left
+        return float("nan"), float("nan"), int((~ok).sum())
     lo, hi = np.quantile(sp[ok], [1/3, 2/3])
     fast, slow = ok & (sp >= hi), ok & (sp <= lo)
     return float(r[fast].mean() - r[slow].mean()), float(rs[fast].mean() - rs[slow].mean()), int((~ok).sum())
@@ -244,16 +246,17 @@ def analyse(tracks, label, reps=300, seed=2026100895):
     boots_idx = [rng.integers(0, n, n) for _ in range(reps)]
     for sg in GRID:
         gr, gc, dr = gaps(tracks, sg)
-        curve.append(1 - gc/gr if gr > 0.05 else np.nan)
+        curve.append(1 - gc/gr if (np.isfinite(gr) and gr > 0.05) else np.nan)
         Gc.append(gc)
         drop.append(dr)
         fb = []
         for idx in boots_idx:
             sub = [tracks[i] for i in idx]
             g1, g2, _ = gaps(sub, sg)
-            fb.append(1 - g2/g1 if g1 > 0.05 else np.nan)
-        lo16.append(float(np.nanpercentile(fb, 16)))
-        hi84.append(float(np.nanpercentile(fb, 84)))
+            fb.append(1 - g2/g1 if (np.isfinite(g1) and g1 > 0.05) else np.nan)
+        fb = np.array(fb, float)
+        lo16.append(float(np.nanpercentile(fb, 16)) if np.isfinite(fb).any() else float("nan"))
+        hi84.append(float(np.nanpercentile(fb, 84)) if np.isfinite(fb).any() else float("nan"))
     curve = np.array(curve)
     def first(arr):
         arr = np.asarray(arr)

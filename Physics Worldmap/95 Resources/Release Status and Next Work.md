@@ -107,6 +107,8 @@ The September 18 feasibility checkpoint adds [[Instrument Feasibility — Respon
 
 **Generalisation (lab 46).** [[Derivation — Conditioning on an Estimated Velocity]] gives universal operator factors, an exact velocity-noise leak and a design criterion for any velocity cusp. **[[Benchmark 018 — Apparent Velocity Roughness and the 7-4 Fractal Dimension]]** (lab 47) applies the same lens to velocity-increment scaling. The apparent $H_v$ passes through ¼ but never plateaus, and raw data show a noise-made pseudo-plateau.
 
+**Beyond physics (labs 48–49).** [[Benchmark 019 — Localization Noise and the Speed-Persistence Coupling]] carries the estimator lesson to cell migration. In three public in vivo immune-cell datasets, T cells and neutrophils show no noise-correctable speed–persistence gap. The B-cell gap would be explained by only 0.3–0.4 µm of localization error. The common turning-angle metric is the noise-sensitive one.
+
 Lab 39 independently confirms that the authors' commented-out $v_0$ term describes release after steady dragging, not equilibrium. It also corrects the physical labelling in [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]].
 
 ## Precision work

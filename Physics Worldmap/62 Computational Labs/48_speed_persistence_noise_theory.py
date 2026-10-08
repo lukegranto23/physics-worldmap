@@ -117,7 +117,7 @@ def main():
     ax[0].set_xlabel("measured mean speed (µm/s)"); ax[0].set_ylabel("apparent persistence ⟨cos θ⟩")
     ax[0].set_title("Same persistence (P = 60 s) for every cell;\nlocalization noise alone makes slow cells look less persistent", fontsize=9)
     ax[0].legend(fontsize=8)
-    ax[1].semilogx(sp2, c2, "C2")
+    ax[1].plot(sp2, c2, "C2")
     ax[1].set_xlabel("measured mean speed (µm/s)"); ax[1].set_ylabel("apparent persistence ⟨cos θ⟩")
     ax[1].set_title("Same speed, varying persistence, no noise:\nthe sparse-sampling mechanism (Ganusov et al.)", fontsize=9)
     fig.tight_layout(); fig.savefig(OUT / "noise_made_coupling.png", dpi=150)
