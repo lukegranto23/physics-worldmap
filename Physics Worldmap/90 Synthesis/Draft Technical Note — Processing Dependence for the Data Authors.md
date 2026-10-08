@@ -12,8 +12,8 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 
 # Draft Technical Note — Processing Dependence for the Data Authors
 
-> [!warning] Unsent draft
-> This is for the vault owner to review, edit, sign and send, or not. Nothing here has been sent. Keep the tone that of a question about a reanalysis, not a refutation. The authors may know things these files do not show.
+> [!note] Sent 2026-10-08
+> An email version of this note was sent by the vault owner to the paper's corresponding author on 2026-10-08. It was shorter and in the first person. It disclosed AI assistance with the analysis and code, and linked this public repository. No reply had been received when this note was updated. Record any reply here, and keep the analysis notes unchanged until the authors' points have been checked.
 
 **To:** the authors of "Observation of super-ballistic Brownian dynamics in liquid", *Sci. Adv.* (2026), doi:10.1126/sciadv.aeb4579.
 
