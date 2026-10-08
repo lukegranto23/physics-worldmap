@@ -57,6 +57,10 @@ The tracks are chosen on the same noisy $V$ that is then used to evaluate them, 
 
 **Conclusion.** Localization noise explains **at least about one-eighth** of the in vitro coupling: $f_\text{noise}\ge0.12$–0.14 at conservative lower bounds. Whether the remainder is real still depends on whether σ is below about 0.3–0.4 µm, which the tracks cannot establish. The frozen verdict stands. The decisive measurement is still an independent calibration with fixed cells or beads.
 
+## Revision (lab 55, after internal review)
+
+The attribution protocol re-formed speed terciles on the cells surviving the drop rule, and this biased $f_\text{noise}$. With terciles fixed on all cells, $f_\text{noise}$ at σ = 0.2, 0.3 and 0.4 µm is 0.06, 0.19 and 0.46 for ICAM-1, and 0.15, 0.47 and 1.17 for VCAM-1. By interpolation, $\sigma_{1/2}\approx0.41$ µm for ICAM-1 and 0.30 µm for VCAM-1. The coupling is even more noise-fragile than the frozen run reported. The lower bound (σ ≳ 0.2 µm) assumes that nearly immobile objects are not confined ($C_1\ge0$), and confined or wobbling debris would violate it.
+
 ## Limits
 
 These are 2D tracks of 10 minutes (21 frames). The OU walk is a null model. The persistence measure (lag-1 step correlation) is not the measure used by Maiuri et al. The speed thirds are formed after excluding low-signal cells at each σ. ICAM and VCAM are pooled across replicates.
