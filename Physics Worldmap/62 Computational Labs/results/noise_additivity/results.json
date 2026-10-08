@@ -1,0 +1,69 @@
+{
+  "bands": [
+    {
+      "band_hz": [
+        2000.0,
+        10000.0
+      ],
+      "ratio_excess_over_model": 0.9932140136590901,
+      "empty_over_model": 2.0135078066204e-05,
+      "particle_over_empty": 69111.13780693058
+    },
+    {
+      "band_hz": [
+        10000.0,
+        30000.0
+      ],
+      "ratio_excess_over_model": 0.9641739935337271,
+      "empty_over_model": 0.0003199464937864149,
+      "particle_over_empty": 5898.740980919939
+    },
+    {
+      "band_hz": [
+        30000.0,
+        100000.0
+      ],
+      "ratio_excess_over_model": 1.020402131423631,
+      "empty_over_model": 0.012170449139594662,
+      "particle_over_empty": 219.69714998275398
+    },
+    {
+      "band_hz": [
+        100000.0,
+        200000.0
+      ],
+      "ratio_excess_over_model": 1.2290597926240636,
+      "empty_over_model": 0.13368192698321568,
+      "particle_over_empty": 13.325327077678171
+    },
+    {
+      "band_hz": [
+        200000.0,
+        400000.0
+      ],
+      "ratio_excess_over_model": 1.229768259746828,
+      "empty_over_model": 1.097518250670739,
+      "particle_over_empty": 2.843061150186311
+    },
+    {
+      "band_hz": [
+        400000.0,
+        600000.0
+      ],
+      "ratio_excess_over_model": -1.6447297498161662,
+      "empty_over_model": 6.59549133617859,
+      "particle_over_empty": 0.8300073274728437
+    },
+    {
+      "band_hz": [
+        600000.0,
+        660000.0
+      ],
+      "ratio_excess_over_model": -5.3594076786967655,
+      "empty_over_model": 12.808619582980208,
+      "particle_over_empty": 0.5858354752191669
+    }
+  ],
+  "nperseg": 8192,
+  "status": "descriptive diagnostic; no decision rule"
+}

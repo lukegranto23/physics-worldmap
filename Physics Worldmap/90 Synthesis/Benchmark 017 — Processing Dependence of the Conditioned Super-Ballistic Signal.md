@@ -97,7 +97,7 @@ At larger speeds the mean-displacement term $(r/s)^2E[W^2]$ grows. It responds t
 
 ## Limits
 
-- **Noise model.** It assumes additive, particle-independent noise statistically equal to the empty trap. [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] and lab 40 diagnostic D4 (in Benchmark 015) suggest the noise during particle runs may differ, but only partly.
+- **Noise model.** It assumes additive, particle-independent noise statistically equal to the empty trap. The lab 45 spectra in Benchmark 015 show this is only approximate: the particle-run noise floor above 400 kHz is about 0.5–0.7× the empty trap's. The noise shares quoted above (9–71%) are therefore upper estimates; at 0.75 µs a 0.6× floor still gives roughly 60%. The nine-variant test passed regardless, because its ratios are dominated by the operator. [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] and lab 40 diagnostic D4 (in Benchmark 015) suggest the noise during particle runs may differ, but only partly.
 - **Gain.** The authors' fitted gain is used; equipartition supports it to within 1.6%. Ratios $\rho$ do not depend on it.
 - **One dataset.** One particle, six 84 ms traces, one laboratory. The upstream Tikhonov high-pass inversion is shared by all variants and was not varied.
 - **No author response.** The authors have not been consulted. A private note to them should come before any public claim.

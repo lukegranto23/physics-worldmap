@@ -102,7 +102,23 @@ Lab 40's five diagnostics were frozen and committed (`dfece64`) after lab 35 had
 - With B3 physics also free, χ² = 1,381 on 11 dof.
 - So noise transfer, in this two-component form, does not account for the residual.
 
-The sign change between lags 2 and 3 coincides with the reach of white detector noise through the stencil, which spans at most 4 bins. Particle-dependent noise was the leading suspect, but neither a single scale (D4) nor two components (lab 42) account for the residual. It stays **open**. The remaining tests need material only the authors hold: raw detector records (to vary the Tikhonov high-pass inversion), the order and timing of the traces, and the detector's linearity calibration.
+The sign change between lags 2 and 3 coincides with the reach of white detector noise through the stencil, which spans at most 4 bins. Particle-dependent noise is now established spectrally (lab 45 above). Neither a single scale (D4) nor two components (lab 42) account for the residual, which points to a frequency-dependent change in noise shape, or physics, in the 100–400 kHz band. It stays **open**. The remaining tests need material only the authors hold: raw detector records (to vary the Tikhonov high-pass inversion), the order and timing of the traces, and the detector's linearity calibration.
+
+## Spectral view of the noise assumption (lab 45, descriptive)
+
+Lab 45 (`45_noise_additivity_spectrum.py`; figure `results/noise_additivity/noise_additivity_psd.png`) compares Welch spectra of the supplied 750 ns positions with the published-Basset spectrum, including box averaging and aliasing, at the published gain.
+
+| Band | (particle − empty) ÷ Basset model | particle ÷ empty |
+|---|---:|---:|
+| 2–100 kHz | 0.96–1.02 | ≫ 1 |
+| 100–400 kHz | 1.23 | 13 → 2.8 |
+| 400–660 kHz | negative | 0.83 → 0.59 |
+
+Three readings follow:
+
+1. **Theory and calibration agree over four decades in frequency.** From about 200 Hz to 100 kHz the model and gain match the particle spectrum, and to within 1–4% from 2 to 100 kHz.
+2. **The noise is not particle-independent.** Above 400 kHz the particle runs are quieter than the empty trap. Their high-frequency noise floor is roughly 0.5–0.7× the empty-trap floor, consistent with D4 (α = 0.61) and lab 42's short-range scale (0.75). Subtracting the empty-trap noise over-subtracts at the shortest lags.
+3. **The 2–12 µs residual has a spectral counterpart.** At 100–400 kHz (periods of 2.5–10 µs) the particle spectrum exceeds Basset plus empty-trap noise by about 23% of the model. Noise and particle signal are comparable in that band, so a change in noise shape with the particle present cannot be separated from extra physics using these files alone.
 
 ## Limits
 
