@@ -97,7 +97,12 @@ Lab 40's five diagnostics were frozen and committed (`dfece64`) after lab 35 had
 
 **On D5.** Every per-trace B3 fit is poor, so its parameters compensate rather than measure, and the heterogeneity is a lead, not a result. If the traces are in acquisition order, the falling $z/m$ could indicate a drift during the experiment, such as temperature, viscosity or wall distance. The trace order and timing are not documented in the files.
 
-The sign change between lags 2 and 3 coincides with the reach of white detector noise through the stencil, which spans at most 4 bins. That points to imperfect noise transfer between empty-trap and particle runs, for example particle-dependent shot noise. A single noise-scale factor does not capture it. Physical explanations at 2–12 µs were not tested. The residual stays **open**.
+**Lab 42 (stage 4, post hoc; frozen before running, one dated pre-fit numerical amendment).** It splits the measured empty-trap noise into a short-range part (|n| ≤ 3 bins) and a long-range part, and lets each scale freely in the particle runs, with the published Basset physics kept fixed.
+- **Result: NOT EXPLAINED.** χ² = 2,300 on 14 dof, and the best fit needs the long-range noise 8× larger with the particle present, which is implausible.
+- With B3 physics also free, χ² = 1,381 on 11 dof.
+- So noise transfer, in this two-component form, does not account for the residual.
+
+The sign change between lags 2 and 3 coincides with the reach of white detector noise through the stencil, which spans at most 4 bins. Particle-dependent noise was the leading suspect, but neither a single scale (D4) nor two components (lab 42) account for the residual. It stays **open**. The remaining tests need material only the authors hold: raw detector records (to vary the Tikhonov high-pass inversion), the order and timing of the traces, and the detector's linearity calibration.
 
 ## Limits
 

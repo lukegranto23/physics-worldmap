@@ -90,7 +90,7 @@ The continuum theory itself gives 2.32 there.
 
 ## Next
 
-1. Write a short, neutral technical note for the authors: forward model, test, code, digests.
+1. Review and send [[Draft Technical Note — Processing Dependence for the Data Authors]]: forward model, test, code, digests.
 2. Extend the forward model to nonzero conditioning speeds, and to the authors' metre-unit figures.
 3. Test noise additivity directly, for example from the high-frequency $d^4$ proxy in particle versus empty-trap runs.
 
