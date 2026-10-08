@@ -12,7 +12,7 @@ source_audit: public-dataset-provenance-and-checksum-recorded
 
 # Benchmark 020 — In Vitro T Cells and the Noise Margin of Speed-Persistence Coupling
 
-**Update (post hoc, lab 51):** the localization error, measured from near-immobile tracks, is 0.20–0.30 µm, at which noise explains 12–35% of the coupling. See below.
+**Update (post hoc, lab 51):** near-immobile tracks give a conservative lower bound σ ≳ 0.20–0.26 µm, so noise explains **at least** 12–14% of the coupling. No valid tight upper bound can be obtained from the tracks. See below.
 
 **Status:** lab 50 (`50_in_vitro_speed_persistence_test.py`) applies the final protocol of [[Benchmark 019 — Localization Noise and the Speed-Persistence Coupling]], unchanged. It was frozen and committed (`849616a`) before any statistic of these tracks was computed, and its self-tests were rerun at 30 s. No novelty claim.
 
@@ -39,19 +39,23 @@ Coordinates are calibrated µm, which was checked against the image size: X max 
 3. **Sparse sampling is not the driver here.** Halving the frame rate slightly lowers the correlation, unlike the in vivo case.
 4. **What would settle it** is an independent localization-error measurement for this pipeline: fixed cells, beads, or repeated segmentation of the same frames.
 
-## Post hoc: measuring the noise (lab 51)
+## Post hoc: bounding the noise (lab 51)
 
-This analysis was done after the frozen verdict. For the slowest 5% of tracks, true persistent motion adds only $C_1\ge0$ and $V\ge0$. That gives a lower bound $\sigma_\text{lo}=\sqrt{-\bar C_1}$ and an upper bound $\sigma_\text{hi}=\sqrt{\bar V/2}$. These tracks' mean lag-1 step correlation is −0.38 (ICAM) and −0.26 (VCAM), close to the −0.5 signature of pure noise. Lab 51 is `51_in_vitro_noise_bracket.py`, with output `results/in_vitro_speed_persistence/noise_bracket_post_hoc.json`.
+This analysis was done after the frozen verdict, and it was corrected the same day (see the amendment in the lab 51 docstring).
 
-| Group | σ bracket (µm) | $f_\text{noise}$ over the bracket | Real share of the coupling |
+**Lower bound.** Take any subset of tracks. True persistent motion only adds $C_1\ge0$, so $\sigma^2\ge-\bar C_1$ for that subset. For the slowest 5% of tracks, the mean lag-1 step correlation is −0.38 for ICAM and −0.26 for VCAM, close to the −0.5 signature of pure noise. This gives:
+
+| Group | Lower bound on σ (µm), slowest 5% | 16–84% | $f_\text{noise}$ at the bound |
 |---|---|---|---|
-| ICAM-1 | 0.26–0.30 | 0.12–0.16 | about 84–88% |
-| VCAM-1 | 0.20–0.27 | 0.14–0.35 | about 65–86% |
-| All | 0.22–0.28 | 0.13–0.25 | about 75–87% |
+| ICAM-1 | 0.26 | 0.25–0.28 | ≥ 0.12 |
+| VCAM-1 | 0.20 | 0.19–0.21 | ≥ 0.14 |
+| All | 0.22 | 0.21–0.23 | ≥ 0.13 |
 
-**Conclusion:** in vitro, the speed–persistence coupling is **mostly real**, and localization noise inflates it by a measurable **12–35%**.
+The tracks are chosen on the same noisy $V$ that is then used to evaluate them, and this biases the bound low. It is therefore conservative: in synthetic controls with true σ = 0.25 µm it gave 0.18–0.20. The bound also *rises* as the selected fraction grows. For ICAM it is 0.23, 0.26, 0.29 and 0.30 µm at 2, 5, 10 and 20%. That hints that centroid error is larger for cells that move more, as expected if shape changes add jitter.
 
-**Caveat:** debris and stuck cells may be localized more precisely than deforming migrating cells. The bracket measures the pipeline's positional error, not centroid jitter caused by changes of cell shape.
+**Upper bound: not available from these data.** I first used $\sqrt{\bar V/2}$ of the selected tracks as an upper bound, but it is invalid under the same selection. In the synthetic controls it fell to 0.19–0.21 µm, below the true 0.25, so it has been withdrawn. A valid version selects tracks on the first half and evaluates them on the disjoint second half. It is correct on synthetic data, but on the real tracks it is loose: 0.50 µm for VCAM and 0.84–1.22 µm for ICAM and All. At those values noise could explain all of the coupling. The real "slow" cells do not stay slow, because cells pause and resume.
+
+**Conclusion.** Localization noise explains **at least about one-eighth** of the in vitro coupling: $f_\text{noise}\ge0.12$–0.14 at conservative lower bounds. Whether the remainder is real still depends on whether σ is below about 0.3–0.4 µm, which the tracks cannot establish. The frozen verdict stands. The decisive measurement is still an independent calibration with fixed cells or beads.
 
 ## Limits
 
