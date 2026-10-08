@@ -68,6 +68,8 @@ Over 0.75–6 µs the noise-free operator curve has log-log slope **2.93**. Addi
 
 (The remaining three variants are in `results/processing_dependence/dryad_v3/results.json`.)
 
+**Figure.** `results/processing_dependence/processing_dependence_figure.png` (lab 44, descriptive) plots the zero-speed conditioned MSD for the published processing and two coarser alternatives, against the continuum curve and each variant's forward model.
+
 **Descriptive consequence.** Over the same physical window of 3–12 µs, the apparent log-log exponent of the conditioned MSD ranges from **2.29 to 2.96** depending only on processing:
 - 2.29–2.42 at 750 ns;
 - 2.50–2.66 at 1.5 µs;
