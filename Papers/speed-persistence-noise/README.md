@@ -1,6 +1,6 @@
 # Localization error and the speed–persistence coupling — manuscript draft
 
-**Status:** complete draft, 8 October 2026. Not submitted or posted anywhere.
+**Status: NOT READY.** An internal review on 8 October 2026 found major problems, including that the zebrafish headline is wrong. See `REVIEW_STATUS.md`. Do not submit or post this draft as it stands.
 
 | File | What it is |
 |---|---|

@@ -12,6 +12,14 @@ source_audit: public-dataset-provenance-and-checksum-recorded
 
 # Benchmark 021 — Calibrating Localization Error in Zebrafish T-Cell Tracks
 
+> [!warning] Correction after internal review (2026-10-08). The "robust" conclusion of an earlier version of this note is **withdrawn**.
+> An adversarial referee pass found three problems, and I verified each myself.
+> 1. **The calibration transfer fails.** All 29 tracks at 12 s come from **one movie** (2019). The 45 s control set comes from 16 fish imaged in 2018, and the 6 rockout fish are a subset of them. On the rockout movies, a split-half lower bound (select tracks on their first halves, evaluate $-\langle\hat C_1\rangle$ on the second halves) gives **σ ≥ 0.46–0.50 µm**, which already exceeds the 0.40 µm bound transferred from the 12 s movie. The control movies' own valid upper bound is 1.22 µm, and it was omitted.
+> 2. **The attribution was biased.** Lab 49's `gaps()` re-forms the speed terciles on the cells that survive the drop rule, and recomputes $G_\text{raw}$ on them. Lab 55 fixes the terciles on all cells, and its self-check recovers f ≈ 1.03–1.08 for pure noise at the true σ.
+> 3. **The 12 s and 48 s attributions contradict each other** under the OU model. At σ = 0.4 the slow cells' corrected $r^*$ is 0.97 at 12 s and 0.12 at 48 s. So the 12 s statistic is dominated by non-OU structure: blur, correlated error or fast motion.
+>
+> **Revised reading.** With fixed terciles (lab 55), the fish control's $f_\text{noise}$ is 0.14, 0.23 and 0.32 at σ = 0.4, 0.5 and 0.6 µm. If σ is shared with the rockout sessions (≥ 0.46 µm), noise explains **roughly 20–40%** of the control coupling, and the data alone cannot exclude more. The coupling is **not** shown to be robust. What survives is the methods point: the MSD intercept mistakes non-white structure for white error and over-corrects. That point is a demonstration, not a discovery (see Berglund 2010; Vestergaard et al. 2014; Pedersen et al. 2016).
+
 **Status:** a frozen test (lab 53, committed as `4028d77` before any real-data statistic was computed, with one pre-data code fix) and a post hoc consistency analysis (lab 54). No novelty claim.
 
 **Data:** the tracks of Jerison and Quake, *eLife* 9:e53933 (2020), from github.com/erjerison/TCellMigration. These are 2D tracks in µm:
@@ -71,7 +79,7 @@ The 0.49 µm calibration lies above the valid 12 s upper bound (0.40, with 84% b
 
 ## Reading
 
-1. **The fish T-cell coupling is robust to localization error at the authors' sampling.** Observed at 48 s, the same 29 high-frequency cells have $f_\text{noise}\le0.23$ (0.30 at the bootstrap 84% bound). With the 12 s bound transferred to the 45 s control movies, $f_\text{noise}\le0.13$. This agrees with the authors' own noise check, and here it rests on a data-internal calibration rather than an assumed σ. It does not address the sparse-sampling mechanism. Coarsening 12 s to 48 s raises $G$ only from 0.44 to 0.49.
+1. ~~**The fish T-cell coupling is robust to localization error at the authors' sampling.**~~ *(Withdrawn; see the correction at the top.)* Observed at 48 s, the same 29 high-frequency cells have $f_\text{noise}\le0.23$ (0.30 at the bootstrap 84% bound). With the 12 s bound transferred to the 45 s control movies, $f_\text{noise}\le0.13$. This agrees with the authors' own noise check, and here it rests on a data-internal calibration rather than an assumed σ. It does not address the sparse-sampling mechanism. Coarsening 12 s to 48 s raises $G$ only from 0.44 to 0.49.
 2. **The standard MSD-intercept calibration is wrong for cells.** It mistakes fast real motion for localization error. It passed a synthetic self-test that lacked such a component, then failed a consistency check on real data. The persistence correction needs the white-noise part only, which is bounded by the lag-1 structure.
 3. **The frame interval decides.** The same fish cells are noise-sensitive at 12 s (an upper-bound σ could explain everything) and robust at 48 s. Noise and sparse sampling bias opposite ends of the frame-interval range (Benchmark 019).
 4. **Rockout** cells are slower and more noise-sensitive: between a third and three quarters of their gap is attributable to noise within the bounds. **Dicty** at 5 s cannot be decided from the tracks.
