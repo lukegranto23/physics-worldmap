@@ -148,6 +148,11 @@ Follow-up labs on the same digest-verified Dryad files (all separate from the co
 - **Lab 36** (`36_stratified_conditioning.py`). The preregistered variance-stratification test of Benchmark 014's anomalies.
 - **Lab 37** (`37_stratification_artifact_audit.py`). A post hoc eight-seed stationary audit showing that the primary $\operatorname{Var}W$ proxy is itself biased. Labs 36–37 are documented in [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]].
 - **Lab 38** (`38_gain_free_selftest.py`). Synthetic Basset and Langevin controls for lab 35's frozen rules. Positions are synthesised exactly from the FDT spectrum on a 25 ns grid and box-averaged, with white and smooth detector noise. The synthesiser's expected increment variances match lab 35's operator to about $10^{-5}$.
+- **Lab 41** (`41_processing_dependence_test.py`, `--selftest` then `--data`). A confirmatory nine-variant stencil and coarsening test, frozen before data. The conditioned MSD follows the forward model ($Z=20.9$), not the processing-independent reading ($Z=4773$). Documented in [[Benchmark 017 — Processing Dependence of the Conditioned Super-Ballistic Signal]].
+- **Lab 45** (`45_noise_additivity_spectrum.py`). A descriptive spectral check of noise additivity. Published Basset matches the particle spectrum to 1–4% at 2–100 kHz, but the particle-run noise floor above 400 kHz is about 0.5–0.7× the empty trap's.
+- **Lab 44** (`44_processing_dependence_figure.py`). A descriptive figure for Benchmark 017.
+- **Lab 43** (`43_nonzero_speed_processing_test.py`). The lab 41 test at the published nonzero speeds: H_fwd at $q=0.5$ and 2, UNRESOLVED at the $q=1$ crossover, the same pattern as its self-test.
+- **Lab 42** (`42_noise_transfer_test.py`). Two-component noise-transfer test of the residual; NOT EXPLAINED (Benchmark 015). Lab 40 (`40_basset_misfit_diagnostics.py`) holds the five frozen misfit diagnostics.
 - **Lab 39** (`39_conditional_mean_preparations.py`). A Grünwald–Letnikov time-domain check that the equilibrium conditional mean equals the impulsive start, and that the authors' commented-out term is release after steady dragging. Supports [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]].
 
 ## How to learn with these

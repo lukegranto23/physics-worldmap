@@ -2,6 +2,15 @@
 
 Date: September 18, 2026; real-build validation September 20. Status: **isolated upstream build reproduction with a tested patch; not submitted upstream**.
 
+## Re-verification — October 8, 2026
+
+- **Upstream is unchanged.** Current `actions/attest` `main` at `7d8b1cacecb65f487779b3b98fd5296a018d1a1b` (2026-10-02) has all three workflow files byte-identical to the pinned versions (SHA-256). The same comparison lines are present.
+- **Both patches still apply.** `proposed-fix.patch` and the broader `proposed-complete-fix.patch` pass `git apply --check` against it.
+- **The harness passes on Linux.** `reproduce.py` was rerun from a copy outside any enclosing Git repository: Linux, Git, Node 22. All seven regressions pass, and the non-repository control exits 128 as designed.
+- **Fixture location matters.** Run inside this vault, the non-repository control is invalid, because the fixture directory sits inside the vault's own Git repository.
+
+Still not submitted upstream.
+
 ## Result
 
 September 21 follow-up: [clean-build testing](./Clean%20Build%20Follow-up.md) confirms a second, independent gap: the normal build retains `184.index.js`, which a clean build does not produce. The original comparison-only patch does not fix output preparation. See the follow-up before treating it as a complete fresh-build consistency fix.

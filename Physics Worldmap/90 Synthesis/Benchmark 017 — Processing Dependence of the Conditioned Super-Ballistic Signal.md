@@ -68,12 +68,26 @@ Over 0.75–6 µs the noise-free operator curve has log-log slope **2.93**. Addi
 
 (The remaining three variants are in `results/processing_dependence/dryad_v3/results.json`.)
 
+**Figure.** `results/processing_dependence/processing_dependence_figure.png` (lab 44, descriptive) plots the zero-speed conditioned MSD for the published processing and two coarser alternatives, against the continuum curve and each variant's forward model.
+
 **Descriptive consequence.** Over the same physical window of 3–12 µs, the apparent log-log exponent of the conditioned MSD ranges from **2.29 to 2.96** depending only on processing:
 - 2.29–2.42 at 750 ns;
 - 2.50–2.66 at 1.5 µs;
 - 2.94–2.96 at 3 µs.
 
 The continuum theory itself gives 2.32 there.
+
+## Extension to the nonzero-speed curves (lab 43)
+
+Lab 43 (`43_nonzero_speed_processing_test.py`) applies the same nine-variant test to the published conditioning speeds $v_0=q\,\operatorname{sd}(W)$, using the authors' ±1% window. It was frozen and committed (`f9505f2`) before the real-data run, and the forward prediction now includes the window's $E[W^2]$.
+
+| $q$ | Synthetic self-test | Dryad data | $Z_\text{fwd}$ / $Z_\text{cont}$ (data) | Direction of the effect |
+|---:|---|---|---|---|
+| 0.5 | H_fwd | **H_fwd FAVOURED** | 44 / 849 | coarser processing suppresses the curve ($\rho\approx0.7$–0.9) |
+| 1 | UNRESOLVED | UNRESOLVED | 16 / 28 | crossover: both hypotheses predict $\rho\approx1$ |
+| 2 | H_fwd | **H_fwd FAVOURED** | 33 / 114 | coarser processing *enhances* the curve ($\rho$ up to 1.25) |
+
+At larger speeds the mean-displacement term $(r/s)^2E[W^2]$ grows. It responds to processing in the opposite direction to the residual-variance term, so the sign of the effect changes near $q\approx1$. The UNRESOLVED verdict at $q=1$ is that crossover, which the self-test predicted, not a failure. Processing dependence therefore covers every published conditioning speed except the crossover.
 
 ## Interpretation
 
@@ -83,15 +97,15 @@ The continuum theory itself gives 2.32 there.
 
 ## Limits
 
-- **Noise model.** It assumes additive, particle-independent noise statistically equal to the empty trap. [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] and lab 40 diagnostic D4 (in Benchmark 015) suggest the noise during particle runs may differ, but only partly.
+- **Noise model.** It assumes additive, particle-independent noise statistically equal to the empty trap. The lab 45 spectra in Benchmark 015 show this is only approximate: the particle-run noise floor above 400 kHz is about 0.5–0.7× the empty trap's. The noise shares quoted above (9–71%) are therefore upper estimates; at 0.75 µs a 0.6× floor still gives roughly 60%. The nine-variant test passed regardless, because its ratios are dominated by the operator. [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] and lab 40 diagnostic D4 (in Benchmark 015) suggest the noise during particle runs may differ, but only partly.
 - **Gain.** The authors' fitted gain is used; equipartition supports it to within 1.6%. Ratios $\rho$ do not depend on it.
 - **One dataset.** One particle, six 84 ms traces, one laboratory. The upstream Tikhonov high-pass inversion is shared by all variants and was not varied.
 - **No author response.** The authors have not been consulted. A private note to them should come before any public claim.
 
 ## Next
 
-1. Write a short, neutral technical note for the authors: forward model, test, code, digests.
-2. Extend the forward model to nonzero conditioning speeds, and to the authors' metre-unit figures.
+1. Review and send [[Draft Technical Note — Processing Dependence for the Data Authors]]: forward model, test, code, digests.
+2. Extend the forward model to the authors' metre-unit figures. Nonzero speeds are done (lab 43).
 3. Test noise additivity directly, for example from the high-frequency $d^4$ proxy in particle versus empty-trap runs.
 
 [[Benchmark 014 — Preregistered Conditioned Brownian Reproduction]] · [[Benchmark 015 — Gain-Free Test of Hydrodynamic Memory]] · [[Benchmark 016 — Stratified Conditioning and an Estimator Artifact]] · [[Public Data Lead — Conditioned Hydrodynamic Brownian Motion]] · [[Research Frontier — Identifiability Before Discovery]]
