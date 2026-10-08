@@ -17,6 +17,11 @@ source_audit: digest-verified-public-data-and-notebooks-read-as-text
 > - **The noise shares (71/51/27/16/9%) are shares of the forward prediction.** As shares of the measured value they are 88/51/25/16/9%.
 > - **The processing-invariance hypothesis H_cont was not the authors' claim.** The extreme ratios occur when the coarse bins are as long as the lag.
 > - **The forward model has its own misfit** at the published processing: −20% at 0.75 µs and +8.6% at 3 µs.
+>
+> **The draft paper built on Benchmarks 015–018 was withdrawn and deleted** (`Papers/estimated-velocity-conditioning/`, still in git history). The review also flagged the following:
+> - the "preregistered" framing is overstated;
+> - the velocity-roughness claims are not tested against the preprints;
+> - the literature review is thin, missing regression dilution, motion blur (Berglund 2010; Savin & Doyle 2005) and the dependence of velocity variance on time resolution (Kheifets et al. 2014).
 
 
 **Status:** a reanalysis result on public data. The hypothesis was formed post hoc and then tested with a confirmatory protocol that was frozen and committed (`c908437`, 2026-10-08T08:39Z) before the confirmatory statistic was computed on the real data. The protocol's synthetic self-test passed.
