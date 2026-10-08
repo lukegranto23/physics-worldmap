@@ -200,11 +200,11 @@ exact per-cell inversion. Because <span
 class="math inline">\(\sigma\)</span> cannot be reliably estimated from
 short tracks, we report a sensitivity curve: the fraction of the
 observed speed–persistence gap that noise of size <span
-class="math inline">\(\sigma\)</span> would account for. We applied it
-under protocols fixed before the data were analysed to five public track
-sets. In three in vivo lymph-node datasets, T cells and neutrophils show
-no positive gap in the noise-correctable measure, and the B-cell gap
-would be half explained by <span
+class="math inline">\(\sigma\)</span> would account for. We applied it,
+under protocols fixed before the data were analysed, to public track
+sets from three studies. In three in vivo lymph-node datasets, T cells
+and neutrophils show no positive gap in the noise-correctable measure,
+and the B-cell gap would be half explained by <span
 class="math inline">\(\sigma\approx0.3\)</span>–0.4 <span
 class="math inline">\(\mu\)</span>m. In vitro T cells on ICAM-1 and
 VCAM-1 show a strong coupling, but <span
@@ -214,10 +214,20 @@ pixel, would explain half of it. Nearly immobile tracks give a
 conservative lower bound <span
 class="math inline">\(\sigma\gtrsim0.2\)</span> <span
 class="math inline">\(\mu\)</span>m, so noise accounts for at least
-12–14% of the in vitro coupling. We also show that the obvious upper
-bound from the same tracks is biased by selection and invalid. The
-results argue for reporting an independent localization-error
-calibration with any speed–persistence analysis.</p>
+12–14% of the in vitro coupling. The obvious upper bound from the same
+tracks is biased by selection and invalid. Long tracks change the
+picture. In the zebrafish T-cell data of Jerison and Quake, where the
+speed–turning coupling was reported, 12 s tracks of about 830 frames
+bound the error from above, <span
+class="math inline">\(\sigma\le0.40\)</span> <span
+class="math inline">\(\mu\)</span>m, through a Cauchy–Schwarz constraint
+on held-out track halves. At 45–48 s sampling, noise then explains at
+most 13–23% of the coupling, so this coupling is robust to localization
+error. The standard calibration, the intercept of the mean-squared
+displacement, fails for cells: fast genuine motion masquerades as noise
+and leads to over-correction. The results argue for calibrating
+localization error, from fixed objects or long tracks, with any
+speed–persistence analysis.</p>
 </div>
 </header>
 <h1 id="introduction">Introduction</h1>
@@ -241,8 +251,12 @@ Consecutive steps share a position, so independent position errors
 anticorrelate them. The anticorrelation matters most for cells that move
 little between frames. Speed heterogeneity alone then produces “faster
 cells are straighter”. We give the closed form, a noise-correctable
-test, and its results on five public datasets. We make no claim about
-the data of Ref. <span class="citation"
+test, and its results on lymph-node, in vitro and zebrafish T-cell
+tracks. The zebrafish data are those in which a speed–turning coupling
+was reported in vivo <span class="citation"
+data-cites="Jerison2020"></span> and which motivated Ref. <span
+class="citation" data-cites="Ganusov2023"></span>. We make no claim
+about the data of Ref. <span class="citation"
 data-cites="Maiuri2015"></span>.</p>
 <h1 id="theory">Theory</h1>
 <div class="figure*">
@@ -364,7 +378,12 @@ We used the CellTracksColab compilation <span class="citation"
 data-cites="ZenodoTcell2023 GomezDeMariscal2024"></span>, with pixel
 size 0.645 <span class="math inline">\(\mu\)</span>m. It gives 820
 (ICAM-1) and 1083 (VCAM-1) gap-free tracks of at least 6 positions; 122
-tracks with missing frames were excluded.</p>
+tracks with missing frames were excluded. (iii) T cells in larval
+zebrafish <span class="citation" data-cites="Jerison2020"></span>: 712
+control and 236 rockout tracks at <span class="math inline">\(\Delta
+t=45\)</span> s, and 29 tracks at <span class="math inline">\(\Delta
+t=12\)</span> s with about 830 frames each. For each track we use its
+longest gap-free segment.</p>
 <h1 id="results">Results</h1>
 <div class="ruledtabular">
 <div id="tab:results">
@@ -538,9 +557,138 @@ class="math inline">\(\mu\)</span>m. On the real tracks, though, it
 gives only loose upper bounds: 0.50 <span
 class="math inline">\(\mu\)</span>m for VCAM-1 and 1.2 <span
 class="math inline">\(\mu\)</span>m for ICAM-1. Cells that are slow in
-one half do not stay slow, because cells pause and resume. The tracks
+one half do not stay slow, because cells pause and resume. The tighter
+bound of Sec. <a href="#sec:calib" data-reference-type="ref"
+data-reference="sec:calib">6</a> is also loose for these 21-frame tracks
+(0.5–0.8 <span class="math inline">\(\mu\)</span>m). The tracks
 therefore show that noise explains at least about an eighth of the in
 vitro coupling, but they cannot exclude that it explains most of it.</p>
+<h1 id="sec:calib">Calibrating the noise from long tracks</h1>
+<div class="ruledtabular">
+<div id="tab:fish">
+<table>
+<caption>Zebrafish T cells <span class="citation"
+data-cites="Jerison2020"></span>: localization-error bounds and the
+fraction of the gap attributable to noise. <span
+class="math inline">\(\sigma_{\max}\)</span> is the Cauchy–Schwarz
+split-half upper bound of Eq. (<a href="#eq:cs"
+data-reference-type="ref" data-reference="eq:cs">[eq:cs]</a>), with its
+16–84% bootstrap range, and <span class="math inline">\(f_{\rm
+noise}\)</span> is evaluated at it. The 45 s control movies use the
+bound from the 12 s movies (transferred). “12 s, coarsened” is the 12 s
+cells sampled every fourth frame (48 s).</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Group</th>
+<th style="text-align: right;">Cells</th>
+<th style="text-align: right;"><span class="math inline">\(G_{\rm
+raw}\)</span></th>
+<th style="text-align: left;"><span
+class="math inline">\(\sigma_{\max}\)</span> (<span
+class="math inline">\(\mu\)</span>m)</th>
+<th style="text-align: left;"><span class="math inline">\(f_{\rm
+noise}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">12 s</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0.44</td>
+<td style="text-align: left;">0.40 (0.37–0.46)</td>
+<td style="text-align: left;">1.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12 s, coarsened</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">0.49</td>
+<td style="text-align: left;">0.40 (same cells)</td>
+<td style="text-align: left;"><span
+class="math inline">\(\le0.23\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">45 s control</td>
+<td style="text-align: right;">711</td>
+<td style="text-align: right;">0.58</td>
+<td style="text-align: left;">0.40 (transferred)</td>
+<td style="text-align: left;"><span
+class="math inline">\(\le0.13\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">45 s rockout</td>
+<td style="text-align: right;">236</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: left;">0.71 (0.66–0.78)</td>
+<td style="text-align: left;"><span
+class="math inline">\(\le0.76\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Tracks hundreds of frames long should make <span
+class="math inline">\(\sigma\)</span> measurable. We tested this on the
+zebrafish data with a protocol frozen before the real-data run. It
+fitted each long track’s per-coordinate mean-squared displacement at
+lags 1–10 frames with the OU form plus a white-noise intercept <span
+class="math inline">\(2\sigma^2\)</span>, the standard approach in
+particle tracking <span class="citation"
+data-cites="Michalet2010"></span>. The estimator passed synthetic
+self-tests that matched the real track lengths and had within-track
+switching of persistence. On the 12 s fish tracks it gave <span
+class="math inline">\(\sigma=0.49\)</span> <span
+class="math inline">\(\mu\)</span>m. Applied to the very tracks it was
+calibrated on, however, that value attributes 3.5 times the observed gap
+to noise. That is impossible, and it signals that the calibration is
+wrong. A <em>Dictyostelium</em> set compiled in the same repository (5 s
+frames) over-corrected even more.</p>
+<p>The contradiction is direct. Because the true step covariance obeys
+<span class="math inline">\(C_1\le V\)</span> (Cauchy–Schwarz), white
+error must satisfy <span
+class="math display">\[\sigma^2\le\tfrac13\left(\hat V-\hat C_1\right).
+\label{eq:cs}\]</span> To avoid the selection bias of Sec. <a
+href="#sec:bound" data-reference-type="ref"
+data-reference="sec:bound">5</a>, we rank tracks by <span
+class="math inline">\(\hat V\)</span> on their first halves and evaluate
+Eq. (<a href="#eq:cs" data-reference-type="ref"
+data-reference="eq:cs">[eq:cs]</a>) on the slowest third of the disjoint
+second halves. The slowest 12 s fish tracks have lag-1 step correlation
+<span class="math inline">\(+0.20\)</span>. White error of 0.49 <span
+class="math inline">\(\mu\)</span>m would force about <span
+class="math inline">\(-0.5\)</span>.</p>
+<p>The mechanism is a fast component of genuine motion that decorrelates
+within about a frame. It raises the short-lag MSD but leaves no negative
+lag-1 dip, so a single-persistence fit absorbs it into the noise
+intercept. We confirmed this on synthetic tracks with the real 12 s
+lengths, a fast velocity component carrying 0–60% of the variance, and
+true <span class="math inline">\(\sigma\)</span> of 0.15, 0.3 and
+0.5 <span class="math inline">\(\mu\)</span>m. The MSD intercept was
+biased up, for example from 0.15 to 0.29 <span
+class="math inline">\(\mu\)</span>m. The split-half bound of Eq. (<a
+href="#eq:cs" data-reference-type="ref"
+data-reference="eq:cs">[eq:cs]</a>) stayed at or above the true value in
+all nine cases. The persistence correction of Eq. (<a href="#eq:inv"
+data-reference-type="ref" data-reference="eq:inv">[eq:inv]</a>) needs
+only the white part, and Eq. (<a href="#eq:cs" data-reference-type="ref"
+data-reference="eq:cs">[eq:cs]</a>) bounds exactly that part.</p>
+<p>On the 12 s fish tracks the bound is <span
+class="math inline">\(\sigma\le0.40\)</span> <span
+class="math inline">\(\mu\)</span>m (Table <a href="#tab:fish"
+data-reference-type="ref" data-reference="tab:fish">2</a>), which
+excludes the MSD calibration. Sampled at 12 s, even this bound would
+allow noise to explain the whole gap. Sampled every fourth frame (48 s),
+the same cells keep their coupling (<span
+class="math inline">\(G\)</span> rises only from 0.44 to 0.49), and
+noise explains at most 23% of it, or 30% at the bootstrap 84% bound.
+Transferring the bound to the 45 s control movies, which assumes similar
+imaging settings, gives at most 13%. The coupling reported in Ref. <span
+class="citation" data-cites="Jerison2020"></span> is therefore robust to
+localization error at the authors’ sampling interval. This agrees with
+their own check at an assumed noise level, and here it rests on a
+calibration from the data. The slower rockout cells are more sensitive:
+noise explains up to three quarters of their gap within their own bound.
+These estimators were developed after the frozen run, so this section is
+post hoc.</p>
 <h1 id="discussion">Discussion</h1>
 <p>Localization error biases persistence in a speed-dependent way. It
 can therefore manufacture, inflate or mask a speed–persistence coupling.
@@ -556,35 +704,43 @@ lag-1 step correlation can be corrected exactly through Eq. (<a
 href="#eq:inv" data-reference-type="ref"
 data-reference="eq:inv">[eq:inv]</a>), whereas turning-angle statistics
 cannot. Second, <span class="math inline">\(\sigma\)</span> is not
-reliably identifiable from short tracks. A data-internal estimate should
-be validated on synthetic tracks of the same lengths and composition,
-and selection on noisy quantities can silently invalidate a bound, as
-shown above. Third, the clean remedy is experimental: image fixed cells
-or beads with the same pipeline, or re-segment the same frames under
-perturbation, and report <span class="math inline">\(\sigma\)</span>
-with the speed–persistence analysis. With such a calibration the curves
-of Fig. <a href="#fig:sens" data-reference-type="ref"
-data-reference="fig:sens">1</a> turn directly into an attribution.</p>
+reliably identifiable from short tracks, and the usual MSD-intercept
+calibration is biased upward for cells because their fast genuine motion
+counts as noise. The quantity that matters is the white part, which is
+bounded by the lag-1 structure through Eq. (<a href="#eq:cs"
+data-reference-type="ref" data-reference="eq:cs">[eq:cs]</a>), evaluated
+on held-out track halves. Selection on noisy quantities can silently
+invalidate a bound, and a self-test can pass on synthetic data that lack
+a feature of real cells. Both happened here. Third, the clean remedy is
+experimental: image fixed cells or beads with the same pipeline, or
+record a subset of long, fast-sampled tracks as in Ref. <span
+class="citation" data-cites="Jerison2020"></span>, and report <span
+class="math inline">\(\sigma\)</span> with the speed–persistence
+analysis. With such a calibration the curves of Fig. <a href="#fig:sens"
+data-reference-type="ref" data-reference="fig:sens">1</a> turn directly
+into an attribution.</p>
 <p>The OU walk is a null model, not a description of lymphocyte
 motility. The data are 2D, and the in vivo tracks are projections of 3D
 motion. Our persistence measure differs from that of Ref. <span
 class="citation" data-cites="Maiuri2015"></span>. The in vitro tracks
-are 21 frames long. None of the analysed datasets is from Ref. <span
-class="citation" data-cites="Maiuri2015"></span>, and we draw no
-conclusion about those experiments.</p>
+are 21 frames long, and the zebrafish bound rests on 29 long tracks.
+None of the analysed datasets is from Ref. <span class="citation"
+data-cites="Maiuri2015"></span>, and we draw no conclusion about those
+experiments.</p>
 <h1 class="unnumbered" id="data-and-code-availability">Data and code
 availability</h1>
 <p>All analysis code, frozen protocols with their amendment history,
 self-test outputs and result files are available from the author
-(analysis scripts labelled labs 48–52). The track data are public <span
-class="citation" data-cites="Wortel2021 ZenodoTcell2023"></span> and are
-not redistributed; their checksums are recorded with the results.</p>
+(analysis scripts labelled labs 48–54). The track data are public <span
+class="citation"
+data-cites="Wortel2021 ZenodoTcell2023 Jerison2020"></span> and are not
+redistributed; their checksums are recorded with the results.</p>
 <div class="acknowledgments">
-<p>We thank the authors of celltrackR and the CellTracksColab and
-StarDist–TrackMate teams for making their track data public. The
-analysis and code were developed with assistance from an AI system
-(Claude, Anthropic); the author takes responsibility for the
-content.</p>
+<p>We thank the authors of celltrackR, the CellTracksColab and
+StarDist–TrackMate teams, and E. R. Jerison and S. R. Quake for making
+their track data public. The analysis and code were developed with
+assistance from an AI system (Claude, Anthropic); the author takes
+responsibility for the content.</p>
 </div>
 <div class="thebibliography">
 <p><span>99</span> P. Maiuri <em>et al.</em>, Cell <strong>161</strong>,
@@ -593,9 +749,10 @@ and B. Majumder, Phys. Biol. <strong>20</strong>, 025001 (2023),
 doi:10.1088/1478-3975/acb18c. X. Michalet, Phys. Rev. E
 <strong>82</strong>, 041914 (2010), doi:10.1103/PhysRevE.82.041914.
 A. J. Berglund, Phys. Rev. E <strong>82</strong>, 011917 (2010),
-doi:10.1103/PhysRevE.82.011917. I. M. N. Wortel <em>et al.</em>,
-ImmunoInformatics <strong>1–2</strong>, 100003 (2021),
-doi:10.1016/j.immuno.2021.100003. E. Fazeli <em>et al.</em>,
+doi:10.1103/PhysRevE.82.011917. E. R. Jerison and S. R. Quake, eLife
+<strong>9</strong>, e53933 (2020), doi:10.7554/eLife.53933. I. M. N.
+Wortel <em>et al.</em>, ImmunoInformatics <strong>1–2</strong>, 100003
+(2021), doi:10.1016/j.immuno.2021.100003. E. Fazeli <em>et al.</em>,
 F1000Research <strong>9</strong>, 1279 (2020),
 doi:10.12688/f1000research.27019.1. N. H. Roy and G. Jacquemet,
 “Combining StarDist and TrackMate example 2 – T cell dataset,” Zenodo
