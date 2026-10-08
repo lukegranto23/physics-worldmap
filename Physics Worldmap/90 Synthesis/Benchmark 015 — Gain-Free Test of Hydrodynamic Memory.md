@@ -93,7 +93,9 @@ Lab 40's five diagnostics were frozen and committed (`dfece64`) after lab 35 had
 | D2 free memory exponent | β → 1.85, χ² 2,078 | no |
 | D3 detector low-pass | corner → ∞; no change | no |
 | D4 noise scale | α = 0.61, χ² 1,730 (Δχ² 1,018) | partly, not fully |
-| D5 per-trace B3 | present within single traces (χ² 1,255 and 732 for traces 1–2) | not a pooling artefact |
+| D5 per-trace B3 | Present in every trace (χ² 732–1,842 on 13 dof). Parameters differ across traces far beyond their refit spread: heterogeneity $p\approx0$, $10^{-92}$ and $10^{-39}$ for $\gamma/m$, $z/m$, $K/m$. Fitted $z/m$ falls from 229 to 94 over traces 2–6 | not a pooling artefact; see note below |
+
+**On D5.** Every per-trace B3 fit is poor, so its parameters compensate rather than measure, and the heterogeneity is a lead, not a result. If the traces are in acquisition order, the falling $z/m$ could indicate a drift during the experiment, such as temperature, viscosity or wall distance. The trace order and timing are not documented in the files.
 
 The sign change between lags 2 and 3 coincides with the reach of white detector noise through the stencil, which spans at most 4 bins. That points to imperfect noise transfer between empty-trap and particle runs, for example particle-dependent shot noise. A single noise-scale factor does not capture it. Physical explanations at 2–12 µs were not tested. The residual stays **open**.
 
