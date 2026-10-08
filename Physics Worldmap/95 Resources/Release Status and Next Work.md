@@ -105,6 +105,8 @@ The September 18 feasibility checkpoint adds [[Instrument Feasibility — Respon
   - The apparent 3–12 µs exponent ranges from 2.29 to 2.96 with processing alone.
   - Basset physics stands. The published curve is a processing-dependent statistic, and its agreement with the continuum $t^{5/2}$ curve is a near-cancellation.
 
+**Generalisation (lab 46).** [[Derivation — Conditioning on an Estimated Velocity]] gives universal operator factors, an exact velocity-noise leak and a design criterion for any velocity cusp. **[[Benchmark 018 — Apparent Velocity Roughness and the 7-4 Fractal Dimension]]** (lab 47) applies the same lens to velocity-increment scaling. The apparent $H_v$ passes through ¼ but never plateaus, and raw data show a noise-made pseudo-plateau.
+
 Lab 39 independently confirms that the authors' commented-out $v_0$ term describes release after steady dragging, not equilibrium. It also corrects the physical labelling in [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]].
 
 ## Precision work
