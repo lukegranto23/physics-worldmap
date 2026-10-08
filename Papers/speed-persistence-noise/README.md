@@ -19,9 +19,9 @@
 
 1. **Full texts not read.** The full texts of Maiuri et al. and Ganusov et al. could not be read here, so the paper describes them only at the level of their abstracts. Before submitting, check that no earlier paper already models localization error in speed–persistence analyses. A limited search found none, which is why the paper says "we work out" rather than claiming priority.
 2. **Two corrections are built in.** Section V reports, on purpose, that an upper bound I first computed was invalid (selection bias). Section VI reports that the frozen MSD-intercept calibration over-corrected and was excluded by a consistency bound. The lab history keeps every version (lab 51 amendment, labs 53 and 54).
-5. **Courtesy, zebrafish.** Section VI largely *supports* Jerison and Quake's coupling against a noise artefact. A short note to them after posting would be natural.
 3. **Venue.** Options include Phys. Biol., PRE, Biophys. J. (as a short communication), or a bioRxiv preprint.
-4. **Courtesy.** The in vitro data come from the Jacquemet lab (Åbo Akademi / Turku). A short note to them before posting would be polite but is not required: the data are CC-BY.
+4. **Courtesy, in vitro.** The in vitro data come from the Jacquemet lab (Åbo Akademi / Turku). A short note to them before posting would be polite but is not required: the data are CC-BY.
+5. **Courtesy, zebrafish.** Section VI largely *supports* Jerison and Quake's coupling against a noise artefact. A short note to them after posting would be natural.
 
 ## Claims, and where they come from
 
