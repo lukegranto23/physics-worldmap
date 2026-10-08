@@ -95,6 +95,16 @@ def make_records(rng, truth, dt):
 _REFIT = {}
 
 
+def jsonable(obj):
+    if isinstance(obj, np.bool_):
+        return bool(obj)
+    if isinstance(obj, dict):
+        return {k: jsonable(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [jsonable(v) for v in obj]
+    return lab34.to_jsonable(obj)
+
+
 def _refit(i):
     s = _REFIT
     return {m: lab35.fit(m, s["reps"][i], s["Cinv"], s["lags"], s["dt"], s["start"][m])[0] for m in s["start"]}
@@ -139,7 +149,7 @@ def analyse(Yp, Wp, Ye, We, P, n_refits, seed_offset):
            "memory_supported_L_minus_B2": chi["L_fit"] - chi["B2_fit"],
            "memory_supported": chi["L_fit"] - chi["B2_fit"] > 25,
            "z_over_m_B3": [float(fits["B3"]["params"][1]), interval],
-           "z_interval_contains_stokes_basset": interval[0] <= a0 <= interval[1]}
+           "z_interval_contains_stokes_basset": bool(interval[0] <= a0 <= interval[1])}
     return {"models": table, "decision": dec, "R_s": R.tolist(), "R_se_s": se.tolist(), "relative_se": (se/np.abs(R)).tolist(),
             "R_E_s": R_E.tolist(), "fits": {m: np.asarray(v["params"]).tolist() for m, v in fits.items()},
             "noise_fraction_of_varW": float(lab35.moments(empty)[1]/lab35.moments(halves)[1])}
@@ -194,7 +204,9 @@ def main():
             rng = np.random.default_rng(seed + (100 if name.startswith("langevin") else 0))
             res = analyse(*make_records(rng, truth, dt), P, n_refits, seed_offset=i + 1)
             res.update(truth=name, seed=seed)
-            runs.append(res)
+            runs.append(jsonable(res))
+            OUT.mkdir(parents=True, exist_ok=True)
+            (OUT / "partial.json").write_text(json.dumps(runs, indent=2), encoding="utf-8")
             d = res["decision"]
             print(f"{name:>22} seed {seed}: " + "  ".join(f"{m}={v['chi2']:.1f}(p={v['p']:.2g})" for m, v in res["models"].items()), flush=True)
             print(f"{'':>22}   E ok={d['E_published_consistent']} V rejected={d['V_rejected_vs_E']} "
@@ -211,7 +223,7 @@ def main():
            "published_scaled": {"gamma_over_m": g0, "z_over_m": a0, "K_over_m": k0},
            "synthesis_check": synthesis, "runs": runs}
     OUT.mkdir(parents=True, exist_ok=True)
-    (OUT / ("results_quick.json" if args.quick else "results.json")).write_text(json.dumps(lab34.to_jsonable(out), indent=2), encoding="utf-8")
+    (OUT / ("results_quick.json" if args.quick else "results.json")).write_text(json.dumps(jsonable(out), indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
