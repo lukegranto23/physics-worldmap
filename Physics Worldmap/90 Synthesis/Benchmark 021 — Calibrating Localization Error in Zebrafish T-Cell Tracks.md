@@ -19,6 +19,13 @@ source_audit: public-dataset-provenance-and-checksum-recorded
 > 3. **The 12 s and 48 s attributions contradict each other** under the OU model. At σ = 0.4 the slow cells' corrected $r^*$ is 0.97 at 12 s and 0.12 at 48 s. So the 12 s statistic is dominated by non-OU structure: blur, correlated error or fast motion.
 >
 > **Revised reading.** With fixed terciles (lab 55), the fish control's $f_\text{noise}$ is 0.14, 0.23 and 0.32 at σ = 0.4, 0.5 and 0.6 µm. If σ is shared with the rockout sessions (≥ 0.46 µm), noise explains **roughly 20–40%** of the control coupling, and the data alone cannot exclude more. The coupling is **not** shown to be robust. What survives is the methods point: the MSD intercept mistakes non-white structure for white error and over-corrects. That point is a demonstration, not a discovery (see Berglund 2010; Vestergaard et al. 2014; Pedersen et al. 2016).
+>
+> **The draft paper built on Benchmarks 019–021 was withdrawn and deleted** (`Papers/speed-persistence-noise/`, still in git history). The review also found:
+> - The mechanism is established prior work: Hurford, PLoS ONE 2009; Loosley et al., PLoS ONE 2015; Pedersen et al., PRE 2016; Vestergaard et al., PRE 2014. These citations come from the reviewer's searches and have not been verified in full text.
+> - Motion blur and temporally correlated error are not modelled.
+> - The lower bound assumes non-confined slow objects ($C_1\ge0$).
+> - The cell bootstrap ignores movie-level clustering.
+> - The frozen run's mouse-T and Dicty groups went unreported.
 
 **Status:** a frozen test (lab 53, committed as `4028d77` before any real-data statistic was computed, with one pre-data code fix) and a post hoc consistency analysis (lab 54). No novelty claim.
 
