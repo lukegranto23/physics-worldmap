@@ -29,6 +29,7 @@ updated: 2026-07-30
 | [[Derivation — Canonical Ensemble from a Large Bath]] | Statistical Physics | intermediate |
 | [[Derivation — Diffusion from a Random Walk]] | Statistical Physics | introductory |
 | [[Derivation — Equilibrium Conditioning of a Hydrodynamic Brownian Particle]] | Statistical Physics | advanced |
+| [[Derivation — Conditioning on an Estimated Velocity]] | Statistical Physics | advanced |
 | [[Derivation — Mean-Field Ising Critical Point]] | Statistical Physics | advanced |
 | [[Deep Dive — Renormalization Group and Universality]] | Statistical Physics | advanced |
 | [[Derivation — Navier-Stokes Nondimensionalization]] | Fluid Dynamics | intermediate |
