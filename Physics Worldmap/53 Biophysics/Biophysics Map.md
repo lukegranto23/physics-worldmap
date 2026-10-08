@@ -69,6 +69,7 @@ updated: 2026-07-30
 - [ ] Neural computation across scales
 - [ ] Thermodynamic limits of sensing, adaptation, and replication
 - [ ] Origin of life and transitions to evolvable self-maintaining systems
+- [x] Measurement artefacts in the cell speed–persistence coupling: [[Benchmark 019 — Localization Noise and the Speed-Persistence Coupling]], [[Benchmark 020 — In Vitro T Cells and the Noise Margin of Speed-Persistence Coupling]], [[Benchmark 021 — Calibrating Localization Error in Zebrafish T-Cell Tracks]]
 
 Current evidence and sources belong in [[Open Problems Dashboard]] and the individual frontier notes. A checked box means “reviewed recently,” never “solved.”
 

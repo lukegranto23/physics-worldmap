@@ -70,6 +70,7 @@ The pooled-lag $\sigma$ estimate is a low-precision guide only: 0.78 µm [0.52, 
 
 1. Obtain an independent localization-error estimate, from fixed beads or stationary cells, for any dataset where the coupling is claimed.
 2. **Done for one in vitro dataset:** [[Benchmark 020 — In Vitro T Cells and the Noise Margin of Speed-Persistence Coupling]]. In vitro T cells on ICAM-1 and VCAM-1 show a strong coupling. σ ≤ 0.6 µm (under one pixel) would explain half of it. A post hoc lower bound from near-immobile tracks (σ ≳ 0.2 µm) shows that noise explains at least 12–14% of it. The upper end cannot be bounded from the tracks.
-3. Extend the closed form to the mean-cos metric, so that published cos-based results can be corrected directly.
+3. **Done for zebrafish T cells:** [[Benchmark 021 — Calibrating Localization Error in Zebrafish T-Cell Tracks]] gives a data-internal noise bound. That coupling is robust (at most about 13–23% from noise at 45–48 s).
+4. Extend the closed form to the mean-cos metric, so that published cos-based results can be corrected directly.
 
 [[Derivation — Conditioning on an Estimated Velocity]] · [[Biophysics Map]] · [[Computational Lab Index]]
