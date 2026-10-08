@@ -12,6 +12,8 @@ source_audit: public-dataset-provenance-and-checksum-recorded
 
 # Benchmark 020 — In Vitro T Cells and the Noise Margin of Speed-Persistence Coupling
 
+**Update (post hoc, lab 51):** the localization error, measured from near-immobile tracks, is 0.20–0.30 µm, at which noise explains 12–35% of the coupling. See below.
+
 **Status:** lab 50 (`50_in_vitro_speed_persistence_test.py`) applies the final protocol of [[Benchmark 019 — Localization Noise and the Speed-Persistence Coupling]], unchanged. It was frozen and committed (`849616a`) before any statistic of these tracks was computed, and its self-tests were rerun at 30 s. No novelty claim.
 
 ## Data
@@ -36,6 +38,20 @@ Coordinates are calibrated µm, which was checked against the image size: X max 
 2. **It is probably mostly real, but the margin is under one pixel.** At σ ≈ 0.2 µm (about ⅓ px), which is plausible for StarDist centroids of ~10 µm cells at this pixel size, noise explains 6–15%. At 0.3 µm it explains 16–42%. At 0.4–0.6 µm, still below one pixel, it explains half or more. The data-internal lag estimate (0.0–0.16 µm, upper 84% ≤ 0.32 µm) points to the low end. That estimator is biased low when persistence is heterogeneous (see the Benchmark 019 self-tests), so it is not relied on.
 3. **Sparse sampling is not the driver here.** Halving the frame rate slightly lowers the correlation, unlike the in vivo case.
 4. **What would settle it** is an independent localization-error measurement for this pipeline: fixed cells, beads, or repeated segmentation of the same frames.
+
+## Post hoc: measuring the noise (lab 51)
+
+This analysis was done after the frozen verdict. For the slowest 5% of tracks, true persistent motion adds only $C_1\ge0$ and $V\ge0$. That gives a lower bound $\sigma_\text{lo}=\sqrt{-\bar C_1}$ and an upper bound $\sigma_\text{hi}=\sqrt{\bar V/2}$. These tracks' mean lag-1 step correlation is −0.38 (ICAM) and −0.26 (VCAM), close to the −0.5 signature of pure noise. Lab 51 is `51_in_vitro_noise_bracket.py`, with output `results/in_vitro_speed_persistence/noise_bracket_post_hoc.json`.
+
+| Group | σ bracket (µm) | $f_\text{noise}$ over the bracket | Real share of the coupling |
+|---|---|---|---|
+| ICAM-1 | 0.26–0.30 | 0.12–0.16 | about 84–88% |
+| VCAM-1 | 0.20–0.27 | 0.14–0.35 | about 65–86% |
+| All | 0.22–0.28 | 0.13–0.25 | about 75–87% |
+
+**Conclusion:** in vitro, the speed–persistence coupling is **mostly real**, and localization noise inflates it by a measurable **12–35%**.
+
+**Caveat:** debris and stuck cells may be localized more precisely than deforming migrating cells. The bracket measures the pipeline's positional error, not centroid jitter caused by changes of cell shape.
 
 ## Limits
 
