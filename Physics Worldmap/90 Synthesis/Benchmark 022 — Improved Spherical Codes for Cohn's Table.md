@@ -19,6 +19,14 @@ source_audit: live-record-table-compared-and-verified-to-50-digits
 
 **What this is and is not.** These are verifiable constructions: anyone can check a code from its coordinates with a few lines of code. They improve entries that the maintainer marks "needs more optimization". This is a modest, solid contribution, not a breakthrough. No optimality is claimed, and the method (basin hopping plus LP polish) is standard.
 
+## Second round: deep polish (2026-10-09)
+
+A structure scan showed that most improved codes were far from jammed: few pairs sat exactly at μ. So a longer trust-region LP polish was run on 31 of them, at step sizes 10⁻³ down to 10⁻⁶.
+- **Results.** 29 improved: 7.3×10⁻⁵ for (13,93), 2.2×10⁻⁵ for (11,73), 1.4×10⁻⁵ for (13,74) and (13,94), and smaller gains elsewhere.
+- **Uploaded.** 28 passed the live 12-decimal check and were uploaded the same day, and all are accepted. The 29th, (15,75), is dominated by the improved (15,76).
+- **Files.** Runs are in `results/spherical_codes/deep_polish_runs.jsonl`, and the coordinate files in `codes/` are updated.
+- **The (13,58/59) codes** turned out to be exact. See [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]].
+
 ## Method
 
 - **Search (lab 56):** `56_spherical_code_search.py`.
