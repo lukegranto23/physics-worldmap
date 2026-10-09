@@ -149,3 +149,5 @@ No new theory is claimed by this edition. The vault is external, inspectable res
 **Withdrawn drafts (2026-10-08).** Both manuscript drafts were deleted after internal adversarial review: the estimated-velocity paper (see the correction notes in Benchmarks 015 and 017 and the derivation) and the speed–persistence paper (Benchmark 021). A correction email went to the Brownian-data author the same day. From now on, nothing is sent or posted before a hostile review has been run and its findings checked.
 
 **Spherical codes (2026-10-09).** [[Benchmark 022 — Improved Spherical Codes for Cohn's Table]]: 35 entries of Cohn's table are improved and verified against the live table. Submitted 2026-10-09; all 35 accepted, pending the maintainer's review.
+
+**Exact S5 code (2026-10-09).** [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]]: the (13, 58/59) codes have an exact algebraic description with a rigorous existence certificate. Further numerical improvements to (13, 71/72) are not yet uploaded.

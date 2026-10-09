@@ -193,3 +193,4 @@ important resolution parameters at the command line.
   one independent observable before drawing physical conclusions.
 - **Lab 56** (`56_spherical_code_search.py`). Basin-hopping search for spherical codes, starting from Henry Cohn's table.
 - **Lab 57** (`57_spherical_code_final_check.py`). Independent 50-digit final check against the live table. Result: 35 improved entries. See [[Benchmark 022 — Improved Spherical Codes for Cohn's Table]].
+- **Lab 58** (`58_exact_s5_spherical_code.py`). Exact structure of the improved (13, 59) code: an S5-symmetric 57-point core plus two rattlers. The minimal-angle cosine is a root of 1196x⁴−1428x³+411x²+18x−9, and existence is certified by exact rank. See [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]].
