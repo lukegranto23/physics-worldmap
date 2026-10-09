@@ -53,7 +53,7 @@ What is *not* proved: optimality of $\mu$, or that the rattler coordinates are e
 | 13 | 71 | 0.205582365853 → 0.204538912177 | 0.204507858381 (further polish) |
 | 13 | 72 | 0.207220363795 → 0.205810552628 | 0.205422831761 (further polish) |
 
-The 71 and 72 rows are numerical improvements only, not exact constructions. The new values beat the live table as of 2026-10-09 but are **not yet uploaded**. Exact 40-digit coordinates are in `results/spherical_codes/exact_13/`.
+The 71 and 72 rows are numerical improvements only, not exact constructions. All four were **uploaded on 2026-10-09** and accepted. The live table shows 0.171378280884, 0.171378280884, 0.204507858382 and 0.205422831761. The upload note gave the maintainer the minimal polynomial, the S5 structure, and a permalink to lab 58 at commit `ee67bc0`. No separate email was sent. Exact 40-digit coordinates are in `results/spherical_codes/exact_13/`.
 
 ## How it was found
 

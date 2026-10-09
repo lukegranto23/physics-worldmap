@@ -150,4 +150,4 @@ No new theory is claimed by this edition. The vault is external, inspectable res
 
 **Spherical codes (2026-10-09).** [[Benchmark 022 — Improved Spherical Codes for Cohn's Table]]: 35 entries of Cohn's table are improved and verified against the live table. Submitted 2026-10-09; all 35 accepted, pending the maintainer's review.
 
-**Exact S5 code (2026-10-09).** [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]]: the (13, 58/59) codes have an exact algebraic description with a rigorous existence certificate. Further numerical improvements to (13, 71/72) are not yet uploaded.
+**Exact S5 code (2026-10-09).** [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]]: the (13, 58/59) codes have an exact algebraic description with a rigorous existence certificate. These codes and further numerical improvements to (13, 71/72) were uploaded 2026-10-09; all were accepted.
