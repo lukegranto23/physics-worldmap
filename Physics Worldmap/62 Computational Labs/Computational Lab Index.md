@@ -191,3 +191,5 @@ important resolution parameters at the command line.
   not make a coarse step accurate.
 - Numerical agreement should be tested under refinement and against more than
   one independent observable before drawing physical conclusions.
+- **Lab 56** (`56_spherical_code_search.py`). Basin-hopping search for spherical codes, starting from Henry Cohn's table.
+- **Lab 57** (`57_spherical_code_final_check.py`). Independent 50-digit final check against the live table. Result: 35 improved entries. See [[Benchmark 022 — Improved Spherical Codes for Cohn's Table]].
