@@ -55,6 +55,15 @@ What is *not* proved: optimality of $\mu$, or that the rattler coordinates are e
 
 The 71 and 72 rows are numerical improvements only, not exact constructions. All four were **uploaded on 2026-10-09** and accepted. The live table shows 0.171378280884, 0.171378280884, 0.204507858382 and 0.205422831761. The upload note gave the maintainer the minimal polynomial, the S5 structure, and a permalink to lab 58 at commit `ee67bc0`. No separate email was sent. Exact 40-digit coordinates are in `results/spherical_codes/exact_13/`.
 
+## Outcome after the maintainer's review (checked 2026-10-12)
+
+- Uploads now appear as **"Luke Granto, 2026"**: 31 entries carry the credit.
+- **(13, 60) is listed exactly.** Its value is **0.171378280884**, with the minimal polynomial $1196x^4-1428x^3+411x^2+18x-9$, credited to Luke Granto. The maintainer's 60-point code is a 58-point core plus 2 rattlers, and every core inner product takes one of the 9 values above. So one more point joins the jammed structure, and (13, 58) and (13, 59) are now dominated and no longer listed.
+- **A 61st point (numerical search only, no proof):**
+  - With the 60 points fixed, the deepest hole has max inner product 0.2308.
+  - With 3 free points around the 58-point core, the best value is 0.2150.
+  - Both are well above μ, so the structure appears to stop at 60.
+
 ## How it was found
 
 The structure surfaced when the inner products were inspected. The automorphism group was then computed as the group of colour-preserving permutations of the Gram matrix. Projectors built from exact characters turned the rank-13 condition into integer linear equations plus small rank conditions. A 90-digit Gauss–Newton solve followed: the solution is isolated, and the smallest singular value of the Jacobian is 0.0165. PSLQ identified the values, and an exact rank certificate closed the argument.
