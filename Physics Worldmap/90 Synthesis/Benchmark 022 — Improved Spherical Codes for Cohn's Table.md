@@ -12,9 +12,20 @@ source_audit: live-record-table-compared-and-verified-to-50-digits
 
 # Benchmark 022 — Improved Spherical Codes for Cohn's Table
 
-**Status:** 35 entries of Henry Cohn's table of spherical codes (spherical-codes.org) are improved. 13 of them improve by more than 10⁻⁵. Every code was checked independently against the live table value at the time of checking (2026-10-09). The check uses 50-digit evaluation of the maximal inner product, and each code must beat the record strictly after rounding up to 12 decimals. **Not yet submitted** to the table: submission needs the owner's approval.
+**Status:** 35 entries of Henry Cohn's table of spherical codes (spherical-codes.org) are improved. 13 of them improve by more than 10⁻⁵. Every code was checked independently against the live table value at the time of checking (2026-10-09). The check uses 50-digit evaluation of the maximal inner product, and each code must beat the record strictly after rounding up to 12 decimals. **Submitted on 2026-10-09** through the table's upload form, credited to Luke Granto. The table accepted all 35 entries, which show as "Uploaded by anonymous internet user" until the maintainer reviews them:
+- 34 are listed with the new values.
+- (15,75) is now omitted as dominated by the improved (15,76) code.
+- The (9,73) upload was first not shown, apparently because it ties the new (9,72) value at 12 decimals. It was accepted on re-upload.
 
 **What this is and is not.** These are verifiable constructions: anyone can check a code from its coordinates with a few lines of code. They improve entries that the maintainer marks "needs more optimization". This is a modest, solid contribution, not a breakthrough. No optimality is claimed, and the method (basin hopping plus LP polish) is standard.
+
+## Second round: deep polish (2026-10-09)
+
+A structure scan showed that most improved codes were far from jammed: few pairs sat exactly at μ. So a longer trust-region LP polish was run on 31 of them, at step sizes 10⁻³ down to 10⁻⁶.
+- **Results.** 29 improved: 7.3×10⁻⁵ for (13,93), 2.2×10⁻⁵ for (11,73), 1.4×10⁻⁵ for (13,74) and (13,94), and smaller gains elsewhere.
+- **Uploaded.** 28 passed the live 12-decimal check and were uploaded the same day, and all are accepted. The 29th, (15,75), is dominated by the improved (15,76).
+- **Files.** Runs are in `results/spherical_codes/deep_polish_runs.jsonl`, and the coordinate files in `codes/` are updated.
+- **The (13,58/59) codes** turned out to be exact. See [[Benchmark 023 — An Exact S5-Symmetric Spherical Code in 13 Dimensions]].
 
 ## Method
 
