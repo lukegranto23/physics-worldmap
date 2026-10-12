@@ -65,7 +65,7 @@ def hp_refine(g0, col, n, d, K, dps=90, iters=8):
         G = mp.eye(n)
         for k in range(K): G += g[k]*A[k]
         L, _ = mp.eigsy(G); return sorted(L, key=abs)[:n - d]
-    g = [mp.mpf(float(v)) for v in g0]; h = mp.mpf(10)**(-(dps//2))
+    g = [mp.mpf(float(v)) for v in g0]; h = mp.mpf(10)**(-(dps//2)); S = [mp.mpf(1)]
     for _ in range(iters):
         r = mp.matrix(res(g))
         if mp.norm(r) < mp.mpf(10)**(-(dps - 8)): break
@@ -116,7 +116,7 @@ def attempt(q, g, mu, col, n, d, K):
         rep["status"] = "root isolation failed"; return rep
     root = roots[0]
     if deg == 1:
-        F = sp.QQ; el = [sp.QQ(sp.Rational(e)) for e in exprs]; one = sp.QQ(1)
+        F = sp.QQ; el = [sp.QQ(int(sp.Rational(e).p), int(sp.Rational(e).q)) for e in exprs]; one = sp.QQ(1)
     else:
         F = sp.QQ.algebraic_field(root); el = [F.from_sympy(sp.sympify(e).subs(x, root)) for e in exprs]; one = F.one
     M = DomainMatrix([[one if i == j else el[col[i, j]] for j in range(n)] for i in range(n)], (n, n), F)
